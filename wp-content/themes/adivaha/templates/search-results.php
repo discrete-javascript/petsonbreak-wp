@@ -1,0 +1,390 @@
+<?php session_start();?>
+<div class="loader_hotel_content showthis"> <img ng-src="{{TemplateUrl}}/images/svg/ripple.svg" width="120" height="120" alt="" class="loading_fig" />
+  <h6>Loading {{tab}}!</h6>
+  <p>Please wait while we check for the lowest rates and availibility...</p>
+</div>
+<section id="hotel-list-section" class="wleft">
+  <div class="container hotel-list-container">
+    <div class="row">
+      <div  class="col-md-12">
+        <!-- Filter Section ==============================-->
+        <div class="border-right-g width-set_results-left " id="navbar-main">
+		<span class="close-filter"><i class="fa fa-times" aria-hidden="true"></i></span>
+          <div class="filter_sidebar wleft">
+            <div style="display:none">
+              <input type="fhidden" ng-model="search_Session_Id" />
+              <input type="fhidden" ng-model="location_Id" />
+              <input type="fhidden" ng-model="checkIn" />
+              <input type="fhidden" ng-model="checkOut" />
+              <input type="fhidden" ng-model="Cri_Adults" />
+              <input type="fhidden" ng-model="Cri_currency" />
+              <input type="fhidden" ng-model="Cri_language" />
+              <br />
+              <br />
+              <input type="fhidden" ng-model="distance_Control" />
+              <input type="fhidden" ng-model="minRangeSlider.minValue" />
+              <input type="fhidden" ng-model="minRangeSlider.maxValue" />
+              <input type="fhidden" ng-model="guestminRangeSlider.minValue" />
+              <input type="fhidden" ng-model="guestminRangeSlider.maxValue" />
+              <input type="fhidden" ng-model="star_Rating_Control" />
+              <input type="fhidden" ng-model="list_Or_Map_Control" />
+              <input type="fhidden" ng-model="sorting_Field_Control" />
+              <input type="fhidden" ng-model="sorting_order_Control" />
+            </div>
+            <div>
+            <form id="filter_frm">
+              <div class="filter_controls_div">
+			 
+				<h6 class="reset-all-title"><?php echo $_SESSION['TXTDATA']['filter_your_search'];?><a href="javascript:void(0);" ng-click="resetAll();"><?php echo $_SESSION['TXTDATA']['reset_all'];?></a> </h6>
+				
+                <div class="sep1"></div>
+                <div class="sep2"></div>
+                <div class="filter_criteria wleft">
+                  <h5><?php echo $_SESSION['TXTDATA']['distance_from_destination'];?></h5>
+                  <ul class="criteria_listing">
+                    <li>
+                      <label class="hotel_filter_label">
+                      <input type="radio" class="Filter_Cls" ng-model="distances" value="2" tabindex="1" ng-click="filter_Distance(2);">
+                      2 <?php echo $_SESSION['TXTDATA']['miles'];?>
+                      <div class="label-img-hot"><img ng-src="{{TemplateUrl}}/images/prog2.jpg" alt="" height="7" alt=""> <span class="starRatHotel pull-right">({{distance2}})</span></div>
+                      </label>
+                    </li>
+                    <li>
+                      <label class="hotel_filter_label">
+                      <input type="radio" class="Filter_Cls" ng-model="distances" value="5" tabindex="2" ng-click="filter_Distance(5);">
+                      5 <?php echo $_SESSION['TXTDATA']['miles'];?>
+                      <div class="label-img-hot"><img ng-src="{{TemplateUrl}}/images/prog5.jpg" alt="" height="7" alt=""> <span class="starRatHotel pull-right">({{distance5}})</span></div>
+                      </label>
+                    </li>
+                    <li>
+                      <label class="hotel_filter_label">
+                      <input type="radio" class="Filter_Cls" ng-model="distances" value="10" tabindex="3" ng-click="filter_Distance(10);">
+                      10 <?php echo $_SESSION['TXTDATA']['miles'];?>
+                      <div class="label-img-hot"><img ng-src="{{TemplateUrl}}/images/prog10.jpg" height="7" alt=""> <span class="starRatHotel pull-right">({{distance10}})</span></div>
+                      </label>
+                    </li>
+                    <li>
+                      <label class="hotel_filter_label">
+                      <input type="radio" class="Filter_Cls" ng-model="distances" value="20" tabindex="4" ng-click="filter_Distance(20);">
+                      20 <?php echo $_SESSION['TXTDATA']['miles'];?>
+                      <div class="label-img-hot"><img ng-src="{{TemplateUrl}}/images/prog20.jpg" height="7" alt=""> <span class="starRatHotel pull-right">({{distance20}})</span></div>
+                      </label>
+                    </li>
+                    <li>
+                      <label class="hotel_filter_label">
+                      <input type="radio" class="Filter_Cls" ng-model="distances" value="50" tabindex="5" ng-click="filter_Distance(50);">
+                      50 <?php echo $_SESSION['TXTDATA']['miles'];?>
+                      <div class="label-img-hot"><img ng-src="{{TemplateUrl}}/images/prog50.jpg" height="7" alt=""> <span class="starRatHotel pull-right">({{distance50}})</span></div>
+                      </label>
+                    </li>
+                  </ul>
+                </div>
+                <div class="sep1"></div>
+                <div class="sep2"></div>
+                <div class="filter_criteria wleft">
+                  <h5><?php echo $_SESSION['TXTDATA']['search_with_hotel_name'];?></h5>
+				  <!--
+                  <input type="text" name="hotel_name" id="findbyhotelname" class="hn" value="" ng-model="q" placeholder="Eg, Lalit">-->
+				  <input type="text" name="hotel_name" id="findbynamefilter" ng-keyup="HotelFilter()"  value=""  placeholder="<?php echo $_SESSION['TXTDATA']['search_by_name'];?>">
+				<!--  <div class="popup hidethisinitially locationpopup_flightsto">-->
+				<div class="popup showhidepopup_flightsto{{showpopup_flightsto}} hidethisinitially locationpopup_flightsto">
+					  <div class="show-autocomplete-popup flights_topop"> <a class="autocomplete-dropdown" ng-repeat="Hotel_Filters in Hotel_Filter track by $index">
+					 <span  ng-click="Update_Hotel_Filter(Hotel_Filters.EANHotelID,Hotel_Filters.Name )">{{ Hotel_Filters.Name}}</span>
+					  </a> </div>
+				</div>
+					
+                </div>
+                <div class="filter_criteria wleft">
+                  <h5><?php echo $_SESSION['TXTDATA']['price'];?></h5>
+                  <div class="flt-price">
+                    <rzslider rz-slider-model="minRangeSlider.minValue" rz-slider-high="minRangeSlider.maxValue" rz-slider-options="minRangeSlider.options"></rzslider>
+                  </div>
+                </div>
+                <div class="sep1"></div>
+                <div class="sep2"></div>
+                <div class="filter_criteria wleft">
+                  <h5><?php echo $_SESSION['TXTDATA']['star_rating'];?> <a href="javascript:void(0);" ng-click="clearStar();"><?php echo $_SESSION['TXTDATA']['clear'];?></a></h5>
+                  <ul class="criteria_listing">
+				    <li>
+                      <label class="hotel_filter_label">
+                        <input type="radio" class="Filter_Cls pull-left pull-left starInput" ng-model="starrating" value="0" tabindex="0" ng-click="filter_Rating(0);" />
+                        <span class="starRat pull-left"><i class="fa" aria-hidden="true"></i><?php echo $_SESSION['TXTDATA']['budget_hotels'];?></span><span class="starRatHotel pull-right">({{stars0}})</span></label>
+                    </li>
+                    <li>
+                      <label class="hotel_filter_label">
+                        <input type="radio" class="Filter_Cls pull-left pull-left starInput" ng-model="starrating" value="1" tabindex="1" ng-click="filter_Rating(1);" />
+                        <span class="starRat pull-left"><i class="fa fa-star" aria-hidden="true"></i></span><span class="starRatHotel pull-right">({{stars1}})</span></label>
+                    </li>
+                    <li>
+                      <label class="hotel_filter_label">
+                        <input type="radio" class="Filter_Cls pull-left pull-left starInput" ng-model="starrating" value="2" tabindex="2" ng-click="filter_Rating(2);" />
+                        <span class="starRat pull-left"><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i></span><span class="starRatHotel pull-right">({{stars2}})</span></label>
+                    </li>
+                    <li>
+                      <label class="hotel_filter_label">
+                        <input type="radio" class="Filter_Cls pull-left pull-left starInput" ng-model="starrating" value="3" tabindex="3" ng-click="filter_Rating(3);" />
+                        <span class="starRat pull-left"><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i></span><span class="starRatHotel pull-right">({{stars3}})</span></label>
+                    </li>
+                    <li>
+                      <label class="hotel_filter_label">
+                        <input type="radio" class="Filter_Cls pull-left pull-left starInput" ng-model="starrating" value="4" tabindex="4" ng-click="filter_Rating(4);" />
+                        <span class="starRat pull-left"><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i></span><span class="starRatHotel pull-right">({{stars4}})</span></label>
+                    </li>
+                    <li>
+                      <label class="hotel_filter_label">
+                        <input type="radio" class="Filter_Cls pull-left pull-left starInput" ng-model="starrating" value="5" tabindex="5" ng-click="filter_Rating(5);" />
+                        <span class="starRat pull-left"><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i></span><span class="starRatHotel pull-right">({{stars5}})</span></label>
+                    </li>
+                    <li> </li>
+                  </ul>
+                </div>
+                <div class="filter_criteria wleft">
+                  <h5><?php echo $_SESSION['TXTDATA']['guest_rating'];?></h5>
+                  <div class="flt-price">
+                    <rzslider rz-slider-model="guestminRangeSlider.minValue" rz-slider-high="guestminRangeSlider.maxValue" rz-slider-options="guestminRangeSlider.options"></rzslider>
+                  </div>
+                </div>
+                <div class="sep1"></div>
+                <div class="sep2"></div>
+                <div class="filter_criteria wleft">
+                  <h5><?php echo $_SESSION['TXTDATA']['property_ameneties'];?> <a href="javascript:void(0);" ng-click="clearAmenity();"><?php echo $_SESSION['TXTDATA']['clear'];?></a></h5>
+                  <ul class="criteria_listing">
+				   <!--
+                    <li ng-repeat="role in roles">
+                      <md-checkbox checklist-model="user.roles" checklist-value="role" ng-change="Update_Results(role)"> {{ role }} </md-checkbox>
+                    </li>
+					-->
+					
+					<li ng-repeat="role in roles">
+					   <input type="checkbox" name="Cri_amenity[]" class="amenityCls" value="{{role}}" ng-click="changeAmenty();"><span>{{role}}</span>
+					</li>
+					<!--
+					<li class="ng-scope">
+					   <input type="checkbox" name="Cri_pets" id="Cri_pets" class="petCls" value="1" checked="checked" ng-click="changePets();"><span class="ng-binding">Pets allowed (conditions apply)</span>
+					</li>
+					-->
+					
+                  </ul>
+                </div>
+              </div>
+              </div>
+            </form>
+          </div>
+        </div>
+        <!--End Filter Section -------->
+        <!--Hotel Search Result-->
+        <div class="border-left-f width-set_results-right">
+          <div class="row-not-use">
+            <div class="col-md-12">
+              <div class=" intro wleft">
+                <div class="intr-left">
+                  <h1>{{ Loading_msg }} </h1>
+					  {{hotels_found}}		  
+                  <p>{{ hotels_found }} <?php echo $_SESSION['TXTDATA']['hotels_available_in'];?> {{ destination_name }} .<?php echo $_SESSION['TXTDATA']['checkin'];?>  : {{ checkIn }}, <?php echo $_SESSION['TXTDATA']['checkout'];?>  : {{ checkOut }} </p>
+                </div>
+                <div class="intr-right"><a href="javascript:void(0);" ng-click="function_list_Or_Map_Control('list');"><i class="color-fauseall fa fa-list" aria-hidden="true"></i><?php echo $_SESSION['TXTDATA']['list'];?></a> <a href="javascript:void(0);" ng-click="function_list_Or_Map_Control('map');"><i class="color-fauseall fa fa-map-marker" aria-hidden="true"></i><?php echo $_SESSION['TXTDATA']['map'];?></a>
+                 
+                </div>
+              </div>
+			  <div class="filter-btn-div">
+			     <a href="javascript:void();" class="filter-btn">Filter</a>
+			     <a href="javascript:void();" class="modify-btn">Modify Search</a>
+			  </div>
+			  
+              <div class="hotel_sort wleft showhidemap{{ list_Or_Map_Control }}">
+                <div ng-controller="MyCtrl as vm" class="map-hotel">
+                  <ng-map default-style="true" center="[{{ vm.shops[0].latitude }}, {{ vm.shops[0].longitude }}]"  zoom-to-include-markers={{vm.zoom}} id="mapCanvas">
+                    <custom-marker ng-repeat="shop in vm.shops track by $index" id="{{shop.hotelId}}" on-click="vm.showDetail(shop)" position="[{{shop.latitude}}, {{shop.longitude}}]">
+					 <!--
+                      <div><a href="{{SiteUrl}}/#/hotel-information/{{ shop.hotelId }}" target="_blank">{{ shop.lowRate }}</a> </div>
+					  -->
+					   <div><a href="#/hotel-information/{{ shop.hotelId }}/?fn=hotelInfo&checkIn={{checkInUrl}}&checkOut={{checkOutUrl}}&language=en-US&currency=USD&hotelType={{hotelType}}&rooms={{rooms}}&adults={{adults}}&childs={{childs}}&childAge=" target="_blank">{{ shop.lowRate }}</a> </div>
+					
+					  
+					  
+                    </custom-marker>
+                    <!--<info-window id="foo-iw">
+                      <div ng-non-bindable="">
+                        <div class="map-top-left"> <a href="{{SiteUrl}}/#/hotel-information/{{ vm.shop.hotelId }}" target="_blank"> <img ng-src="http://images.trvl-media.com{{ vm.shop.thumbNailUrl.replace('_t', '_b') }}" alt=""> </a> </div>
+                        <div class="map-top-right">
+                          <p>{{vm.shop.name}}</p>
+                          <p class="searchHot_rating rating-{{ vm.shop.hotelRating  }}"></p>
+                          <p>{{Cri_currency}} {{ vm.shop.lowRate  }}</p>
+                        </div>
+                      </div>
+                    </info-window>-->
+                  </ng-map>
+                </div>
+				
+				
+              </div>
+              <div class="hotel_sort wleft">
+                <ul class="hotel_sort_options wleft">
+                  <li class="active{{recommended_tab}}"><a href="javascript:void(0);" ng-toggle="recommended_tab"  ng-click="function_sorting_Field_Control('recommended');"><?php echo $_SESSION['TXTDATA']['sort_recommended'];?> <span class="recom"><i class="fa fa-thumbs-up" aria-hidden="true"></i></span><img class="show{{recommended_tab}}" ng-src="{{TemplateUrl}}/images/{{sorting_order_Control}}.png" alt="" /></a></li>
+                  <li class="active{{price_tab}}"><a href="javascript:void(0);" ng-toggle="price_tab"  ng-click="function_sorting_Field_Control('price');"><?php echo $_SESSION['TXTDATA']['sort_price'];?>  <span class="pricefilter"><i class="fa fa-tag" aria-hidden="true"></i></span><img class="show{{price_tab}}" ng-src="{{TemplateUrl}}/images/{{sorting_order_Control}}.png" alt="" /></a></li>
+                  <li class="active{{starrating_tab}}"><a href="javascript:void(0);" ng-toggle="starrating_tab"  ng-click="function_sorting_Field_Control('starrating');"><?php echo $_SESSION['TXTDATA']['sort_star_rating'];?>  <span class="starrate"><i class="fa fa-star-o" aria-hidden="true"></i></span><img class="show{{starrating_tab}}" ng-src="{{TemplateUrl}}/images/{{sorting_order_Control}}.png" alt="" /></a></li>
+                  <li class="active{{discounts_tab}}"><a href="javascript:void(0);" ng-toggle="discounts_tab" ng-click="function_sorting_Field_Control('discounts');"><?php echo $_SESSION['TXTDATA']['sort_discount'];?>  <span class="triprate"><i class="fa fa-tags" aria-hidden="true"></i></span><img class="show{{discounts_tab}}" ng-src="{{TemplateUrl}}/images/{{sorting_order_Control}}.png" alt="" /></a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="search-result" >
+              <ul class="hotel-price1">
+                <li dir-paginate="hotelList in hotelList | filter:q | itemsPerPage: pageSize" current-page="currentPage">
+                  <div class="searchHtl_info wleft">
+				  
+		    <div ng-if="hotelList.isFavourate=='Yes'" class="heart_icons favourated chfavourate" data-rel="unfavourate" data-hotel="{{hotelList.hotelId}}" ng-click="makeFavourate( $event,hotelList.hotelId )" id="favourate_{{hotelList.hotelId}}">
+				<i class="fa fa-heart" aria-hidden="true"></i>
+				<span class="tooltiptext"><?php echo $_SESSION['TXTDATA']['remove_favourites'];?></span>
+			</div>
+				  
+			<div ng-if="hotelList.isFavourate==''" class="heart_icons chfavourate" data-rel="favourate" data-hotel="{{hotelList.hotelId}}" ng-click="makeFavourate( $event,hotelList.hotelId )" id="favourate_{{hotelList.hotelId}}">
+			   <i class="fa fa-heart" aria-hidden="true"></i>
+			  <span class="tooltiptext" ><?php echo $_SESSION['TXTDATA']['add_to_favourites'];?></span>
+			</div>
+				  
+                    <div class=" hotel-image wleft"> <a href="{{SiteUrl}}/#/hotel-information/{{ hotelList.hotelId }}/?fn=hotelInfo&checkIn={{checkInUrl}}&checkOut={{checkOutUrl}}&language={{Cri_language}}&currency={{currency}}&hotelType=1&rooms={{rooms}}&adults={{adults}}&childs={{childs}}&childAge={{childAge}}" ><img ng-src="http://images.trvl-media.com{{ hotelList.thumbNailUrl.replace('_t', '_b') }}" alt=""></a>
+                      <div ng-if="hotelList.highRate != hotelList.lowRate">
+                        <p class="savings-message"><strong><?php echo $_SESSION['TXTDATA']['save'];?> <span ng-bind-html="symbol"></span> {{ hotelList.discount_price }}</strong></p>
+                      </div>
+					  <div ng-if="hotelList.lowRate=='-1'">
+                        <div>
+						   <div class="hotl_col_right"> <span class="price_strike_loading">&nbsp;&nbsp;Loading...&nbsp;&nbsp;</span> </div>
+						 </div>
+                      </div>
+					  
+                      <div ng-if="hotelList.highRate == hotelList.lowRate  && hotelList.lowRate!='-1'">
+                        <div class="hotl_col_right"><span class="price"><span ng-bind-html="symbol"></span> {{ hotelList.lowRate  }}</span> </div>
+                      </div>
+                      <div ng-if="hotelList.highRate != hotelList.lowRate && hotelList.lowRate!='-1'">
+                        <div class="hotl_col_right"> <span class="price_strike" ><span ng-bind-html="symbol"></span> {{ hotelList.highRate  }}</span> 
+						<span class="price"><span ng-bind-html="symbol"></span> {{ hotelList.lowRate  }}</span> 
+						
+						</div>
+                      </div>
+                    </div>
+                    <div class=" bg_white hotel-detail wleft">
+                      <div class="hotel-detail-colms">
+                        <div class="hotl_col_left col-md-12">
+                          <p class="h_name_or"><a href="{{SiteUrl}}/#/hotel-information/{{ hotelList.hotelId }}/?fn=hotelInfo&checkIn={{checkInUrl}}&checkOut={{checkOutUrl}}&language={{Cri_language}}&currency={{currency}}&hotelType=1&rooms={{rooms}}&adults={{adults}}&childs={{childs}}&childAge={{childAge}}" ><span ng-bind-html="hotelList.name"></span></a>
+						  <!--
+						  <br>
+						  <span ng-if="hotelList.isFavourate=='Yes'" class="chfavourate favourated" data-rel="unfavourate" data-hotel="{{hotelList.hotelId}}" ng-click="makeFavourate( $event,hotelList.hotelId )" id="favourate_{{hotelList.hotelId}}">Make Fav</span>
+						  
+						  <span ng-if="hotelList.isFavourate==''" class="chfavourate" data-rel="favourate" data-hotel="{{hotelList.hotelId}}" ng-click="makeFavourate($event, hotelList.hotelId )" id="favourate_{{hotelList.hotelId}}">Make Fav</span>
+						  -->
+					
+						  </p>
+                          <p class="searchHot_rating rating-{{ hotelList.hotelRating  }}"></p>
+                          <p class="h_name_or1"><img ng-src="{{TemplateUrl}}/images/location.jpg" alt="" width="11" height="14" align="top">&nbsp;{{ hotelList.address1 }}, {{ hotelList.city }}</p>
+                          <p class="h_name_or3 remomar"><img alt="" ng-src="{{hotelList.tripAdvisorRatingUrl}}"></p>
+                        </div>
+                        <div class="col-md-12 bookNBtnDiv"> <a href="{{SiteUrl}}/#/hotel-information/{{ hotelList.hotelId }}/?fn=hotelInfo&checkIn={{checkInUrl}}&checkOut={{checkOutUrl}}&language={{Cri_language}}&currency={{currency}}&hotelType=1&rooms={{rooms}}&adults={{adults}}&childs={{childs}}&childAge={{childAge}}" class="bookNBtn" ><?php echo $_SESSION['TXTDATA']['hotel_button_name_text'];?></a> </div>
+                        <div class="searchHot_Deals" ng-if="hotelList.promoDescription"><span class="promoText"><?php echo $_SESSION['TXTDATA']['deals'];?></span><span class="promoDescrp">{{ hotelList.promoDescription }}</span></div>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <!-- pageing div -->
+            <!--<div class="pageing-btn">
+              <div ng-controller="OtherController" class="other-controller">
+                <div >
+                  <dir-pagination-controls boundary-links="true" on-page-change="pageChangeHandler(newPageNumber)" template-url="wp-content/themes/adivaha/scripts-libraries/dirPagination.tpl.html"></dir-pagination-controls>
+                </div>
+              </div>
+            </div>->
+            <!-- end pageing div -->
+			
+			<div class="srchList-pagingCntnr" ng-if="hotels_found >15 ">
+              <div class="srchList-pagingOuter"> <a id='first' ng-click="getData(1)">«</a>
+			  <a id='prev'>‹</a>
+                <ul id="myList" class="pagination">
+                  <li ng-repeat="n in [] | range:( hotels_founds )" id="{{n}}" ng-click="getData(n+1)">{{n+1}}</li>
+                </ul>
+                <a id='nDots'>...</a> 
+				<a id='next'>›</a> 
+				<a id='last' ng-click="getData(hotels_founds)">»</a>
+			 </div>
+            </div>
+            <input type="hidden" ng-model="paggination" value="{{paggination}}">
+          </div>
+        </div>
+        <!--End Hotel Search Result-------->
+      </div>
+    </div>
+  </div>
+</section>
+<div class="filter-opac"></div>
+<script>
+
+$('.close-filter,.filter-opac').click(function(){
+	$('.width-set_results-left').removeClass('width-set_results-left-slider');
+	$('.filter-opac').fadeOut();
+	})
+$('.filter-btn').click(function(){
+	$('.width-set_results-left').addClass('width-set_results-left-slider');
+	$('.filter-opac').fadeIn();
+	})
+
+
+$('.modify-btn').click(function(){
+$('.horizontal-box').slideToggle();
+})
+	
+	
+</script>
+
+<script>
+/*
+var affixElement = '#navbar-main';
+$(affixElement).affix({
+  offset: {
+    // Distance of between element and top page
+    top: function () {
+      return (this.top = $(affixElement).offset().top)
+    },
+    // when start #footer 
+    bottom: function () { 
+      return (this.bottom = $('#footer').outerHeight(true)+100)
+    }
+  }
+});
+
+
+$('.currency-inr-boder').click(function(){
+   $(this).find('.dropdown-menu').css('z-index','24');
+   $('.search_Form').css('z-index','1');
+
+});*/
+
+</script>
+
+<style>
+.affix-bottom {position: absolute;width: 22.5%;}
+.showthis .affix {position: fixed;bottom: 20px;width: 19.5%;}
+.showthis .affix-bottom {position: absolute;width: 22.5%;}
+.footer-top {margin-top: 50px;}
+.bookNBtn {display: block;background: #4fa550;color: #fff;margin: 10px 0px;text-align: Center;padding: 6px 0px;font-size: 15px;}
+.affix#filter-fixed {top: 0px;}
+@media only screen and (max-width: 767px){.horizontal-box{display:none;}}
+.filter-opac{position:fixed;background:rgba(0,0,0,0.8);top:0;left:0;right:0;bottom:0;display:none;z-index: 21;}
+
+.search_Form {
+    position: inherit !important;
+    display: none;
+}
+.pet-banner1{    width: 100% !important;}
+.all_yourpetservices{display: none !important;}
+.horizontal-box ul li:first-child { width: 39% !important;}
+.input-daterange {
+    width: 29% !important;
+}
+.horizontal-box ul li {
+    width: 245px !important;
+    
+}
+
+#exTab1 .tab-content { margin: 0px !important;background:#777 !important}
+
+</style>

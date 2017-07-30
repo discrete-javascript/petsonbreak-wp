@@ -1,0 +1,39 @@
+<div class="search_Form horizontal-box">
+	<div class="container">
+		<div class="searchbox">
+			<div class="col-md-12">
+				<ul>
+				  <li>
+					<label>City / Destination Name:</label>
+					
+					<input type="text" ng-autocomplete="result1" details="details1" options="options1" id="destinationName" ng-model="location_Id" placeholder="Select your location" />
+					
+				 </li>
+				   <li>
+					<label>Check in </label>
+					<div class="datepicker-background-div">
+					<md-datepicker ng-model="myDate" md-placeholder="Enter date"></md-datepicker>
+					</div>
+				  </li>
+				  <li>
+				   <label>Check Out</label>
+				   <div class="datepicker-background-div">
+					<md-datepicker ng-model="myDate" md-placeholder="Enter date"></md-datepicker>
+					</div>
+				  </li>
+				  <li>
+					<label>Rooms:</label>
+					<input type="text" ng-model="rooms" id="rooms" placeholder="Rooms" />
+				  </li>
+				  <li>
+					<label>&nbsp;&nbsp;</label>
+					
+					<input class="btn-hack button" type="button" value="Search" ng-click="Search_Destinations();" >
+				  </li>
+				</ul>
+			  </div>
+		</div>
+	</div>
+</div>
+
+

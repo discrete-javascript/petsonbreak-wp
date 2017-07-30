@@ -1,0 +1,104 @@
+********************************************************************************
+DUPLICATOR-LITE PACKAGE-LOG: 2017-07-25 06:48:24
+NOTICE: Do NOT post to public sites or forums 
+********************************************************************************
+VERSION:	1.2.14
+WORDPRESS:	4.8
+PHP INFO:	5.4.45 | SAPI: litespeed
+SERVER:		Apache Phusion_Passenger/4.0.10 mod_bwlimited/1.4 
+PHP TIME LIMIT: (0) no time limit imposed 
+PHP MAX MEMORY: 2048M (256M default) 
+MEMORY STACK: 54.75MB 
+
+********************************************************************************
+DATABASE:
+********************************************************************************
+BUILD MODE:   PHP(query limit - 100)
+MYSQLTIMEOUT: 5000
+MYSQLDUMP:    Is Supported 
+TABLES: total:85 | filtered:0 | create:85 
+FILTERED: [] 
+SQL CREATED: 20170725_petsonbreakcom_319b3d547c55ddb04518170725064527_database.sql 
+SQL FILE SIZE: 31.4MB (32922274) 
+SQL FILE TIME: 2017-07-25 06:50:39 
+SQL RUNTIME: 134.52 sec. 
+
+******************************************************************************** 
+ARCHIVE (ZIP): 
+******************************************************************************** 
+ARCHIVE DIR:  /home/petsoprs/public_html 
+ARCHIVE FILE: 20170725_petsonbreakcom_319b3d547c55ddb04518170725064527_archive.zip 
+FILTERS: *ON* 
+DIRS:
+	not set 
+FILES:
+	/home/petsoprs/public_html/12thjune2017.zip
+	/home/petsoprs/public_html/cgi-bin.zip
+	/home/petsoprs/public_html/wp-content/plugins/ean_plugin.zip
+	/home/petsoprs/public_html/wp-content/themes/adivaha.zip
+	/home/petsoprs/public_html/wp-content/uploads/2017/05/F1-Cartagena-streets.jpg
+	/home/petsoprs/public_html/wp-content/uploads/2017/05/abigail-keenan-27292.jpg
+	/home/petsoprs/public_html/wp-content/uploads/2017/05/aidan-meyer-129855.jpg
+	/home/petsoprs/public_html/wp-content/uploads/2017/05/andrew-branch-106877.jpg
+	/home/petsoprs/public_html/wp-content/uploads/2017/05/arno-smit-141735.jpg
+	/home/petsoprs/public_html/wp-content/uploads/2017/05/bram-naus-200967.jpg
+	/home/petsoprs/public_html/wp-content/uploads/2017/05/brandi-redd-122054.jpg
+	/home/petsoprs/public_html/wp-content/uploads/2017/05/cole-keister-257654-1.jpg
+	/home/petsoprs/public_html/wp-content/uploads/2017/05/cole-keister-257654.jpg
+	/home/petsoprs/public_html/wp-content/uploads/2017/05/dhruva-reddy-168724.jpg
+	/home/petsoprs/public_html/wp-content/uploads/2017/05/harvey-enrile-491.jpg
+	/home/petsoprs/public_html/wp-content/uploads/2017/05/henry-be-99471.jpg
+	/home/petsoprs/public_html/wp-content/uploads/2017/05/hermes-rivera-255601.jpg
+	/home/petsoprs/public_html/wp-content/uploads/2017/05/jens-theess-28249.jpg
+	/home/petsoprs/public_html/wp-content/uploads/2017/05/jonas-vincent-2717-1.jpg
+	/home/petsoprs/public_html/wp-content/uploads/2017/05/jonas-vincent-2717.jpg
+	/home/petsoprs/public_html/wp-content/uploads/2017/05/jorge-flores-98842.jpg
+	/home/petsoprs/public_html/wp-content/uploads/2017/05/kai-oberhauser-82223.jpg
+	/home/petsoprs/public_html/wp-content/uploads/2017/05/mark-johnson-259950.jpg
+	/home/petsoprs/public_html/wp-content/uploads/2017/05/marvin-meyer-188676.jpg
+	/home/petsoprs/public_html/wp-content/uploads/2017/05/meg-sanchez-75919.jpg
+	/home/petsoprs/public_html/wp-content/uploads/2017/05/mickey-o-neil-36548.jpg
+	/home/petsoprs/public_html/wp-content/uploads/2017/05/mike-kotsch-1034.jpg
+	/home/petsoprs/public_html/wp-content/uploads/2017/05/milada-vigerova-35572.jpg
+	/home/petsoprs/public_html/wp-content/uploads/2017/05/rawpixel-com-250087.jpg
+	/home/petsoprs/public_html/wp-content/uploads/2017/05/rowan-chestnut-175871.jpg
+	/home/petsoprs/public_html/wp-content/uploads/2017/05/sai-kiran-anagani-209542.jpg
+	/home/petsoprs/public_html/wp-content/uploads/2017/05/scott-webb-56901.jpg
+	/home/petsoprs/public_html/wp-content/uploads/2017/05/tamara-bellis-115355.jpg
+	/home/petsoprs/public_html/wp-content/uploads/2017/05/teddy-kelley-124043-1.jpg
+	/home/petsoprs/public_html/wp-content/uploads/2017/05/teddy-kelley-124043.jpg
+	/home/petsoprs/public_html/wp-content/uploads/2017/05/thomas-somme-220647.jpg
+	/home/petsoprs/public_html/wp-content/uploads/2017/05/thought-catalog-214785.jpg
+	/home/petsoprs/public_html/wp-content/uploads/2017/05/wendy-aros-routman-254111.jpg
+	/home/petsoprs/public_html/wp-content/uploads/backwpup-d77279-backups/backwpup_d7727902_2017-06-14_21-09-34.zip
+	/home/petsoprs/public_html/wp-content/uploads/backwpup-d77279-backups/backwpup_d7727902_2017-06-14_21-09-34.zip.0wGCzV
+	/home/petsoprs/public_html/wp-content/uploads/backwpup-d77279-backups/backwpup_d7727902_2017-06-14_21-09-34.zip.aafcPj 
+EXTS:  not set 
+---------------------------------------- 
+COMPRESSING 
+SIZE:	918.17MB 
+STATS:	Dirs 2,423 | Files 16,039 
+SQL ADDED: 20170725_petsonbreakcom_319b3d547c55ddb04518170725064527_database.sql 
+ZipArchive Object
+(
+    [status] => 0
+    [statusSys] => 0
+    [numFiles] => 18462
+    [filename] => /home/petsoprs/public_html/wp-snapshots/tmp/20170725_petsonbreakcom_319b3d547c55ddb04518170725064527_archive.zip
+    [comment] => 
+)
+ 
+COMPRESSION RESULT: '1' 
+COMPRESSED SIZE: 792.36MB 
+ARCHIVE RUNTIME: 148.66 sec. 
+MEMORY STACK: 62MB 
+
+******************************************************************************** 
+MAKE INSTALLER: 
+******************************************************************************** 
+Build Start 
+Build Finished 
+Preping for use 
+Template parsed with new data 
+Complete [/home/petsoprs/public_html/wp-snapshots/tmp/20170725_petsonbreakcom_319b3d547c55ddb04518170725064527_installer.php] 
+Added to archive 

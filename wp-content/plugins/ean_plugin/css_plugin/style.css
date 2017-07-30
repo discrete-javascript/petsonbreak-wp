@@ -1,0 +1,31 @@
+ul , li { list-style:none;}
+a { text-decoration:none;}
+.content-holder h2{display:none;}
+
+#tw_wrapper{ clear:both; margin:0 auto; width:990px;}
+.tw_left { float:left; width:210px;}
+.tw_left h2 { overflow:auto; font-size:16px; font-weight:normal; margin-bottom:15px;}
+.tw_left ul { clear:both;}
+.tw_left ul li { clear:both; overflow:auto; margin-bottom:6px; border-bottom:1px dashed #e1e1e1; padding-bottom:5px;}
+.tw_left ul li a { clear:both; color:#3b49b5;}
+.tw_left ul li a:hover { font-weight:bold;}
+
+
+
+.tw_mid { float:left; width:545px; margin:0 0 0 15px;}
+.tw_mid h2 { clear:both; background:#89c254; padding:10px; color:#FFF; margin-bottom:15px; font-size:16px; font-weight:normal;}
+.tw_mid h3 { clear:both;  padding:0px 10px 05px 10px; color:#000; font-size:14px; font-weight:normal; margin-bottom:15px; border-bottom:1px dashed #dbdbdb;}
+.tw_mid ul { clear:both;}
+.tw_mid ul li { float:left; width:162px; margin-left:15px; margin-bottom:15px; text-align:center;  font-size:14px;}
+.tw_mid ul li p { clear:both; display:block; overflow:auto; margin-bottom:5px;}
+.tw_mid ul li  span { clear:both; display:block;}
+
+.tw_right { float:right; width:210px;}
+.tw_right h2 { overflow:auto; font-size:16px; font-weight:normal; margin-bottom:15px;}
+.tw_right ul { clear:both;}
+.tw_right ul li { clear:both; overflow:auto; margin-bottom:6px; border-bottom:1px dashed #e1e1e1; padding-bottom:5px;}
+.tw_right ul li a { clear:both; color:#3b49b5;}
+.tw_right ul li a:hover { font-weight:bold;}
+.make_it_visible{ display:block;}
+
+

@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Response> <id>6</id> <name>Manage Mail Messages</name> <title_of_page>Manage Mail Messages</title_of_page> <caption_of_button>Mail Message</caption_of_button> <title_of_table>Title, Subject</title_of_table> <table_name>twc_mail_messages</table_name> <parent_id>1</parent_id> <manage_page_field_list>id, title,subject, published, date_time, status_deleted, sort_order</manage_page_field_list>  <sort_order_displayed>sort_order</sort_order_displayed>
+	<exclude_sort_order>Yes</exclude_sort_order>
+	<exclude_publish>Yes</exclude_publish>  
+	<short_code_Twc>Banner</short_code_Twc> 
+  <forms_twc>
+    <fields
+		fieldset="Start"
+		caption="Messages Details"
+		name="fieldset" aligns="left" />
+	<fields
+		display_this_on_form="Y"
+		event_on_form="Y"
+		name="title"
+		type="text"
+		datatype="text"
+		label="Message Title"
+		validation="Y"
+		class="span12"
+		validation_description="This is my new text for the Title of Page, You can find it while you edit this page conent." />
+	
+	<fields
+		display_this_on_form="Y"
+		event_on_form="Y"
+		name="subject"
+		type="text"
+		datatype="text"
+		label="Subject"
+		validation="Y"
+		class="span12"
+		validation_description="This is my new text for the Title of Page, You can find it while you edit this page conent." />	
+	<fields
+		display_this_on_form="Y"
+		name="messages_content"
+		rich_text_enable="Y"
+		cols="30" 
+		rows="20"
+		type="textarea"
+		datatype="text"
+		label="Message Content"
+		validation="y"
+		class="wysiwg_full"
+		validation_description="This is my new text for the Page Content of Page." />
+	
+	<fields
+		fieldset="End"
+		caption="Page Details"
+		name="fieldset" />	
+	<fields
+		fieldset="Start"
+		caption="Positioning and Other Details"
+		name="fieldset" aligns="right" />	
+    <fields
+		display_this_on_form="Y"
+		name="published"
+		type="radio"
+		datatype="text"
+		label="Published"
+		validation="Y"
+		class=""
+		validation_description="Check on if you want to Publish this Page">
+      <options value="Yes" checked="true">Yes</options>
+      <options value="No">No</options>
+    </fields>
+	
+    <fields
+		display_this_on_form="N"
+		name="sort_order"
+		type="hidden"
+		datatype="text"
+		label="Sorting Order"
+		validation="Y"
+		class="span12"
+		validation_description="Please Enter the Number (Sorting Order)." />
+	<fields
+		fieldset="End"
+		caption="Manage Meta Informations"
+		name="fieldset" />
+	
+	<fields
+		fieldset="End"
+		caption="Manage Meta Informations"
+		name="fieldset" />
+  </forms_twc>
+</Response>

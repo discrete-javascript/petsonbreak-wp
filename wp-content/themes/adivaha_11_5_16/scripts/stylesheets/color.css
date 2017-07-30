@@ -1,0 +1,81 @@
+/* color code */
+a {color: #00B7FF;}
+body {background: rgb(248, 249, 250);}
+.header-top{background-color: #2d67b2;}
+.hd-left li a , .hd-right li a {color: #fff;}
+.header-bottom{background-color: #fff;}
+.logo a{color: #9e5555;}
+.header-bottom .hd-left li a , .header-bottom .hd-right li a {color: #787879;}
+.borders-color{border-color: #e5e5e5;}
+.AdBanner{background-color:#234b80;}
+.AdBanner .search_Form{background: #2d67b2;}
+.horizontal-box{background-color: #2d67b2;}
+.horizontal-box-2{background-color: #2d67b2;}
+
+.searchbox ul li label{color: #fff;}
+.searchbox ul li input[type=text]{background-color:#fff;}
+.Hotel-title li{color:#777;background-color:#fff;}
+/*.Hotel-title li a{color:#777;}*/
+.hotel-booking button{background-color: #21a8dd;color: #fff;}
+.paging a { padding:5px 10px; background:#06C; color:#FFF; text-decoration:none; }
+.SrB-left h2 {color: #777777;}
+.SrB-left p {color: #777777;}
+.AdBanner .banner-caption p {color: #fff;}
+.SrB-right ul li a {color: #777;}
+.hotel-price1 li .hot-NA{background-color: #2d67b2;color: #fff;}
+.hotel-price1 li{background-color: #fff;}
+.hotel-price1 li:hover{border: #234b80 1px solid;}
+.button { background-color: #234b80; color:#fff; }
+.btn-color{ background-color: #234b80; color:#fff; } 
+.HOT-PRC{color: #fff; background-color: rgba(35, 75, 128, 0.5);}
+.HOT-NM{color: #333;}
+/* end color code */
+
+
+.hot-fltr ul li{background-color: #fff;}
+.filter-All{color: #ff5a5f;}
+.flt-price p{color: #ff5a5f;}
+.flt-price a{color: #ff5a5f;}
+.rat a{background-color: #fff;color: #ff5a5f;}
+.check-box2 ul li input[type="checkbox"]{background-color: #fff;}
+.suggestions{background-color: #fff;}
+
+
+.hotel-information-1{color:#000;}
+.btn-book{background-color: #234b80;color:#fff;}
+.room-det-img{background: #fff;}
+.modify_searchContainer{background: #2d67b2;}
+.modBookBtn{color: #fff;background: #234b80;}
+.hotdetNav_body{background: #fff;}
+.nav_active{   background: #2d67b2;color:#fff !important;}
+.hote_map-container{background: rgb(229, 227, 223);}
+.suggested_hotel{background:#fff;}
+.sug_hotel_col{background: #fbfbfb;}
+.sName{background: rgba(0,0,0,0.8);color: #fff;}
+.sug_hotel_bot{background: #fff;}
+.sug_book{background: #234b80;}
+
+.hotel-booking-left{background: #fff;}
+.hotel-booking-right-col{background: #fff;}
+.payment_info_wrapper{background-color: #f7f7f7;}
+.payConfBtn{background: #234b80;color: #fff;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

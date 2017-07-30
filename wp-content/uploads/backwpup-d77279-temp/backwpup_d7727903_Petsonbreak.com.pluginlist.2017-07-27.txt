@@ -1,0 +1,92 @@
+------------------------------------------------------------
+  Plugin list generated with BackWPup version: 3.4.0
+  http://backwpup.com
+  Blog Name: Petsonbreak.com
+  Blog URL: http://petsonbreak.com
+  Generated on: 2017-07-27 09:59.40
+------------------------------------------------------------
+
+
+All plugin information:
+------------------------------
+Akismet Anti-Spam (v.3.3.2) from Automattic
+	https://akismet.com/
+BackWPup (v.3.4.0) from Inpsyde GmbH
+	http://backwpup.com
+Black Studio TinyMCE Widget (v.2.3.2) from Black Studio
+	https://wordpress.org/plugins/black-studio-tinymce-widget/
+Coming Soon Page & Maintenance Mode by SeedProd (v.5.0.10) from SeedProd
+	http://www.seedprod.com
+Duplicator (v.1.2.14) from Snap Creek
+	http://www.lifeinthegrid.com/duplicator/
+Easy Custom Sidebars (v.1.0.9) from Titanium Themes
+	http://www.titaniumthemes.com/wordpress-sidebar-plugin
+Easy Google Fonts (v.1.4.3) from Titanium Themes
+	
+Email Verification / SMS verification / Mobile Verification (v.3.2.31) from miniOrange
+	http://miniorange.com
+Expedia Support Plugin (v.6.6) from Prashant Thakur
+	http://www.wordpress-travel-affiliate-themes.com
+Forget About Shortcode Buttons (v.2.1.0) from Designs & Code
+	http://www.designsandcode.com/wordpress-plugins/forget-about-shortcode-buttons-plugin/
+Google Analytics Dashboard for WP (GADWP) (v.5.1.1.1) from Alin Marcu
+	https://deconf.com
+Hotel in Wordpress (v.1.6) from xcubesolutions
+	http://www.xcubesolutions.com
+Link Library (v.5.9.13.24) from Yannick Lefebvre
+	http://wordpress.org/extend/plugins/link-library/
+Page Builder by SiteOrigin (v.2.5.8) from SiteOrigin
+	https://siteorigin.com/page-builder/
+Share Line (v.1.1) from Karun Jaraslertsuwan
+	http://URI_Of_Page_Describing_Plugin_and_Updates
+Simple Site Map Page (v.1.1) from Jean-Baptiste Audras, project manager @ Whodunit
+	https://jeanbaptisteaudras.com/portfolio/extension-wordpress-plan-de-site/
+SiteOrigin CSS (v.1.1.4) from SiteOrigin
+	https://siteorigin.com/css/
+SiteOrigin Widgets Bundle (v.1.9.3) from SiteOrigin
+	https://siteorigin.com/widgets-bundle/
+Smart Slider 3 (v.3.2.4) from Nextend
+	https://smartslider3.com/
+Spacer (v.3.0.4) from Justin Saad
+	http://www.clevelandwebdeveloper.com/wordpress-plugins/spacer
+Tawk.to Live Chat (v.0.3.1) from Tawkto
+	https://tawk.to
+UpdraftPlus - Backup/Restore (v.1.13.4) from UpdraftPlus.Com, DavidAnderson
+	https://updraftplus.com
+W3 Total Cache (v.0.9.5.4) from Frederick Townes
+	https://www.w3-edge.com/wordpress-plugins/w3-total-cache/
+WordPress Importer (v.0.6.3) from wordpressdotorg
+	http://wordpress.org/extend/plugins/wordpress-importer/
+Yoast SEO (v.5.0.2) from Team Yoast
+	https://yoast.com/wordpress/plugins/seo/#utm_source=wpadmin&utm_medium=plugin&utm_campaign=wpseoplugin
+
+Active plugins:
+------------------------------
+Akismet Anti-Spam
+BackWPup
+Black Studio TinyMCE Widget
+Coming Soon Page & Maintenance Mode by SeedProd
+Duplicator
+Easy Custom Sidebars
+Easy Google Fonts
+Email Verification / SMS verification / Mobile Verification
+Expedia Support Plugin
+Forget About Shortcode Buttons
+Google Analytics Dashboard for WP (GADWP)
+Hotel in Wordpress
+Link Library
+Page Builder by SiteOrigin
+Share Line
+Simple Site Map Page
+SiteOrigin CSS
+SiteOrigin Widgets Bundle
+Smart Slider 3
+Spacer
+Tawk.to Live Chat
+UpdraftPlus - Backup/Restore
+W3 Total Cache
+WordPress Importer
+Yoast SEO
+
+Inactive plugins:
+------------------------------

@@ -1,0 +1,54 @@
+********************************************************************************
+DUPLICATOR-LITE PACKAGE-LOG: 2017-07-25 05:55:26
+NOTICE: Do NOT post to public sites or forums 
+********************************************************************************
+VERSION:	1.2.14
+WORDPRESS:	4.8
+PHP INFO:	5.4.45 | SAPI: litespeed
+SERVER:		Apache Phusion_Passenger/4.0.10 mod_bwlimited/1.4 
+PHP TIME LIMIT: (0) no time limit imposed 
+PHP MAX MEMORY: 2048M (256M default) 
+MEMORY STACK: 55.25MB 
+
+********************************************************************************
+DATABASE:
+********************************************************************************
+BUILD MODE:   PHP(query limit - 100)
+MYSQLTIMEOUT: 5000
+MYSQLDUMP:    Is Supported 
+TABLES: total:85 | filtered:0 | create:85 
+FILTERED: [] 
+SQL CREATED: 20170725_petsonbreakcom_b82cddabf00b987c8477170725055358_database.sql 
+SQL FILE SIZE: 31.39MB (32911952) 
+SQL FILE TIME: 2017-07-25 05:57:40 
+SQL RUNTIME: 134.20 sec. 
+
+******************************************************************************** 
+ARCHIVE (ZIP): 
+******************************************************************************** 
+ARCHIVE DIR:  /home/petsoprs/public_html 
+ARCHIVE FILE: 20170725_petsonbreakcom_b82cddabf00b987c8477170725055358_archive.zip 
+FILTERS: *ON* 
+DIRS:
+	not set 
+FILES:
+	/home/petsoprs/public_html/12thjune2017.zip
+	/home/petsoprs/public_html/cgi-bin.zip
+	/home/petsoprs/public_html/wp-content/uploads/backwpup-d77279-backups/backwpup_d7727902_2017-06-14_21-09-34.zip
+	/home/petsoprs/public_html/wp-content/uploads/backwpup-d77279-backups/backwpup_d7727902_2017-06-14_21-09-34.zip.0wGCzV
+	/home/petsoprs/public_html/wp-content/uploads/backwpup-d77279-backups/backwpup_d7727902_2017-06-14_21-09-34.zip.aafcPj 
+EXTS:  not set 
+---------------------------------------- 
+COMPRESSING 
+SIZE:	1.5GB 
+STATS:	Dirs 2,394 | Files 16,058 
+SQL ADDED: 20170725_petsonbreakcom_b82cddabf00b987c8477170725055358_database.sql 
+ZipArchive Object
+(
+    [status] => 0
+    [statusSys] => 0
+    [numFiles] => 18452
+    [filename] => /home/petsoprs/public_html/wp-snapshots/tmp/20170725_petsonbreakcom_b82cddabf00b987c8477170725055358_archive.zip
+    [comment] => 
+)
+ 

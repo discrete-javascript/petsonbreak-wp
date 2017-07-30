@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Response>
+	<id>7</id>
+	<name>Manage Category</name>
+	<title_of_page>Manage Category</title_of_page>
+	<caption_of_button>Category</caption_of_button>
+	<title_of_table>Title,Description</title_of_table>
+	<table_name>twc_service_category</table_name>
+	<parent_id>1</parent_id>
+	<manage_page_field_list>id,title,description,published,date_time, status_deleted, sort_order</manage_page_field_list>
+	<sort_order_displayed>sort_order</sort_order_displayed>
+	<exclude_sort_order>Yes</exclude_sort_order>
+	<exclude_publish>Yes</exclude_publish>  
+	<img_displayed>category_image</img_displayed>
+    <small_img_folder_path>Category/</small_img_folder_path>
+
+  <forms_twc>
+    <fields
+		fieldset="Start"
+		caption="Messages Details"
+		name="fieldset" aligns="left" />
+		
+	<fields
+		display_this_on_form="Y"
+		event_on_form="Y"
+		name="title"
+		type="text"
+		datatype="text"
+		label="Title"
+		validation="Y"
+		class="span12"
+		validation_description="This is my new text for the Title of Page, You can find it while you edit this page conent." />
+		
+		<fields
+		display_this_on_form="Y"
+		event_on_form="Y"
+		name="description"
+		type="textarea"
+		datatype="text"
+		label="Description"
+		validation="Y"
+		class="span12"
+		validation_description="This is my new text for the Title of Page, You can find it while you edit this page conent." />
+		
+	<fields
+		display_this_on_form="Y"
+		name="category_image"
+		type="file"
+		datatype="text"
+		label="Category Image"
+		validation="N"
+		class=""
+		sizes="19"
+		styles=""
+		validation_description="Logo">		
+		<options paths="Category/" crop="Yes" height="210px" width="430px" priority_defined_while_cropping = "height"></options>    
+	</fields>
+	
+	<fields
+		fieldset="End"
+		caption="Page Details"
+		name="fieldset" />	
+	<fields
+		fieldset="Start"
+		caption="Other Details"
+		name="fieldset" aligns="right" />	
+		
+	<fields
+		display_this_on_form="Y"
+		name="display_on_homepage"
+		type="radio"
+		datatype="text"
+		label="Display On Homepage"
+		validation="Y"
+		class=""
+		validation_description="Check on if you want to Publish this Page">
+      <options value="Yes"> Yes</options>
+      <options value="No" checked="true">No</options>
+    </fields>
+	
+	<fields
+		display_this_on_form="Y"
+		name="is_popular"
+		type="radio"
+		datatype="text"
+		label="Is Popular"
+		validation="Y"
+		class=""
+		validation_description="Check on if you want to Publish this Page">
+      <options value="Yes"> Yes</options>
+      <options value="No" checked="true">No</options>
+    </fields>
+	
+    <fields
+		display_this_on_form="Y"
+		name="published"
+		type="radio"
+		datatype="text"
+		label="Published"
+		validation="Y"
+		class=""
+		validation_description="Check on if you want to Publish this Page">
+      <options value="Yes" checked="true">Yes</options>
+      <options value="No">No</options>
+    </fields>
+	
+	
+	
+    <fields
+		display_this_on_form="N"
+		name="sort_order"
+		type="hidden"
+		datatype="int"
+		label="Sorting Order"
+		validation="Y"
+		class="span12"
+		validation_description="Please Enter the Number (Sorting Order)." />
+	<fields
+		fieldset="End"
+		caption="Manage Meta Informations"
+		name="fieldset" />
+
+  </forms_twc>
+</Response>

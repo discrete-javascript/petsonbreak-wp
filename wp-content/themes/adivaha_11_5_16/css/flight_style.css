@@ -1,0 +1,352 @@
+
+.flight-search-result{position: relative !important;width: 96%;margin: 0 auto;}
+.flight-item1{    background: #fbfbfb;float: left;width: 25%;text-align: center;padding: 20px 18px;}
+.flight-item2{float: left;width: 68%;}
+.flight-item23{float: right;width: 7%;height: 195px;overflow: hidden;padding: 92px 0px 0px 22px;    background: #fbfbfb;}
+.flight-item23 .fa{font-size:15px;}
+.eDreams-prc{}
+.flight-item1 p{font-size: 25px;text-align: center;margin: 5px 0px 2px 0px;font-family: Georgia, "Times New Roman", Times, serif;font-weight: 100;color: #59c45a;}
+.book-now-btn{width: 100%;background: #009af3;color: #fff;margin: 14px 0px;float: left;    padding: 12px 0px 12px 0px;font-weight: 600;}
+.flight-imges1{width:100%;}
+.flight-imges1 img{height: 35px;}
+.eDreams-prc{}
+.eDreams-prc a{width:50%;float:left;}
+.flight-price1{}
+.flight-price1 li{width:100%;float:left;background: #fff;    margin-bottom: 13px;    border: 1px solid #dfdfdf;position: relative;}
+.flight-price1 li:hover{    border: 1px solid #009af3;}
+
+.ticket-segments {
+    position: relative;
+    height: 100%;
+    padding: 26px 9px 30px 15px;
+}
+.showdiv_baggages{clear: both;padding: 12px;background-color: #f9fafd;width: 100%;bottom: 0px;}
+.showdiv_baggages h5{font-size: 14px;text-transform: capitalize; margin: 10px 0px;}
+.add_key_value1{}
+/*
+.add_key_value1 h5{float: left;width: 10%;}
+.add_key_value1 span{float: right;width: 90%;}*/
+.showdiv_baggages .baggages_1 span{  line-height: 17px;
+    font-size: 13px;    overflow: hidden;
+    color: #777;    margin: 10px 0px;}
+.segment-block {
+    margin-bottom: 6px;
+	float: left;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.flight-arrive-info, .flight-depart-info {
+    width: 28%;
+}
+
+.semibold {
+    font-family: "ProximaNova-Semibold",Helvetica,sans-serif;
+}
+
+.flight-date-time .flight-time {
+    font-size: 20px;
+    line-height: 33px;
+    letter-spacing: -.6px;
+}
+
+.flight-date-wrapper, .flight-time {
+    display: inline-block;
+}
+
+.flight-date-wrapper {
+    margin: 0 4px;
+}
+.flight-date-wrapper, .flight-time {
+    display: inline-block;
+}
+.flight-date-time .meridiem {
+    font-size: 10px;
+    line-height: 12px;
+    letter-spacing: .6px;
+}
+
+.flight-date-time .flight-date {
+    font-size: 11px;
+    line-height: 13px;
+}
+
+.flight-duration-info {
+    width: 40%;
+    text-align: center;
+	padding: 0px 0px;
+}
+
+.flight-duration-info .stops-info, .flight-place-title {
+    font-size: 12px;
+    line-height: 15px;
+}
+
+.icon-departing-plane {
+    width: 58%;
+    height: 15px;
+    margin: 0 auto;
+}
+
+.flight-duration-info .flight-duration {
+    font-size: 13px;
+    line-height: 16px;
+}
+
+.flight-arrive-info {
+    text-align: right;
+}
+
+
+
+.flight-arrive-info, .flight-depart-info, .flight-duration-info {
+    display: inline-block;
+    box-sizing: border-box;
+}
+
+.flight-duration-info .stops-info, .flight-place-title {
+    font-size: 12px;
+    line-height: 15px;
+}
+
+.icon-departing-plane {
+    background-image: url(../images/flight.jpg);
+	    background-size: 100% 100%;
+}
+
+.ticket-details>.segment-container {
+    padding: 24px 57px 24px 20px;
+    	background-color: #f9fafd;
+}
+.direction-title {
+    font-size: 22px;
+    line-height: 26px;
+    padding-bottom: 20px;
+    letter-spacing: .4px;
+    color: #000;
+}
+
+.ticket-details .segment-flights.flight-direct {
+    border-left-style: solid;
+}
+.ticket-details .segment-flights.depart, .ticket-details .segment-flights.depart .flight-stop:before {
+    border-color: #1bc951;
+}
+.ticket-details .segment-flights {
+    position: relative;
+    margin-left: 9px;
+    border-left: 1px dotted;
+}
+.flight-segment {
+    padding-left: 24px;
+}
+
+.flight-segment>.airline-info {
+    font-size: 14px;
+    line-height: 17px;
+}
+.clearfix {
+    zoom: 1;
+}
+
+.flight-segment .airline-logo-container {
+    display: inline-block;
+    padding-top: 4px;
+}
+
+.flight-segment .airline-details {
+    display: inline-block;
+    margin-left: 8px;
+    vertical-align: top;
+}
+
+
+.flight-segment .airline-details {
+    display: inline-block;
+    margin-left: 8px;
+    vertical-align: top;
+}
+
+.semibold {
+    
+}
+
+.flight-segment .middot {
+    padding: 0 4px;
+}
+
+.flight-segment .airline-features {
+    position: relative;
+    top: -3px;
+}
+.flight-segment>.segment-info {
+    font-size: 14px;
+    margin-top: 16px;
+}
+.flight-segment .segment-depart {
+    position: relative;
+    margin-right: 30px;
+}
+.flight-segment .segment-arrive {
+    margin-right: 20px;
+}
+.flight-segment .segment-arrive, .flight-segment .segment-depart {
+    width: 140px;
+}
+.flight-segment .segment-arrive, .flight-segment .segment-depart, .flight-segment .segment-duration {
+    display: inline-block;
+}
+.flight-segment .segment-duration {
+    width: 75px;
+}
+.flight-segment .segment-info-title {
+    line-height: 20px;
+    letter-spacing: .6px;
+    color: #464a4d;
+}
+.flight-segment .segment-info-name {
+    font-size: 13px;
+    line-height: 20px;
+    opacity: .5;
+}
+
+.g-text-overflow {
+    display: block;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    -o-text-overflow: ellipsis;
+}
+
+.flight-segment .segment-info-date {
+    line-height: 20px;
+}
+
+.flight-segment .segment-info-title {
+    line-height: 20px;
+    letter-spacing: .6px;
+    color: #464a4d;
+}
+.flight-segment .segment-info-name {
+    font-size: 13px;
+    line-height: 20px;
+    opacity: .5;
+}
+
+.flight-segment .segment-info-date {
+    line-height: 20px;
+}
+
+.flight-segment .segment-depart .icon-plane {
+    position: absolute;
+    top: 2px;
+    right: -24px;
+    width: 11px;
+    height: 11px;
+}
+
+.icon-plane {
+    background-image: url(../images/flight.jpg);
+	    background-size: 50% 100%;
+		background-repeat:none;
+}
+
+.ticket-details{clear: both;float: right;width: 100%;background-color:#f9fafd;}
+.flight-items{    cursor: pointer;}
+.ticket-top-block .best-ticket-label.price {
+    background: #fdaf13;
+}
+
+.ticket-top-block .best-ticket-label {
+    font-size: 9px;
+    color: #fff;
+    letter-spacing: .6px;
+    line-height: 11px;
+    padding: 4px 9px;
+    position: relative;
+    margin-left: -18px;
+}
+
+
+.icon-label-corner {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 5px;
+    height: 19px;
+}
+.g-uppercase {
+    text-transform: uppercase;
+}
+.best-ticket-label{    float: right;
+        padding: 5px 11px;
+    margin-right: 23px;
+    background-color: rgba(89, 196, 90, 0.8);
+    font-size: 17px !important;}
+	
+	.flight-items:focus, .flight-item1:focus{outline:none;}
+	
+.flight-depart-info, .flight-duration-info {
+    border-right: 0px dotted #59c45a;
+}
+.flight-one787{}
+.flight-one788{padding: 18px 0px 0px 0px;}
+.ticket-details .segment-flights.depart, .ticket-details .segment-flights.depart .flight-stop:before {
+    border-color: #1bc951;
+}
+
+.flight-stop:before, .ticket-details .segment-flights:after, .ticket-details .segment-flights:before {
+    left: -9px;
+    box-sizing: content-box;
+    width: 11px;
+    height: 11px;
+    border: 3px solid #f9fafd;
+    border-radius: 11px;
+    position: absolute;
+    display: block;
+   /* content: '';*/
+}
+
+.ticket-details .segment-flights:before {
+    top: 0;
+}
+
+.flight-stop:before {
+    top: 16px;
+    left: -30px;
+    box-sizing: border-box;
+    border: 2px solid;
+    outline: 3px solid #f9fafd;
+    background: #f9fafd;
+}
+
+.flight-stop {
+    font-size: 14px;
+    position: relative;
+    line-height: 20px;
+    height: 44px;
+    margin: 18px 0 18px 24px;
+    padding: 10px 0;
+    color: #ff3e00;
+    border-top: 1px solid #e2e8ee;
+    border-bottom: 1px solid #e2e8ee;
+}
+.ticket-details .segment-flights.return, .ticket-details .segment-flights.return .flight-stop:before {
+    border-color: #fe9f00;
+}
+
+.flight-stop:before {
+    top: 16px;
+    left: -30px;
+    box-sizing: border-box;
+    border: 2px solid;
+    outline: 3px solid #f9fafd;
+    background: #f9fafd;
+}
+.flight-stop > .flight-layover-airport {font-size: 13px;float: left;width: 90%;}
+.flight-stop .flight-duration {text-align: left;float: left;width: 10%;}
+:focus {
+    outline: -webkit-focus-ring-color auto 0px;
+}
+
+.date {    display: block;}

@@ -1,0 +1,125 @@
+.footer-content {color: #fff;font-size: 13px;}
+.footer-content .row {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0;
+    margin-bottom: 0;
+    max-width: 1176px;
+    *zoom: 1;
+}
+
+.column, .columns {
+    position: relative;
+    padding-left: 15px;
+    padding-right: 15px;
+    float: left;
+}
+
+.footer-content {
+    color: #fff;
+    font-size: 12px;
+    line-height: 16px;
+}
+
+.footer-content .social-icons-section {
+    margin-top: -28px;
+    text-align: right;
+    margin-bottom: 5px;
+}
+.footer-content a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.footer-content .social-icons-section .social-icon {
+    margin-left: 15px;
+}
+
+.footer-content .footer-section {
+    margin-bottom: 20px;
+}
+
+.company-description{margin-top:40px;line-height:18px}
+.footer-content .composite-form-input .composite-form-input-button {
+    display: inline-block;
+    margin: 0px;
+    width: 47px;
+    height: 40px;
+    background-color: #bac0ba;
+    border-top: 1px solid #bac0ba;
+    border-right: 1px solid #bac0ba;
+    border-bottom: 1px solid #bac0ba;
+    border-left: 0px;
+    color: #fff;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.footer-content .composite-form-input .composite-form-input-field {
+    float: left;
+    margin: 0;
+    width: 75%;
+    height: 40px;
+    padding: 10px;
+    border: 1px solid #bac0ba;
+    vertical-align: middle;
+    background-color: #fff;
+    border-radius: 0px !important;
+}
+
+#footer .medium-3 {width: 25%;float: left; }
+#footer .medium-6 {width: 50%;float: left; }
+#footer .medium-4 {width: 25%;float: right; }
+.footer-content .footer-section.contact-information-section .footer-section-title .contact-information-phone-number {
+    float: left;
+    font-size: 22px;
+    color: #fff;
+    font-weight: bold;
+    line-height: 18px;
+}
+
+.footer-content .footer-section .footer-section-title {
+    font-weight: bold;
+    font-size: 14px;
+}
+.footer-content .footer-section .footer-section-content {
+    margin: 10px 0;
+}
+
+.large-4 {
+    width: 33.33333%;
+}
+
+
+.large-12 {
+    width: 100%;
+}
+
+.inline-pipe-list li {
+    display: inline;
+    margin-right: 2px;
+    list-style: none;
+}
+
+.footer-content a:hover {
+    text-decoration: underline;
+}
+
+.footer-section-partners-sites-list li::after {
+    content: " |";
+}
+
+.footer-section-partners-sites-list li {
+    float: left;
+    margin-right: 3px;
+}
+
+.inline-pipe-list li::after {
+    content: " |";
+}
+
+.footer-content .bordered-footer-column-separator {
+    border-left: 1px solid rgba(255,255,255,0.35);
+    border-right: 1px solid rgba(255,255,255,0.35);
+}

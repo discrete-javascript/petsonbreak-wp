@@ -1,0 +1,4 @@
+[08-Jun-2017 09:11:04 Etc/GMT] PHP Fatal error:  Call to undefined function add_action() in /home/petsoprs/public_html/wp-content/plugins/spacer/index.php on line 1912
+[08-Jun-2017 09:12:57 Etc/GMT] PHP Fatal error:  Call to undefined function add_action() in /home/petsoprs/public_html/wp-content/plugins/spacer/index.php on line 1912
+[12-Jun-2017 09:44:26 Etc/GMT] PHP Fatal error:  Call to undefined function add_action() in /home/petsoprs/public_html/wp-content/plugins/spacer/index.php on line 1912
+[17-Jul-2017 19:57:47 Etc/GMT] PHP Fatal error:  Call to undefined function add_action() in /home/petsoprs/public_html/wp-content/plugins/spacer/index.php on line 1912

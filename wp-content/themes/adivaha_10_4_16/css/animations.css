@@ -1,0 +1,74 @@
+	#myCarousel .carousel-caption h3{
+		-webkit-animation-name: fadeInUp;
+		-moz-animation-name: fadeInUp;
+		-ms-animation-name: fadeInUp;
+		-o-animation-name: fadeInUp;
+    animation-name: fadeInUp;
+    -webkit-animation-duration: 1s;
+    -moz-animation-duration: 1s;
+    -ms-animation-duration: 1s;
+    -o-animation-duration: 1s;
+    animation-duration: 1s;
+
+		}  
+	
+	
+	
+	.carousel-caption p{
+	-webkit-animation-name: fadeInUp;
+		-moz-animation-name: fadeInUp;
+		-ms-animation-name: fadeInUp;
+		-o-animation-name: fadeInUp;
+    animation-name: fadeIn;
+      -webkit-animation-duration: 3s;
+    -moz-animation-duration: 3s;
+    -ms-animation-duration: 3s;
+    -o-animation-duration: 3s;
+    animation-duration: 3s;
+		}  
+
+
+   .horizontal-box .nav>li>a:hover i {
+	-webkit-animation: toTopFromBottom 0.3s forwards;
+	-moz-animation: toTopFromBottom 0.3s forwards;
+	-ms-animation: toTopFromBottom 0.3s forwards;
+	-o-animation: toTopFromBottom 0.3s forwards;
+	animation: toTopFromBottom 0.3s forwards;
+}
+
+@-webkit-keyframes toTopFromBottom {
+	49% {
+		-webkit-transform: translateY(-100%);
+	}
+	50% {
+		opacity: 0;
+		-webkit-transform: translateY(100%);
+	}
+	51% {
+		opacity: 1;
+	}
+}
+@-moz-keyframes toTopFromBottom {
+	49% {
+		-moz-transform: translateY(-100%);
+	}
+	50% {
+		opacity: 0;
+		-moz-transform: translateY(100%);
+	}
+	51% {
+		opacity: 1;
+	}
+}
+@keyframes toTopFromBottom {
+	49% {
+		transform: translateY(-100%);
+	}
+	50% {
+		opacity: 0;
+		transform: translateY(100%);
+	}
+	51% {
+		opacity: 1;
+	}
+}

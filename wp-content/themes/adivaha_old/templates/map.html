@@ -1,0 +1,35 @@
+<div ng-controller="MyCtrl as vm" class="map-hotel">
+                
+                  <ng-map default-style="true" center="{{ vm.shops[0].position }}" zoom="3">
+                    <custom-marker ng-repeat="shop in vm.shops" id="{{shop.id}}" on-click="vm.showDetail(shop)" position="{{shop.position}}">
+                      <div> {{ shop.price }} </div>
+                    </custom-marker>
+                    <info-window id="foo-iw">
+                      <div ng-non-bindable="" class="map-top-1"> 
+							<div class="map-top-left">
+								<img src="http://cdn.photo.hotellook.com/image_v2/crop/h1783333_1/640/480.jpg" alt="">
+							</div>
+							
+							
+							<div class="map-top-right">
+								<p>{{vm.shop.id}}</p>
+								<p>{{vm.shop.name}}</p>
+								<a href="#" ng-click="vm.clicked(vm.shop.id)">Click Here</a> 
+							
+							</div>
+
+					  
+					<!--	
+					  
+					  id: {{vm.shop.id}}<br/>
+                        name: {{vm.shop.name}}<br/>
+                        Position 1: {{vm.shop.position}}<br/>
+                        Position 2: {{anchor.getPosition()}}<br/>
+                        Position 3: {{vm.map.markers[vm.shop.id].getPosition()}}<br/>
+                        <a href="#" ng-click="vm.clicked(vm.shop.id)">Click Here</a> 
+						-->
+						
+						</div>
+                    </info-window>
+                  </ng-map>
+                </div>

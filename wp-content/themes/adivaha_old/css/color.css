@@ -1,0 +1,158 @@
+@import 'https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i';a{color:#00B7FF;}
+a:hover, a:focus{text-decoration:none;}
+body{background:#fff;color:#222;}
+html.md-default-theme, html, body.md-default-theme, body{color:rgba(0,0,0,0.87);background-color:#fff;}
+.bg_white{background-color:#fff}
+.bg-grey{background:#f3f3f3;}
+.bg-white{background:#fff;}
+.header-top .navbar-nav>li>a{color:#fff;}
+.header-bottom .navbar-default{background-color:#fff;border-color:#fff;}
+.currency-inr .dropdown-menu .color-fauseall:hover, .language-en .dropdown-menu .color-fauseall:hover{color:#fff;}
+.currency-inr .dropdown-menu>li>a:hover, .dropdown-menu>li>a:focus{color:#fff;background-color:#59c45a;}
+.currency-inr .dropdown-menu>li:hover i, .dropdown-menu>li:focus i{color:#fff;background-color:#59c45a;}
+.navbar-right .open .fa-angle-down{color:#777;}
+.language-en .dropdown-menu>li>a:hover, .dropdown-menu>li>a:focus{color:#fff;background-color:#59c45a;}
+.header-bottom .navbar-default .navbar-nav>.open>a, .navbar-default .navbar-nav>.open>a:hover, .navbar-default .navbar-nav>.open>a:focus{color:#fff;background:none !important;}
+.header-bottom .navbar-default .navbar-nav>.open>a, .navbar-default .navbar-nav>.open>a:hover, .navbar-default .navbar-nav>.open>a:focus i{color:#fff;}
+.datepicker-background-div{background:#fff;color:#777;}
+.datepicker-background-div .md-button.md-icon-button md-icon, button.md-button.md-fab md-icon{color:#59c45aa;}
+.datepicker-background-div .md-default-theme .md-calendar-date.md-calendar-selected-date .md-calendar-date-selection-indicator, .md-calendar-date.md-calendar-selected-date .md-calendar-date-selection-indicator, .md-default-theme .md-calendar-date.md-focus.md-calendar-selected-date .md-calendar-date-selection-indicator, .md-calendar-date.md-focus.md-calendar-selected-date .md-calendar-date-selection-indicator{background:#59c45aa;color:rgba(255,255,255,0.87);border-color:transparent;}
+.datepicker-background-div .md-default-theme .md-calendar-day-header, .md-calendar-day-header{background:#59c45aa;color:#fff;}
+.flt-price .rzslider .rz-bar{background:#cccac5;}
+.flt-price .rzslider .rz-bar.rz-selection{background:#59c45aa;}
+.hotel_filter_label span{font-family:Arial,Helvetica Neue,Helvetica,sans-serif;}
+.filter_criteria span{font-family:Arial,Helvetica Neue,Helvetica,sans-serif;}
+.criteria_listing .md-checkbox .md-icon{background-color:#fff;}
+#findbyhotelname{color:#555555;background-color:#ffffff;background-image:none;}
+.suggestions{background:#FFF;font-family:Arial, Helvetica, sans-serif;}
+.book-btn-1{background-color:#59c45aa;color:#fff;}
+.book-btn-2{background-color:#59c45aa;color:#fff;}
+.book-btn-2:hover .hover-div{background;#ccc;}
+.hover-div{background:rgba(0, 0, 0, 0.7);}
+.hover-div ul li span{color:#fff;}
+.h_name_or1{color:#808080;}
+.hotl_col_right{background:rgba(0,0,0,0.8);color:#fff;}
+.price_strike{font-family:Arial, Helvetica, sans-serif;color:#999;}
+.price{font-family:Georgia, "Times New Roman", Times, serif;color:#fff;}
+.ppr{font-family:Arial, Helvetica, sans-serif;color:#000;}
+.savings-message{color:#fff;}
+.hotel_sort_options li{background:#fff;color:#666;}
+.hotel_sort_options li a{color:#666;}
+.hotel_sort_options li a:hover{color:#000;}
+.intr-right ul li a{color:#222;}
+.h2-style1{color:#666;}
+.dropdown-text-1{background-color:#eee;}
+.dropdown-content-1{background-color:#eee;}
+.dropdown-content-1 a:hover{background:#e8e8e8;}
+.dropdown-toggle-1:hover ~ .dropdown-text-1, .dropdown-toggle-1:focus ~ .dropdown-text-1{background-color:#e8e8e8;}
+.total_left2{color:#59c45aa;}
+.total_right2{color:#59c45aa;}
+.payment_desc{color:#666666;}
+.footer-top{Background:#59c45aa;}
+.foot-colHead{color:#fff;}
+.social_links .fa{background-color:#fff;color:#59c45aa;}
+.footer_links a{color:#fff;}
+.footer_links span{color:#fff;}
+.footer_terms ul li{color:#000;}
+.footer_terms ul li a{color:#000;}
+.footer-bottom{background:-webkit-linear-gradient(#dcd5d5,#fff);background:-linear-linear-gradient(#dcd5d5,#fff);background:-moz-linear-gradient(#dcd5d5,#fff);}
+.block-category{color:#C40000;}
+.block-title{color:#222;}
+.block-text{color:#222;}
+.service-icon i{color:#59c45aa;}
+.thumbnail-backg-3{background-color:#59c45aa;}
+.H3-days a{color:#fff;}
+.min_flt3 h3{color:#fff;}
+.min_3lr{color:#fff;}
+.thumb_title h3{color:#fff;}
+.tour_country h3{color:#fff;}
+.parallax .details{background-color:#fff;}
+.parallax h1{color:#fff;}
+.parallax p{color:#fff;}
+.parallax .details h2{color:#777;}
+.parallax .details p{color:#777;}
+.pac-container .pac-item:hover{background-color:#fafafa !important;}
+.pac-container .pac-item{color:#777;}
+.pac-item-query{color:#777;}
+.header-bottom .navbar-nav > li:hover{background-color:#59c45aa}
+.header-bottom .navbar-default .navbar-nav > li:hover a{color:#fff}
+.header-bottom .navbar-default .navbar-nav > li:hover i{color:#fff}
+.hd-left li a , .hd-right li a{color:#fff;}
+.header-bottom{background-color:#fff;box-shadow:0px 3px 5px 0px rgba(0, 0, 0, 0.2);}
+.logo a{color:#9e5555;}
+.header-bottom .hd-left li a , .header-bottom .hd-right li a{color:#787879;}
+.borders-color{border-color:#e5e5e5;}
+.AdBanner .search_Form{background:#59c45aa;}
+.horizontal-box-2{background-color:#59c45aa;}
+.header-top .nav .open > a, .nav .open > a:hover, .nav .open > a:focus{background-color:#fff !important;border-color:#fff ! important;color:#777;}
+.header-top .nav .open > a, .nav .open > a i:hover, .nav .open > a i:focus{background-color:#fff !important;border-color:#fff ! important;color:#777;}
+.currency-inr > a:hover{background-color:#59c45aa !important;border-color:#59c45aa ! important;}
+.currency-inr .fa{color:#fff;}
+.searchbox ul li label{color:#fff;}
+.searchbox ul li input[type=text]{background-color:#fff;}
+.Hotel-title li{color:#777;background-color:#fff;}
+.hotel-booking button{background-color:#21a8dd;color:#fff;}
+.paging a{padding:5px 10px;background:#06C;color:#FFF;text-decoration:none;}
+.SrB-left h2{color:#777777;}
+.SrB-left p{color:#777777;}
+.AdBanner .banner-caption p{color:#fff;}
+.SrB-right ul li a{color:#777;}
+.hotel-price1 li .hot-NA{background-color:#59c45aa;color:#fff;}
+.hotel-price1 li{background-color:#fff;}
+.hotel-price1 li:hover{border:#59c45aa 1px solid;transition:0.2s linear;}
+.button{background-color:#4fa550;color:#fff;}
+.btn-color{background-color:#59c45aa;color:#fff;}
+.HOT-PRC{color:#fff;background-color:rgba(35, 75, 128, 0.5);}
+.HOT-NM{color:#333;}
+.hot-fltr ul li{background-color:#fff;}
+.filter-All{color:#ff5a5f;}
+.flt-price p{color:#ff5a5f;}
+.flt-price a{color:#ff5a5f;}
+.rat a{background-color:#fff;color:#ff5a5f;}
+.check-box2 ul li input[type="checkbox"]{background-color:#fff;}
+.suggestions{background-color:#fff;}
+.hotel-information-1{color:#000;}
+.btn-book{background-color:#59c45aa;color:#fff;}
+.modify_searchContainer{background:#fcfcfc;}
+.modBookBtn{color:#fff;background:#59c45aa;}
+.hotdetNav_body{background:#fff;}
+.nav_active{background:#59c45aa;color:#fff !important;}
+.hote_map-container{background:#fff;}
+.suggested_hotel{background:#fff;}
+.sug_hotel_col{background:#fbfbfb;}
+.sug_hotel_bot{background:#fff;}
+.sug_book{background:#59c45aa;}
+.hotel-booking-left{}
+.hotel-booking-right-col{}
+.payment_info_wrapper{background-color:#f7f7f7;}
+.payConfBtn{background:#59c45aa;color:#fff;transition:0.2s linear;}
+.payConfBtn-clicked{background:#35b336 !important;color:#fff;transition:0.2s linear;}
+md-checkbox.md-default-theme:not(.md-checked) .md-icon, md-checkbox:not(.md-checked) .md-icon{border-color:rgb(89, 196, 90);}
+md-checkbox.md-default-theme.md-checked .md-icon, md-checkbox.md-checked .md-icon{background-color:rgb(89, 196, 90);}
+.bookNowBtn{border:none;background:#59c45aa !important;border-bottom:3px solid #59c45aa !important;}
+.savings-message{background:#59c45aa;}
+.starRat .fa-star{color:#59c45aa}
+.ckavl, .chngdate{background:#c41bbe;}
+.ckavl::after{border-bottom:98px solid #c41bbe;}
+.ckavl::after{border-bottom:98px solid #c41bbe;border-right:100px solid transparent;width:0;height:0;position:absolute;content:"";top:0;right:-100px;}
+.chngdate::after{border-top:69px solid #c41bbe !important;}
+.chngdate::after{border-top:69px solid #c41bbe;border-left:88px solid transparent;width:0;height:0;position:absolute;content:"";top:0;left:-85px;}
+.amenitiesFeatIcon .fa{color:#c41bbe;}
+.chkClass .fa{color:#59c45aa;}
+.color-fauseall{color:#59c45aa;}
+.roomFeedesc ul li:before{color:#59c45aa;}
+.no-records-msg h4{color:#59c45aa;}
+.room-detailso-serbox{background:#59c45aa;margin-bottom:10px;}
+.hotdetNav_listing li{color:#59c45aa;}
+.sugHotPrice{color:#59c45aa;}
+.roomMoreInfo a{color:#59c45aa;}
+.header-bottom .navbar-right .open{background-color:#59c45aa;}
+.header-bottom .navbar-right .open .dropdown-toggle{color:#fff;}
+.border-top-solid{border-top:#d9dad0 1px solid;border-bottom:#d9dad0 1px solid;}
+.room-add-age p{color:#333;}
+.header-bottom .navbar-default .navbar-nav .open > li > a > i{color:#fff;}
+#CDSPOP.cdsBx{background:none !important;}
+#CDSPOP.cdsBx .cdsData .cdsBranding dl{float:left !important;}
+.checkininstruc ul li:before{color:#59c45aa;}
+.returndisable i{color:#dcdada !important;}
+.directdisable i{color:#dcdada !important;}

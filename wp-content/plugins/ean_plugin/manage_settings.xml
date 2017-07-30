@@ -1,0 +1,510 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Response>
+  <id>10</id>
+  <display_in_left_menu>Yes</display_in_left_menu>
+  <name></name>
+  <title_of_page>Manage Settings</title_of_page>
+  <caption_of_button>Site Settings</caption_of_button>
+  <title_of_table>Site Settings</title_of_table>
+  <table_name>twc_settings</table_name>
+  <parent_id>2</parent_id>
+  <manage_page_field_list>id, home_bgcolor, published, date_time, status_deleted, sort_order</manage_page_field_list>
+  <sort_order_displayed>sort_order</sort_order_displayed>
+  <exclude_sort_order>Yes</exclude_sort_order>
+  <exclude_publish>Yes</exclude_publish>
+  <small_img_folder_path>Background_1600px_X_1200px/</small_img_folder_path>
+  <forms_twc>
+    <fields
+		fieldset="Start"
+		caption="Home BGColor and Image Information"
+		name="fieldset" aligns="left" />
+	
+	<fields
+		display_this_on_form="Y"
+		event_on_form="Y"
+		name="home_bgcolor"
+		type="text"
+		datatype="text"
+		label="Home BGColor"
+		validation="Y"
+		class="span12"
+		validation_description="This is my new text for the Title of Page, You can find it while you edit this page conent." />
+		
+	<fields
+		display_this_on_form="Y"
+		name="img_path1"
+		type="file"
+		datatype="text"
+		label="Home BG Image(1600px X 1200px)"
+		validation="N"
+		class=""
+		sizes="19"
+		styles=""
+		validation_description="Advertisement (Image)">		
+		<options paths="Background_1600px_X_1200px/" crop="No" height="1600px" width="1200px" priority_defined_while_cropping = "resize_width_then_height"></options>    
+	</fields>	
+	
+	<fields
+		display_this_on_form="Y"
+		name="welcome_background_color"
+		type="text"
+		datatype="text"
+		label="Welcome Bubble Background color"
+		validation="N"
+		class="span12"
+		validation_description="This is my new text for the Title of Page, You can find it while you edit this page conent." />
+		
+	<fields
+		display_this_on_form="Y"
+		name="globe_glass_url"
+		type="text"
+		datatype="text"
+		label="Globe Glass Url"
+		validation="N"
+		class="span12"
+		validation_description="This is my new text for the Title of Page, You can find it while you edit this page conent." />	
+	
+	<fields
+		display_this_on_form="Y"
+		name="welcome_title"
+		type="text"
+		datatype="text"
+		label="Welcome title"
+		validation="Y"
+		class="span12"
+		validation_description="This is my new text for the Title of Page, You can find it while you edit this page conent." />
+		
+	<fields
+		display_this_on_form="Y"
+		name="welcome_title_color"
+		type="text"
+		datatype="text"
+		label="Welcome title Color"
+		validation="N"
+		class="span12"
+		validation_description="This is my new text for the Title of Page, You can find it while you edit this page conent." />
+	
+    <fields
+		display_this_on_form="Y"
+		name="welcome_middle_text"
+		rich_text_enable="Y"
+		cols="30" 
+		rows="20"
+		type="textarea"
+		datatype="text"
+		label="Welcome Middle Text"
+		validation="Y"
+		class="wysiwg_full"
+		validation_description="This is my new text for the Page Content of Page." />
+		
+	<fields
+		display_this_on_form="Y"
+		name="welcome_middle_text_color"
+		type="text"
+		datatype="text"
+		label="Welcome Middle text Color"
+		validation="N"
+		class="span12"
+		validation_description="This is my new text for the Title of Page, You can find it while you edit this page conent." />
+
+		
+	  <fields
+		display_this_on_form="Y"
+		name="welcome_description"
+		rich_text_enable="Y"
+		cols="30" 
+		rows="20"
+		type="textarea"
+		datatype="text"
+		label="Welcome Descriptiont"
+		validation="Y"
+		class="wysiwg_full"
+		validation_description="This is my new text for the Page Content of Page." />	
+		
+	<fields
+		display_this_on_form="Y"
+		name="welcome_description_color"
+		type="text"
+		datatype="text"
+		label="Welcome Descriptiont Color"
+		validation="N"
+		class="span12"
+		validation_description="This is my new text for the Title of Page, You can find it while you edit this page conent." />
+		
+	<fields
+		fieldset="End"
+		caption="Home BGColor and Image Information"
+		name="fieldset" />
+		
+	<fields
+		fieldset="Start"
+		caption="Basic BGColor and Image Information"
+		name="fieldset" aligns="left" />
+				
+    <fields
+		display_this_on_form="Y"
+		event_on_form="Y"
+		name="basic_bgcolor"
+		type="text"
+		datatype="text"
+		label="Basic Menu BGColor"
+		validation="Y"
+		class="span12"
+		validation_description="This is my new text for the Title of Page, You can find it while you edit this page conent." />
+		
+	<fields
+		display_this_on_form="Y"
+		event_on_form="Y"
+		name="basic_submenu_bgcolor"
+		type="text"
+		datatype="text"
+		label="Basic Submenu BGColor"
+		validation="Y"
+		class="span12"
+		validation_description="This is my new text for the Title of Page, You can find it while you edit this page conent." />
+		
+	<fields
+		display_this_on_form="Y"
+		name="img_path2"
+		type="file"
+		datatype="text"
+		label="BG Basic Image(1600px X 1200px)"
+		validation="N"
+		class=""
+		sizes="19"
+		styles=""
+		validation_description="Advertisement (Image)">		
+		<options paths="Background_1600px_X_1200px/" crop="No" height="1600px" width="1200px" priority_defined_while_cropping = "resize_width_then_height"></options>    
+	</fields>
+	
+	<fields
+		display_this_on_form="Y"
+		event_on_form="Y"
+		name="basic_bottombox_bgcolor"
+		type="text"
+		datatype="text"
+		label="Basic Bottombox BGColor"
+		validation="Y"
+		class="span12"
+		validation_description="This is my new text for the Title of Page, You can find it while you edit this page conent." />
+		
+	<fields
+		display_this_on_form="Y"
+		event_on_form="Y"
+		name="theme_basis_right"
+		type="text"
+		datatype="text"
+		label="Theme Basic Right"
+		validation="Y"
+		class="span12"
+		validation_description="This is my new text for the Title of Page, You can find it while you edit this page conent." />
+	<fields
+		fieldset="End"
+		caption="Basis BGColor and Image Information"
+		name="fieldset" />
+	
+	<fields
+		fieldset="Start"
+		caption="Spectrum BGColor and Image Information"
+		name="fieldset" aligns="left" />	
+	<fields
+		display_this_on_form="Y"
+		event_on_form="Y"
+		name="spectrum_bgcolor"
+		type="text"
+		datatype="text"
+		label="Spectrum Menu BGColor"
+		validation="Y"
+		class="span12"
+		validation_description="This is my new text for the Title of Page, You can find it while you edit this page conent." />
+		
+	<fields
+		display_this_on_form="Y"
+		event_on_form="Y"
+		name="spectrum_submenu_bgcolor"
+		type="text"
+		datatype="text"
+		label="Spectrum Submenu BGColor"
+		validation="Y"
+		class="span12"
+		validation_description="This is my new text for the Title of Page, You can find it while you edit this page conent." />
+		
+	<fields
+		display_this_on_form="Y"
+		event_on_form="Y"
+		name="spectrum_subsubmenu_bgcolor"
+		type="text"
+		datatype="text"
+		label="Spectrum Sub-Submenu BGColor"
+		validation="Y"
+		class="span12"
+		validation_description="This is my new text for the Title of Page, You can find it while you edit this page conent." />
+		
+	<fields
+		display_this_on_form="Y"
+		name="img_path3"
+		type="file"
+		datatype="text"
+		label="BG Spectrum Image(1600px X 1200px)"
+		validation="N"
+		class=""
+		sizes="19"
+		styles=""
+		validation_description="Advertisement (Image)">		
+		<options paths="Background_1600px_X_1200px/" crop="No" height="1600px" width="1200px" priority_defined_while_cropping = "resize_width_then_height"></options>    
+	</fields>
+		
+		
+	<fields
+		display_this_on_form="Y"
+		event_on_form="Y"
+		name="spectrum_bottombox_bgcolor"
+		type="text"
+		datatype="text"
+		label="Spectrum Bottombox BGColor"
+		validation="Y"
+		class="span12"
+		validation_description="This is my new text for the Title of Page, You can find it while you edit this page conent." />
+		
+	<fields
+		display_this_on_form="Y"
+		event_on_form="Y"
+		name="theme_spectrum_right"
+		type="text"
+		datatype="text"
+		label="Theme Spectrum Right"
+		validation="Y"
+		class="span12"
+		validation_description="This is my new text for the Title of Page, You can find it while you edit this page conent." />
+	
+		
+	<fields
+		fieldset="End"
+		caption="Spectrum BGColor and Image Information"
+		name="fieldset" />
+	
+	<fields
+		fieldset="Start"
+		caption="Intention BGColor and Image Information"
+		name="fieldset" aligns="left" />
+	<fields
+		display_this_on_form="Y"
+		event_on_form="Y"
+		name="intention_bgcolor"
+		type="text"
+		datatype="text"
+		label="Intention Menu BGColor"
+		validation="Y"
+		class="span12"
+		validation_description="This is my new text for the Title of Page, You can find it while you edit this page conent." />
+		
+	<fields
+		display_this_on_form="Y"
+		event_on_form="Y"
+		name="intention_sub_bgcolor"
+		type="text"
+		datatype="text"
+		label="Intention Submenu BGColor"
+		validation="Y"
+		class="span12"
+		validation_description="This is my new text for the Title of Page, You can find it while you edit this page conent." />
+		
+	<fields
+		display_this_on_form="Y"
+		name="img_path4"
+		type="file"
+		datatype="text"
+		label="BG Intention Image(1600px X 1200px)"
+		validation="N"
+		class=""
+		sizes="19"
+		styles=""
+		validation_description="Advertisement (Image)">		
+		<options paths="Background_1600px_X_1200px/" crop="No" height="1600px" width="1200px" priority_defined_while_cropping = "resize_width_then_height"></options>    
+	</fields>
+		
+	<fields
+		display_this_on_form="Y"
+		event_on_form="Y"
+		name="intention_bottombox_bgcolor"
+		type="text"
+		datatype="text"
+		label="Intention Bottombox BGColor"
+		validation="N"
+		class="span12"
+		validation_description="This is my new text for the Title of Page, You can find it while you edit this page conent." />
+		
+	<fields
+		display_this_on_form="Y"
+		event_on_form="Y"
+		name="theme_intention_right"
+		type="text"
+		datatype="text"
+		label="Theme Intention Right"
+		validation="Y"
+		class="span12"
+		validation_description="This is my new text for the Title of Page, You can find it while you edit this page conent." />
+		
+	
+	<fields
+		fieldset="End"
+		caption="Intention BGColor and Image Information"
+		name="fieldset" />
+	
+	<fields
+		fieldset="Start"
+		caption="Essence BGColor and Image Information"
+		name="fieldset" aligns="left" />
+	<fields
+		display_this_on_form="Y"
+		event_on_form="Y"
+		name="essence_bgcolor"
+		type="text"
+		datatype="text"
+		label="Essence Menu BGColor"
+		validation="Y"
+		class="span12"
+		validation_description="This is my new text for the Title of Page, You can find it while you edit this page conent." />
+		
+	<fields
+		display_this_on_form="Y"
+		event_on_form="Y"
+		name="essence_submenu_bgcolor"
+		type="text"
+		datatype="text"
+		label="Essence Submenu BGColor"
+		validation="Y"
+		class="span12"
+		validation_description="This is my new text for the Title of Page, You can find it while you edit this page conent." />
+		
+	<fields
+		display_this_on_form="Y"
+		name="img_path5"
+		type="file"
+		datatype="text"
+		label="BG Essence Image(1600px X 1200px)"
+		validation="N"
+		class=""
+		sizes="19"
+		styles=""
+		validation_description="Advertisement (Image)">		
+		<options paths="Background_1600px_X_1200px/" crop="No" height="1600px" width="1200px" priority_defined_while_cropping = "resize_width_then_height"></options>    
+	</fields>
+	
+	<fields
+		display_this_on_form="Y"
+		event_on_form="Y"
+		name="essence_bottombox_bgcolor"
+		type="text"
+		datatype="text"
+		label="Essence Bottombox BGColor"
+		validation="Y"
+		class="span12"
+		validation_description="This is my new text for the Title of Page, You can find it while you edit this page conent." />
+		
+	<fields
+		display_this_on_form="Y"
+		event_on_form="Y"
+		name="theme_essence_right"
+		type="text"
+		datatype="text"
+		label="Theme Essence Right"
+		validation="Y"
+		class="span12"
+		validation_description="This is my new text for the Title of Page, You can find it while you edit this page conent." />
+		
+	<fields
+		fieldset="End"
+		caption="Essence BGColor and Image Information"
+		name="fieldset" />
+	
+	<fields
+		fieldset="Start"
+		caption="Void BGColor and Image Information"
+		name="fieldset" aligns="left" />
+	<fields
+		display_this_on_form="Y"
+		event_on_form="Y"
+		name="void_bgcolor"
+		type="text"
+		datatype="text"
+		label="Void Menu BGColor"
+		validation="Y"
+		class="span12"
+		validation_description="This is my new text for the Title of Page, You can find it while you edit this page conent." />
+		
+	<fields
+		display_this_on_form="Y"
+		name="img_path6"
+		type="file"
+		datatype="text"
+		label="BG Void Image(1600px X 1200px)"
+		validation="N"
+		class=""
+		sizes="19"
+		styles=""
+		validation_description="Advertisement (Image)">		
+		<options paths="Background_1600px_X_1200px/" crop="No" height="1600px" width="1200px" priority_defined_while_cropping = "resize_width_then_height"></options>    
+	</fields>
+	<fields
+		display_this_on_form="Y"
+		event_on_form="Y"
+		name="void_bottombox_bgcolor"
+		type="text"
+		datatype="text"
+		label="Void Bottombox BGColor"
+		validation="Y"
+		class="span12"
+		validation_description="This is my new text for the Title of Page, You can find it while you edit this page conent." />
+		
+	<fields
+		display_this_on_form="Y"
+		event_on_form="Y"
+		name="theme_void_right"
+		type="text"
+		datatype="text"
+		label="Theme Void Right"
+		validation="Y"
+		class="span12"
+		validation_description="This is my new text for the Title of Page, You can find it while you edit this page conent." />	
+	<fields
+		fieldset="End"
+		caption="Menu Color Information"
+		name="fieldset" />
+     
+   <fields
+		fieldset="Start"
+		caption="Positioning and Other Details"
+		name="fieldset" aligns="right" />
+		
+	
+	
+		
+    <fields
+		display_this_on_form="Y"
+		name="published"
+		type="radio"
+		datatype="text"
+		label="Visible / Published "
+		validation="Y"
+		class=""
+		validation_description="Check on if you want to Publish this Page">
+      <options value="Yes" checked="true">Yes</options>
+      <options value="No">No</options>
+    </fields>
+	
+    <fields
+		display_this_on_form="N"
+		name="sort_order"
+		type="hidden"
+		datatype="int"
+		label="Sorting Order"
+		validation="Y"
+		class="span12"
+		validation_description="Please Enter the Number (Sorting Order)." />
+    <fields
+		fieldset="End"
+		caption="Positioning and Other Details"
+		name="fieldset" />
+  </forms_twc>
+</Response>

@@ -1,0 +1,4 @@
+[30-Apr-2017 06:25:05 UTC] WordPress database error Table 'petsoprs_twc.twc_pet_breedtype' doesn't exist for query select * from twc_pet_breedtype where pet_type='Dogs'
+[30-Apr-2017 06:28:46 UTC] WordPress database error Table 'petsoprs_twc.twc_feedback' doesn't exist for query select * from twc_feedback where email='asthapak@gmail.com'
+[30-Apr-2017 06:28:46 UTC] WordPress database error Table 'petsoprs_twc.twc_feedback' doesn't exist for query Insert into twc_feedback SET id='5905841e2d4a9', title='feedback', email='asthapak@gmail.com',rating='0',feedback_type='',message='Whats wrong?? Why cant we see anything beyond home page???',published='Yes', date_time='2017-04-30 06:28:46'
+[30-Apr-2017 07:19:57 UTC] WordPress database error Table 'petsoprs_twc.twc_pet_breedtype' doesn't exist for query select * from twc_pet_breedtype where pet_type='Dogs'

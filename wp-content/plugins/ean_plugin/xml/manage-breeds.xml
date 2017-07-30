@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Response>
+	<id>31</id>
+	<name>Manage Pet Breed</name>
+	<title_of_page>Manage Pet Breed</title_of_page>
+	<caption_of_button>Breed Type</caption_of_button>
+	<title_of_table>Title, Pet Type</title_of_table>
+	<table_name>twc_pet_breedtype</table_name>
+	<parent_id>1</parent_id>
+	<manage_page_field_list>id,title,pet_type,published,date_time, status_deleted, sort_order</manage_page_field_list>
+	<sort_order_displayed>sort_order</sort_order_displayed>
+	<exclude_sort_order>Yes</exclude_sort_order>
+	<exclude_publish>Yes</exclude_publish>  
+	
+  
+  <forms_twc>
+    <fields
+		fieldset="Start"
+		caption="Messages Details"
+		name="fieldset" aligns="left" />
+		
+	<fields
+		display_this_on_form="Y"
+		event_on_form="Y"
+		name="title"
+		type="text"
+		datatype="text"
+		label="Title"
+		validation="Y"
+		class="span12"
+		validation_description="This is my new text for the Title of Page, You can find it while you edit this page conent." />
+
+	
+	<fields
+		display_this_on_form="Y"
+		name="pet_type"
+		type="select"
+		datatype="text"
+		label="Pet Type"
+		validation="Y"
+		class="span12"
+		dropdownheight="250px"
+		parent_field="N"
+		validation_description="Please select pet type"
+		multiple_selection="N"
+		import_from_table_name="" field1="title" field2="title" field3="">
+		<options value="" selected="true">Select pet type</options>
+			  <options value="Dogs">Dogs</options>
+			  <options value="Cats">Cats</options>
+			  <options value="Fishes">Fishes</options>
+			  <options value="Birds">Birds</options>
+			  <options value="Ponies">Ponies</options>
+			  <options value="Mammals">Mammals</options>
+			  <options value="Horse">Horse</options>
+    </fields>	
+	
+	
+	<fields
+		fieldset="End"
+		caption="Page Details"
+		name="fieldset" />	
+	<fields
+		fieldset="Start"
+		caption="Other Details"
+		name="fieldset" aligns="right" />	
+	
+    <fields
+		display_this_on_form="Y"
+		name="published"
+		type="radio"
+		datatype="text"
+		label="Published"
+		validation="Y"
+		class=""
+		validation_description="Check on if you want to Publish this Page">
+      <options value="Yes" checked="true">Yes</options>
+      <options value="No">No</options>
+    </fields>
+	
+	
+	
+    <fields
+		display_this_on_form="N"
+		name="sort_order"
+		type="hidden"
+		datatype="int"
+		label="Sorting Order"
+		validation="Y"
+		class="span12"
+		validation_description="Please Enter the Number (Sorting Order)." />
+	<fields
+		fieldset="End"
+		caption="Manage Meta Informations"
+		name="fieldset" />
+
+  </forms_twc>
+</Response>

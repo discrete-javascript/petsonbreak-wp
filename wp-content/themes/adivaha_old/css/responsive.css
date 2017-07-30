@@ -1,0 +1,237 @@
+@media (min-width:1200px){}
+@media (min-width:768px) and (max-width:1200px){.horizontal-box ul li:first-child{width:35%;}
+#myCarousel{height:100%;}
+.header-bottom .nav > li > a{padding:20px 7px;}
+#myCarousel .carousel-caption{top:20px;}
+}
+@media (min-width:1024px) and (max-width:1199px){.div_clol .nav-pills li:last-child{width:25% !important;}
+.horizontal-box ul li:first-child{width:26%;}
+.children-age{top:55px;width:62%;left:120px;}
+.how_noofRooms .nomar{width:30%;}
+.room_text1 .nomar{width:30%;}
+#packListdiv{width:68%;}
+.packchildsscls{width:45% !important;}
+.packadultscls{width:45% !important;}
+#roomAvailability #packListdiv2{width:68%;}
+.flight-search-box ul li{width:17%;}
+.flight-search-box ul li:first-child{width:17%;}
+.dibba1{display:none;}
+.dibba2{display:none;}
+.dibba3{display:none;}
+.dibba4{display:none;}
+}
+@media only screen and (min-device-width:768px) and (max-device-width:1024px){}
+@media only screen and (max-width:1024px){
+.horizontal-box ul li:first-child{width:100%;}
+.input-daterange{width:100% !important;}
+.horizontal-box .tab-pane ul li{width:100%;margin-bottom:10px;}
+.horizontal-box .tab-pane ul li:last-child{width:100%;margin-bottom:0px;}
+.horizontal-box .tab-pane ul li i{}
+#exTab1 .nav-pills > li > a{font-size:0px;}
+.div_clol .nav-pills li a i{font-size:32px;}
+.horizontal-box .nav-pills{margin-top:-58px;}
+.header-bottom .navbar-default .navbar-nav > li > a{font-size:0px;}
+.account_open .dropdown-toggle{font-size:13px !important;}
+.navbar-brand img{width:100%;}
+.header-bottom .navbar-default .navbar-nav > li > a > i{font-size:32px;padding:0px 15px 0px 15px;}
+.header-bottom #navbar{padding:0px;}
+#myCarousel .carousel-caption h3{/*display:none;font-size:20px;*/}
+#myCarousel .carousel-caption p{/*display:none;font-size:12px;*/}
+.header-bottom .nav > li > a{padding:11.5px 7px;}
+.dibba1{display:none;}
+.dibba2{display:none;}
+.dibba3{display:none;}
+.dibba4{display:none;}
+.hom1-div{margin-bottom:13px;}
+.mar-b{padding-bottom:13px;}
+.hom1_bot{margin-bottom:13px;}
+.fixing-row .col-md-8{width:100%;float:left;}
+.fixing-row .col-md-4{width:100%;float:left;}
+.nopad-left .affix{position:relative;}
+.nopad-left .affix-bottom{position:relative;top:0px !important;left:35px !important;width:95% !important;}
+.room-detailso-serbox ul li{width:50%;}
+.room_mod_icon .fa-calendar{display:none;}
+.room-detailso-serbox .input-calIcon{left:0px;}
+.children-age{top:169px;width:83%;}
+.how_noofRooms .nomar{width:30%;}
+.room_text1 .nomar{width:30%;}
+#packListdiv{width:68%;}
+.packchildsscls{width:45% !important;}
+.packadultscls{width:45% !important;}
+#roomAvailability #packListdiv2{width:68%;}
+.flight-search-box .children-age{top:222px;}
+.container_width{width:98%;}
+}
+@media (max-width:767px){.header-bottom .navbar-default .navbar-nav > li > a > i{font-size:32px;padding:0px 15px 0px 15px;}
+#exTab1 .nav-pills > li > a{font-size:0px;}
+.div_clol .nav-pills li a i{font-size:30px;padding:0px;}
+.horizontal-box .tab-pane ul li{width:100%;margin-bottom:10px;}
+.input-daterange{width:100% !important;}
+#myCarousel{height:100%;}
+#myCarousel .carousel-caption{display:none;}
+.horizontal-box .nav-pills{margin-top:-57px;}
+.header-bottom .navbar-default .navbar-nav > li > a{font-size:14px;}
+.dibba1{display:none;}
+.dibba2{display:none;}
+.dibba3{display:none;}
+.dibba4{display:none;}
+header .navbar-default .navbar-toggle .icon-bar{background-color:#59c45a;}
+.header-bottom .navbar-toggle{border:0px solid transparent;padding:23px 0px 0px 0px;margin-top:0px;margin-right:0px;}
+.header-bottom .navbar-header{width:100%;}
+.header-bottom .navbar-nav > li > a{padding:8px 0px;border-bottom:1px solid #dfdfdf;}
+.hom1-div{margin-bottom:13px;}
+.mar-b{padding-bottom:13px;}
+.hom1_bot{margin-bottom:13px;}
+.footer-top .col-md-3{padding:0px;}
+.us_dollar_text{width:91%;}
+.dollar_text_left{float:left;width:16% !important;}
+.currency-inr .fa-angle-down{color:#59c45a !important;}
+.navbar-right .us_dollar_text .dollar_text_right{width:84%;text-align:left;}
+.header-bottom .currency-inr{display:block !important;}
+.header-bottom .navbar-nav > li:hover .fa-angle-down{color:#fff;}
+.children-age{top:169px;width:83%;}
+.how_noofRooms .nomar{width:30%;}
+.room_text1 .nomar{width:30%;}
+#packListdiv{width:68%;}
+.packchildsscls{width:45% !important;}
+.packadultscls{width:45% !important;}
+.fixing-row .col-md-8{width:100%;float:left;}
+.fixing-row .col-md-4{width:100%;float:left;}
+.nopad-left .affix{position:relative;}
+.nopad-left .affix-bottom{position:relative;top:0px !important;left:15px !important;width:97.5% !important;}
+.room-detailso-serbox ul li{width:50%;}
+.room_mod_icon .fa-calendar{display:none;}
+.room-detailso-serbox .input-calIcon{left:0px;}
+.hotel-information_address div:first-child{float:left;width:100%;margin-bottom:8px;}
+.hotel-information_address div:nth-child(2){float:left;width:100%;margin-bottom:8px;}
+.hotel-information_address div:nth-child(2) ul{float:left;}
+.sug_hotel_col{width:100%;margin:0px 0px 20px 0px;}
+.sug_hotel_col:nth-child(3n-1){margin-left:0%;margin-right:0%;}
+.hotelInfo_slideshow{height:300px;}
+.form_title h3 strong{display:none;}
+.form_title{padding-left:0px;}
+.step{border-left:0px solid ! important;padding:1px 0px 17px 0px;margin:0px;}
+.relatHotels>.col-md-12{padding:0px;}
+.roomBookWrapr{width:100%;text-align:left;padding:0px;}
+.roomBook .btn-book{width:100%;text-align:center;border-radius:0px;margin-top:3px;}
+.flight-search-box .children-age{top:222px;}
+#CDSPOP.cdsPropDetail2014.cdsBx .cdsData .cdsTrvlRtng .barRatings.rightSide{padding-left:0px;}
+.roomMoreInfoDiv{padding:0px 0px 0px 19px;}
+.roomMoreInfo{margin:19px 0px 0px 17px;}
+.foot-colHead{margin:20px 0px 11px 0px;}
+.container_width{width:98%;}
+}
+@media (max-width:580px){.horizontal-box .nav-pills{padding:0px 15px 0px 15px;}
+#exTab1 .tab-content{padding:18px 15px 15px 15px;}
+.div_clol .nav-pills li a i{font-size:32px;padding:0px;}
+.main_title h2{font-size:17px;}
+.block-text{font-size:13px;line-height:21px;}
+.ad-class-1 .block-text{padding-top:0px;}
+.home-section1{padding:30px 0px;}
+.children-age .age_childdiv{width:100%;}
+.children-age .age_label{display:none;}
+.children-age .age-childAge select{margin-bottom:9px;}
+.children-age .how_noofRooms .nomar{margin-bottom:18px;}
+.children-age .age_childdiv{width:100%;}
+.children-age .age_label{display:none;}
+.children-age .age-childAge select{margin-bottom:9px;}
+.children-age .how_noofRooms .nomar{margin-bottom:18px;}
+.col-left-menu ul li{font-size:12px;margin-right:11px;}
+.room-det-img{Width:100%;height:300px;margin-bottom:30px;}
+.room-det-desc{width:100%;height:100%;}
+.roomBookWrapr{width:100%;text-align:left;padding:0px;}
+.roomBook .btn-book{width:100%;text-align:center;border-radius:0px;margin-top:3px;}
+.room_details_listing > li{padding:10px 10px;}
+.flight-item1{width:100%;}
+.flight-item2{width:93%;padding:0px 30px;}
+.flight-item23{height:15px;padding:0px 0px 0px 0px;cursor:pointer;}
+.flight-stop > .flight-layover-airport{width:43%;}
+.flight-stop .flight-duration{width:36%;}
+.footer_terms ul, .footer_terms p{text-align:center;margin-bottom:4px;}
+.footer_terms ul li{display:block;padding-right:0px;width:100%;margin-bottom:4px;}
+#roomAvailability .children-age{top:168px;right:4%;width:92%;}
+.room-detailso-serbox ul li{width:100%;}
+#CDSPOP.cdsPropDetail2014.cdsBx .cdsData .cdsTrvlRtng .expect{width:100%;}
+.cdsBx .cdsData .cdsTrvlRtng .barRatings{width:100%;}
+#CDSPOP.cdsPropDetail2014.cdsBx .cdsData .hReview .reviewBoxRight{margin-left:0px;width:100%;margin-top:20px;}
+#prev, #next, #first, #last, #nDots{padding:2px 10px;top:-8px;}
+#myList.pagination>li{padding:2px 10px;}
+#sthoverbuttons{display:none;}
+}
+@media (max-width:360px){#exTab1 .nav-pills > li > a{padding:4px 9px 0px 9px;}.hotelInfo_slideshow{height:200px;}
+.room-det-img{Width:100%;height:200px;margin-bottom:30px;}
+.horizontal-box .nav-pills{margin-top:-42px;}
+.div_clol .nav-pills li a i{font-size:33px;padding:0px 0px;}
+.div_clol .nav-pills li:last-child a{padding:4px 0px 0px 0px !important;}
+#prev, #next, #first, #last, #nDots{padding:2px 6px;top:-8px;}
+#myList.pagination>li{padding:2px 6px;}
+}
+@media (max-width:320px){#exTab1 .nav-pills > li > a{padding:5px 8px 0px 8px;font-size:15px;}
+.hotelInfo_slideshow{height:150px;}
+#exTab1 .nav-pills > li > a{padding:4px 9px 0px 9px;}
+.room-det-img{Width:100%;height:150px;margin-bottom:30px;}
+}
+@media (min-width:769px) and (max-width:979px){}
+@media (max-width:767px){}
+@media (max-width:991px){}
+@media (max-width:768px){}
+@media (max-width:667px){}
+@media (max-width:480px){.ticket-segments{padding:26px 0px 7px 0px;}
+.flight-search-box .children-age{top:222px !important;width:100% !important;right:0px !important;}
+.div_clol .nav-pills li a i{font-size:33px;padding:0px 0px;}
+#exTab1 .nav-pills > li > a{padding:4px 9px 0px 9px;}
+.flight-search-box .show-autocomplete-popup{width:100%;}
+}
+@media only screen and (max-width:320px){}
+.flight-item23{cursor:pointer;}
+.ui-widget-content{background:transparent;width:100%;margin-left:0px;border:0px solid #c5c5c5 !important;height:6px;background-color:#cccac5;}
+.ui-slider-horizontal .ui-slider-handle{border:0px !important;cursor:pointer;}
+.arrive-sliders_step1{padding:24px 24px 4px 7px;}
+.ui-slider-horizontal .ui-slider-range{height:6px !important;}
+.sliders_step1{clear:both;padding:24px 24px 4px 7px;}
+.header-bottom .currency-inr{display:none;}
+.shrink{top:0px;left:0px;right:0px;position:fixed;transition:0.6s ease-in-out;-webkit-transition:0.6s ease-in-out;-moz-transition:0.6s ease-in-out;-ms-transition:0.6s ease-in-out;-o-transition:0.6s ease-in-out;}
+.navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus{background-color:transparent;}
+*{outline:none;}
+@media only screen and (max-width:320px){#exTab1 .nav-pills > li > a{font-size:0px;}
+.flight-search-box .show-autocomplete-popup{width:100%;}
+}
+
+
+.input-daterange{width:100% !important;}
+.horizontal-box .tab-pane ul li{width:100%;margin-bottom:10px;}
+.horizontal-box .tab-pane ul li:last-child{width:100%;margin-bottom:0px;}
+.horizontal-box .tab-pane ul li i{}
+#exTab1 .nav-pills > li > a{font-size:0px;}
+.horizontal-box .nav-pills{margin-top:-58px;}
+.header-bottom .navbar-default .navbar-nav > li > a{font-size:0px;}
+.account_open .dropdown-toggle{font-size:13px !important;}
+.navbar-brand img{width:100%;}
+.header-bottom .navbar-default .navbar-nav > li > a > i{font-size:32px;padding:0px 15px 0px 15px;}
+.header-bottom #navbar{padding:0px;}
+
+.header-bottom .nav > li > a{padding:11.5px 7px;}
+.pet-divclol .nav-pills li a i {font-size: 30px;padding: 0px;    color: #fff;    position: static;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.container {
+    max-width: 1300px;
+}

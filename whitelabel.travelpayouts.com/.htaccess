@@ -1,0 +1,6 @@
+
+RewriteEngine on
+RewriteCond %{HTTP_HOST} ^whitelabel\.travelpayouts\.com\.petsonbreak\.com$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.whitelabel\.travelpayouts\.com\.petsonbreak\.com$
+RewriteRule ^/?$ "http\:\/\/petsonbreak\.com\/" [R=301,L]
+

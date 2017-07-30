@@ -1,0 +1,10 @@
+#twc_home_page_block { clear:both;  float:left;  clear:both; width:98%; padding:0 1%; padding-top:10px; margin-top:45px; }
+#twc_home_page_block  .twc_home_page_block_cont { float:left; width:320px; margin-right:13px;}
+#twc_home_page_block  .twc_home_page_block_cont .home_user_prof_block { clear:both; float:left; width:100%; display:inline-block;}
+ #twc_home_page_block  .twc_home_page_block_cont .home_user_prof_block .profile_pics_likes_block { clear:both;} 
+ #twc_home_page_block  .twc_home_page_block_cont .home_user_prof_block .profile_thumb_name { clear:both;}
+  #twc_home_page_block  .twc_home_page_block_cont .home_user_prof_block .profile_thumb_name .thmb_img { float:left; width:55px;}
+  #twc_home_page_block  .twc_home_page_block_cont .home_user_prof_block .profile_thumb_name .thmb_img img { padding:1px; background:#FFF; border:1px solid #dedede;}
+  #twc_home_page_block  .twc_home_page_block_cont .home_user_prof_block .profile_thumb_name .user_show_name { float:right; padding:5px 0 0 0; width:263px;}
+   #twc_home_page_block  .twc_home_page_block_cont .home_user_prof_block .profile_thumb_name .user_show_name h4 { font-size:14px; font-weight:bold; color:#464646;}
+   #twc_home_page_block  .twc_home_page_block_cont .home_user_prof_block .profile_thumb_name .user_show_name h4 {font-size:12px;  font-weight:bold;}

@@ -1,0 +1,37 @@
+@import url(http://fonts.googleapis.com/css?family=Trochut);
+#twc_header { position:fixed; left:0px; top:0px; width:100%; clear:both; text-align:center; height:45px; z-index:5;
+background: #6a8dbc; /* Old browsers */
+background: -moz-linear-gradient(top,  #6a8dbc 0%, #3262a3 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#6a8dbc), color-stop(100%,#3262a3)); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top,  #6a8dbc 0%,#3262a3 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top,  #6a8dbc 0%,#3262a3 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top,  #6a8dbc 0%,#3262a3 100%); /* IE10+ */
+background: linear-gradient(to bottom,  #6a8dbc 0%,#3262a3 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3262a3', endColorstr='#6a8dbc',GradientType=0 ); /* IE6-9 */
+-moz-box-shadow: 1px 1px 2px #8b8b8b;
+-webkit-box-shadow: 1px 2px 2px #8b8b8b;
+box-shadow: 1px 1px 2px #8b8b8b;
+ -ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=135, Color='#8b8b8b')";
+ filter: progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=135, Color='#8b8b8b');
+}
+ 
+#twc_header #twc_header_wrapper { margin:0px auto; text-align:left; width:1000px; position:relative; height:45px;}
+#twc_header #twc_header_wrapper .company_logo { float:left; margin-right:50px; font-family: 'Trochut', cursive;  text-shadow: 1px 1px 1px #5f6060;  font-size:34px; margin-top:2px;}
+#twc_header #twc_header_wrapper .company_logo a { color:#ffffff;}
+#twc_header #twc_header_wrapper ul.link_block {}
+#twc_header #twc_header_wrapper ul.link_block li { float:left; margin-right:23px; position:relative;}
+#twc_header #twc_header_wrapper ul.link_block li a { display:inline-block; float:left; position:relative; font-size:14px; color:#ffffff;}
+#twc_header #twc_header_wrapper ul.link_block li a img { float:left; margin-top:16px; margin-right:3px;}
+#twc_header #twc_header_wrapper ul.link_block li a span { float:left; margin-top:16px;}
+#twc_header #twc_header_wrapper ul.link_block li a em { float:left; position:absolute; background:#d60000; color:#ffffff; font-size:11px; font-family:Arial, Helvetica, sans-serif; padding:0px 3px; border:1px solid #ffffff; left:-7px; top:8px; z-index:10;}
+#twc_header #twc_header_wrapper ul.link_block li input { float:left; margin-top:9px; width:281px; border:1px solid #ffffff; height:25px; background: #6a8dbc; /* Old browsers */
+background: -moz-linear-gradient(top,  #e4dfe0 0%, #ffffff 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#e4dfe0), color-stop(100%,#ffffff)); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top,  #e4dfe0 0%,#ffffff 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top,  #e4dfe0 0%,#ffffff 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top,  #e4dfe0 0%,#ffffff 100%); /* IE10+ */
+background: linear-gradient(to bottom,  #e4dfe0 0%,#ffffff 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e4dfe0', endColorstr='#ffffff',GradientType=0 ); /* IE6-9 */
+ }
+.link_block li a span b{font-weight:normal;}
+

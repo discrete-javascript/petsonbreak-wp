@@ -1,0 +1,321 @@
+.flight-search-result{position: relative !important;width: 96%;margin: 0 auto;}
+.flight-item1{float: left;width: 25%;text-align: center;padding: 20px 18px;}
+.flight-item2{float: left;width: 68%;}
+.flight-item23{float: right;width: 7%;height: 195px;overflow: hidden;padding: 92px 0px 0px 22px;}
+.flight-item23 .fa{font-size:15px;}
+.eDreams-prc{}
+.flight-item1 p{font-size: 25px;text-align: center;margin: 5px 0px 2px 0px;font-family: Georgia, "Times New Roman", Times, serif;font-weight: 100;color: #59c45a;}
+.book-now-btn{width: 100%;background: #59c45a;color: #fff;margin: 14px 0px;float: left;    padding: 12px 0px 12px 0px;font-weight: 600;}
+.flight-imges1{width:100%;}
+.flight-imges1 img{max-height: 55px;}
+.eDreams-prc{}
+.eDreams-prc a{width:50%;float:left;}
+.flight-price1{}
+.flight-price1 li{width:100%;float:left;background: #fff;    margin-bottom: 13px;    border: 1px solid #dfdfdf;position: relative;}
+.flight-price1 li:hover{    border: 1px solid #59c45a;}
+.ticket-segments {position: relative;height: 100%;padding: 26px 9px 30px 15px;}
+.showdiv_baggages{clear: both;padding: 12px;width: 100%;bottom: 0px;}
+.showdiv_baggages h5{font-size: 14px;text-transform: capitalize; margin: 10px 0px;}
+.add_key_value1{}
+.showdiv_baggages .baggages_1 span{  line-height: 17px;font-size: 13px;overflow: hidden;
+    color: #777;    margin: 10px 0px;}
+.segment-block {margin-bottom: 6px;float: left;width: 100%;margin-top: 10px;}
+.flight-arrive-info, .flight-depart-info {width: 28%;}
+.semibold {font-family: "ProximaNova-Semibold",Helvetica,sans-serif;}
+.flight-date-time .flight-time {font-size: 20px;line-height: 33px;letter-spacing: -.6px;}
+.flight-date-wrapper, .flight-time {display: inline-block;}
+.flight-date-wrapper {margin: 0 4px;}
+.flight-date-wrapper, .flight-time {display: inline-block;}
+.flight-date-time .meridiem {font-size: 10px;line-height: 12px;letter-spacing: .6px;}
+.flight-date-time .flight-date {font-size: 11px;line-height: 13px;}
+.flight-duration-info {width: 40%;text-align: center;padding: 0px 0px;}
+.flight-duration-info .stops-info, .flight-place-title {font-size: 12px;line-height: 15px;}
+.icon-departing-plane {width: 58%;height: 15px;margin: 0 auto;}
+.flight-duration-info .flight-duration {font-size: 13px;line-height: 16px;}
+.flight-arrive-info {text-align: right;}
+.flight-arrive-info, .flight-depart-info, .flight-duration-info {
+    display: inline-block;box-sizing: border-box;}
+.flight-duration-info .stops-info, .flight-place-title {font-size: 12px;line-height: 15px;}
+.icon-departing-plane {background-image: url(http://www.adivaha.com/demo/ean-team/wp-content/themes/adivaha/images/flight.jpg);
+background-size: 100% 100%;}
+.ticket-details>.segment-container {padding: 24px 57px 24px 20px;}
+.direction-title {font-size: 22px;line-height: 26px;padding-bottom: 20px;  letter-spacing: .4px;color: #000;}
+.ticket-details .segment-flights.flight-direct {border-left-style: solid;}
+.ticket-details .segment-flights.depart, .ticket-details .segment-flights.depart .flight-stop:before {border-color: #1bc951;}
+.ticket-details .segment-flights {position: relative;margin-left: 9px;border-left: 1px dotted;}
+.flight-segment {padding-left: 24px;}
+.flight-segment>.airline-info {font-size: 14px;line-height: 17px;}
+.clearfix { zoom: 1;}
+.flight-segment .airline-logo-container {display: inline-block;padding-top: 4px;}
+.flight-segment .airline-details {display: inline-block;margin-left: 8px;vertical-align: top;}
+.flight-segment .airline-details {display: inline-block;margin-left: 8px;vertical-align: top;}
+.flight-segment .middot {padding: 0 4px;}
+.flight-segment .airline-features {position: relative;top: -3px;}
+.flight-segment>.segment-info {font-size: 14px;margin-top: 16px;}
+.flight-segment .segment-depart {position: relative;margin-right: 30px;}
+.flight-segment .segment-arrive {margin-right: 20px;}
+.flight-segment .segment-arrive, .flight-segment .segment-depart {width: 140px;}
+.flight-segment .segment-arrive, .flight-segment .segment-depart, .flight-segment .segment-duration {display: inline-block;}
+.flight-segment .segment-duration {width: 75px;}
+.flight-segment .segment-info-title {line-height: 20px;letter-spacing: .6px;color: #464a4d;}
+.flight-segment .segment-info-name {font-size: 13px;line-height: 20px;opacity: .5;}
+.g-text-overflow {
+    display: block;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    -o-text-overflow: ellipsis;
+}
+
+.flight-segment .segment-info-date {
+    line-height: 20px;
+}
+
+.flight-segment .segment-info-title {
+    line-height: 20px;
+    letter-spacing: .6px;
+    color: #464a4d;
+}
+.flight-segment .segment-info-name {
+    font-size: 13px;
+    line-height: 20px;
+    opacity: .5;
+}
+
+.flight-segment .segment-info-date {
+    line-height: 20px;
+}
+
+.flight-segment .segment-depart .icon-plane {
+    position: absolute;
+    top: 2px;
+    right: -24px;
+    width: 11px;
+    height: 11px;
+}
+
+.icon-plane {
+    background-image: url(http://www.adivaha.com/demo/ean-team/wp-content/themes/adivaha/images/flight.jpg);
+	    background-size: 50% 100%;
+		background-repeat:none;
+}
+
+.ticket-details{clear: both;float: right;width: 100%;}
+.flight-items{    cursor: pointer;}
+.ticket-top-block .best-ticket-label.price {
+    background: #fdaf13;
+}
+
+.ticket-top-block .best-ticket-label {
+    font-size: 9px;
+    color: #fff;
+    letter-spacing: .6px;
+    line-height: 11px;
+    padding: 4px 9px;
+    position: relative;
+    margin-left: -18px;
+}
+
+
+.icon-label-corner {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 5px;
+    height: 19px;
+}
+.g-uppercase {
+    text-transform: uppercase;
+}
+.best-ticket-label{    float: right;
+        padding: 5px 11px;
+    margin-right: 23px;
+    background-color: rgba(89, 196, 90, 0.8);
+    font-size: 17px !important;}
+	
+	.flight-items:focus, .flight-item1:focus{outline:none;}
+	
+.flight-depart-info, .flight-duration-info {
+    border-right: 0px dotted #59c45a;
+}
+.flight-one787{}
+.flight-one788{padding: 18px 0px 0px 0px;}
+.ticket-details .segment-flights.depart, .ticket-details .segment-flights.depart .flight-stop:before {
+    border-color: #1bc951;
+}
+
+.flight-stop:before, .ticket-details .segment-flights:after, .ticket-details .segment-flights:before {
+    left: -9px;
+    box-sizing: content-box;
+    width: 11px;
+    height: 11px;
+    border: 3px solid #f9fafd;
+    border-radius: 11px;
+    position: absolute;
+    display: block;
+   /* content: '';*/
+}
+
+.ticket-details .segment-flights:before {
+    top: 0;
+}
+
+.flight-stop:before {
+    top: 16px;
+    left: -30px;
+    box-sizing: border-box;
+    border: 2px solid;
+    outline: 3px solid #f9fafd;
+    background: #f9fafd;
+}
+
+.flight-stop {
+    font-size: 14px;
+    position: relative;
+    line-height: 20px;
+    height: 44px;
+    margin: 18px 0 18px 24px;
+    padding: 10px 0;
+    color: #ff3e00;
+    border-top: 1px solid #e2e8ee;
+    border-bottom: 1px solid #e2e8ee;
+}
+.ticket-details .segment-flights.return, .ticket-details .segment-flights.return .flight-stop:before {
+    border-color: #fe9f00;
+}
+
+.flight-stop:before {
+    top: 16px;
+    left: -30px;
+    box-sizing: border-box;
+    border: 2px solid;
+    outline: 3px solid #f9fafd;
+    background: #f9fafd;
+}
+.flight-stop > .flight-layover-airport {font-size: 13px;float: left;width: 90%;}
+.flight-stop .flight-duration {text-align: left;float: left;width: 10%;}
+:focus {
+    outline: -webkit-focus-ring-color auto 0px;
+}
+
+.date {    display: block;}
+.hotel_sort_options{    margin-bottom: 10px;}
+
+
+ #myList{
+	 margin:0px;
+ }
+
+ 
+  #myList.pagination li>a{
+   transition: all 0.2s ease;
+   -webkit-transition: all 0.2s ease;
+   -moz-transition: all 0.2s ease;
+   -ms-transition: all 0.2s ease;
+   -o-transition: all 0.2s ease;
+  }
+   
+ #myList.pagination>.active, #myList.pagination>.active:hover,#myList.pagination>.active:focus{
+    z-index: 2 !important;
+    color: #fff !important;
+    cursor: default !important;
+    background-color: #59c45a !important;
+    border-color: #59c45a !important;
+}
+
+
+#myList.pagination>li:first-child{
+    margin-left: 0;
+    border-bottom-left-radius: 0px;
+    border-top-left-radius: 0px;
+}
+
+#myList.pagination>li:last-child{
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
+}
+
+#myList.pagination{
+    box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.1);
+}
+
+#myList.pagination>li{
+    position: relative;
+    float: left;
+    padding: 9px 15px;
+    margin-left: -1px;
+    text-decoration: none;
+    background-color: #fff;
+    border: 1px solid #ddd;
+	outline:none;
+}
+
+#prev,#next{
+    padding: 9px 15px;
+    background: #fff;
+    text-decoration: none;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    display: inline-block;
+	}
+   
+   #prev,#first{
+   right: -4px;
+    border-right: 0px;
+   }
+   
+   #first{
+   right: -8px;
+    border-right: 0px;
+   }
+   #next{
+   left: -12px;
+    border-left: 0px;
+   }
+	
+	#last{
+   left: -17px 	;
+    border-left: 0px;
+   }
+	#prev, #next , #first, #last , #nDots {
+    padding: 9px 15px;
+    background: #fff;
+    text-decoration: none;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    display: inline-block;
+    position: relative;
+    top: -15px;
+    box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.1);
+	cursor:pointer;
+}
+
+#nDots{
+left: -4px;
+    border-left: 0px;
+}
+
+/* Left Side List css code */
+
+.ui-slider {position: relative;text-align: left;}
+.ui-slider-horizontal .ui-slider-range {background: #59c45a;border: 0px;border-radius: 0px;top: 0;height: 100%;}
+#slider-range .ui-slider-horizontal .ui-slider-handle:first-child{margin-left: -3px;}
+#slider-range .ui-slider-horizontal .ui-slider-handle:first-child{margin-left: -14px;}
+.arrive-sliders_step1{clear: both;padding: 23px 0px 4px 0px;}
+#arrive-slider-range ui-slider-horizontal .ui-slider-handle:first-child{margin-left: -3px;}
+#arrive-slider-range .ui-slider-horizontal .ui-slider-handle:first-child{margin-left: -14px;}
+.ui-slider .ui-slider-handle {
+    position: absolute;z-index: 2;width: 22px;height: 22px;cursor: default;border: none;
+    cursor: pointer;}
+.ui-slider-horizontal .ui-slider-handle {
+    top: -.5em;margin-left: -.6em;top: -14px !important;z-index: 3 !important;width: 32px !important;height: 32px !important;cursor: pointer;background-color: #009af3;
+    border-radius: 19px;background: url(http://adivaha.com/demo/ean-team/wp-content/themes/adivaha/images/ioncs.png) !important;}
+.ui-slider a:focus {outline:none;}
+@media only screen and (max-width: 767px){
+.horizontal-box{display:none;}
+}
+.ui-widget-content {background: transparent;width: 88%;margin: 0 auto;}
+.affix-bottom {position: absolute;width: 22.5%;}
+.showthis .affix {position: fixed;bottom: 20px;width: 19.5%;}
+
+.footer-top {margin-top: 50px;}
