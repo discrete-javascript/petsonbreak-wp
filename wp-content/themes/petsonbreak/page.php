@@ -122,36 +122,32 @@ $results =$wpdb->get_results("select * from twc_service_category where published
 ?>
 
 <div class="log_backGrond">
-	<div class="container_width">
+    
+    <div class="container_width">
             <input type="hidden" value="" id="sel_category">
 			<div class="pet-groomsv-sercahbox">
 			    <div class="pet-groomsv-criteria-open">
-                            <span>
-                                <span class="pet_g_crt"><?php echo $serviceCategory;?></span>
-                                <span><i class="fa fa-angle-down" aria-hidden="true"></i></span></span>
-				<ul id="categories" class="form-control">
-				   <?php foreach($results as $val) { ?>
+<!--                                <span>
+                                    <span class="pet_g_crt"><?php echo $serviceCategory;?></span>
+                                    <span><i class="fa fa-angle-down" aria-hidden="true"></i></span>
+                                </span>-->
+                                <ul id="categories" class="form-control">
+                                   <?php foreach($results as $val) { ?>
                                    <li class="selected_category" value="<?php echo $val->id;?>">
                                        <span class="opt">
                                            <?php echo $val->title;?>
                                        </span>
                                    </li>           
                                    <?php } ?>
-				</ul>
+                                </ul>
                             </div>
 			<div class="input-group">
 			  <?php if($_REQUEST['destName']!=''){ ?>
-                            <span class="input-group-addon" id="magnifying">
-                                <i class="fa fa-search"></i>
-                            </span>
                             <input type="text" 
                                    name="searchName" 
                                    id="searchName" 
                                    class="form-control" value="<?php echo $_REQUEST['destName'] ;?>" placeholder="Discover and Unleash Happiness you cherish">
                             <?php }  else {?>
-                            <span class="input-group-addon" id="magnifying">
-                                <i class="fa fa-search"></i>
-                            </span>
                             <input type="text" name="searchName" id="searchName" class="form-control" value="" placeholder="Discover and Unleash Happiness you cherish">
                             <?php } ?>
                             <span class="input-group-addon city_search" 
@@ -161,6 +157,7 @@ $results =$wpdb->get_results("select * from twc_service_category where published
 			</div>
 			<span class="err_searchName"></span>
                     </div>
+                    
             
 		<!-- <div class="facebookBack">
 			<a href="javascript:void(0);" alt="fblogin" class="fblogin">
@@ -207,7 +204,7 @@ $results =$wpdb->get_results("select * from twc_service_category where published
 			?>
 	<p style="clear: both;"></p>
 	  </div> -->
-  </div>
+    </div>
 </div>
 <div> 
 <?php strong_testimonials_view( 1 ); ?>.

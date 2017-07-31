@@ -198,44 +198,9 @@ $results =$wpdb->get_results("select * from twc_service_category where published
   
 <div class="pet-header">
   <div class="container">
-        <div class="row">
-          <div class="col-md-9 col-sm-9 col-xs-9">
-      <div id="mySidenav" class="sidenav">
-	   
-        <a class="logo-other"  href="<?php echo $siteUrl;?>"><img ng-src="<?php echo $mk_options['footer_logo'];?>" alt="Logo"></a>
-	    
-		<ul>
-		<li>
-		<a title="Pet Friendly"><i class="fa fa-paw" aria-hidden="true"></i><span>Pet Friendly</span></a>
-			<ul class="pet-friend-subm">
-			<li>
-			<a href="<?php echo site_url();?>/all-categories/?sid=N148948330558c7b6295b388" title="Weekend Destinations"><span class="weeknd_icon"><img src="<?php echo get_template_directory_uri();?>/images/weeknd.png"/></span><span>Weekend Destinations</span></a>
-			</li>
-			<li>
-			<a href="<?php echo site_url();?>/all-categories/?sid=V148948235058c7b26e54885" title="Pet Friendly Restaurants"><i class="fa fa-cutlery" aria-hidden="true"></i><span>Restaurants</span></a>
-			</li>
-			<li>
-			<a href="<?php echo site_url();?>/all-categories/?sid=G148948225958c7b21322ce8" title="Pet Friendly Cab Services"><i class="fa fa-taxi" aria-hidden="true"></i><span>Cab Services</span></a>
-			</li>
-			</ul>
-
-			</li>
-
-			<li><a href="<?php echo site_url();?>/all-categories/" title="Pet Services"><i class="fa fa-cog" aria-hidden="true"></i><span>Pet Services</span></a></li>
-			<li><a href="<?php echo site_url();?>/what-we-do/" title="What We Do"><i class="fa fa-info-circle" aria-hidden="true" ></i><span>What we Do</span></a></li>
-
-			<li><a href="<?php echo site_url();?>/calendar/events/" title="Events"><i class="fa fa-calendar" aria-hidden="true"></i><span>Events</span></a></li>
-
-			<li><a href="<?php echo site_url();?>/news-and-updates/" title="News & Updates"><i class="fa fa-newspaper-o" aria-hidden="true"></i><span>News & Updates</span></a></li>
-
-
-			<?php if($userID==''){ ?>  
-			<li> <a href="<?php echo site_url();?>/login/" title="Offers and Discounts"><i class="fa fa-tags" aria-hidden="true"></i><span>Offers and Discouts</span></a></li>
-			<?php } else{ ?>
-			<li><a href="<?php echo site_url();?>/offers-and-discounts/" title="Offers and Discounts"><i class="fa fa-tags" aria-hidden="true"></i><span>Offers and Discouts</span></a></li>
-			<?php   }?>
-			</ul>
-      </div>
+    <div class="row">
+      <div class="col-md-9 col-sm-9 col-xs-9">
+      
 	  
       <span class="bar_mnu">
 
@@ -340,8 +305,89 @@ $results =$wpdb->get_results("select * from twc_service_category where published
 
   </header>
 </article>
+
 <div id="article-anchor"></div>
 <div ng-controller="bodyloader"></div>
+<nav class="navbar navbar-default" role="navigation">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggle" 
+           data-toggle="collapse" data-target="#navbar-to-collapse">
+           <span class="sr-only">Toggle navigation</span>
+           <span class="icon-bar"></span>
+           <span class="icon-bar"></span>
+           <span class="icon-bar"></span>
+        </button>
+    </div>
+    <div class="collapse navbar-collapse" id="navbar-to-collapse">
+      <ul class="nav navbar-nav">
+          <li>
+             <a href="<?php echo site_url();?>" title="home">
+                 <span>Home</span>
+             </a>
+          </li>
+          <li class="dropdown">
+              <a title="Pet Friendly" class="dropdown-toggle" data-toggle="dropdown">
+                  <span>Pet Friendly</span>
+                  <b class="caret"></b>
+              </a>
+              <ul class="pet-friend-subm dropdown-menu">
+                  <li>
+                      <a href="<?php echo site_url();?>/all-categories/?sid=N148948330558c7b6295b388" title="Weekend Destinations">
+                          <span>Weekend Destinations</span>
+                      </a>
+                  </li>
+                  <li>
+                      <a href="<?php echo site_url();?>/all-categories/?sid=V148948235058c7b26e54885" title="Pet Friendly Restaurants">
+                          <span>Restaurants</span>
+                      </a>
+                  </li>
+                  <li>
+                      <a href="<?php echo site_url();?>/all-categories/?sid=G148948225958c7b21322ce8" title="Pet Friendly Cab Services">
+                          <span>Cab Services</span>
+                      </a>
+                  </li>
+              </ul>
+          </li>
+
+          <li>
+              <a href="<?php echo site_url();?>/all-categories/" title="Pet Services">
+                  <span>Pet Services</span>
+              </a>
+          </li>
+          <li>
+              <a href="<?php echo site_url();?>/what-we-do/" title="What We Do">
+                  <span>What we Do</span>
+              </a>
+          </li>
+
+          <li>
+              <a href="<?php echo site_url();?>/calendar/events/" title="Events">
+                  <span>Events</span>
+              </a>
+          </li>
+
+          <li>
+              <a href="<?php echo site_url();?>/news-and-updates/" title="News & Updates">
+                  <span>News & Updates</span>
+              </a>
+          </li>
+
+          <?php if($userID==''){ ?>  
+              <li>
+                  <a href="<?php echo site_url();?>/login/" title="Offers and Discounts">
+                      <span>Offers and Discouts</span>
+                  </a>
+              </li>
+          <?php } else{ ?>
+              <li>
+                  <a href="<?php echo site_url();?>/offers-and-discounts/" title="Offers and Discounts">
+                      <span>Offers and Discouts</span>
+                  </a>
+              </li>
+          <?php   }?>
+      </ul>
+    </div>
+</nav>
 <script type="text/javascript" src="//code.jquery.com/jquery-2.0.3.min.js"></script>
 <script type="text/javascript" src="//maps.googleapis.com/maps/api/js?libraries=places&key=AIzaSyBwzkKvM75QzamE7BzVZTfEBwRO6FHEz4U"></script>
 
@@ -354,26 +400,6 @@ $results =$wpdb->get_results("select * from twc_service_category where published
 </script>
 
 
-<script type="text/javascript">
-       google.maps.event.addDomListener(window, "load", function () {
-		   /*                                                                                                                 
-		   var places = new google.maps.places.Autocomplete((document.getElementById('search-TB')),{
-	   types: ['geocode'],
-			 componentRestrictions: {country: 'DE'}//UK only   
-			 });*/
-		   var places = new google.maps.places.Autocomplete((document.getElementById("searchName")));
-           google.maps.event.addListener(places, "place_changed", function () {
-               var place = places.getPlace();
-               var address = place.formatted_address;
-                       
-               var latitude = place.geometry.location.lat();
-               var longitude = place.geometry.location.lng();
-			   document.getElementById("latitude").value = latitude;
-			   document.getElementById("longitude").value = longitude;
-			   
-           });                 
-      });
-</script>
 
 <script>
 $('.city_pop_search').click(function(){
