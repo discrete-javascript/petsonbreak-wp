@@ -131,17 +131,59 @@ $results =$wpdb->get_results("select * from twc_service_category where published
                                     <span class="pet_g_crt"><?php echo $serviceCategory;?></span>
                                     <span><i class="fa fa-angle-down" aria-hidden="true"></i></span>
                                 </span>-->
-                                <ul id="categories" class="form-control">
-                                   <?php foreach($results as $val) { ?>
+                                <ul id="categories" class="nav nav-tabs">
+                                   <?php foreach ($results as $val) { ?>
                                    <li class="selected_category" value="<?php echo $val->id;?>">
-                                       <span class="opt">
+                                       <a class="opt" data-toggle="tab" href="#searchbox">
                                            <?php echo $val->title;?>
-                                       </span>
+                                       </a>
                                    </li>           
                                    <?php } ?>
                                 </ul>
+                                <div class="tab-content">
+                                    <div id="searchbox" class="tab-pane">
+                                        <?php if($_REQUEST['destName']!=''){ ?>
+                                        <input type="text" 
+                                             name="searchName" 
+                                             id="searchName" 
+                                             class="form-control" value="<?php echo $_REQUEST['destName'] ;?>" placeholder="Discover and Unleash Happiness you cherish">
+                                        <?php }  else {?>
+                                        <input type="text" name="searchName" id="searchName" class="form-control" value="" placeholder="Discover and Unleash Happiness you cherish">
+                                        <?php } ?>
+                                        <span class="input-group-addon city_search" 
+                                            id="basic-addon2" style="cursor: pointer;">
+                                          Search
+                                        </span>
+                                    </div>
+                              </div>
+                                  <span class="err_searchName"></span>
                             </div>
-			<div class="input-group">
+<!--                             <ul class="nav nav-tabs">
+                                <li class="active"><a data-toggle="tab" href="#home">Home</a></li>
+                                <li><a data-toggle="tab" href="#menu1">Menu 1</a></li>
+                                <li><a data-toggle="tab" href="#menu2">Menu 2</a></li>
+                                <li><a data-toggle="tab" href="#menu3">Menu 3</a></li>
+                              </ul>
+
+                              <div class="tab-content">
+                                <div id="home" class="tab-pane fade in active">
+                                  <h3>HOME</h3>
+                                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                                </div>
+                                <div id="menu1" class="tab-pane fade">
+                                  <h3>Menu 1</h3>
+                                  <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                                </div>
+                                <div id="menu2" class="tab-pane fade">
+                                  <h3>Menu 2</h3>
+                                  <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.</p>
+                                </div>
+                                <div id="menu3" class="tab-pane fade">
+                                  <h3>Menu 3</h3>
+                                  <p>Eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+                                </div>
+                              </div>-->
+<!--			<div class="input-group">
 			  <?php if($_REQUEST['destName']!=''){ ?>
                             <input type="text" 
                                    name="searchName" 
@@ -155,7 +197,7 @@ $results =$wpdb->get_results("select * from twc_service_category where published
                                 Search
                             </span>
 			</div>
-			<span class="err_searchName"></span>
+			<span class="err_searchName"></span>-->
                     </div>
                     
             
@@ -208,6 +250,14 @@ $results =$wpdb->get_results("select * from twc_service_category where published
 </div>
 <div> 
 <?php strong_testimonials_view( 1 ); ?>.
+<script>
+    var listCategories = document.querySelector('#categories');
+    listCategories.childNodes.forEach(function(item, index) {
+        if (index > 10 && index %2) {
+            item.classList.add('hidden')
+        }
+    })
+</script>
 <script>
 $('.city_search').click(function(){
 	if($('#searchName').val()==''){
