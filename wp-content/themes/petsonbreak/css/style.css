@@ -2956,7 +2956,7 @@ transform: translate(-50%,-50%);}
 .pet-groomsv-text{float: left;width: 100%;}
 .pet-groomsv-text{}
 .pet-groomsv-text p{font-size: 25px;color: #333;font-weight: 500;margin-bottom:20px;}
-.pet-groomsv-sercahbox{float: right;width: 100%;position:relative;}
+.pet-groomsv-sercahbox{float: right;width: 100%;position:relative; background: white;border-radius: 5px;}
 .pet-groomsv-criteria{width: 30%;float:left;cursor:pointer;}
 .pet-groomsv-criteria>span{height: 45px;display: inline-block;line-height: 45px;width: 100%;text-align: center;border:1px solid #ccc;border-right:0px;color:#333;font-size:15px;}
 .pet-groomsv-criteria #categories {border-radius:0px;padding-left:0px;height:auto;max-height:500px;overflow:auto;position: absolute;top: 45px;left: 0px;border:0px;display:none;border:1px solid #ccc;border-top:0px;min-width: 40%;width: auto;}
@@ -3002,8 +3002,8 @@ background: #E5E4E6;border:1px solid #ccc;border-right:0px;margin-bottom:0px;cur
 
 .pet-groomsv-sercahbox .input-group{width: 100%;float: left;}
 .pet-groomsv-sercahbox .form-control{height: 41px;font-size: 13px;padding: 0px 0px 0px 8px;    border-radius: 0px;color: #727272;background: #fff;border-right:0px;}
-.pet-groomsv-sercahbox .form-control#searchName{border: 1px solid #ccc;border-left: 0px;border-right: 0px;box-shadow: none;height:45px;line-height:45px;font-size:15px;padding-left:0px;}
-.pet-groomsv-sercahbox .input-group-addon{background-color: #636;color: #fff;font-size: 14px;    border-radius: 0px;border:1px solid #aaa;border-radius:0px;}
+.pet-groomsv-sercahbox .form-control#searchName{border: 1px solid #ccc;border-right: 0px;box-shadow: none;height:30px;line-height:45px;font-size:12px;padding-left:15px;}
+.pet-groomsv-sercahbox .input-group-addon{background-color: #ff372f;color: #fff;font-size: 14px;    border-radius: 0px;border:1px solid #aaa;border-radius:0px;}
 .pet-groomsv-sercahbox #magnifying{cursor: pointer;background: none;border-left: 0px;border-right: 0px;color: #ccc;font-size: 20px;}
 .star-ioncs14{position:relative;}
 
@@ -6936,8 +6936,36 @@ border-left: 30px solid #636;
 .navbar-default .navbar-nav>li>a {
     color: #fff;
     cursor: pointer;
+    text-transform: uppercase;
 }
 .navbar-default .navbar-nav>.dropdown>a:hover .caret, .navbar-default .navbar-nav>.dropdown>a:focus .caret {
     border-top-color: #fff;
     border-bottom-color: #fff;
+}
+
+/*over riding container width and including flex*/
+/* tabing for search in homepage */
+div.container_width {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80em;
+}
+div#searchbox {
+    display: flex;
+    padding: 15px;
+}
+.pet-groomsv-sercahbox .input-group-addon {
+    width: 8em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#categories.nav-tabs>li>a {
+    color: #000;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+#categories.nav-tabs>li.active>a, #categories.nav-tabs>li.active>a:hover, #categories.nav-tabs>li.active>a:focus {
+    color: #ff372f
 }

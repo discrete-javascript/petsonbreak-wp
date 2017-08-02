@@ -146,9 +146,9 @@ $results =$wpdb->get_results("select * from twc_service_category where published
                                         <input type="text" 
                                              name="searchName" 
                                              id="searchName" 
-                                             class="form-control" value="<?php echo $_REQUEST['destName'] ;?>" placeholder="Discover and Unleash Happiness you cherish">
+                                             class="form-control" value="<?php echo $_REQUEST['destName'] ;?>" placeholder="WHERE WOULD YOU LIKE TO GO ?">
                                         <?php }  else {?>
-                                        <input type="text" name="searchName" id="searchName" class="form-control" value="" placeholder="Discover and Unleash Happiness you cherish">
+                                        <input type="text" name="searchName" id="searchName" class="form-control" value="" placeholder="WHERE WOULD YOU LIKE TO GO ?">
                                         <?php } ?>
                                         <span class="input-group-addon city_search" 
                                             id="basic-addon2" style="cursor: pointer;">
@@ -251,12 +251,17 @@ $results =$wpdb->get_results("select * from twc_service_category where published
 <div> 
 <?php strong_testimonials_view( 1 ); ?>.
 <script>
-    var listCategories = document.querySelector('#categories');
-    listCategories.childNodes.forEach(function(item, index) {
-        if (index > 10 && index %2) {
-            item.classList.add('hidden')
-        }
-    })
+    window.onload = function() { 
+        listCategories.childNodes[1].childNodes[1].click(); 
+    }; 
+    
+        var listCategories = document.querySelector('#categories');
+        listCategories.childNodes.forEach(function(item, index) {
+            if (index > 10 && index %2) {
+                item.classList.add('hidden');
+            }
+        });
+    
 </script>
 <script>
 $('.city_search').click(function(){
