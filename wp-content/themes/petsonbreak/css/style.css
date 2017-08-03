@@ -167,7 +167,7 @@ li {
 }
 .wright{
     width:100%;
-	float:right;'
+	float:right;
 }
 
 
@@ -2456,7 +2456,7 @@ background: #673569}
 	height: 1px;
 	content: '';
 	vertical-align: middle;
-background: #673569}\
+background: #673569}
 
 .pet-pop-desti{width:100%;float: left;}
 .big-img{}
@@ -6990,9 +6990,78 @@ a.carousel-control[href="#servicesCarousel"] span.glyphicon.glyphicon-chevron-le
     left: -2em;
     color: gray;
     font-size: 35px;
+    right: -1em;
 }
 /*About Us Style*/
-.about-us-layer {
+.about-us-section {
     margin: 8rem 0 0 70rem;
     width: 50rem;
+}
+
+/*Testimonial Slider Over riding*/
+
+a.carousel-control[href="#testimonial-slider"] {
+    width: 0%;
+}
+.testimonial-container {
+    margin-top: 5em;
+}
+.testimonial-container p:first-child {
+    font-size: 24px;
+    text-align: center;
+    margin-bottom: 3rem;
+    font-weight: 500;
+}
+#testimonial-slider {
+    background: #643364;
+    padding: 2.5rem 0;
+}
+.testimonial-section img{
+    border-radius: 100%;
+    width: 38rem;
+    height: 38rem;
+    margin-left: 20rem;
+    transform: scale(0.8);
+}
+.testimony-content {
+    color: white;
+    margin: 3rem 1em; 
+}
+.testimony-person-name {
+    margin-bottom: 1rem;
+    font-size: 2.5rem;
+}
+.testimony-stars .glyphicon.glyphicon-star {
+    color: yellow;
+    font-size: 25px;
+    margin-bottom: 1rem;
+}
+.testimony-description {
+    font-style: italic;
+    line-height: normal;
+}
+
+/*Events & News Container Styles*/ 
+.events-news-container {
+    margin: 5rem 0;
+    color: black;
+}
+.events-section-heading, .news-section-heading {
+    text-align: center;
+    font-size: 3rem;
+    font-weight: 500;
+    margin-bottom: 2rem;
+}
+.news-column {
+    border-right: 1px solid #000;
+}
+.whole-news {
+    margin-left: 5rem;
+}
+.each-news .glyphicon.glyphicon-play {
+    margin-right: 1rem;
+    color: yellow;
+}
+.each-news {
+    margin-bottom: 1rem;
 }

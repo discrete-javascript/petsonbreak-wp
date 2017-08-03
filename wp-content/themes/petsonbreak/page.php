@@ -322,14 +322,126 @@ else{
      </div>
    
 </div>
-<div class="about-us-layer">
+<div class="about-us-section">
     <h1 class="about-us-heading">ABOUT US</h1>
     <div class="about-us-description">
         <p>At PetsonBreak we mean what we say and are committed to providing superlative experiences that can rarely be found elsewhere. For us, PetsonBreak is more than just a travel company; it is the embodiment of everything that we are truly passionate about. PetsonBreak is owned and staffed by pet people for whom work related with pets and travel is not simply an interesting job, but an all-consuming passion. </p>
         <p>We believe that travel should not simply be a business, but a way of exploring and understanding the diverse cultures, people and traditions that inhabit in this world and what more you can ask if your furry friend can tag along in these adventurous trips.</p>
     </div>
 </div>
-<?php strong_testimonials_view( 1 ); ?>.
+<?php // strong_testimonials_view( 1 ); ?>.
+<div class="testimonial-container">
+  <p>Customer Reviews & Testimonials</p>  
+  <div id="testimonial-slider" class="carousel slide" data-ride="carousel">
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner">
+      <div class="item active testimonial-section">
+            <div class="row">
+                <div class="col-lg-6 col-md-6 col-sm-6">
+                    <img src="http://dev.petsonbreak.com/wp-content/uploads/2017/07/desk-about-portrait-diego@2x-6e11e0946c.jpg">
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-6">
+                    <div class="testimony-content">
+                      <p class="testimony-person-name"> Peter Novac</p>
+                      <p class="testimony-stars">
+                        <span class="glyphicon glyphicon-star"></span>
+                        <span class="glyphicon glyphicon-star"></span>
+                        <span class="glyphicon glyphicon-star"></span>
+                        <span class="glyphicon glyphicon-star"></span>
+                        <span class="glyphicon glyphicon-star"></span>
+                      </p>
+                      <p class="testimony-description"> Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui. Donec sollicitudin molestie malesuada. Vivamus suscipit tortor eget felis porttitor volutpat. Curabitur aliquet quam id dui posuere blandit. Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Proin eget tortor risus. Nulla porttitor accumsan tincidunt. Proin eget tortor risus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent sapien massa, convallis a pellentesque nec, egestas non nisi. </p>
+                      <small class="testimony-date"><i>Sunday 26th July, 2017</i> </small>
+                  </div>
+                </div>
+            </div>
+      </div>
+      <div class="item testimonial-section">
+            <div class="row">
+                <div class="col-lg-6 col-md-6 col-sm-6">
+                    <img src="http://dev.petsonbreak.com/wp-content/uploads/2017/07/desk-about-portrait-diego@2x-6e11e0946c.jpg">
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-6">
+                    <div class="testimony-content">
+                      <p class="testimony-person-name"> Peter Novac</p>
+                      <p class="testimony-stars">
+                        <span class="glyphicon glyphicon-star"></span>
+                        <span class="glyphicon glyphicon-star"></span>
+                        <span class="glyphicon glyphicon-star"></span>
+                        <span class="glyphicon glyphicon-star"></span>
+                        <span class="glyphicon glyphicon-star"></span>
+                      </p>
+                      <p class="testimony-description"> Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui. Donec sollicitudin molestie malesuada. Vivamus suscipit tortor eget felis porttitor volutpat. Curabitur aliquet quam id dui posuere blandit. Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Proin eget tortor risus. Nulla porttitor accumsan tincidunt. Proin eget tortor risus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent sapien massa, convallis a pellentesque nec, egestas non nisi. </p>
+                      <small class="testimony-date"><i>Sunday 26th July, 2017</i> </small>
+                  </div>
+                </div>
+            </div>
+      </div>
+      <div class="item testimonial-section">
+            <div class="row">
+                <div class="col-lg-6 col-md-6 col-sm-6">
+                    <img src="http://dev.petsonbreak.com/wp-content/uploads/2017/07/desk-about-portrait-diego@2x-6e11e0946c.jpg">
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-6">
+                    <div class="testimony-content">
+                      <p class="testimony-person-name"> Peter Novac</p>
+                      <p class="testimony-stars">
+                        <span class="glyphicon glyphicon-star"></span>
+                        <span class="glyphicon glyphicon-star"></span>
+                        <span class="glyphicon glyphicon-star"></span>
+                        <span class="glyphicon glyphicon-star"></span>
+                        <span class="glyphicon glyphicon-star"></span>
+                      </p>
+                      <p class="testimony-description"> Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui. Donec sollicitudin molestie malesuada. Vivamus suscipit tortor eget felis porttitor volutpat. Curabitur aliquet quam id dui posuere blandit. Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Proin eget tortor risus. Nulla porttitor accumsan tincidunt. Proin eget tortor risus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent sapien massa, convallis a pellentesque nec, egestas non nisi. </p>
+                      <small class="testimony-date"><i>Sunday 26th July, 2017</i> </small>
+                  </div>
+                </div>
+            </div>
+      </div>
+    </div>
+
+    <!-- Left and right controls -->
+    <a class="left carousel-control" href="#testimonial-slider" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#testimonial-slider" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+</div>
+<div class="container events-news-container">
+    <div class="row">
+        <div class="event-column col-lg-6 col-md-6 col-sm-6 col-xs-12">
+            <div class="events-container">
+                <p class="events-section-heading">Events</p>
+            </div>
+            <div style="display: flex;justify-content: center;align-items: center;margin-top: 2rem;">
+                <h2>No Events</h2>
+            </div>
+        </div>
+        <div class="news-column col-lg-6 col-md-6 col-sm-6 col-xs-12">
+            <div class="news-container">
+                <p class="news-section-heading">News & Updates</p>
+                
+                <div class="whole-news">
+                    <?php $newsResults =$wpdb->get_results("select * from twc_news where published='Yes' and status_deleted=0");
+                    foreach($newsResults as $obj){?>
+                    <div class="each-news" id="hash_<?php echo $obj->id;?>">
+                        <span class="glyphicon glyphicon-play"></span>
+                        <span><i><?php echo stripcslashes($obj->title);?></i></span>
+                    </div>    
+                    <?php } ?>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div>
+    <img style="width: 100%" src="http://dev.petsonbreak.com/wp-content/uploads/2017/08/Index-Banner-Partners.png" />
+</div>
+
 <script>
     window.onload = function() { 
         listCategories.childNodes[1].childNodes[1].click(); 
