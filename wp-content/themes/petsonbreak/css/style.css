@@ -4076,9 +4076,9 @@ padding-bottom: 20px;}
 
 /* All Categories */
 
-.cat_colm{    width: 100%;
+.cat_colm{    width: 24rem;
     float: left;
-    height: 200px;
+    height: 30rem;
 	position: relative;
 margin-bottom: 15px;}
 
@@ -6968,4 +6968,31 @@ div#searchbox {
 }
 #categories.nav-tabs>li.active>a, #categories.nav-tabs>li.active>a:hover, #categories.nav-tabs>li.active>a:focus {
     color: #ff372f
+}
+
+/*Styles for Heading and Description for homepage carousel*/
+.offer-description {display: flex;flex-direction: column;justify-content: center;align-items: center;margin: 6em 0;}
+.offer-heading { margin-bottom: 4rem;}
+.offer-content {color: #808080; font-size: 24px;font-weight: 500;}
+.pets-number {color: red;}
+
+/*Over riding Carousel Control Style*/
+
+a.carousel-control[href="#servicesCarousel"] {
+    width: 0%;
+}
+a.carousel-control[href="#servicesCarousel"] span.glyphicon.glyphicon-chevron-right {
+    right: 1em;
+    color: gray;
+    font-size: 35px;
+}
+a.carousel-control[href="#servicesCarousel"] span.glyphicon.glyphicon-chevron-left {
+    left: -2em;
+    color: gray;
+    font-size: 35px;
+}
+/*About Us Style*/
+.about-us-layer {
+    margin: 8rem 0 0 70rem;
+    width: 50rem;
 }

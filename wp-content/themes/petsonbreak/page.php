@@ -144,8 +144,6 @@ else{
 }
 
 ?>
-<!-- Latest compiled and minified JavaScript -->
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 <div class="log_backGrond">
     
     <div class="container_width">
@@ -274,87 +272,63 @@ else{
     </div>
 </div>
  <div id="all_categories">
+     <div class="offer-description">
+         <h1 class="offer-heading">WHAT WE OFFER</h1>
+         <p class="offer-content">Over <span class="pets-number">10,000+</span> Pets friendly places to stay, eat & play with your Pets</p>
+     </div>
+     <div class="container">
+         <div id="servicesCarousel" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner">
 
- <?php foreach (array_chunk($users_kicks, 4, true) as $array) {
-    echo '<div>';
-    foreach($array as $kicks) {
-         echo $kicks->brand;
-    }
-    echo '</div>'; ?>
-}
-    <div class="row">
-    <?php 
-    $weekresults =$wpdb->get_results("select * from twc_petfriendly_destination where 1 ".$extQuery." ".$extrCond."");
-    foreach($weekresults as $weekrow){
-            // $link =site_url().'/search-vendor/?sid='.$weekrow->service_category;
-        $link =site_url().'/search-vendor/?sid='.$weekrow->service_category.'&destName='.$weekrow->destination;
-    ?>
-        <div class="col-md-6 col-sm-6">
-            <div class="cat_colm">
-                <div class="" rel="<?php echo $weekrow->service_category;?>" style="background:url(<?php echo plugins_url(); ?>/ean_plugin/images/Category/<?php echo $weekrow->img_path;?>);background-size:cover;">
-                    <div class="desc">
-                        <h2><?php echo $weekrow->title;?></h2>
-                        <p><?php echo $weekrow->destination;?></p>
-                    </div>
-                    <div class="cat_overlay">
-                        <a href="<?php echo $link;?>" class="cat_det">
-                            <i class="fa fa-paperclip" aria-hidden="true"></i>
-                        </a>
+             <?php 
+            $weekresults =$wpdb->get_results("select * from twc_petfriendly_destination where 1 ".$extQuery." ".$extrCond."");
+            foreach(array_chunk($weekresults, 4, true) as $key=>$array){
+                    // $link =site_url().'/search-vendor/?sid='.$weekrow->service_category;
+               
+            ?>
+            <div class="item <?php if($key == 0) { echo 'active'; } else { echo '';  }?>">
+            <?php foreach($array as $weekrow) {  $link =site_url().'/search-vendor/?sid='.$weekrow->service_category.'&destName='.$weekrow->destination; ?>
+            
+                <div class="col-md-3 col-xs-3">
+                    <div class="cat_colm">
+                        <div class="" rel="<?php echo $weekrow->service_category;?>" style="background:url(<?php echo plugins_url(); ?>/ean_plugin/images/Category/<?php echo $weekrow->img_path;?>);background-size:cover;">
+                            <div class="desc">
+                                <h2><?php echo $weekrow->title;?></h2>
+                                <p><?php echo $weekrow->destination;?></p>
+                            </div>
+                            <div class="cat_overlay">
+                                <a href="<?php echo $link;?>" class="cat_det">
+                                    <i class="fa fa-paperclip" aria-hidden="true"></i>
+                                </a>
+                            </div>
+                        </div>
                     </div>
                 </div>
+            <?php } ?>
             </div>
-        </div>
-    <?php } ?>
+         
+            <?php } ?>
+            </div>
+             <!-- Left and right controls -->
+            <a class="left carousel-control" href="#servicesCarousel" data-slide="prev">
+              <span class="glyphicon glyphicon-chevron-left"></span>
+              <span class="sr-only">Previous</span>
+            </a>
+            <a class="right carousel-control" href="#servicesCarousel" data-slide="next">
+              <span class="glyphicon glyphicon-chevron-right"></span>
+              <span class="sr-only">Next</span>
+            </a>
+         </div>
+     </div>
+   
+</div>
+<div class="about-us-layer">
+    <h1 class="about-us-heading">ABOUT US</h1>
+    <div class="about-us-description">
+        <p>At PetsonBreak we mean what we say and are committed to providing superlative experiences that can rarely be found elsewhere. For us, PetsonBreak is more than just a travel company; it is the embodiment of everything that we are truly passionate about. PetsonBreak is owned and staffed by pet people for whom work related with pets and travel is not simply an interesting job, but an all-consuming passion. </p>
+        <p>We believe that travel should not simply be a business, but a way of exploring and understanding the diverse cultures, people and traditions that inhabit in this world and what more you can ask if your furry friend can tag along in these adventurous trips.</p>
     </div>
 </div>
-<div class="container">
-  <h2>Carousel Example</h2>  
-  <div id="myCarousel" class="carousel slide" data-ride="carousel">
-    <!-- Indicators -->
-    
-
-    <!-- Wrapper for slides -->
-    <div class="carousel-inner">
-      <div class="item active">
-        <div class="row">
-            <div class="col-xs-3"><img src="la.jpg" alt="Los Angeles" style="width:100%;"></div>
-            <div class="col-xs-3"><img src="la.jpg" alt="Los Angeles" style="width:100%;"></div>
-            <div class="col-xs-3"><img src="la.jpg" alt="Los Angeles" style="width:100%;"></div>
-            <div class="col-xs-3"><img src="la.jpg" alt="Los Angeles" style="width:100%;"></div>
-        </div>
-      </div>
-
-      <div class="item">
-        <div class="row">
-            <div class="col-xs-3"><img src="la.jpg" alt="Los Angeles" style="width:100%;"></div>
-            <div class="col-xs-3"><img src="la.jpg" alt="Los Angeles" style="width:100%;"></div>
-            <div class="col-xs-3"><img src="la.jpg" alt="Los Angeles" style="width:100%;"></div>
-            <div class="col-xs-3"><img src="la.jpg" alt="Los Angeles" style="width:100%;"></div>
-        </div>
-      </div>
-    
-      <div class="item">
-        <div class="row">
-            <div class="col-xs-3"><img src="la.jpg" alt="Los Angeles" style="width:100%;"></div>
-            <div class="col-xs-3"><img src="la.jpg" alt="Los Angeles" style="width:100%;"></div>
-            <div class="col-xs-3"><img src="la.jpg" alt="Los Angeles" style="width:100%;"></div>
-            <div class="col-xs-3"><img src="la.jpg" alt="Los Angeles" style="width:100%;"></div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Left and right controls -->
-    <a class="left carousel-control" href="#myCarousel" data-slide="prev">
-      <span class="glyphicon glyphicon-chevron-left"></span>
-      <span class="sr-only">Previous</span>
-    </a>
-    <a class="right carousel-control" href="#myCarousel" data-slide="next">
-      <span class="glyphicon glyphicon-chevron-right"></span>
-      <span class="sr-only">Next</span>
-    </a>
-  </div>
-</div>
-
 <?php strong_testimonials_view( 1 ); ?>.
 <script>
     window.onload = function() { 
