@@ -119,8 +119,33 @@ $site_language='';
 }
 
 $results =$wpdb->get_results("select * from twc_service_category where published='Yes' and status_deleted=0");
-?>
 
+$extQuery ='';
+if($_REQUEST['sid']!=''){
+ $extQuery.=" and service_category='".$_REQUEST['sid']."'";	
+}
+if($_REQUEST['destName']!=''){
+ //$extQuery.=" and LCASE(city)='".strtolower($_REQUEST['destName'])."'";
+  $extQuery.=" and LCASE(city)LIKE '%".strtolower($_REQUEST['destName'])."'"; 
+}
+
+$serviceTitle ='';
+if($_REQUEST['sid']!='' && $_REQUEST['destName']!=''){
+ $serviceTitle.=getFieldByID('title','twc_service_category',$_REQUEST['sid']). ' in ' .$_REQUEST['destName'];	
+}
+elseif($_REQUEST['sid']!='' || $_REQUEST['destName']=''){
+ $serviceTitle.=getFieldByID('title','twc_service_category',$_REQUEST['sid']);
+}
+elseif($_REQUEST['destName']!='' || $_REQUEST['sid']=''){
+  $serviceTitle.=$_REQUEST['destName']; 
+}
+else{
+	$serviceTitle.='Pet Services';
+}
+
+?>
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 <div class="log_backGrond">
     
     <div class="container_width">
@@ -146,9 +171,9 @@ $results =$wpdb->get_results("select * from twc_service_category where published
                                         <input type="text" 
                                              name="searchName" 
                                              id="searchName" 
-                                             class="form-control" value="<?php echo $_REQUEST['destName'] ;?>" placeholder="Discover and Unleash Happiness you cherish">
+                                             class="form-control" value="<?php echo $_REQUEST['destName'] ;?>" placeholder="WHERE WOULD YOU LIKE TO GO ?">
                                         <?php }  else {?>
-                                        <input type="text" name="searchName" id="searchName" class="form-control" value="" placeholder="Discover and Unleash Happiness you cherish">
+                                        <input type="text" name="searchName" id="searchName" class="form-control" value="" placeholder="WHERE WOULD YOU LIKE TO GO ?">
                                         <?php } ?>
                                         <span class="input-group-addon city_search" 
                                             id="basic-addon2" style="cursor: pointer;">
@@ -248,15 +273,45 @@ $results =$wpdb->get_results("select * from twc_service_category where published
 	  </div> -->
     </div>
 </div>
-<div> 
+ <div id="all_categories">
+    <div class="row">
+    <?php 
+    $weekresults =$wpdb->get_results("select * from twc_petfriendly_destination where 1 ".$extQuery." ".$extrCond."");
+    foreach($weekresults as $weekrow){
+            // $link =site_url().'/search-vendor/?sid='.$weekrow->service_category;
+        $link =site_url().'/search-vendor/?sid='.$weekrow->service_category.'&destName='.$weekrow->destination;
+    ?>
+        <div class="col-md-6 col-sm-6">
+            <div class="cat_colm">
+                <div class="" rel="<?php echo $weekrow->service_category;?>" style="background:url(<?php echo plugins_url(); ?>/ean_plugin/images/Category/<?php echo $weekrow->img_path;?>);background-size:cover;">
+                    <div class="desc">
+                        <h2><?php echo $weekrow->title;?></h2>
+                        <p><?php echo $weekrow->destination;?></p>
+                    </div>
+                    <div class="cat_overlay">
+                        <a href="<?php echo $link;?>" class="cat_det">
+                            <i class="fa fa-paperclip" aria-hidden="true"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    <?php } ?>
+    </div>
+</div>
 <?php strong_testimonials_view( 1 ); ?>.
 <script>
-    var listCategories = document.querySelector('#categories');
-    listCategories.childNodes.forEach(function(item, index) {
-        if (index > 10 && index %2) {
-            item.classList.add('hidden')
-        }
-    })
+    window.onload = function() { 
+        listCategories.childNodes[1].childNodes[1].click(); 
+    }; 
+    
+        var listCategories = document.querySelector('#categories');
+        listCategories.childNodes.forEach(function(item, index) {
+            if (index > 10 && index %2) {
+                item.classList.add('hidden');
+            }
+        });
+    
 </script>
 <script>
 $('.city_search').click(function(){
@@ -296,5 +351,6 @@ $('.pet-groomsv-criteria-open #categories li').click(function(){
         cursor: pointer;
     }
 </style>
+
 <?php get_footer(); ?>
 
