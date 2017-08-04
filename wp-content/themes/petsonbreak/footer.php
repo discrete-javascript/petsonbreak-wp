@@ -11,182 +11,113 @@ $vendor_id =$result->vendor_id;
 <div class="main-overlay"></div>
 <footer id="footer">
   <div class="footer-top">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-12">
-          <div class="col-md-4">
-			<div class="footer_colm">
-              <h1 class="foot-colHead"><?php  echo $mk_options['f_other_services'];?></h1>
-	
-			    <?php 
-			   $fdefaults = array(
-						'theme_location'  => 'services_offered',
-						'menu'            => '',
-						'container'       => '',
-						'container_class' => '',
-						'container_id'    => '',
-						'menu_class'      => '',
-						'menu_id'         => '',
-						'echo'            => true,
-						'fallback_cb'     => 'wp_page_menu',
-						'before'          => '',
-						'after'           => '',
-						'link_before'     => '',
-						'link_after'      => '',
-						'items_wrap'      => '<ul class="footer_links" id="prime-navnp">%3$s</ul>',
-						'depth'           => 0,
-						'walker'          => ''
+      <div class="container">
+          <div class="row">
+            <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+                <span>QUICK LINKS</span>
+		<?php $fdefaults = array(
+                                        'theme_location'  => 'services_offered',
+                                        'menu'            => '',
+                                        'container'       => '',
+                                        'container_class' => '',
+                                        'container_id'    => '',
+                                        'menu_class'      => '',
+                                        'menu_id'         => '',
+                                        'echo'            => true,
+                                        'fallback_cb'     => 'wp_page_menu',
+                                        'before'          => '',
+                                        'after'           => '',
+                                        'link_before'     => '',
+                                        'link_after'      => '',
+                                        'items_wrap'      => '<ul class="quick-links-list">%3$s</ul>',
+                                        'depth'           => 0,
+                                        'walker'          => ''
 					);
-				 wp_nav_menu($fdefaults);
+				wp_nav_menu($fdefaults);
 			 ?>
-			  
-	  
-			  
-            </div>	
-          </div>
-
-          <div class="col-md-4">
-            <div class="footer_colm">
-              <h1 class="foot-colHead">Petsonbreak Details</h1>
-			  
-			    <?php 
-			   $fdefaults = array(
-						'theme_location'  => 'petsonbreak_details',
-						'menu'            => '',
-						'container'       => '',
-						'container_class' => '',
-						'container_id'    => '',
-						'menu_class'      => '',
-						'menu_id'         => '',
-						'echo'            => true,
-						'fallback_cb'     => 'wp_page_menu',
-						'before'          => '',
-						'after'           => '',
-						'link_before'     => '',
-						'link_after'      => '',
-						'items_wrap'      => '<ul class="footer_links" id="prime-navnp">%3$s</ul>',
-						'depth'           => 0,
-						'walker'          => ''
+                <?php $fdefaults = array(
+                                        'theme_location'  => 'petsonbreak_details',
+                                        'menu'            => '',
+                                        'container'       => '',
+                                        'container_class' => '',
+                                        'container_id'    => '',
+                                        'menu_class'      => '',
+                                        'menu_id'         => '',
+                                        'echo'            => true,
+                                        'fallback_cb'     => 'wp_page_menu',
+                                        'before'          => '',
+                                        'after'           => '',
+                                        'link_before'     => '',
+                                        'link_after'      => '',
+                                        'items_wrap'      => '<ul class="quick-links-list">%3$s</ul>',
+                                        'depth'           => 0,
+                                        'walker'          => ''
 					);
-				 wp_nav_menu($fdefaults);
-			 ?>
-
+				wp_nav_menu($fdefaults);
+			?>
+            </div>
+            <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+                <p>LOCATIONS </p>
+                <p>INDIA OFFICE</p>
+                <ul>
+                    <li><?php echo $mk_options['f_company_name'];?></li>
+                    <li>Vidhya Nagar,</li>
+                    <li>Dhanori,</li>
+                    <li>Pune 411 015 </li>
+                    <li>India</li>
+                </ul>
+                <span>PHONE</span>
+                <ul>
+                    <li>+91-8999 306 724 (Travel Related)</li>
+                    <?php  if($mk_options['f_contact_number']!=''){ ?>
+                    <li>+91-7566485676 (Pet Related)</li>
+                       <?php } ?>
+                </ul>
+                <span>PHONE</span>
+            </div>
+            <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+                <span>AUSTRALIA OFFICE</span>
+                <ul>
+                    <li>43 </li>
+                    <li>Whites Lane,</li>
+                    <li>Glen Waverley 3150,</li>
+                    <li>Victoria  </li>
+                    <li>Australia</li>
+                </ul>
+                <span>PHONE</span>
+                <ul>
+                    <li>0421 3766 36 (Travel Related)</li>
+                    <li>australiaincoming[at]petsonbreak[dot]com</li>
+                </ul>
+            </div>
+            <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+                <div class="visa-sign-cards">
+                        <p class="veri"><img src="<?php echo get_template_directory_uri();?>/images/veri-sign.png"/></p>
+                        <ul>
+                          <li><img src="<?php echo get_template_directory_uri();?>/images/visaCard.png"/></li>
+                          <li><img src="<?php echo get_template_directory_uri();?>/images/masterCard.png"/></li>
+                          <li><img src="<?php echo get_template_directory_uri();?>/images/americanEx.png"/></li>
+                          <li><img src="<?php echo get_template_directory_uri();?>/images/discover.png"/></li>
+                        </ul>
+                </div>
+                <div class="social-links-container">
+                    <p>FOLLOW US ON</p>
+                    <ul class="footer_links social_links">
+                                 <?php if($mk_options['f_facebook']!=''){?>
+                        <li><a href="<?php echo $mk_options['f_facebook'];?>" target="_blank"><i class="fa fa-facebook"></i> </a></li>
+                                   <?php } if($mk_options['f_google']!=''){?>
+                        <li><a href="<?php echo $mk_options['f_google'];?>" target="_blank"><i class="fa fa fa-google-plus"></i> </a></li>
+                                   <?php } if($mk_options['f_linkedin']!=''){?>
+                        <li><a href="<?php echo $mk_options['f_linkedin'];?>" target="_blank"><i class="fa fa fa-linkedin"></i> </a></li>
+                                        <?php } if($mk_options['f_twitter']!=''){?>
+                        <li><a href="<?php echo $mk_options['f_twitter'];?>" target="_blank"><i class="fa fa fa-twitter"></i> </a></li>
+                                      <?php }?>
+                    </ul>
+                </div>
             </div>
           </div>
-		  
-		  
-			
-		  
-		  
-          <div class="col-md-4">
-		    <div class="footer_colm footer_colm_logo"> <a href="#"><img ng-src="<?php echo $mk_options['footer_logo'];?>" alt="logo" class="footer-logo"></a> </div>
-		  
-            <div class="footer_colm">
-			   <ul class="footer_links">
-					<li><a href="<?php echo site_url();?>/contact-us/" target="_blank">Contact Us</a></li>
-					<li></li>
-			   </ul>
-			
-              <h1 class="foot-colHead"><?php echo $mk_options['f_stay_sonnected'];?></h1>
-              <ul class="footer_links social_links">
-			   <?php if($mk_options['f_facebook']!=''){?>
-                <li><a href="<?php echo $mk_options['f_facebook'];?>" target="_blank"><i class="fa fa-facebook"></i> </a></li>
-			   <?php } if($mk_options['f_google']!=''){?>
-                <li><a href="<?php echo $mk_options['f_google'];?>" target="_blank"><i class="fa fa fa-google-plus"></i> </a></li>
-			   <?php } if($mk_options['f_linkedin']!=''){?>
-                <li><a href="<?php echo $mk_options['f_linkedin'];?>" target="_blank"><i class="fa fa fa-linkedin"></i> </a></li>
-				<?php } if($mk_options['f_twitter']!=''){?>
-                <li><a href="<?php echo $mk_options['f_twitter'];?>" target="_blank"><i class="fa fa fa-twitter"></i> </a></li>
-				<?php }?>
-              </ul>
-            </div>
-			
-			<div class="visa-sign-cards">
-				<p class="veri"><img src="<?php echo get_template_directory_uri();?>/images/veri-sign.png"/></p>
-				<ul>
-				  <li><img src="<?php echo get_template_directory_uri();?>/images/visaCard.png"/></li>
-				  <li><img src="<?php echo get_template_directory_uri();?>/images/masterCard.png"/></li>
-				  <li><img src="<?php echo get_template_directory_uri();?>/images/americanEx.png"/></li>
-				  <li><img src="<?php echo get_template_directory_uri();?>/images/discover.png"/></li>
-				</ul>
-				
-			</div>
-			
-          </div>
-        </div>
       </div>
-	  
-	  
-	  <div class="row border-row">
-	      <div class="col-md-12">
-		     <div class="col-md-12">
-			     <hr class="borderR"></hr>
-			 </div>
-		  </div>
-	  </div>
-	  
-	  
-	  <div class="row">
-	    <div class="col-md-12">
-	
-			<div class="col-md-4">
-            <div class="footer_colm">
-			 <h1 class="foot-colHead"><?php echo $mk_options['f_contact_title'];?></h1>
-            <h5 class="company_name"><?php echo $mk_options['f_company_name'];?></h5>
-		    <ul class="footer_links ausAd">
-				<li><span><i class="fa fa-home"></i></span><a href="">Vidhya Nagar, Dhanori,Pune 411 015 India</a></li>
-                <li><span><i class="fa fa-phone"></i></span><a href=""><?php echo $mk_options['f_contact_number'];?></a></li>
-      
-			 
-			
-              </ul>
-            </div>
-			</div>
-			<div class="col-md-4">
-			  <div class="footer_colm">
-			  <ul class="footer_links indAdd">
-			   <h6 style="color:#FFF">INDIA</h6>
-			     
-				
-				
-			   
-                <!--<li><span><i class="fa fa-home"></i></span><a href=""><?php// echo $mk_options['f_address'];?></a></li>-->
-			   <?php  if($mk_options['f_contact_number']!=''){ ?>
-               
-				<li><span><i class="fa fa-phone"></i></span><a href="">+91 7566485676 (Pet Related)</a></li>
-			   <?php } if($mk_options['f_email']!=''){?>
-                <li><span><i class="fa fa-envelope"></i></span><a href=""><?php echo $mk_options['f_email'];?></a></li>
-			   <?php } if($mk_options['f_website']!=''){?>
-                <li><span><i class="fa fa-globe"></i></span><a href=""><?php echo $mk_options['f_website'];?></a></li>
-			   <?php } if($mk_options['f_skype']!=''){?>
-                <li><span><i class="fa fa-envelope"></i></span><a href=""><?php echo $mk_options['f_skype'];?></a></li>
-			   <?php }?>
-			   <li><span><i class="fa fa-skype"></i></span><a href="">info[at]petsonbreak[dot]com</a></li>
-              </ul>
-			  </div>
-			</div>
-			
-			<div class="col-md-4">
-			  <div class="footer_colm">
-			     	   <ul class="footer_links ausAd">
-			   <h6 style="color:#FFF">AUSTRALIA</h6>
-                
-                <li><span><i class="fa fa-home"></i></span><a href="">43 Whites Lane,Glen Waverley 3150,Victoria  Australia</a></li>
-                <li><span><i class="fa fa-phone"></i></span><a href="">0421 3766 36 (Travel Related)</a></li>
-                <li><span><i class="fa fa-envelope"></i></span><a href="">australiaincoming[at]petsonbreak[dot]com</a></li>
-			 
-			
-              </ul>
-			  </div>
-			</div>
-			
-			
-          
-		</div>
-	  
-	  </div>
-	  
-    </div>
+    
   </div>
   <div class="footer-bottom">
     <div class="container">
