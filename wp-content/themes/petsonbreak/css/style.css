@@ -4076,9 +4076,9 @@ padding-bottom: 20px;}
 
 /* All Categories */
 
-.cat_colm{    width: 24rem;
+.cat_colm{    width: 100%;
     float: left;
-    height: 30rem;
+    height: 200px;
 	position: relative;
 margin-bottom: 15px;}
 
@@ -6977,7 +6977,10 @@ div#searchbox {
 .pets-number {color: red;}
 
 /*Over riding Carousel Control Style*/
-
+div.category-slides {
+    width: 24rem;
+    height: 30rem;
+}
 a.carousel-control[href="#servicesCarousel"] {
     width: 0%;
 }
@@ -7049,7 +7052,7 @@ a.carousel-control[href="#servicesCarousel"] span.glyphicon.glyphicon-chevron-le
     margin-bottom: 2rem;
 }
 .news-column {
-    border-right: 1px solid #000;
+    border-left: 1px solid #000;
 }
 .whole-news {
     margin-left: 5rem;
@@ -7063,7 +7066,9 @@ a.carousel-control[href="#servicesCarousel"] span.glyphicon.glyphicon-chevron-le
 }
 
 /*Footer Styles*/
-
+div.footer-top {
+    background: #1f0422;
+}
 .quick-links-list li a {
     color: white;
     cursor: pointer;
@@ -7071,4 +7076,35 @@ a.carousel-control[href="#servicesCarousel"] span.glyphicon.glyphicon-chevron-le
 .social-links-container {
     width: 25rem;
     margin-top: 10rem;
+}
+
+/*Search Vendor Styles*/
+.search-results-container {
+    width: 100%;
+}
+.parallax-search-frame {
+    background-image: url(http://dev.petsonbreak.com/wp-content/uploads/2017/06/alexander-dummer-117495.jpg);
+    padding: 20rem 0px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+.parallax-service-title p {
+    color: white;
+    font-size: -webkit-xxx-large;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+ul#serviceList li {
+    width: 40%;
+    height: 14em;
+    float: left;
+    margin-right: 10%;
+    margin-top: 5%;
+}
+div.pet-child-right {
+    width: 100%;
+    float: none;
 }

@@ -290,7 +290,7 @@ else{
             <?php foreach($array as $weekrow) {  $link =site_url().'/search-vendor/?sid='.$weekrow->service_category.'&destName='.$weekrow->destination; ?>
             
                 <div class="col-md-3 col-xs-3">
-                    <div class="cat_colm">
+                    <div class="cat_colm category-slides">
                         <div class="" rel="<?php echo $weekrow->service_category;?>" style="background:url(<?php echo plugins_url(); ?>/ean_plugin/images/Category/<?php echo $weekrow->img_path;?>);background-size:cover;">
                             <div class="desc">
                                 <h2><?php echo $weekrow->title;?></h2>
