@@ -73,45 +73,22 @@ else{
 </div>
 <div class="container search-vendor-container">
 	<div class="con_left search-results-container">
-	<div id="petBrd-page-wrap">
-	  <ul class="pet_breadcrumb">
-					<li class=" pet_breadcrumbStep pet_breadcrumbActive"><a href="<?php echo site_url();?>">Home</a></li>
-					<li class="pet_breadcrumbStep"><a href="#"><?php echo getFieldByID('title','twc_service_category',$_REQUEST['sid']);?></a></li>
-				</ul>
-			</div>
 	<div class="pet-search-container">
 
 		
-		<div class="pet-child-right">
+		<div class="search-items pet-child-right">
+                    
                     <div class="row">
-                        <div class="col-lg-1"></div>
-                        <div class="col-lg-10">
+                        <div class="no-of-results">
+					0 RESULTS
+				</div>
+                        
+                        <div class="col-lg-12">
                             <ul id="serviceList">
-                                <li>
-                                    <div class="float_left14" 
-                                        style="background-image:url(http://dev.petsonbreak.com/wp-content/themes/petsonbreak/uploads/vendor_thumbs/);">
-                                             
-                                    </div>
-                                    <div class="float_right14">
-                                        <h2>null</h2>
-                                        <div class="text-pack17">
-                                            <span class="add_Srvc">
-                                                <i class="fa fa-map-marker"></i>459, Rohini,New Delhi
-                                            </span>
-                                            <span class="star-ioncs4">
-                                                
-                                            </span>
-                                            <span>
-                                                <a href="http://dev.petsonbreak.com/details-page/?id=37&amp;destName=delhi">
-                                                    <button type="button" class="btn btn-default btn-use_1">More Info</button>
-                                                </a>
-                                            </span>
-                                        </div>
-                                    </div>
-                                </li>
+                                
                             </ul>
                         </div>
-                        <div class="col-lg-1"></div>
+                        
                     </div>
 		
 	   <div class="pagination-div" id="pagination">&nbsp;</div>
@@ -219,7 +196,7 @@ function changePage(){
 
 }
 
-function searchVendorServices(){ 
+function searchVendorServices(){
 	 var page=$('#page').val();
 	 var filter_Data =$('#filter_frm').serialize();
 	  $.ajax({
@@ -231,46 +208,44 @@ function searchVendorServices(){
 		 myData = JSON.parse(Data); 
 		 var str='';
 		 for(a=0; a<myData.length; a++){
+                     console.log(myData[a])
 			str+='<li>';
-				str+='<div class="float_left14" style="background-image:url(<?php echo get_template_directory_uri(); ?>/uploads/vendor_thumbs/'+myData[a].image_path+');">';
+                        if(!!(myData[a].image_path)) {
+				str+='<div class="search-items float_left14" style="background-image:url(<?php echo get_template_directory_uri(); ?>/uploads/vendor_thumbs/'+myData[a].image_path+');">'; }
+                            else { str+='<div class="search-items float_left14" style="background-image:url(<?php echo get_template_directory_uri(); ?>/uploads/vendor_thumbs/no-image.png">';}
 				
 				str+='</div>';
-				str+='<div class="float_right14">';
-					str+='<h2>'+myData[a].title+'</h2>';
-					str+='<div class="text-pack17">';
-					if((myData[a].event_name)!=''){
-					str+='<span class="add_Srvc"><i class="fa fa-calendar"></i>Event:'+myData[a].event_name+'</span>';
-					} else {str+='<span class="add_Srvc"><i class="fa fa-calendar"></i>Event:Some Event</span>';}
-					str+='<span class="add_Srvc"><i class="fa fa-map-marker"></i>'+myData[a].address+','+myData[a].city+'</span>';
-					if((myData[a].service_offered)!=''){
-					str+='<span class="off_Srvc"><i class="fa fa-wrench" aria-hidden="true"></i>'+myData[a].service_offered+'</span>';
-					} else {str+='<span class="off_Srvc"><i class="fa fa-wrench" aria-hidden="true"></i>Wrenh something</span>';}
+				str+='<div class="search-items float_right14">';
 					
-				//str+='<span><i class="fa      fa-map-marker"></i>'+getFieldByID('title','twc_manage_offered',myData[a].service_offered)+'</span>';
+					str+='<div class="search-items text-pack17">';
+                                        
+					str+='<div class="search-items top-panel">';
+                                        str+='<h2>'+myData[a].title+'</h2>';
+                                            str+='<div class="search-item-address add_Srvc">'+myData[a].address+','+myData[a].city+'</div>';
 
-					/* str+='<span><i class=""></i>';
-					if(myData[a].on_call=='Yes'){fa fa-phone
-					str+=myData[a].contact;
-					}
-				    str+='<span class="price165">$'+myData[a].price+'</span></span>'; */
-					if((myData[a].on_call)!=''){
-					str+='<span class="pay_Srvc"><i class="fa fa-phone" aria-hidden="true"></i>Available on call:('+myData[a].on_call+')</span>';
-					} else {str+='<span class="pay_Srvc"><i class="fa fa-phone" aria-hidden="true"></i>Available on call:(phone)</span>';}
-					if((myData[a].card_accepted)!=''){
-					str+='<span class="pay_Srvc"><i class="fa fa-credit-card" aria-hidden="true"></i>Card Accepted:('+myData[a].card_accepted+')</span>';
-					} else {str+='<span class="pay_Srvc"><i class="fa fa-credit-card" aria-hidden="true"></i>Card Accepted:(card)</span>';}
-					str+='<span class="star-ioncs4"></span>';
-				   <?php if($userID==''){?>
-				   str+='<span><a href="<?php echo site_url();?>/login/?redirectPage=details-page&id='+myData[a].id+'&destName=<?php echo $_REQUEST['destName'];?>"><button type="button" class="btn btn-default btn-use_1">More Info</button></a></span>';
-				  <?php }else{?>
-			      str+='<span><a href="<?php echo site_url();?>/details-page/?id='+myData[a].id+'&destName=<?php echo $_REQUEST['destName'];?>"><button type="button" class="btn btn-default btn-use_1">More Info</button></a></span>';
-				   <?php } ?>
-			
+                                            if(!!(myData[a].time_from) && !!(myData[a].time_to)) {
+                                               str+='<div class="add_Srvc">'+myData[a].time_from+' to '+myData[a].time_to+'</div>'; 
+                                            }
+                                            else {str+='TIME: U/A'}
+
+                                            str+='<div class="search-item-desc off_Srvc">'+myData[a].description+'</div>';
 					str+='</div>';
+                                        str+='<div class="search-items bottom-panel">';
+                                            str+='<div class="search-items rating-container">';
+                                                str+='<span>RATINGS & REVIEW</span><span class="item-rating">'+myData[a].avg_rating+'</span>';
+                                            str+='</div>'
+                                       <?php if($userID==''){?>
+                                        str+='<div class="search-items book-now-button"><a href="<?php echo site_url();?>/login/?redirectPage=details-page&id='+myData[a].id+'&destName=<?php echo $_REQUEST['destName'];?>">BOOK NOW</a></div>';
+                                      <?php }else{?>
+                                        str+='<div class="search-items book-now-button"><a href="<?php echo site_url();?>/details-page/?id='+myData[a].id+'&destName=<?php echo $_REQUEST['destName'];?>">BOOK NOW</a></div>';
+                                       <?php } ?>
+                                        str+='</div>';
+                                str+='</div>';   
 				str+='</div>';
 				str+='</li>';
 		  }
 		  $('#serviceList').html(str);
+                  $('.no-of-results').html(''+myData.length+' RESULTS AVAILABLE')
 		}
 	}) 
 }
