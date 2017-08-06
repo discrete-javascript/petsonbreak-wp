@@ -7167,4 +7167,11 @@ div.search-item-desc.off_Srvc {
     width: 50%;
     text-align: center;
 }
+.book-now-button a {
+    color: red;
+    font-weight: bold;
+}
+.book-now-button a::hover {
+    color: red;
+}
 .pet-child-right ul#serviceList li .search-items.float_right14{padding: 0px}
