@@ -6911,8 +6911,36 @@ border-left: 30px solid #636;
 	
 	#home_news_section .news-section-body{height:360px;}
 	#home_news_section .news{border-bottom:0px;}
-        
+/*Integrated Searchbox styles*/
+.pet-groomsv-sercahbox.menu-bar {
+    border-radius: 0px;
+}
+#categories.nav-tabs.menu-bar {
+    background: #663366;
+}
+#categories.nav-tabs.menu-bar>li>a {
+    color: white;
+}
+#categories.nav-tabs.menu-bar>li.active>a, #categories.nav-tabs.menu-bar>li.active>a:hover, #categories.nav-tabs.menu-bar>li.active>a:focus {
+    background: red;
+    color: white;
+}
+#searchbox.tab-pane.menu-bar{
+    display: flex;
+    padding: 15px;
+    justify-content: center;
+    align-items: center;
+    background: red;
+}
+#searchName.menu-bar-textbox {
+    width: 50em;
+}
 /*over-riding Bootstrap Navbar*/ 
+#categories.nav-tabs {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 .navbar .navbar-nav {
   display: inline-block;
   float: none;
@@ -7175,3 +7203,54 @@ div.search-item-desc.off_Srvc {
     color: red;
 }
 .pet-child-right ul#serviceList li .search-items.float_right14{padding: 0px}
+
+/*Registration Page Styles*/
+.register-background {
+    background-image: url(http://dev.petsonbreak.com/wp-content/uploads/2017/05/andrew-branch-106877.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    padding: 13em 0;
+}
+.parallax-heading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.parallax-heading > p {
+    font-size: -webkit-xxx-large;
+    font-weight: 500;
+    color: white;
+}
+.register-wording {
+    color: yellow;
+}
+.registration-container#regist {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.registration-container#regist #register_con_left {
+    padding: 0;
+    width:75%;
+    margin-top: -3.6em;
+}
+.registration-tab-content {
+    padding: 1em 5em;
+}
+#regist #register_con_left .nav-tabs>li.active>a, #register_con_left .nav-tabs>li.active>a:hover, #register_con_left .nav-tabs>li.active>a:focus {
+    background-color: white;
+    color: #000;
+    border-bottom: 3px solid red;
+}
+#regist #register_con_left.con_left .nav-tabs>li>a {
+    border-radius: 0;
+    text-transform: uppercase;
+    width: 10em;
+    text-align: center;
+}
+#regist .modalLogin-loginFields li label {
+    font-size: 13px;
+    text-transform: uppercase;
+}

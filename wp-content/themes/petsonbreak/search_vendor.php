@@ -80,7 +80,7 @@ else{
                     
                     <div class="row">
                         <div class="no-of-results">
-					0 RESULTS
+					Loading Results...
 				</div>
                         
                         <div class="col-lg-12">

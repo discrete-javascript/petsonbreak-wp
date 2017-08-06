@@ -308,7 +308,194 @@ $results =$wpdb->get_results("select * from twc_service_category where published
 
 <div id="article-anchor"></div>
 <div ng-controller="bodyloader"></div>
-<nav class="navbar navbar-default" role="navigation">
+<?php if(!is_front_page()): ?>
+<div class="">
+            <input type="hidden" value="" id="sel_category">
+			<div class="pet-groomsv-sercahbox menu-bar">
+			    <div class="pet-groomsv-criteria-open menu-bar">
+<!--                                <span>
+                                    <span class="pet_g_crt"><?php echo $serviceCategory;?></span>
+                                    <span><i class="fa fa-angle-down" aria-hidden="true"></i></span>
+                                </span>-->
+                                <ul id="categories" class="nav nav-tabs menu-bar">
+                                   <?php foreach ($results as $val) { ?>
+                                   <li class="selected_category" value="<?php echo $val->id;?>">
+                                       <a class="opt" data-toggle="tab" href="#searchbox">
+                                           <?php echo $val->title;?>
+                                       </a>
+                                   </li>           
+                                   <?php } ?>
+                                </ul>
+                                <div class="tab-content menu-bar">
+                                    <div id="searchbox" class="tab-pane hidden menu-bar">
+                                        <?php if($_REQUEST['destName']!=''){ ?>
+                                        <input type="text" 
+                                             name="searchName" 
+                                             id="searchName" 
+                                             class="form-control menu-bar-textbox" value="<?php echo $_REQUEST['destName'] ;?>" placeholder="WHERE WOULD YOU LIKE TO GO ?">
+                                        <?php }  else {?>
+                                        <input type="text" name="searchName" id="searchName" class="form-control menu-bar-textbox" value="" placeholder="WHERE WOULD YOU LIKE TO GO ?">
+                                        <?php } ?>
+                                        <span class="input-group-addon city_search" 
+                                            id="basic-addon2" style="cursor: pointer;">
+                                          Search
+                                        </span>
+                                    </div>
+                              </div>
+                                  <span class="err_searchName"></span>
+                            </div>
+<!--                             <ul class="nav nav-tabs">
+                                <li class="active"><a data-toggle="tab" href="#home">Home</a></li>
+                                <li><a data-toggle="tab" href="#menu1">Menu 1</a></li>
+                                <li><a data-toggle="tab" href="#menu2">Menu 2</a></li>
+                                <li><a data-toggle="tab" href="#menu3">Menu 3</a></li>
+                              </ul>
+
+                              <div class="tab-content">
+                                <div id="home" class="tab-pane fade in active">
+                                  <h3>HOME</h3>
+                                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                                </div>
+                                <div id="menu1" class="tab-pane fade">
+                                  <h3>Menu 1</h3>
+                                  <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                                </div>
+                                <div id="menu2" class="tab-pane fade">
+                                  <h3>Menu 2</h3>
+                                  <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.</p>
+                                </div>
+                                <div id="menu3" class="tab-pane fade">
+                                  <h3>Menu 3</h3>
+                                  <p>Eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+                                </div>
+                              </div>-->
+<!--			<div class="input-group">
+			  <?php if($_REQUEST['destName']!=''){ ?>
+                            <input type="text" 
+                                   name="searchName" 
+                                   id="searchName" 
+                                   class="form-control" value="<?php echo $_REQUEST['destName'] ;?>" placeholder="Discover and Unleash Happiness you cherish">
+                            <?php }  else {?>
+                            <input type="text" name="searchName" id="searchName" class="form-control" value="" placeholder="Discover and Unleash Happiness you cherish">
+                            <?php } ?>
+                            <span class="input-group-addon city_search" 
+                                  id="basic-addon2" style="cursor: pointer;">
+                                Search
+                            </span>
+			</div>
+			<span class="err_searchName"></span>-->
+                    </div>
+                    
+            
+		<!-- <div class="facebookBack">
+			<a href="javascript:void(0);" alt="fblogin" class="fblogin">
+			<i class="fa fa-facebook"></i>  &nbsp;&nbsp;<?php echo $mk_options['log_in_with_facebook'];?></a>
+		</div>
+	
+		<div class="New_contactFrom">
+		
+		    <?php
+			if (is_page( 'login' ) ):
+			?>
+			<p class="logWith"><?php echo $mk_options['log_in'];?></p>
+				
+			<p class="CeratOr">  <small><?php echo $mk_options['or'];?></small> <a href="<?php echo site_url();?>/register/"><?php echo $mk_options['create_an_account'];?></a></p>
+			<?php
+			endif;
+			?>
+			
+			
+			<?php
+			if (is_page( 'register' ) ):
+			?>
+			<p class="logWith registerWith"><?php echo $mk_options['register'];?></p>
+			<?php
+			endif;
+			?>
+			
+			
+			
+			
+				
+		
+
+		  <?php
+			while ( have_posts() ) : the_post();
+			?>
+		  <p class="txt-o">
+			<?php the_content(); ?>
+		  </p>
+		  <?php
+			// End the loop.
+			endwhile;
+			
+			?>
+	<p style="clear: both;"></p>
+	  </div> -->
+    </div>
+<script>
+
+    
+        var listCategories = document.querySelector('#categories');
+        listCategories.childNodes.forEach(function(item, index) {
+            if (index > 10 && index %2) {
+                item.classList.add('hidden');
+            }
+        });
+    
+</script>
+<script
+  src="https://code.jquery.com/jquery-2.0.3.min.js"
+  integrity="sha256-sTy1mJ4I/LAjFCCdEB4RAvPSmRCb3CU7YqodohyeOLo="
+  crossorigin="anonymous"></script>
+<script>
+$('.city_search').click(function(){
+	if($('#searchName').val()==''){
+		$('.err_searchName').html('<span class="error_search">Please select category and your city name.</span>');
+		//alert('Please enter city name for search');
+		$('.err_searchName').show(1).delay(2000).hide(1);
+		$('#searchName').focus();
+		return false;
+	}
+	else{
+		var city=$('#searchName').val();
+		var sid = $('#sel_category').val();
+		//alert(sid);
+		window.location.href="<?php echo site_url();?>/search-vendor/?sid="+sid+"&destName="+city;
+		}	
+	});
+
+</script>
+
+
+<script>
+ $('.pet-groomsv-criteria').click(function(){
+	  $(this).toggleClass('pet-groomsv-criteria-open');
+	 })	
+	 
+$('.pet-groomsv-criteria-open #categories li').click(function(){
+	 var catLi = ($(this).find('.opt').text());
+	  var id = $(this).attr('value');
+	   $('#sel_category').val(id);
+//	  alert(id);
+	 $('.pet_g_crt').text(catLi);
+})
+</script>
+<script>
+    var optionsForSearch = document.querySelectorAll('a.opt');
+    optionsForSearch.forEach(function(item) {
+	item.addEventListener('click', function(e){
+		document.querySelector('div#searchbox.tab-pane').classList.remove('hidden')
+	});
+})
+</script>
+<style>
+    .pet-groomsv-criteria-open #categories li {
+        cursor: pointer;
+    }
+</style>
+<?php endif; ?>
+<!--<nav class="navbar navbar-default" role="navigation">
     <div class="navbar-header">
         <button type="button" class="navbar-toggle" 
            data-toggle="collapse" data-target="#navbar-to-collapse">
@@ -387,7 +574,7 @@ $results =$wpdb->get_results("select * from twc_service_category where published
           <?php   }?>
       </ul>
     </div>
-</nav>
+</nav>-->
 <script type="text/javascript" src="//code.jquery.com/jquery-2.0.3.min.js"></script>
 <script type="text/javascript" src="//maps.googleapis.com/maps/api/js?libraries=places&key=AIzaSyBwzkKvM75QzamE7BzVZTfEBwRO6FHEz4U"></script>
 
