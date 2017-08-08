@@ -169,9 +169,9 @@ else{
                                         <input type="text" 
                                              name="searchName" 
                                              id="searchName" 
-                                             class="form-control" value="<?php echo $_REQUEST['destName'] ;?>" placeholder="WHERE WOULD YOU LIKE TO GO ?">
+                                             class="form-control" value="<?php echo $_REQUEST['destName'] ;?>" placeholder="Discover and Unleash Happiness you cherish">
                                         <?php }  else {?>
-                                        <input type="text" name="searchName" id="searchName" class="form-control" value="" placeholder="WHERE WOULD YOU LIKE TO GO ?">
+                                        <input type="text" name="searchName" id="searchName" class="form-control" value="" placeholder="Discover and Unleash Happiness you cherish">
                                         <?php } ?>
                                         <span class="input-group-addon city_search" 
                                             id="basic-addon2" style="cursor: pointer;">

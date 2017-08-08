@@ -276,8 +276,8 @@ $results =$wpdb->get_results("select * from twc_service_category where published
 	   
 	   <ul class="navbar-right pet_right " id="riteSidedata">
 	   <?php if($userID==''){ ?>
-                <li><a href="<?php echo $siteUrl; ?>/register/"> <i class="fa fa-user-plus" aria-hidden="true"></i><span class="profileText"><?php echo $mk_options['sign_up'];?></span></a></li>
-                <li><a href="<?php echo $siteUrl; ?>/login/"> <i class="fa fa-sign-in" aria-hidden="true"></i><span class="signoutText"><?php echo $mk_options['log_in'];?></span></a></li>
+               <li><button class="sign-up-button"><a href="<?php echo $siteUrl; ?>/register/"><span class="profileText"><?php echo $mk_options['sign_up'];?></span></a></button></li>
+               <li><button class="login-button"><a href="<?php echo $siteUrl; ?>/login/"><span class="signoutText"><?php echo $mk_options['log_in'];?></span></a></button></li>
               <?php } else{ ?>
 			  
 			  <?php if($user_roles=='Vendor'){ ?>
@@ -289,7 +289,7 @@ $results =$wpdb->get_results("select * from twc_service_category where published
                 <li><a href="<?php echo wp_logout_url(home_url() ); ?>" title="Sign Out"> <i class="fa fa-sign-out" aria-hidden="true"></i><span class="signoutText"><?php echo $mk_options['sign_out'];?></span></a></li>
 				
 		<?php }?>
-        </ul>
+        </ul> 
 
       </div>
     </div>
@@ -332,7 +332,7 @@ $results =$wpdb->get_results("select * from twc_service_category where published
                                         <input type="text" 
                                              name="searchName" 
                                              id="searchName" 
-                                             class="form-control menu-bar-textbox" value="<?php echo $_REQUEST['destName'] ;?>" placeholder="WHERE WOULD YOU LIKE TO GO ?">
+                                             class="form-control menu-bar-textbox" value="<?php echo $_REQUEST['destName'] ;?>" placeholder="Discover and Unleash Happiness you cherish">
                                         <?php }  else {?>
                                         <input type="text" name="searchName" id="searchName" class="form-control menu-bar-textbox" value="" placeholder="WHERE WOULD YOU LIKE TO GO ?">
                                         <?php } ?>

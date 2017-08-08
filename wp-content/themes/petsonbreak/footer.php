@@ -14,7 +14,7 @@ $vendor_id =$result->vendor_id;
       <div class="container">
           <div class="row">
             <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
-                <span>QUICK LINKS</span>
+                <p class="footer-quick-links">QUICK LINKS</p>
 		<?php $fdefaults = array(
                                         'theme_location'  => 'services_offered',
                                         'menu'            => '',
@@ -57,8 +57,8 @@ $vendor_id =$result->vendor_id;
 			?>
             </div>
             <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
-                <p>LOCATIONS </p>
-                <p>INDIA OFFICE</p>
+                <p class="footer-locations">LOCATIONS </p>
+                <p class="footer-india-office">INDIA OFFICE</p>
                 <ul>
                     <li><?php echo $mk_options['f_company_name'];?></li>
                     <li>Vidhya Nagar,</li>
@@ -66,17 +66,17 @@ $vendor_id =$result->vendor_id;
                     <li>Pune 411 015 </li>
                     <li>India</li>
                 </ul>
-                <span>PHONE</span>
+                <p class="footer-india-phone">PHONE</p>
                 <ul>
                     <li>+91-8999 306 724 (Travel Related)</li>
                     <?php  if($mk_options['f_contact_number']!=''){ ?>
                     <li>+91-7566485676 (Pet Related)</li>
                        <?php } ?>
                 </ul>
-                <span>PHONE</span>
+                <p class="footer-india-email">EMAIL</p>
             </div>
             <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
-                <span>AUSTRALIA OFFICE</span>
+                <p class="footer-aus-office">AUSTRALIA OFFICE</p>
                 <ul>
                     <li>43 </li>
                     <li>Whites Lane,</li>
@@ -84,10 +84,16 @@ $vendor_id =$result->vendor_id;
                     <li>Victoria  </li>
                     <li>Australia</li>
                 </ul>
-                <span>PHONE</span>
+                <p class="footer-aus-phone">PHONE</p>
                 <ul>
                     <li>0421 3766 36 (Travel Related)</li>
-                    <li>australiaincoming[at]petsonbreak[dot]com</li>
+                    
+                </ul>
+                <p class="footer-aus-email">EMAIL</p>
+                <ul>
+                    <li>
+                        
+                    </li>
                 </ul>
             </div>
             <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">

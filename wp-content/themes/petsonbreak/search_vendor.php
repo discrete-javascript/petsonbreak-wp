@@ -234,10 +234,12 @@ function searchVendorServices(){
                                             str+='<div class="search-items rating-container">';
                                                 str+='<span>RATINGS & REVIEW</span><span class="item-rating">'+myData[a].avg_rating+'</span>';
                                             str+='</div>'
-                                       <?php if($userID==''){?>
-                                        str+='<div class="search-items book-now-button"><a href="<?php echo site_url();?>/login/?redirectPage=details-page&id='+myData[a].id+'&destName=<?php echo $_REQUEST['destName'];?>">BOOK NOW</a></div>';
+                                       <?php if($userID!==''){?>
+                                                                                   str+='<div class="search-items book-now-button"><a href="<?php echo site_url();?>/details-page/?id='+myData[a].id+'&destName=<?php echo $_REQUEST['destName'];?>">2MORE INFO</a></div>';
+
                                       <?php }else{?>
-                                        str+='<div class="search-items book-now-button"><a href="<?php echo site_url();?>/details-page/?id='+myData[a].id+'&destName=<?php echo $_REQUEST['destName'];?>">BOOK NOW</a></div>';
+                                                                                  str+='<div class="search-items book-now-button"><a href="<?php echo site_url();?>/login/?redirectPage=details-page&id='+myData[a].id+'&destName=<?php echo $_REQUEST['destName'];?>">1MORE INFO</a></div>';
+
                                        <?php } ?>
                                         str+='</div>';
                                 str+='</div>';   
