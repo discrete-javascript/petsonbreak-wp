@@ -87,6 +87,8 @@ define('WP_DEBUG', false);
 /* That's all, stop editing! Happy blogging. */
 define( 'WPCACHEHOME', '/home/petsoprs/public_html/dev/wp-content/plugins/wp-super-cache/' ); //Added by WP-Cache Manager
 
+define('WPCACHEHOME', dirname(__FILE__) . '/wp-content/plugins/wp-super-cache/');
+
 /** Absolute path to the WordPress directory. */
 if ( !defined('ABSPATH') )
 	define('ABSPATH', dirname(__FILE__) . '/');
