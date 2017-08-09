@@ -467,8 +467,11 @@ $('.city_search').click(function(){
 	else{
 		var city=$('#searchName').val();
 		var sid = $('#sel_category').val();
+                var store = window.localStorage;
 		//alert(sid);
+                store.setItem('idOfSelected', sid);
 		window.location.href="<?php echo site_url();?>/search-vendor/?sid="+sid+"&destName="+city;
+                
 		}	
 	});
 

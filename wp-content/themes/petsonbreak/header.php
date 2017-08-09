@@ -319,7 +319,7 @@ $results =$wpdb->get_results("select * from twc_service_category where published
                                 </span>-->
                                 <ul id="categories" class="nav nav-tabs menu-bar">
                                    <?php foreach ($results as $val) { ?>
-                                   <li class="selected_category" value="<?php echo $val->id;?>">
+                                   <li class="selected_category" id="<?php echo $val->id;?>" value="<?php echo $val->id;?>">
                                        <a class="opt" data-toggle="tab" href="#searchbox">
                                            <?php echo $val->title;?>
                                        </a>
@@ -449,6 +449,7 @@ $results =$wpdb->get_results("select * from twc_service_category where published
   integrity="sha256-sTy1mJ4I/LAjFCCdEB4RAvPSmRCb3CU7YqodohyeOLo="
   crossorigin="anonymous"></script>
 <script>
+
 $('.city_search').click(function(){
 	if($('#searchName').val()==''){
 		$('.err_searchName').html('<span class="error_search">Please select category and your city name.</span>');
@@ -461,10 +462,19 @@ $('.city_search').click(function(){
 		var city=$('#searchName').val();
 		var sid = $('#sel_category').val();
 		//alert(sid);
+                var store = window.localStorage;
+                store.setItem('idOfSelected', sid);
 		window.location.href="<?php echo site_url();?>/search-vendor/?sid="+sid+"&destName="+city;
 		}	
 	});
-
+//document.DOMContentLoaded = function() {
+    
+//}
+document.addEventListener("DOMContentLoaded", function(event) {
+    var preSelectdCategory = window.localStorage.idOfSelected;
+    var toSelect = document.getElementById(preSelectdCategory);
+    toSelect.querySelector('.opt').click();
+  });
 </script>
 
 
