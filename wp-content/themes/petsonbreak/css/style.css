@@ -6911,6 +6911,26 @@ border-left: 30px solid #636;
 	
 	#home_news_section .news-section-body{height:360px;}
 	#home_news_section .news{border-bottom:0px;}
+
+/*Topbar Button styles*/ 
+.sign-up-button, .login-button {
+    width: 8em;
+    border-radius: 20px;
+    height: 35px;
+    text-transform: uppercase;
+}
+.sign-up-button {
+    background: red;
+    border: 1px solid red;
+}
+.sign-up-button > a > span {
+    color: white;
+}
+.login-button {
+    background: white;
+    border: 1px solid black;
+}
+
 /*Integrated Searchbox styles*/
 .pet-groomsv-sercahbox.menu-bar {
     border-radius: 0px;
@@ -6999,7 +7019,7 @@ div#searchbox {
 }
 
 /*Styles for Heading and Description for homepage carousel*/
-.offer-description {display: flex;flex-direction: column;justify-content: center;align-items: center;margin: 6em 0;}
+.offer-description {display: flex;flex-direction: column;justify-content: center;align-items: center;margin: 6em 1em;}
 .offer-heading { margin-bottom: 4rem;}
 .offer-content {color: #808080; font-size: 24px;font-weight: 500;}
 .pets-number {color: red;}
@@ -7032,7 +7052,7 @@ a.carousel-control[href="#servicesCarousel"] span.glyphicon.glyphicon-chevron-le
 /*Testimonial Slider Over riding*/
 .testimonial-container {
     margin-top: 5em;
-}
+} 
 .testimonial-container p:first-child {
     font-size: 24px;
     text-align: center;
@@ -7094,6 +7114,19 @@ a.carousel-control[href="#servicesCarousel"] span.glyphicon.glyphicon-chevron-le
 }
 
 /*Footer Styles*/
+.footer-quick-links, .footer-locations,
+.footer-india-office, .footer-india-phone,
+.footer-aus-office, .footer-aus-phone,
+.footer-aus-email {
+    margin-bottom: 2em;
+}
+.footer-aus-office {
+    margin-top: 3em;
+}
+.footer-india-phone, .footer-aus-phone,
+.footer-aus-email, .footer-india-email{
+    margin-top: 1em;
+}
 div.footer-top {
     background: #1f0422;
 }
@@ -7105,7 +7138,22 @@ div.footer-top {
     width: 25rem;
     margin-top: 10rem;
 }
-
+.social_links .fa.fa-facebook {
+    background: #3b5998;
+    color: white;
+}
+.social_links .fa.fa-google-plus {
+    background: #d34836;
+    color: white;
+}
+.social_links .fa.fa-linkedin {
+    background: #0077b5;
+    color: #000;
+}
+.social_links .fa.fa-twitter {
+    background: #0084b4;
+    color: white;
+}
 /*Search Vendor Styles*/
 .search-results-container {
     width: 100%;
@@ -7232,7 +7280,7 @@ div.search-item-desc.off_Srvc {
     align-items: center;
 }
 .registration-container#regist #register_con_left {
-    padding: 0;
+    padding: 0 0 1em 0;
     width:75%;
     margin-top: -3.6em;
 }
@@ -7253,4 +7301,12 @@ div.search-item-desc.off_Srvc {
 #regist .modalLogin-loginFields li label {
     font-size: 13px;
     text-transform: uppercase;
+}
+#regist .register-btn {
+    display: flex;
+    justify-content: center;
+    align-items: cente;
+}
+#regist .register-btn input {
+    background: #ff0000;
 }

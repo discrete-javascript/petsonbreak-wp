@@ -196,10 +196,10 @@ $results =$wpdb->get_results("select * from twc_service_category where published
 <article class="borders-color header-article">
   <header>
   
-<div class="pet-header">
+<div class="pet-header header-container">
   <div class="container">
     <div class="row">
-      <div class="col-md-9 col-sm-9 col-xs-9">
+      <div class="col-md-9 col-sm-6 col-xs-12 logo-container">
       
 	  
       <span class="bar_mnu">
@@ -270,14 +270,14 @@ $results =$wpdb->get_results("select * from twc_service_category where published
 			
       </div>
       
-       <div class="col-md-3 col-sm-3 col-xs-3 pull-right">
+       <div class="col-md-3 col-sm-6 col-xs-12 pull-right new-user-container">
 	   
 	   
 	   
 	   <ul class="navbar-right pet_right " id="riteSidedata">
 	   <?php if($userID==''){ ?>
-                <li><a href="<?php echo $siteUrl; ?>/register/"> <i class="fa fa-user-plus" aria-hidden="true"></i><span class="profileText"><?php echo $mk_options['sign_up'];?></span></a></li>
-                <li><a href="<?php echo $siteUrl; ?>/login/"> <i class="fa fa-sign-in" aria-hidden="true"></i><span class="signoutText"><?php echo $mk_options['log_in'];?></span></a></li>
+               <li><button class="sign-up-button"><a href="<?php echo $siteUrl; ?>/register/"><span class="profileText"><?php echo $mk_options['sign_up'];?></span></a></button></li>
+               <li><button class="login-button"><a href="<?php echo $siteUrl; ?>/login/"><span class="signoutText"><?php echo $mk_options['log_in'];?></span></a></button></li>
               <?php } else{ ?>
 			  
 			  <?php if($user_roles=='Vendor'){ ?>
@@ -289,7 +289,7 @@ $results =$wpdb->get_results("select * from twc_service_category where published
                 <li><a href="<?php echo wp_logout_url(home_url() ); ?>" title="Sign Out"> <i class="fa fa-sign-out" aria-hidden="true"></i><span class="signoutText"><?php echo $mk_options['sign_out'];?></span></a></li>
 				
 		<?php }?>
-        </ul>
+        </ul> 
 
       </div>
     </div>
@@ -319,7 +319,7 @@ $results =$wpdb->get_results("select * from twc_service_category where published
                                 </span>-->
                                 <ul id="categories" class="nav nav-tabs menu-bar">
                                    <?php foreach ($results as $val) { ?>
-                                   <li class="selected_category" value="<?php echo $val->id;?>">
+                                   <li class="selected_category" id="<?php echo $val->id;?>" value="<?php echo $val->id;?>">
                                        <a class="opt" data-toggle="tab" href="#searchbox">
                                            <?php echo $val->title;?>
                                        </a>
@@ -332,7 +332,7 @@ $results =$wpdb->get_results("select * from twc_service_category where published
                                         <input type="text" 
                                              name="searchName" 
                                              id="searchName" 
-                                             class="form-control menu-bar-textbox" value="<?php echo $_REQUEST['destName'] ;?>" placeholder="WHERE WOULD YOU LIKE TO GO ?">
+                                             class="form-control menu-bar-textbox" value="<?php echo $_REQUEST['destName'] ;?>" placeholder="Discover and Unleash Happiness you cherish">
                                         <?php }  else {?>
                                         <input type="text" name="searchName" id="searchName" class="form-control menu-bar-textbox" value="" placeholder="WHERE WOULD YOU LIKE TO GO ?">
                                         <?php } ?>
@@ -449,6 +449,7 @@ $results =$wpdb->get_results("select * from twc_service_category where published
   integrity="sha256-sTy1mJ4I/LAjFCCdEB4RAvPSmRCb3CU7YqodohyeOLo="
   crossorigin="anonymous"></script>
 <script>
+
 $('.city_search').click(function(){
 	if($('#searchName').val()==''){
 		$('.err_searchName').html('<span class="error_search">Please select category and your city name.</span>');
@@ -461,10 +462,19 @@ $('.city_search').click(function(){
 		var city=$('#searchName').val();
 		var sid = $('#sel_category').val();
 		//alert(sid);
+                var store = window.localStorage;
+                store.setItem('idOfSelected', sid);
 		window.location.href="<?php echo site_url();?>/search-vendor/?sid="+sid+"&destName="+city;
 		}	
 	});
-
+//document.DOMContentLoaded = function() {
+    
+//}
+document.addEventListener("DOMContentLoaded", function(event) {
+    var preSelectdCategory = window.localStorage.idOfSelected;
+    var toSelect = document.getElementById(preSelectdCategory);
+    toSelect.querySelector('.opt').click();
+  });
 </script>
 
 

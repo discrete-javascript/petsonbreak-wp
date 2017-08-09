@@ -146,7 +146,7 @@ else{
 ?>
 <div class="log_backGrond">
     
-    <div class="container_width">
+    <div class="container_width home-page-container">
             <input type="hidden" value="" id="sel_category">
 			<div class="pet-groomsv-sercahbox">
 			    <div class="pet-groomsv-criteria-open">
@@ -169,9 +169,9 @@ else{
                                         <input type="text" 
                                              name="searchName" 
                                              id="searchName" 
-                                             class="form-control" value="<?php echo $_REQUEST['destName'] ;?>" placeholder="WHERE WOULD YOU LIKE TO GO ?">
+                                             class="form-control" value="<?php echo $_REQUEST['destName'] ;?>" placeholder="Discover and Unleash Happiness you cherish">
                                         <?php }  else {?>
-                                        <input type="text" name="searchName" id="searchName" class="form-control" value="" placeholder="WHERE WOULD YOU LIKE TO GO ?">
+                                        <input type="text" name="searchName" id="searchName" class="form-control" value="" placeholder="Discover and Unleash Happiness you cherish">
                                         <?php } ?>
                                         <span class="input-group-addon city_search" 
                                             id="basic-addon2" style="cursor: pointer;">
@@ -467,8 +467,11 @@ $('.city_search').click(function(){
 	else{
 		var city=$('#searchName').val();
 		var sid = $('#sel_category').val();
+                var store = window.localStorage;
 		//alert(sid);
+                store.setItem('idOfSelected', sid);
 		window.location.href="<?php echo site_url();?>/search-vendor/?sid="+sid+"&destName="+city;
+                
 		}	
 	});
 

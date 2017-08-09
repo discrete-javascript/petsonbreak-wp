@@ -24,14 +24,14 @@ define('WP_CACHE', true); // Added by W3 Total Cache
 // ** MySQL settings - You can get this info from your web host ** //
 /** The name of the database for WordPress */
  //Added by WP-Cache Manager
-define( 'WPCACHEHOME', '/home/petsoprs/public_html/wp-content/plugins/wp-super-cache/' ); //Added by WP-Cache Manager
+define( 'WPCACHEHOME', '/home/petsoprs/public_html/dev/wp-content/plugins/wp-super-cache/' ); //Added by WP-Cache Manager
 define('DB_NAME', 'petsoprs_dev');
 
 /** MySQL database username */
-define('DB_USER', 'root');
+define('DB_USER', 'petsoprs_adivaha');
 
 /** MySQL database password */
-define('DB_PASSWORD', '');
+define('DB_PASSWORD', 'P@ssword_123');
 
 /** MySQL hostname */
 define('DB_HOST', 'localhost');
@@ -85,6 +85,7 @@ $table_prefix  = 'wp_';
 define('WP_DEBUG', false);
 
 /* That's all, stop editing! Happy blogging. */
+define( 'WPCACHEHOME', '/home/petsoprs/public_html/dev/wp-content/plugins/wp-super-cache/' ); //Added by WP-Cache Manager
 
 /** Absolute path to the WordPress directory. */
 if ( !defined('ABSPATH') )

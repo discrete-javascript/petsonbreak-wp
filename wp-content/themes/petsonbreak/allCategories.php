@@ -132,7 +132,7 @@ else{
   
 	</div>
 	
-	<?php } ?>
+
 	
 	<div class="con_right">
 		<div class="pet-search-right">
