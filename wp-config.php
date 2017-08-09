@@ -28,10 +28,10 @@ define( 'WPCACHEHOME', '/home/petsoprs/public_html/wp-content/plugins/wp-super-c
 define('DB_NAME', 'petsoprs_dev');
 
 /** MySQL database username */
-define('DB_USER', 'root');
+define('DB_USER', 'petsoprs_adivaha');
 
 /** MySQL database password */
-define('DB_PASSWORD', '');
+define('DB_PASSWORD', 'P@ssword_123');
 
 /** MySQL hostname */
 define('DB_HOST', 'localhost');
@@ -85,6 +85,7 @@ $table_prefix  = 'wp_';
 define('WP_DEBUG', false);
 
 /* That's all, stop editing! Happy blogging. */
+define('WPCACHEHOME', dirname(__FILE__) . '/wp-content/plugins/wp-super-cache/');
 
 /** Absolute path to the WordPress directory. */
 if ( !defined('ABSPATH') )
