@@ -44,7 +44,7 @@ if($_REQUEST['redirectPage']!=''){
 			
 			<li>
 				<label class="nrd-loginModal-label u-vr2x" for="username"><span>Password</span></label>
-				<input type="password" name="user_password" id="user_password"  placeholder="Name" title="Email address is required." type="email">
+				<input type="password" name="user_password" id="user_password"  placeholder="Password" title="Email address is required." type="email">
 				<a href="<?php echo $siteUrl;?>/forgot-password/" class="login-page forgot_po">Forgot your password?</a>
 				
 			</li>
