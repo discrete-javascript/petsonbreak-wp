@@ -999,7 +999,7 @@ $(document).ready(function(){
 	.main_Container{transition:0.8s ease-in-out;width: 97%;float: right;}
   .main_Container_sliding{float: right;transition:0.8s ease-in-out;}
   .main_Container_sliding_out{float: right;}
- }
+ 
 
   #nav-icon4{}
 

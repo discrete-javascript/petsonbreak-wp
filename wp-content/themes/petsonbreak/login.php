@@ -26,12 +26,17 @@ if($_REQUEST['redirectPage']!=''){
 
 
 ?>
-<div class="container"  id="login">
-	<div class="login-container con_left"> 
-		<form method="post" id="loginform">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<div class="login-background"></div>
+<div class="login-whole-container container w3-container w3-content"  id="login">
+	<div class="login-container con_left w3-panel w3-white w3-card-2 w3-display-container"> 
+            <div class="login-header"><div class="login-flex"><div class="login-margin"><h2 class="register-page1">Log in</h2></div></div></div>
+            <div class="login-form-container">
+                <form method="post" id="loginform">
 		 <input type="hidden" name="redirect" id="redirect" value="<?php echo $loginRedirect;?>">
-		<h2 class="register-page1">Log in</h2>
-		<ul class="modalLogin-loginFields">
+                 
+                 <div class="login-content">
+                     <ul class="user-input-container modalLogin-loginFields">
 			<li>
 				<label class="nrd-loginModal-label u-vr2x" for="username"><span>Email</span></label>
 				<input name="user_login" id="user_login" placeholder="Name" title="Email address is required." type="email">
@@ -40,22 +45,27 @@ if($_REQUEST['redirectPage']!=''){
 			<li>
 				<label class="nrd-loginModal-label u-vr2x" for="username"><span>Password</span></label>
 				<input type="password" name="user_password" id="user_password"  placeholder="Name" title="Email address is required." type="email">
-				<a href="<?php echo $siteUrl;?>/forgot-password/" class="forgot_po">Forgot your password?</a>
+				<a href="<?php echo $siteUrl;?>/forgot-password/" class="login-page forgot_po">Forgot your password?</a>
 				
 			</li>
 		              
            </ul>
-		   <div class="register-btn">
+		   <div class="login-page register-btn">
 				<!--<a href="http://petsonbreak.com/login/" class="btn_1 green medium">Log In</a>-->
 				  <input type="button" id="vendor_login" value="Log In" class="btn_1 green medium">
 			</div>
 			
-			<h2 class="register-page1" style="clear: both;padding: 21px 0px;"> Don't Have An Account? </h2>
-		   <div class="register-btn">
+			
+		   <div class="registration-button-container register-btn">
+                       <p class="login-page register-page1" style="clear: both;"> Don't Have An Account? </p>
 				<a href="<?php echo site_url();?>/register/" class="btn_1 green medium">Register Now</a>
 			</div>
+                 </div>
+		
 		   
 		 </form>  
+            </div>
+		
 
 	</div>
 
