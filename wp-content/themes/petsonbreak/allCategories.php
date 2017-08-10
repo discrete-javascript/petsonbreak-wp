@@ -44,13 +44,17 @@ else{
 }
 
 ?>
-
+<div class="parallax-all-categories-frame">
+    <div class="parallax-all-categories-title">
+                <p>Explore our Pet Friendly World - Pet Related services</p>
+    </div>
+</div>
 <div id="allCat">
 <div class="container" style="display: flex;" >
 
 <?php if($_REQUEST['sid']!=''){ ?>
 
-	<div class="con_left"> 
+	<div class="all-categories-container con_left"> 
 				<div id="petBrd-page-wrap">
 	  <ul class="pet_breadcrumb">
 					<li class=" pet_breadcrumbStep pet_breadcrumbActive"><a href="<?php echo site_url();?>">Home</a></li>
@@ -71,7 +75,7 @@ else{
 			 ?>
 			 
 		  
-	   	     <div class="col-md-6 col-sm-6">
+	   	     <div class="col-md-3 col-sm-3 col-xs-6">
 	   	       <div class="cat_colm">
 	   	          <div class="" rel="<?php echo $weekrow->service_category;?>" style="background:url(<?php echo plugins_url(); ?>/ean_plugin/images/Category/<?php echo $weekrow->img_path;?>);background-size:cover;">
 				   
@@ -93,7 +97,7 @@ else{
 	
 	<?php }  else { ?>
 	
-	<div class="con_left"> 
+	<div class="all-categories-container con_left"> 
 	   				<div id="petBrd-page-wrap">
 	  <ul class="pet_breadcrumb">
 					<li class=" pet_breadcrumbStep pet_breadcrumbActive"><a href="<?php echo site_url();?>">Home</a></li>
@@ -101,18 +105,17 @@ else{
 				</ul>
 			</div>
 	
-	   <div class="news-header">
-        <h2>Explore our Pet Friendly World - Pet Related services</h2>
+	   <div class="all-categories-header news-header">
       </div>
 	   <div id="all_categories">
 	   	  <div class="row">
 		  
-		  <? 
+		  <?php
             $results =$wpdb->get_results("select * from twc_service_category where published='Yes' and status_deleted=0");
 			foreach($results as $objrow){
              $link =site_url().'/search-vendor/?sid='.$objrow->id;?>
 		  
-	   	     <div class="col-md-6 col-sm-6">
+	   	     <div class="col-md-3 col-sm-3 col-xs-6">
 	   	       <div class="cat_colm">
 	   	          <div class="ser_services" rel="<?php echo $objrow->id;?>" style="background:url(<?php echo plugins_url(); ?>/ean_plugin/images/Category/<?php echo $objrow->category_image;?>);background-size:cover;">
 				   
@@ -134,44 +137,13 @@ else{
 	
 
 	
-	<div class="con_right">
-		<div class="pet-search-right">
-			<?php  echo getPopularCategories();?>
-		</div>
-		
-		<div id="quick_links">
-			<?php  echo getQuickLinks();?>
-		</div>
-		
-				<div id="news_n_updates">
-				<h2><?php echo $mk_options['latest_news'];?></h2>
-			<div class="pet_house1 news-section">
-    
-  <div class="news-section-div">
-   
-     <div class="news-section-body">
-      <?php $results =$wpdb->get_results("select * from twc_news where published='Yes' and status_deleted=0");
-          foreach($results as $obj){?>
-       <div class="news">
-         <h3><span class="news-title"><img src="<?php echo get_template_directory_uri();?>/images/rightN.png"></span>
-		 <a href="<?php echo site_url().'/news-and-updates/?id='.$obj->id;?>"><?php echo stripslashes($obj->title);?></a></h3>
-         <p><?php echo stripcslashes(substr($obj->description,0,148)); ?>...</p>
-       </div>
-       <?php } ?>
-
-     </div>
-  </div>
-</div>
-		</div>
-
-	</div>
+	
 
 </div>
 </div>
 
 
 
-</div>
 
 <style>
 
@@ -211,4 +183,3 @@ else{
 		 })
  });		 
 </script>
-

@@ -146,7 +146,7 @@ else{
 ?>
 <div class="log_backGrond">
     
-    <div class="container_width home-page-container">
+    <div class="container_width">
             <input type="hidden" value="" id="sel_category">
 			<div class="pet-groomsv-sercahbox">
 			    <div class="pet-groomsv-criteria-open">
@@ -281,7 +281,7 @@ else{
             <div class="carousel-inner">
 
              <?php 
-            $weekresults =$wpdb->get_results("select * from twc_petfriendly_destination where 1 ".$extQuery." ".$extrCond."");
+            $weekresults =$wpdb->get_results("select * from twc_service_category where published='Yes' and status_deleted=0");
             foreach(array_chunk($weekresults, 4, true) as $key=>$array){
                     // $link =site_url().'/search-vendor/?sid='.$weekrow->service_category;
                
@@ -291,7 +291,7 @@ else{
             
                 <div class="col-md-3 col-xs-3">
                     <div class="cat_colm category-slides">
-                        <div class="" rel="<?php echo $weekrow->service_category;?>" style="background:url(<?php echo plugins_url(); ?>/ean_plugin/images/Category/<?php echo $weekrow->img_path;?>);background-size:cover;">
+                        <div class="" rel="<?php echo $weekrow->service_category;?>" style="background:url(<?php echo plugins_url(); ?>/ean_plugin/images/Category/<?php echo $weekrow->category_image;?>);background-size:cover;">
                             <div class="desc">
                                 <h2><?php echo $weekrow->title;?></h2>
                                 <p><?php echo $weekrow->destination;?></p>
