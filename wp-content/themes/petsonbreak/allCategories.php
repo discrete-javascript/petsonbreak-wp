@@ -76,7 +76,7 @@ else{
 			 ?>
 			 
 		  
-	   	     <div class="col-md-3 col-sm-3 col-xs-2">
+	   	     <div class="col-md-3 col-sm-3 col-xs-6">
 	   	       <div class="cat_colm">
 	   	          <div class="" rel="<?php echo $weekrow->service_category;?>" style="background:url(<?php echo plugins_url(); ?>/ean_plugin/images/Category/<?php echo $weekrow->img_path;?>);background-size:cover;">
 				   
@@ -112,12 +112,12 @@ else{
 	   <div id="all_categories">
 	   	  <div class="row">
 		  
-		  <? 
+		  <?php 
             $results =$wpdb->get_results("select * from twc_service_category where published='Yes' and status_deleted=0");
 			foreach($results as $objrow){
              $link =site_url().'/search-vendor/?sid='.$objrow->id;?>
 		  
-	   	     <div class="col-md-3 col-sm-3 col-xs-2">
+	   	     <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6">
 	   	       <div class="cat_colm">
 	   	          <div class="ser_services" rel="<?php echo $objrow->id;?>" style="background:url(<?php echo plugins_url(); ?>/ean_plugin/images/Category/<?php echo $objrow->category_image;?>);background-size:cover;">
 				   
