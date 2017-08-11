@@ -379,6 +379,7 @@
 			
 			<div id="home" class="tab-pane fade">
 				<form id="contactform" method="post" action="" method="POST" enctype="multipart/form-data">
+                                    <p class="mandatoryText">ALL <span style="color: red">*</span> MARKED FIELDS ARE MANDATORY</p>
 					<ul class="modalLogin-loginFields">
 						<li>
 							<label class="nrd-loginModal-label u-vr2x" for="username"><span>First Name<span class="err_req">* </span></span></label>
@@ -391,7 +392,7 @@
 							<span class="errSpan" id="err_last_name"></span>
 						</li>
 						
-						<li>
+						<li class="address-container">
 							<label class="nrd-loginModal-label u-vr2x" for="username"><span>Address<span class="err_req">* </span></span></label>
 							<input name="address" id="address" class="form-control" placeholder="Address" title="" type="text" onkeyup="blankField('address','Address')" >
 							<span class="errSpan" id="err_address"></span>
@@ -879,11 +880,11 @@ $("#pets").change(function() {
     var checkBoxBox = document.querySelector('.register-page-checkbox');
     var count = 1;
     checkboxContainer.addEventListener('click', function(e) {
-        if(e.target.className === 'register-page-checkbox-label' && count === 1) {
+        if(e.target.classList.contains('register-page-checkbox-label') && count === 1) {
             checkBoxBox.setAttribute('checked', 'checked');
             count = 0;
-        } else if (e.target.className === 'register-page-checkbox-label' && count === 0) {
-            checkBoxBox.remomveAttribute('checked');
+        } else if (e.target.classList.contains('register-page-checkbox-label') && count === 0) {
+            checkBoxBox.removeAttribute('checked');
             count = 1;
         }
     })

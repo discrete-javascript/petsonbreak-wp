@@ -7318,7 +7318,8 @@ div.search-item-desc.off_Srvc {
 }
 #regist .modalLogin-loginFields li.address_li, 
 #regist .modalLogin-loginFields li.member_prof, 
-#regist .modalLogin-loginFields li.additional_info {
+#regist .modalLogin-loginFields li.additional_info,
+#regist .modalLogin-loginFields li.address-container {
     width: 100%;
 }
 #regist #member_register #intrested_area,
