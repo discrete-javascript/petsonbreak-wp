@@ -42,6 +42,8 @@
 
 			<div id="menu1" class="tab-pane fade in active">
 				<form id="member_register" name="member_register" method="post">
+                                    <p class="mandatoryText">ALL <span style="color: red">*</span> MARKED FIELDS ARE MANDATORY</p>
+    
 				 <input type="hidden" name="no_of_pets" id="no_of_pets"  value="0" />
 					<ul class="modalLogin-loginFields">
 						<li>
@@ -57,21 +59,38 @@
 							<span class="errSpan" id="err_member_last_name"></span>
 						</li>
 						
-						<li>
-							<label class="nrd-loginModal-label u-vr2x" for="username"><span>DOB(for verification members must be 18+)<span class="err_req">* </span></span></label>
-							<input name="member_dob" id="member_dob" class="form-control datepicker"  placeholder="Enter Your DOB"  type="text" onkeyup="blankField('member_dob','Enter Your DOB')">
-							<span class="errSpan" id="err_member_dob"></span>
-						</li>
+						
 			
 						<li>
-							<label class="nrd-loginModal-label u-vr2x" for="username"><span>Gender<span class="err_req">* </span></span></label>
-							<select  id="gender" name="gender" class="form-control" placeholder="Gender" onchange="blankField('gender','')">
+						<label class="nrd-loginModal-label u-vr2x" for="gender"><span>Gender<span class="err_req">* </span></span></label>                          
+                                                <div class="gender-container">
+                                                    <span class="register-page">
+                                                        <input type="radio" name="gender" id="Male" value="Male" checked>
+                                                        <label class="radio-inline" class="form-control">Male</label>
+                                                    </span>
+                                                    <span class="register-page">
+                                                        <input type="radio" name="gender" id="Female" value="Female">
+                                                        <label class="radio-inline">Female</label>
+                                                    </span>
+                                                    <span class="register-page">
+                                                        <input type="radio" name="gender" id="NotSpecified" value="Female" >
+                                                        <label class="radio-inline">Third Gender</label>
+                                                    </span>
+                                                </div>
+                                                    
+<!--							<select  id="gender" name="gender" class="form-control" placeholder="Gender" onchange="blankField('gender','')">
 								<option value="">Select Gender</option>
 									<option value="Male">Male</option>
-									<option value="Female">Female</option>
+									<option value="Male">Male</option>
 									<option value="NotSpecified">Third Gender</option>
-							</select>
+							</select>-->
 							<span class="errSpan" id="err_gender"></span>
+						</li>
+                                                <li>
+							<label class="nrd-loginModal-label u-vr2x" for="username"><span>Date Of Birth<span class="err_req">* </span></span></label>
+                                                        <span class="dateWrapper"><input name="member_dob" id="member_dob" class="form-control datepicker"  placeholder="Enter Your DOB"  type="text" onkeyup="blankField('member_dob','Enter Your DOB')"></span>
+                                                        <span>FOR VERIFICATION MEMBERS MUST BE 18+</span>
+							<span class="errSpan" id="err_member_dob"></span>
 						</li>
 						<li class="address_li">
 							<label class="nrd-loginModal-label u-vr2x" for="username"><span>Address<span class="err_req">* </span></span></label>
@@ -148,13 +167,21 @@
 						<li class="doYou">
 						<label class="nrd-loginModal-label u-vr2x" for="Accepted"><span>Do you Own Pets</span></label>
 							
-							<div class="payment-options">
-								<label class="radio-inline" class="form-control">
+							<div class="register-page payment-options">
+                                                            <span class="register-page">
+                                                                <input type="radio" name="own_pets" id="own_pets1" value="Yes">
+                                                                <label class="radio-inline" class="form-control">Yes</label>
+                                                            </span>
+                                                            <span class="register-page">
+                                                                <input type="radio" name="own_pets" id="own_pets2" value="No" checked>
+                                                                <label class="radio-inline">No</label>
+                                                            </span>
+<!--								<label class="radio-inline" class="form-control">
 									<span>Yes</span> <input type="radio" name="own_pets" id="own_pets1" value="Yes">
 								</label>
 								<label class="radio-inline">
 									<span>No</span> <input type="radio" name="own_pets" id="own_pets2" value="No" checked>
-								</label>
+								</label>-->
 							</div>
 							<span class="errSpan"></span>
 						</li>	
@@ -337,9 +364,9 @@
 					</ul>
 					<div class="petsInfo"></div>
 			
-					<div class="agreeTerms">
-						<input id="person_terms_of_service" name="person_terms_of_service" class="form-control" type="checkbox" value="1">	
-						<label class="nrd-loginModal-label u-vr2x">I agree to the <a href="" title="terms and conditions">terms and conditions</a></label>
+					<div class="register-page-checkbox-container agreeTerms">
+						<input id="person_terms_of_service" name="person_terms_of_service" class="form-control register-page-checkbox" type="checkbox" value="1">	
+						<label class="nrd-loginModal-label u-vr2x register-page-checkbox-label">I agree to the <a href="" title="terms and conditions">terms and conditions</a></label>
 						<span class="errSpan" id="err_person_terms_of_service"></span>
 						
 					</div>
@@ -807,18 +834,71 @@ $("#pets").change(function() {
   $( document ).ready(function() {
         $(".pets_option").hide();	
     });
-
-
-    $("input[name='own_pets']").click(function() {
-        var test = $(this).val();
-		if(test=='No'){
-		 $(".pets_option").hide();	
-		}
-		else{
-			$(".pets_option").show();
-		}
-       
-    }); 
+    // Script for Ownpets Radio Button -- 
+    // Because of the design I'm writing this code-- Don't blame me already code is badxx
+    var radioContainer = document.querySelector('.register-page.payment-options');
+    var yesRadioButton = document.querySelector('#own_pets1');
+    var noRadioButton = document.querySelector('#own_pets2');
+    radioContainer.addEventListener('click', function(e) {
+            if(e.target.innerText === 'YES') {
+                    noRadioButton.removeAttribute('checked')
+                    yesRadioButton.setAttribute('checked', 'checked');
+                    $(".pets_option").show();
+            } else if (e.target.innerText === 'NO') {
+                    yesRadioButton.removeAttribute('checked');
+                    noRadioButton.setAttribute('checked', 'checked');
+                    $(".pets_option").hide();
+            }
+    });
+    // Script for Gender Radio Button
+    var genderContainer = document.querySelector('.gender-container');
+    var maleRadio = document.querySelector('#Male');
+    var femaleRadio = document.querySelector('#Female');
+    var notSpecRadio = document.querySelector('#NotSpecified');
+    genderContainer.addEventListener('click', function(e) {
+            if(e.target.innerText === 'MALE') {
+                    femaleRadio.removeAttribute('checked');
+                    notSpecRadio.removeAttribute('checked');
+                    maleRadio.setAttribute('checked', 'checked');
+                    console.log('male');
+            } else if (e.target.innerText === 'FEMALE') {
+                    maleRadio.removeAttribute('checked');
+                    notSpecRadio.removeAttribute('checked');
+                    femaleRadio.setAttribute('checked', 'checked');
+                    console.log('female');
+            } else if (e.target.innerText === 'THIRD GENDER') {
+                    maleRadio.removeAttribute('checked');
+                    femaleRadio.removeAttribute('checked');
+                    notSpecRadio.setAttribute('checked', 'checked');
+                    console.log('NS');
+            } 
+            
+    });
+    // Script for Checkbox
+    var checkboxContainer = document.querySelector('.register-page-checkbox-container');
+    var checkBoxBox = document.querySelector('.register-page-checkbox');
+    var count = 1;
+    checkboxContainer.addEventListener('click', function(e) {
+        if(e.target.className === 'register-page-checkbox-label' && count === 1) {
+            checkBoxBox.setAttribute('checked', 'checked');
+            count = 0;
+        } else if (e.target.className === 'register-page-checkbox-label' && count === 0) {
+            checkBoxBox.remomveAttribute('checked');
+            count = 1;
+        }
+    })
+    
+//    $("input[name='own_pets']").click(function() {
+//        var test = $(this).val();
+//        console.log(test);
+//		if(test=='No'){
+//		 $(".pets_option").hide();	
+//		}
+//		else{
+//			$(".pets_option").show();
+//		}
+//       
+//    }); 
 		
 
 </script>
