@@ -39,10 +39,11 @@
 		</ul>
 		
 		<div class="registration-tab-content tab-content">
-
+                    <p class="mandatoryText">ALL <span style="color: red">*</span> MARKED FIELDS ARE MANDATORY</p>
 			<div id="menu1" class="tab-pane fade in active">
+                            
 				<form id="member_register" name="member_register" method="post">
-                                    <p class="mandatoryText">ALL <span style="color: red">*</span> MARKED FIELDS ARE MANDATORY</p>
+                                    
     
 				 <input type="hidden" name="no_of_pets" id="no_of_pets"  value="0" />
 					<ul class="modalLogin-loginFields">
@@ -378,8 +379,9 @@
 			
 			
 			<div id="home" class="tab-pane fade">
+                            
 				<form id="contactform" method="post" action="" method="POST" enctype="multipart/form-data">
-                                    <p class="mandatoryText">ALL <span style="color: red">*</span> MARKED FIELDS ARE MANDATORY</p>
+                                    
 					<ul class="modalLogin-loginFields">
 						<li>
 							<label class="nrd-loginModal-label u-vr2x" for="username"><span>First Name<span class="err_req">* </span></span></label>
