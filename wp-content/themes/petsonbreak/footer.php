@@ -571,7 +571,7 @@ function closeNav() {
 
         </div>
    <div class="feed-error">
-	  <span class="excl"><img src="http://twc5.com/clients/petsonbreak/wp-content/themes/adivaha/images/exclamation.png"></span><span class="feed-text">Please select a score!</span>
+	  <span class="excl"><img src="<?php echo get_template_directory_uri();?>/images/exclamation.png"></span><span class="feed-text">Please select a score!</span>
 	
      </div>
 	
@@ -705,7 +705,7 @@ $('#prime-nav li').addClass('ser_services');
 </script>
 
 
-<script type="text/javascript" src="//maps.googleapis.com/maps/api/js?sensor=false&libraries=places"></script>
+<!-- <script type="text/javascript" src="//maps.googleapis.com/maps/api/js?sensor=false&libraries=places"></script> -->
 <script type="text/javascript">
        google.maps.event.addDomListener(window, "load", function () {
 		   /*                                                                                                                 

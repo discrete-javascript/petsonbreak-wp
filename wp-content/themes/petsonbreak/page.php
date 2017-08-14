@@ -156,7 +156,7 @@ else{
                                 </span>-->
                                 <ul id="categories" class="nav nav-tabs">
                                    <?php foreach ($results as $val) { ?>
-                                   <li class="selected_category" value="<?php echo $val->id;?>">
+                                   <li class="selected_category" data-value="<?php echo $val->id;?>">
                                        <a class="opt" data-toggle="tab" href="#searchbox">
                                            <?php echo $val->title;?>
                                        </a>
@@ -291,13 +291,13 @@ else{
             
                 <div class="col-md-3 col-xs-3">
                     <div class="cat_colm category-slides">
-                        <div class="" rel="<?php echo $weekrow->service_category;?>" style="background:url(<?php echo plugins_url(); ?>/ean_plugin/images/Category/<?php echo $weekrow->category_image;?>);background-size:cover;">
+                        <div class="ser_services" rel="<?php echo $weekrow->id;?>" style="background:url(<?php echo plugins_url(); ?>/ean_plugin/images/Category/<?php echo $weekrow->category_image;?>);background-size:cover;">
                             <div class="desc">
                                 <h2><?php echo $weekrow->title;?></h2>
                                 <p><?php echo $weekrow->destination;?></p>
                             </div>
                             <div class="cat_overlay">
-                                <a href="<?php echo $link;?>" class="cat_det">
+                                <a href="javascript:void(0);" class="cat_det">
                                     <i class="fa fa-paperclip" aria-hidden="true"></i>
                                 </a>
                             </div>
@@ -456,6 +456,20 @@ else{
     
 </script>
 <script>
+$('.city_pop_search').click(function(){
+	if($('#destName').val()==''){
+		$('#err_destName').html('<span class="state-indicator">Please enter your city name.</span>');
+		$('#destName').focus();
+		return false;
+	}
+	else{
+		var sid=$('#hiddenSID').val();
+		window.location.href="<?php echo site_url();?>/search-vendor/?sid="+sid+"&destName="+$("#destName").val();		
+		}	
+	});
+
+</script>
+<script>
 $('.city_search').click(function(){
 	if($('#searchName').val()==''){
 		$('.err_searchName').html('<span class="error_search">Please select category and your city name.</span>');
@@ -485,9 +499,9 @@ $('.city_search').click(function(){
 	 
 $('.pet-groomsv-criteria-open #categories li').click(function(){
 	 var catLi = ($(this).find('.opt').text());
-	  var id = $(this).attr('value');
+	  var id = $(this).attr('data-value');
 	   $('#sel_category').val(id);
-	  //alert(id);
+//	  alert(id);
 	 $('.pet_g_crt').text(catLi);
 })
 </script>

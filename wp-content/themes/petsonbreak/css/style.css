@@ -3711,8 +3711,8 @@ color: #fff;
 
 .city_pop_close{
     position: absolute;
-    right: 8px;
-    top: 3px;
+    left: 2px;
+    top: -3px;
     font-size: 20px;
     color: #555;
     font-weight: bold;
@@ -5826,10 +5826,6 @@ float:left;}
 	height: 160px;
 }
 
-#regist #member_register #intrested_area{
-	height: 160px;
-}
-
 #regist #member_register .member_profile_btn{
 	position: relative;
 }
@@ -7094,8 +7090,12 @@ a.carousel-control[href="#servicesCarousel"] span.glyphicon.glyphicon-chevron-le
     margin: 5rem 0;
     color: black;
 }
+.news-container {
+    height: 250px;
+    overflow-y: auto;
+}
 .events-section-heading, .news-section-heading {
-    text-align: center;
+    text-align: center; 
     font-size: 3rem;
     font-weight: 500;
     margin-bottom: 2rem;
@@ -7113,6 +7113,7 @@ a.carousel-control[href="#servicesCarousel"] span.glyphicon.glyphicon-chevron-le
 .each-news {
     margin-bottom: 1rem;
 }
+
 
 /*Footer Styles*/
 .footer-quick-links, .footer-locations,
@@ -7155,6 +7156,8 @@ div.footer-top {
     background: #0084b4;
     color: white;
 }
+/** Homepage Styles End **/
+
 /*Search Vendor Styles*/
 .search-results-container {
     width: 100%;
@@ -7253,6 +7256,8 @@ div.search-item-desc.off_Srvc {
 }
 .pet-child-right ul#serviceList li .search-items.float_right14{padding: 0px}
 
+/*Search Vendor Styles End*/
+
 /*Registration Page Styles*/
 .register-background {
     background-image: url(http://dev.petsonbreak.com/wp-content/uploads/2017/05/andrew-branch-106877.jpg);
@@ -7308,6 +7313,9 @@ div.search-item-desc.off_Srvc {
     font-size: 13px;
     text-transform: uppercase;
 }
+#regist .modalLogin-loginFields li .register-page label.interested_area_label {
+    display: block;
+}
 #regist .register-btn {
     display: flex;
     justify-content: center;
@@ -7316,13 +7324,20 @@ div.search-item-desc.off_Srvc {
 #regist .register-btn input {
     background: #ff0000;
 }
+#regist .modalLogin-loginFields > li select#intrested_area {
+    width: 50%;
+    float: left;
+}
+.register-page.bot {
+    padding-bottom: 8em;
+}
 #regist .modalLogin-loginFields li.address_li, 
 #regist .modalLogin-loginFields li.member_prof, 
 #regist .modalLogin-loginFields li.additional_info,
 #regist .modalLogin-loginFields li.address-container {
     width: 100%;
 }
-#regist #member_register #intrested_area,
+
 #regist #member_register #additional_info {
     height: 120px;
 }
@@ -7332,13 +7347,17 @@ div.search-item-desc.off_Srvc {
 span.err_req {
     color: #ff0000;
 }
-.dateWrapper:after {
-    font-family: 'FontAwesome'; 
-    position: relative; 
-    top: -35px; 
-    content: "\f073"; 
-    float: right;
-    left: -10px;
+#regist .modalLogin-loginFields > li span.dateWrapper select{
+    width: 33%;
+}
+.dateWrapper {
+    float: left;
+    width: 100%;
+}
+div.register-page-checkbox-container a:hover,
+div.register-page-checkbox-container a:focus,
+div.register-page-checkbox-container a:active{
+    color: #51bce6;
 }
 
 /*Registration Page Radio Button Styles*/
@@ -7438,7 +7457,8 @@ div.register-page-checkbox-container  input[type="checkbox"] + label::before {
    box-shadow: inset 0 2px 5px rgba(0,0,0,0.25);
    margin-right: 0.5em;
 }
-        
+/*Registration Page Styles End*/     
+
 /*All Categories Styles*/
 
 div.all-categories-container {
@@ -7465,6 +7485,7 @@ div.all-categories-header {
     text-transform: uppercase;
     font-weight: 700;
 }
+/*All Categories Styles End*/
 
 /*Login Page Styles*/ 
 .login-container {
@@ -7541,3 +7562,4 @@ div.login-whole-container {
     color: red;
     font-size: 15px;
 }
+/*Login Page Styles End*/ 

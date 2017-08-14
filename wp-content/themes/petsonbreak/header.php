@@ -444,7 +444,7 @@ $results =$wpdb->get_results("select * from twc_service_category where published
         });
     
 </script>
-<script
+<!--<script
   src="https://code.jquery.com/jquery-2.0.3.min.js"
   integrity="sha256-sTy1mJ4I/LAjFCCdEB4RAvPSmRCb3CU7YqodohyeOLo="
   crossorigin="anonymous"></script>
@@ -470,6 +470,8 @@ $('.city_search').click(function(){
 //document.DOMContentLoaded = function() {
     
 //}
+</script>-->
+<script>
 document.addEventListener("DOMContentLoaded", function(event) {
     var preSelectdCategory = window.localStorage.idOfSelected;
     var toSelect = document.getElementById(preSelectdCategory);
@@ -479,16 +481,16 @@ document.addEventListener("DOMContentLoaded", function(event) {
 
 
 <script>
- $('.pet-groomsv-criteria').click(function(){
-	  $(this).toggleClass('pet-groomsv-criteria-open');
+ jQuery('.pet-groomsv-criteria').click(function(){
+	  jQuery(this).toggleClass('pet-groomsv-criteria-open');
 	 })	
 	 
-$('.pet-groomsv-criteria-open #categories li').click(function(){
-	 var catLi = ($(this).find('.opt').text());
-	  var id = $(this).attr('value');
-	   $('#sel_category').val(id);
+jQuery('.pet-groomsv-criteria-open #categories li').click(function(){
+	 var catLi = (jQuery(this).find('.opt').text());
+	  var id = jQuery(this).attr('id');
+	   jQuery('#sel_category').val(id);
 //	  alert(id);
-	 $('.pet_g_crt').text(catLi);
+	 jQuery('.pet_g_crt').text(catLi);
 })
 </script>
 <script>
@@ -644,7 +646,7 @@ $('.city_search').click(function(){
 	 
 $('.pet-groomsv-criteria #categories li').click(function(){
 	 var catLi = ($(this).find('.opt').text());
-	  var id = $(this).attr('value');
+	  var id = $(this).attr('id');
 	   $('#sel_category').val(id);
 	  //alert(id);
 	 $('.pet_g_crt').text(catLi);

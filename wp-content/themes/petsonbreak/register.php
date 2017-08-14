@@ -17,6 +17,12 @@
 ?>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.4/css/bootstrap-select.min.css">
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.4/js/bootstrap-select.min.js"></script>
+
 <style>
 .form-control:focus{
 	 border-color:#636 !important;
@@ -89,8 +95,18 @@
 						</li>
                                                 <li>
 							<label class="nrd-loginModal-label u-vr2x" for="username"><span>Date Of Birth<span class="err_req">* </span></span></label>
-                                                        <span class="dateWrapper"><input name="member_dob" id="member_dob" class="form-control datepicker"  placeholder="Enter Your DOB"  type="text" onkeyup="blankField('member_dob','Enter Your DOB')"></span>
-                                                        <span>FOR VERIFICATION MEMBERS MUST BE 18+</span>
+                                                        <span class="dateWrapper">
+                                                            <select id="days">
+                                                            </select>
+                                                            <select id="months">
+                                                            </select>
+                                                            <select id="years">
+                                                            </select>
+                                                        </span>
+                                                        <input type="hidden" name="member_dob" id="member_dob">
+                                                        
+<!--                                                        <span class="dateWrapper"><input name="member_dob" id="member_dob" class="form-control datepicker"  placeholder="Enter Your DOB"  type="text" onkeyup="blankField('member_dob','Enter Your DOB')"></span>-->
+                                                        <span style="display: block;">FOR VERIFICATION MEMBERS MUST BE 18+</span>
 							<span class="errSpan" id="err_member_dob"></span>
 						</li>
 						<li class="address_li">
@@ -347,9 +363,20 @@
 							<span id="err_member_profile_pic"></span>
 							</div>-->
 							
-							<div class="bot">
-							   <label class="nrd-loginModal-label u-vr2x" for="username"><span>Please indicate the services you are intrested in</span></label>
-							   <textarea cols="5" name="intrested_area" id="intrested_area"></textarea>
+							<div class="bot register-page">
+							   <label class="nrd-loginModal-label u-vr2x interested_area_label" for="username"><span>Please indicate the services you are intrested in</span></label>
+                                                           <select name="intrested_area" id="intrested_area">
+                                                               <?php 
+                                                                    $vendorServices =$wpdb->get_results("select * from twc_service_category where published='Yes' and status_deleted=0");
+                                                                    foreach ($vendorServices as $val) { ?>
+                                                                    <option id="<?php echo $val->id;?>" value="<?php echo $val->title;?>">
+                                                                        
+                                                                            <?php echo $val->title;?>
+                                                                        
+                                                                    </option>           
+                                                                    <?php } ?>
+                                                               ?>
+                                                           </select>
 					
 							<span id="err_member_profile_pic"></span>
 							</div>
@@ -367,7 +394,7 @@
 			
 					<div class="register-page-checkbox-container agreeTerms">
 						<input id="person_terms_of_service" name="person_terms_of_service" class="form-control register-page-checkbox" type="checkbox" value="1">	
-						<label class="nrd-loginModal-label u-vr2x register-page-checkbox-label">I agree to the <a href="" title="terms and conditions">terms and conditions</a></label>
+						<label class="nrd-loginModal-label u-vr2x register-page-checkbox-label">I agree to the <a target="_blank" href="http://dev.petsonbreak.com/terms-conditions/" title="terms and conditions">terms and conditions</a></label>
 						<span class="errSpan" id="err_person_terms_of_service"></span>
 						
 					</div>
@@ -704,7 +731,57 @@ function deletePets(){
 
 
 </script>
+<script>
+//Scipt for Selecting dates
 
+var monthNames = [ "January", "February", "March", "April", "May", "June",
+    "July", "August", "September", "October", "November", "December" ];
+
+for (i = new Date().getFullYear(); i > 1900; i--){
+    $('#years').append($('<option value='+i+'/>').val(i).html(i));
+}
+    
+for (i = 1; i < 13; i++){
+    $('#months').append($('<option value='+i+'/>').val(i).html(i));
+}
+ updateNumberOfDays(); 
+    
+$('#years, #months').on("change", function(){
+    updateNumberOfDays(); 
+});
+
+
+
+function updateNumberOfDays(){
+    $('#days').html('');
+    month=$('#months').val();
+    year=$('#years').val();
+    days=daysInMonth(month, year);
+
+    for(i=1; i < days+1 ; i++){
+            $('#days').append($('<option value='+i+'/>').val(i).html(i));
+    }
+}
+
+function daysInMonth(month, year) {
+    return new Date(year, month, 0).getDate();
+}
+$('#days').prepend('<option selected="selected" value="">Date</option>');
+$('#months').prepend('<option selected="selected" value="">Month</option>');
+$('#years').prepend('<option selected="selected" value="">Year</option>');
+
+var dateWrapper = document.querySelector('.dateWrapper');
+
+var dateOfBirth = document.querySelector('#member_dob');
+date.addEventListener('change', function() {
+    var date = document.querySelector('#days');
+    var month = document.querySelector('#months');
+    var year = document.querySelector('#years');
+   dateOfBirth.value = year.value+'-'+month.value+'-'+date.value;
+   console.log(dateOfBirth.value);
+});
+
+</script>
 
 <script>
  $('#MemberRegisBtn').click(function(){
@@ -722,8 +799,18 @@ function deletePets(){
 	  $('#member_last_name').focus();
        return false;
       }
-	   else if($('#member_dob').val()==""){
-      $('#err_member_dob').html('Please enter your DOB.');
+	   else if($('#days').val()==""){
+      $('#err_member_dob').html('Please select your date.');
+	  $('#member_dob').focus();
+        return false;
+      }
+      else if($('#months').val()==""){
+      $('#err_member_dob').html('Please select your month.');
+	  $('#member_dob').focus();
+        return false;
+      }
+      else if($('#years').val()==""){
+      $('#err_member_dob').html('Please select your year.');
 	  $('#member_dob').focus();
         return false;
       }
@@ -796,18 +883,19 @@ function deletePets(){
 		} 
 	 else{
 	  var frmdata =$('#member_register').serialize();
-		 $.ajax({
-			 type: "POST",
-			 url: "<?php echo get_template_directory_uri(); ?>/custom-ajax.php",
-			 data: "action=MemberRegistration&"+frmdata,
-			 success: function(Data){
-				if(Data==1){
-					 window.location.href="<?php echo site_url();?>/thank-you/";
-				}else{
-					$('#msgDiv').html('<span class="error">This email id already exist.</span>');
-				}
-			  }
-	  })
+          console.log(frmdata);
+//		 $.ajax({
+//			 type: "POST",
+//			 url: "<?php echo get_template_directory_uri(); ?>/custom-ajax.php",
+//			 data: "action=MemberRegistration&"+frmdata,
+//			 success: function(Data){
+//				if(Data==1){
+//					 window.location.href="<?php echo site_url();?>/thank-you/";
+//				}else{
+//					$('#msgDiv').html('<span class="error">This email id already exist.</span>');
+//				}
+//			  }
+//	  })
    }		 
 });	
 
