@@ -4265,6 +4265,7 @@ margin-bottom: 15px;}
     z-index: 10;
     display: none;
 	overflow:auto;
+        top: 0;
 }
 
 .query-div{
@@ -6943,6 +6944,8 @@ border-left: 30px solid #636;
 .pet-groomsv-sercahbox.menu-bar {
     border-radius: 0px;
     margin-top: 4.7em;
+    position: fixed;
+    z-index: 1;
 }
 #categories.nav-tabs.menu-bar {
     background: #663366;
@@ -7652,5 +7655,14 @@ div.login-whole-container {
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
-    height: 13em;
+    height: 40em;
+   
+}
+.vendor-details-container {
+    margin-top: -7em;
+    margin-bottom: 1.5em;
+    color: white;
+}
+.vendor-details-container h3 {
+    color: white;
 }

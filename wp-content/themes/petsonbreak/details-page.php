@@ -78,15 +78,22 @@ $ratingArr =array('5'=>'Awesome','4'=>'Great','3'=>'Average','2'=>'Not that bad'
 </style>
 <div class="details-page-parallax-container" style="background-image: url(<?php echo get_template_directory_uri()?>/uploads/<?php echo $objs->image_path; ?>);
 ">
-    <div>
-        <h3>Details<?php echo $establishment;?></h3>
-        <p><?php echo $objs->address;?>,<?php echo $objs->city;?></p>
-         <p><?php echo $objs->contact_number;?></p>
+    
+            
         
-    </div>
+   
 </div>
 <div class="detail-container">
-    <ul class="nav nav-tabs">
+    <div class="row">
+        <div class="col-lg-2 col-md-2 col-sm-2"></div>
+        <div class="col-lg-8 col-md-8 col-sm-8">
+            <div class="vendor-details-container">
+                <h3>Details<?php echo $establishment;?></h3>
+                <p><?php echo $objs->address;?>,<?php echo $objs->city;?></p>
+                 <p><?php echo $objs->contact_number;?></p>
+                 
+            </div>
+   <ul class="nav nav-tabs">
     <li class="active"><a data-toggle="tab" href="#overview">OVERVIEW</a></li>
     <li><a data-toggle="tab" href="#photos">PHOTOS</a></li>
     <li><a data-toggle="tab" href="#reviews">REVIEWS</a></li>
@@ -94,7 +101,7 @@ $ratingArr =array('5'=>'Awesome','4'=>'Great','3'=>'Average','2'=>'Not that bad'
   </ul>
 
   <div class="tab-content">
-    <div id="overview" class="tab-pane fade in active">
+    <div id="overview" class="tab-pane fade active">
       <div class="pet-child-right">
 		    <h3>Why do we use it?</h3>
 			<p><?php echo $objs->description;?></p>
@@ -400,6 +407,11 @@ $messageReview=$revResult->message;
           </div>
     </div>
   </div>
+        </div>
+        <div class="col-lg-2 col-md-2 col-sm-2"></div>
+    </div>
+     
+    
    
 
 
@@ -440,9 +452,13 @@ $messageReview=$revResult->message;
 	    slideWidth: 350,
 	  });
 		}
+               
 
   });
- 
+ document.addEventListener("DOMContentLoaded", function() {
+    var overviewTab = document.querySelector('#overview');
+    overviewTab.classList.add('active');
+  });
 </script>
 
 
