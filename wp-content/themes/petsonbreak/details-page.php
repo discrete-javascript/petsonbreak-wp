@@ -88,75 +88,89 @@ $ratingArr =array('5'=>'Awesome','4'=>'Great','3'=>'Average','2'=>'Not that bad'
         <div class="col-lg-2 col-md-2 col-sm-2"></div>
         <div class="col-lg-8 col-md-8 col-sm-8">
             <div class="vendor-details-container">
-                <h3>Details<?php echo $establishment;?></h3>
-                <p><?php echo $objs->address;?>,<?php echo $objs->city;?></p>
-                 <p><?php echo $objs->contact_number;?></p>
-                 
+                <p>Details<?php echo $establishment;?><sup class="item-rating details-page-rating"><?php if($averageReview) { echo $averageReview; } else { echo '0'; } ?></sup></p>
+                <div><i class="fa fa-map-marker details-page-address" aria-hidden="true"></i><span><?php echo $objs->address;?>,<?php echo $objs->city;?></span></div>
+                <div><i class="fa fa-phone details-page-phone" aria-hidden="true"></i> <span><?php echo $objs->contact_number;?></span></div>
             </div>
-   <ul class="nav nav-tabs">
-    <li class="active"><a data-toggle="tab" href="#overview">OVERVIEW</a></li>
-    <li><a data-toggle="tab" href="#photos">PHOTOS</a></li>
-    <li><a data-toggle="tab" href="#reviews">REVIEWS</a></li>
-    <li><a data-toggle="tab" href="#alsoListed">ALSO LISTED IN</a></li>
+            <div class="pet-search-left details-page35">
+ 		<div id="petBrd-page-wrap">
+ 		  <ul class="pet_breadcrumb">
+ 					<li class=" pet_breadcrumbStep pet_breadcrumbActive"><a href="<?php echo site_url();?>">Home</a></li>
+ 					<li class=" pet_breadcrumbStep pet_breadcrumbActive"><a href="<?php echo site_url();?>/search-vendor/?sid=<?php echo $sid; ?>&destName=<?php echo $_REQUEST['destName'];?>"><?php echo $serviceTitle ; ?></a></li>
+ 					<li class="pet_breadcrumbStep"><a href="#"><?php echo $establishment; ?></a></li>
+ 				</ul>
+ 		</div>
+            </div>
+   <ul class="nav nav-tabs details-page-nav-tabs">
+    <li class="active"><a data-toggle="tab" data-target="#overview" href="#overview">OVERVIEW</a></li>
+    <li><a data-toggle="tab" data-target="#photos" href="#photos">PHOTOS</a></li>
+    <li><a data-toggle="tab" data-target="#reviews" href="#reviews">REVIEWS</a></li>
+    <li><a data-toggle="tab" data-target="#alsoListed" href="#alsoListed">ALSO LISTED IN</a></li>
   </ul>
 
-  <div class="tab-content">
-    <div id="overview" class="tab-pane fade active">
-      <div class="pet-child-right">
+  <div class="tab-content details-page-tab-content">
+    <div id="overview" class="tab-pane fade in active">
+      <div class="pet-child-right details-page long-description-overview">
 		    <h3>Why do we use it?</h3>
-			<p><?php echo $objs->description;?></p>
-			<a href="javascript:void();" class="snd_query_btn">Send Query</a>
+                    <div class="long-description-container">
+                        <p><?php echo $objs->description;?></p>
+                    </div>
+			
+                    
 		</div>
         
-          <div class="col-md-4 pet-search-mid">
+          <div class="col-md-4 pet-search-mid details-page more-information-container">
       		    <h5>More Information</h5>
            		<ul>
- 					   <li>Hours of Operation -<span><?php echo $objs->time_from ; ?> - <?php echo $objs->time_to ; ?></span></li>
-					    <li>Contact No        - <span><?php echo $objs->contact_number;?></span></li>
+                            <li><div></div>Hours of Operation <span class="details-page-more-info"><?php echo $objs->time_from ; ?> - <?php echo $objs->time_to ; ?></span></li>
+                                           <li>Contact No        <span class="details-page-more-info"><?php echo $objs->contact_number;?></span></li>
 						<?php if(($objs->card_accepted)!=''){ ?>
-					    <li>Card Accepted     - <span>[<?php echo $objs->card_accepted;?>]</span></li>
+					    <li>Card Accepted     <span class="details-page-more-info">[<?php echo $objs->card_accepted;?>]</span></li>
 						<?php } ?>
 						<?php if(($objs->event_name)!=''){ ?>
-					    <li>Event Name - <span>[<?php echo $objs->event_name;?>]</span></li>
+					    <li>Event Name <span class="details-page-more-info">[<?php echo $objs->event_name;?>]</span></li>
 					    <?php } ?>
 						<?php if(($objs->on_call)!=''){ ?>
-					    <li>Available On Call - <span>[<?php echo $objs->on_call;?>]</span></li>
+					    <li>Available On Call <span class="details-page-more-info">[<?php echo $objs->on_call;?>]</span></li>
 					    <?php } ?>
 						<?php if(($objs->area_covered)!=''){ ?>
-					    <li>Area Covered - <span>[<?php echo $objs->area_covered;?>]</span></li>
+					    <li>Area Covered <span class="details-page-more-info">[<?php echo $objs->area_covered;?>]</span></li>
 					    <?php } ?>
 						<?php if(($objs->awards)!=''){ ?>
-					    <li>Awards - <span>[<?php echo $objs->awards;?>]</span></li>
+					    <li>Awards <span class="details-page-more-info">[<?php echo $objs->awards;?>]</span></li>
 					    <?php } ?>
 						<?php if(($objs->payment_terms)!=''){ ?>
-					    <li>Payment Terms - <span>[<?php echo $objs->payment_terms;?>]</span></li>
+					    <li>Payment Terms <span class="details-page-more-info">[<?php echo $objs->payment_terms;?>]</span></li>
 					    <?php } ?>
 						<?php if(($objs->our_expertise)!=''){ ?>
-					    <li>Our Espertise - <span>[<?php echo $objs->our_expertise;?>]</span></li>
+					    <li>Our Espertise  <span class="details-page-more-info">[<?php echo $objs->our_expertise;?>]</span></li>
 					    <?php } ?>
 						<?php if(($objs->we_offer)!=''){ ?>
-					    <li>We Offer - <span>[<?php echo $objs->we_offer;?>]</span></li>
+					    <li>We Offer <span class="details-page-more-info">[<?php echo $objs->we_offer;?>]</span></li>
 					    <?php } ?>
 						<?php if(($objs->time_slot)!=''){ ?>
-					    <li>Time Slot - <span>[<?php echo $objs->time_slot;?>]</span></li>
+					    <li>Time Slot <span class="details-page-more-info">[<?php echo $objs->time_slot;?>]</span></li>
 					    <?php } ?>
 						<?php if(($objs->delivery)!=''){ ?>
-					    <li>Delivery - <span>[<?php echo $objs->delivery;?>]</span></li>
+					    <li>Delivery <span class="details-page-more-info">[<?php echo $objs->delivery;?>]</span></li>
 					    <?php } ?>
 						<?php if(($objs->types)!=''){ ?>
-					    <li>Types - <span>[<?php echo $objs->types;?>]</span></li>
+					    <li>Types <span class="details-page-more-info">[<?php echo $objs->types;?>]</span></li>
 					    <?php } ?>
 						<?php if(($objs->sales_support)!=''){ ?>
-					    <li>Sales Support - <span>[<?php echo $objs->sales_support;?>]</span></li>
+					    <li>Sales Support <span class="details-page-more-info">[<?php echo $objs->sales_support;?>]</span></li>
 					    <?php } ?>
 						<?php if(($objs->rate_fair)!=''){ ?>
-					    <li>Rate Fair - <span>[<?php echo $objs->rate_fair;?>]</span></li>
+					    <li>Rate Fair <span class="details-page-more-info">[<?php echo $objs->rate_fair;?>]</span></li>
 					    <?php } ?>
            		</ul>
 
           </div>
+        <div>
+                        <a href="javascript:void();" class="snd_query_btn">Send Query</a>
+                    </div>
     </div>
-    <div id="photos" class="tab-pane fade">
+    <div id="photos" class="tab-pane fade details-page">
       <h3>PHOTOS</h3>
              
    <?php 
@@ -166,7 +180,7 @@ $ratingArr =array('5'=>'Awesome','4'=>'Great','3'=>'Average','2'=>'Not that bad'
   if($imageResult!=""){ ?>
 		
 		<div class="col-md-4 pet-search-lft">
-          		<div id="pet-search-lft-carousel" class="carousel slide" data-ride="carousel">
+          		<div id="pet-search-lft-carousel" class="carousel slide details-page-photos-slider" data-ride="carousel">
 				<!--
                 <ol class="carousel-indicators">
                     <li data-target="#pet-search-lft-carousel" data-slide-to="0" class="active"></li>
@@ -193,7 +207,7 @@ $ratingArr =array('5'=>'Awesome','4'=>'Great','3'=>'Average','2'=>'Not that bad'
           </div>
  <?php } ?>
     </div>
-    <div id="reviews" class="tab-pane fade">
+    <div id="reviews" class="tab-pane fade details-page">
       <h3>REVIEWS</h3>
       
    <?php	
@@ -388,10 +402,10 @@ $messageReview=$revResult->message;
      </div>
    </div>
     </div>
-    <div id="alsoListed" class="tab-pane fade">
+    <div id="alsoListed" class="tab-pane fade details-page">
       <h3>ALSO LISTED IN </h3>
-      <div class="col-md-4 pet-search-rht">
-                <h5>Also Listed in</h5>
+      <div class="col-md-4 pet-search-rht details-page-also-listed">
+               
            		<ul>
 				<?php
 				$listed_results =$wpdb->get_results("select * from twc_vendor_services where vendor_id='".$userid."' and id!='".$_REQUEST['id']."'");
@@ -455,10 +469,7 @@ $messageReview=$revResult->message;
                
 
   });
- document.addEventListener("DOMContentLoaded", function() {
-    var overviewTab = document.querySelector('#overview');
-    overviewTab.classList.add('active');
-  });
+  
 </script>
 
 
@@ -609,4 +620,13 @@ max-height: 85px;
 	$('.detail-section2 .carousel-reviews.broun-block').width(width);
 	var dynamiWidth = $('.det-rat-smry').outerWidth() + width;
 	$('.dynamic_width_div').width(dynamiWidth);
+        var overviewTab = document.querySelector('.tab-content div#overview');
+  console.log(overviewTab.classList);
+ document.addEventListener("DOMContentLoaded", function() {
+     console.log('lol');
+    
+    overviewTab.classList.add('active');
+    console.log(overviewTab.classList);
+  });
+  console.log(overviewTab.classList);
 </script>

@@ -6945,7 +6945,7 @@ border-left: 30px solid #636;
     border-radius: 0px;
     margin-top: 4.7em;
     position: fixed;
-    z-index: 1;
+    z-index: 3;
 }
 #categories.nav-tabs.menu-bar {
     background: #663366;
@@ -7320,6 +7320,7 @@ div.search-item-desc.off_Srvc {
     text-align: center;
     border-radius: 5px;
     font-weight: bold;
+    color: black;
 }
 .search-items.rating-container {
     display: inline-block;
@@ -7659,10 +7660,85 @@ div.login-whole-container {
    
 }
 .vendor-details-container {
-    margin-top: -7em;
-    margin-bottom: 1.5em;
+    margin-top: -8em;
+    margin-bottom: 0.5em;
     color: white;
 }
 .vendor-details-container h3 {
     color: white;
+}
+.vendor-details-container > p {
+    font-size: -webkit-xxx-large;
+}
+.details-page h3,
+.details-page p {
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1em 0;
+}
+.details-page-tab-content {
+    background: white;
+    padding-bottom: 5em;
+}
+.details-page h5,
+.details-page ul li {
+    color: black;
+}
+.pet-search-mid {
+    background: white;
+}
+.more-information-container {
+    padding-bottom: 4em;
+}
+.snd_query_btn {
+    background: red;
+    color: white;
+    right: 4em; 
+    bottom: 5em;
+}
+.details-page-more-info {
+    font-size: larger;
+    color: red;
+    font-weight: bold;
+    display: block;
+    margin-top: 5px;
+}
+.details-page-rating {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    font-size: large;
+}
+.details-page-address + span,
+.details-page-phone + span {
+    font-size: 14px;
+    color: yellow;
+    margin-left: 10px;
+    font-weight: 600;
+}
+.details-page-nav-tabs {
+    background: white;
+}
+.details-page-nav-tabs li {
+    border-top: 1px solid #ddd;
+    border-right: 1px solid #ddd;
+}
+ul.details-page-nav-tabs>li.active>a, ul.details-page-nav-tabs>li.active>a:hover, ul.details-page-nav-tabs>li.active>a:focus {
+    border: 0px;
+    border-top: 2px solid red;
+}
+ul.details-page-nav-tabs>li>a {
+    border-radius: 0px;
+}
+div.details-page-also-listed ul li a {
+    color: black;
+}
+div.details-page-also-listed {
+    background: white;
+}
+#pet-search-lft-carousel.details-page-photos-slider .item img {
+   display: block;
+   margin: auto;
 }
