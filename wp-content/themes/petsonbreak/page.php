@@ -175,7 +175,7 @@ else{
                                         <?php } ?>
                                         <span class="input-group-addon city_search" 
                                             id="basic-addon2" style="cursor: pointer;">
-                                          Search
+                                          SNIFF
                                         </span>
                                     </div>
                               </div>
@@ -292,13 +292,10 @@ else{
                 <div class="col-md-3 col-xs-3">
                     <div class="cat_colm category-slides">
                         <div class="ser_services" rel="<?php echo $weekrow->id;?>" style="background:url(<?php echo plugins_url(); ?>/ean_plugin/images/Category/<?php echo $weekrow->category_image;?>);background-size:cover;">
-                            <div class="desc">
-                                <h2><?php echo $weekrow->title;?></h2>
+                            <div class="home-slider-offer desc">
+                                <a href="javascript:void(0);">
+                                    <p class="home-slider-offer-title"><?php echo $weekrow->title;?></p>
                                 <p><?php echo $weekrow->destination;?></p>
-                            </div>
-                            <div class="cat_overlay">
-                                <a href="javascript:void(0);" class="cat_det">
-                                    <i class="fa fa-paperclip" aria-hidden="true"></i>
                                 </a>
                             </div>
                         </div>
@@ -402,11 +399,11 @@ else{
 
     <!-- Left and right controls -->
     <a class="left carousel-control" href="#testimonial-slider" data-slide="prev">
-      <span class="glyphicon glyphicon-chevron-left"></span>
+      <span class="testimonial-slider glyphicon glyphicon-chevron-left"></span>
       <span class="sr-only">Previous</span>
     </a>
     <a class="right carousel-control" href="#testimonial-slider" data-slide="next">
-      <span class="glyphicon glyphicon-chevron-right"></span>
+      <span class="testimonial-slider glyphicon glyphicon-chevron-right"></span>
       <span class="sr-only">Next</span>
     </a>
   </div>

@@ -180,10 +180,24 @@ $vendor_id =$result->vendor_id;
 </div>
 </div>
 </div>
+<div class="social-links-container-overlay">
+                    
+                    <ul>
+                                 <?php if($mk_options['f_facebook']!=''){?>
+                        <li><a href="<?php echo $mk_options['f_facebook'];?>" target="_blank"><i class="side-social-links fa fa-facebook"></i> </a></li>
+                                   <?php } if($mk_options['f_google']!=''){?>
+                        <li><a href="<?php echo $mk_options['f_google'];?>" target="_blank"><i class="side-social-links fa fa-google-plus"></i> </a></li>
+                                   <?php } if($mk_options['f_linkedin']!=''){?>
+                        <li><a href="<?php echo $mk_options['f_linkedin'];?>" target="_blank"><i class="side-social-links fa fa fa-linkedin"></i> </a></li>
+                                        <?php } if($mk_options['f_twitter']!=''){?>
+                        <li><a href="<?php echo $mk_options['f_twitter'];?>" target="_blank"><i class="side-social-links fa fa fa-twitter"></i> </a></li>
+                                      <?php }?>
+                    </ul>
+                </div>
 </div>
 
 <script type="text/javascript" src="//code.jquery.com/jquery-2.0.3.min.js"></script>
-<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.js"></script>
+<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
 <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/0.10.0/ui-bootstrap-tpls.min.js"></script>
 
 
@@ -205,9 +219,9 @@ $vendor_id =$result->vendor_id;
 <script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/scripts-libraries/loading-bar.js?var=<?php echo uniqid(); ?>"></script>
 <script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/js/elif.js"></script>
 <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-<script src="//cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.6.4/js/bootstrap-datepicker.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.6.4/js/bootstrap-datepicker.min.js"></script>
 <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
-<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-sanitize.js"></script>
+<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-sanitize.min.js"></script>
 <script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/scripts-libraries/dirPagination.js"></script>
 <script src="<?php echo get_template_directory_uri(); ?>/js/ng-map.js"></script>
 <script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/scripts/main.js"></script>
@@ -584,7 +598,7 @@ function closeNav() {
 
 
 <div class="feed-btn">
-<a href="javascript:void();" class="feedBtn"><img src="<?php echo get_template_directory_uri();?>/images/feedBtn.png"></a>
+<a href="javascript:void();" class="feedBtn">FEEDBACK</a>
 
 
 

@@ -123,15 +123,14 @@ $results =$wpdb->get_results("select * from twc_service_category where published
 <link rel="stylesheet" type="text/css" href="<?php echo get_template_directory_uri(); ?>/css/color.css?var=<?php echo rand();?>">
 <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css-libraries/angular-material.min.css">
 <link href='<?php echo get_template_directory_uri(); ?>/css-libraries/loading-bar.css' rel='stylesheet' />
-<link href='//fonts.googleapis.com/css?family=Oxygen:300,400,700' rel='stylesheet' type='text/css'>
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i|Oxygen:300,400,700" rel="stylesheet">
 <link href='<?php echo get_template_directory_uri(); ?>/css-libraries/app.css' rel='stylesheet' />
 <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css-libraries/angular-material.min.css">
 <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
 <link rel="stylesheet" type="text/css" href="<?php echo get_template_directory_uri(); ?>/css-libraries/rzslider.css">
-<link href="//fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i" rel="stylesheet">
 <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css-libraries/bootstrap.min.css">
 <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css-libraries/jquery.bxslider.css?var=<?php echo rand();?>">
-<script type="text/javascript" src="//platform-api.sharethis.com/js/sharethis.js#property=58f9d6dacaaba30012e7e3cb&product=sticky-share-buttons"></script>
+<!-- <script type="text/javascript" src="//platform-api.sharethis.com/js/sharethis.js#property=58f9d6dacaaba30012e7e3cb&product=sticky-share-buttons"></script> -->
 
 
 <?php wp_head(); ?>
@@ -334,11 +333,11 @@ $results =$wpdb->get_results("select * from twc_service_category where published
                                              id="searchName" 
                                              class="form-control menu-bar-textbox" value="<?php echo $_REQUEST['destName'] ;?>" placeholder="Discover and Unleash Happiness you cherish">
                                         <?php }  else {?>
-                                        <input type="text" name="searchName" id="searchName" class="form-control menu-bar-textbox" value="" placeholder="WHERE WOULD YOU LIKE TO GO ?">
+                                        <input type="text" name="searchName" id="searchName" class="form-control menu-bar-textbox" value="" placeholder="Discover and Unleash Happiness you cherish">
                                         <?php } ?>
                                         <span class="input-group-addon city_search" 
                                             id="basic-addon2" style="cursor: pointer;">
-                                          Search
+                                          SNIFF
                                         </span>
                                     </div>
                               </div>
@@ -588,7 +587,7 @@ jQuery('.pet-groomsv-criteria-open #categories li').click(function(){
     </div>
 </nav>-->
 <script type="text/javascript" src="//code.jquery.com/jquery-2.0.3.min.js"></script>
-<script type="text/javascript" src="//maps.googleapis.com/maps/api/js?libraries=places&key=AIzaSyBwzkKvM75QzamE7BzVZTfEBwRO6FHEz4U"></script>
+<!-- <script type="text/javascript" src="//maps.googleapis.com/maps/api/js?libraries=places&key=AIzaSyBwzkKvM75QzamE7BzVZTfEBwRO6FHEz4U"></script> -->
 
 <script type="text/javascript">
 

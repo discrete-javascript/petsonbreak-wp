@@ -86,7 +86,7 @@
 
 
 
-@media (min-width:1025px){.logo-other{position:absolute;top:20px;} .logo-desk{    position: fixed;left: 45%;top:20px;}}
+@media (min-width:1025px){.logo-other{position:absolute;top:20px;} .logo-desk{    position: fixed;left: 45%;top:10px;}}
 @media (min-width:768px) and (max-width:1200px){.horizontal-box ul li:first-child{}
 #myCarousel{height:100%;}
 .header-bottom .nav > li > a{padding:20px 7px;}

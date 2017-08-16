@@ -1147,11 +1147,11 @@ outline:none;}
 .footer_links a{text-decoration: none;font-size: 13px;}
 .footer_links span{color: #fff;padding-right: 10px;}
 .social_links{}
-.social_links li{display: inline-block;margin-right: 20px;border-bottom: none;}
+.social_links li{display: inline-block;margin-right: 5px;border-bottom: none;}
 .social_links .fa{display: inline-block;height: 30px;line-height: 30px;margin: auto 3px;width: 30px;border-radius: 30px;font-size: 13px;text-align: center;}
 .footer_terms ul li{display: inline;padding-right: 45px;font-size: 13px;}
 .copyright1{font-size:13px;}
-.footer-bottom{padding:20px 0px;}
+.footer-bottom{padding:10px 0px;}
 .footer_terms ul , .footer_terms p{margin-bottom:0px;}
 .footer-logo{margin-bottom:15px;}
 
@@ -1173,7 +1173,7 @@ outline:none;}
 }
 .footer_colm_logo{margin-bottom: -10px;}
 .visa-sign-cards{padding-top: 10px;}
-.veri img{width:150px; -webkit-filter: brightness(0) invert(1);filter: brightness(0) invert(1);}
+.veri img{width:120px; -webkit-filter: brightness(0) invert(1);filter: brightness(0) invert(1);}
 .visa-sign-cards ul li{float: left;padding-right: 8px;}
 #menu-item-214 a{cursor:default;}
 
@@ -1968,8 +1968,8 @@ font-size: 18px;}
 
 /* new css add 21-02-2017 pet dog */ 
 
-.pet-header{background-color: #fff;border-bottom: 3px solid #673568;padding: 11px 0px 12px 0px;height:78px;}
-#article-anchor{height:78px;}
+.pet-header{background-color: #fff;padding: 5px 0px 12px 0px;height:60px;}
+#article-anchor{height:0px;}
 .pet-header .sidenav {
     height: 100%;
     width: 3%;
@@ -3002,7 +3002,7 @@ background: #E5E4E6;border:1px solid #ccc;border-right:0px;margin-bottom:0px;cur
 
 .pet-groomsv-sercahbox .input-group{width: 100%;float: left;}
 .pet-groomsv-sercahbox .form-control{height: 41px;font-size: 13px;padding: 0px 0px 0px 8px;    border-radius: 0px;color: #727272;background: #fff;border-right:0px;}
-.pet-groomsv-sercahbox .form-control#searchName{border: 1px solid #ccc;border-right: 0px;box-shadow: none;height:30px;line-height:45px;font-size:12px;padding-left:15px;}
+.pet-groomsv-sercahbox .form-control#searchName{border: 1px solid #ccc;border-right: 0px;box-shadow: none;height:40px;line-height:45px;font-size:12px;padding-left:15px;}
 .pet-groomsv-sercahbox .input-group-addon{background-color: #ff372f;color: #fff;font-size: 14px;    border-radius: 0px;border:1px solid #aaa;border-radius:0px;}
 .pet-groomsv-sercahbox #magnifying{cursor: pointer;background: none;border-left: 0px;border-right: 0px;color: #ccc;font-size: 20px;}
 .star-ioncs14{position:relative;}
@@ -4302,6 +4302,7 @@ margin-bottom: 15px;}
     z-index: 10;
     display: none;
 	overflow:auto;
+        top: 0;
 }
 .feedback-div{
     width: 50%;
@@ -6928,15 +6929,20 @@ border-left: 30px solid #636;
 }
 .sign-up-button > a > span {
     color: white;
+    font-size: 13px;
 }
 .login-button {
     background: white;
     border: 1px solid black;
 }
+.login-button > a > span {
+    font-size: 13px;
+}
 
 /*Integrated Searchbox styles*/
 .pet-groomsv-sercahbox.menu-bar {
     border-radius: 0px;
+    margin-top: 4.7em;
 }
 #categories.nav-tabs.menu-bar {
     background: #663366;
@@ -6947,6 +6953,7 @@ border-left: 30px solid #636;
 #categories.nav-tabs.menu-bar>li.active>a, #categories.nav-tabs.menu-bar>li.active>a:hover, #categories.nav-tabs.menu-bar>li.active>a:focus {
     background: red;
     color: white;
+    border: none;
 }
 #searchbox.tab-pane.menu-bar{
     display: flex;
@@ -6957,6 +6964,14 @@ border-left: 30px solid #636;
 }
 #searchName.menu-bar-textbox {
     width: 50em;
+}
+
+.menu-bar.nav-tabs>li>a {
+    border: none;
+    border-radius: 0px;
+}
+.nav-tabs.menu-bar {
+    border: none;
 }
 /*over-riding Bootstrap Navbar*/ 
 #categories.nav-tabs {
@@ -7011,6 +7026,7 @@ div#searchbox {
     display: flex;
     justify-content: center;
     align-items: center;
+    height: 2.87em;
 }
 #categories.nav-tabs>li>a {
     color: #000;
@@ -7019,6 +7035,14 @@ div#searchbox {
 }
 #categories.nav-tabs>li.active>a, #categories.nav-tabs>li.active>a:hover, #categories.nav-tabs>li.active>a:focus {
     color: #ff372f
+}
+.home-slider-offer-title {
+    text-align: center;
+    color: white;
+}
+div.home-slider-offer.desc {
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.51);
 }
 
 /*Styles for Heading and Description for homepage carousel*/
@@ -7050,6 +7074,9 @@ a.carousel-control[href="#servicesCarousel"] span.glyphicon.glyphicon-chevron-le
 .about-us-section {
     margin: 8rem 0 0 70rem;
     width: 50rem;
+}
+.about-us-description p {
+    line-height: 1.5;
 }
 
 /*Testimonial Slider Over riding*/
@@ -7088,7 +7115,10 @@ a.carousel-control[href="#servicesCarousel"] span.glyphicon.glyphicon-chevron-le
 }
 .testimony-description {
     font-style: italic;
-    line-height: normal;
+    line-height: 1.8;
+}
+.testimonial-slider.glyphicon {
+    font-size: -webkit-xxx-large;
 }
 
 /*Events & News Container Styles*/ 
@@ -7160,6 +7190,52 @@ div.footer-top {
 }
 .social_links .fa.fa-twitter {
     background: #0084b4;
+    color: white;
+}
+p.copyright1 {
+    padding-top: 4px;
+}
+.feedBtn {
+    background: red;
+    display: block;
+    text-transform: uppercase;
+    color: white;
+    transform: rotate(270deg);
+    margin-right: -26px;
+    width: 6em;
+    height: 2em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.social-links-container-overlay {
+    position: fixed;
+    top: 50%;
+    left: 0;
+    right: 0;
+    display: inline;
+    width: 0;
+}
+.social-links-container-overlay ul {
+    display: inline-flex;
+    flex-direction: column;
+    background: red;
+    width: 30px;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 120px;
+}
+.social-links-container-overlay ul li {
+    display: inline;
+}
+.side-social-links.fa {
+    border: 1px solid white;
+    border-radius: 50%;
+    width: 2em;
+    height: 2em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     color: white;
 }
 /** Homepage Styles End **/

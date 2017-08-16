@@ -1848,7 +1848,7 @@ left: -4px;
    
    /* new css add 21-02-2017 pet dog */ 
    
-  .pet-header{background-color: #fff;border-bottom: 3px solid #673568;padding: 11px 0px 12px 0px;}
+  .pet-header{background-color: #fff;padding: 11px 0px 12px 0px;}
 	.pet-header .sidenav {
     height: 100%;
     width: 0;

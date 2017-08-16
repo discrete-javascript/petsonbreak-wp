@@ -514,13 +514,15 @@
 							<span class="errSpan" id="err_password1"></span>
 						</li>
 						
-						
-						<li class="agreeTerms">
-							<input style="float: left;width: 3%;height: 15px;margin-bottom: 0px;" id="v_tc" name="v_tc" type="checkbox" value="1">	
-							<label class="nrd-loginModal-label u-vr2x">I agree to the <a href="" title="terms and conditions">Terms and Conditions</a></label>
+                                                <div class="register-page-checkbox-container">
+                                                    <li class="agreeTerms">
+							<input class="register-page-checkbox" style="float: left;width: 3%;height: 15px;margin-bottom: 0px;" id="v_tc" name="v_tc" type="checkbox" value="1">	
+							<label class="nrd-loginModal-label u-vr2x register-page-checkbox-label">I agree to the <a href="" title="terms and conditions">Terms and Conditions</a></label>
 							<span class="errSpan" id="err_v_tc"></span>
 							
 						</li>
+                                                </div>
+						
 						
 					</ul>
 					
