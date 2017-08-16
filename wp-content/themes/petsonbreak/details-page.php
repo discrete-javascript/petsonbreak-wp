@@ -76,78 +76,31 @@ $ratingArr =array('5'=>'Awesome','4'=>'Great','3'=>'Average','2'=>'Not that bad'
 <style>
 	.cat_loc {font-size: 10px;}
 </style>
-
+<div class="details-page-parallax-container" style="background-image: url(<?php echo get_template_directory_uri()?>/uploads/<?php echo $objs->image_path; ?>);
+">
+    <div>
+        <h3>Details<?php echo $establishment;?></h3>
+        <p><?php echo $objs->address;?>,<?php echo $objs->city;?></p>
+         <p><?php echo $objs->contact_number;?></p>
+        
+    </div>
+</div>
 <div class="detail-container">
-   <div class="detail-section1">
-   	<div class="pet-search-left details-page35">
-		<div id="petBrd-page-wrap">
-		  <ul class="pet_breadcrumb">
-					<li class=" pet_breadcrumbStep pet_breadcrumbActive"><a href="<?php echo site_url();?>">Home</a></li>
-					<li class=" pet_breadcrumbStep pet_breadcrumbActive"><a href="<?php echo site_url();?>/search-vendor/?sid=<?php echo $sid; ?>&destName=<?php echo $_REQUEST['destName'];?>"><?php echo $serviceTitle ; ?></a></li>
-					<li class="pet_breadcrumbStep"><a href="#"><?php echo $establishment; ?></a></li>
-				</ul>
-		</div>
-      <div class="pet-search-left_Top">
-         	<div class="pet-child-left">
-			<div class="dt-img1">
-				<img src="<?php echo get_template_directory_uri()?>/uploads/<?php echo $objs->image_path; ?>" alt="">
+    <ul class="nav nav-tabs">
+    <li class="active"><a data-toggle="tab" href="#overview">OVERVIEW</a></li>
+    <li><a data-toggle="tab" href="#photos">PHOTOS</a></li>
+    <li><a data-toggle="tab" href="#reviews">REVIEWS</a></li>
+    <li><a data-toggle="tab" href="#alsoListed">ALSO LISTED IN</a></li>
+  </ul>
 
-				<div class="pet-child-left-content">
-  				  <h3><?php echo $establishment;?></h3>
-  				  <p class="star-ioncs<?php echo round($objs->avg_rating); ?> detailStars"></p>
-  				  <p><?php echo $objs->address;?>,<?php echo $objs->city;?></p>
-				  <p><?php echo $objs->contact_number;?></p>
-				      
-				</div>
-			</div>
-		</div>
-		
-		<div class="pet-child-right">
+  <div class="tab-content">
+    <div id="overview" class="tab-pane fade in active">
+      <div class="pet-child-right">
 		    <h3>Why do we use it?</h3>
 			<p><?php echo $objs->description;?></p>
 			<a href="javascript:void();" class="snd_query_btn">Send Query</a>
 		</div>
-    </div>
-
-      <div class="pet-search-left_Bot">
-      	<div  class="pet-search-left_Bot_row">
-
-         
-   <?php 
-     $galleryResults =$wpdb->get_results("select * from twc_vendor_gallery where vendor_service_id='".$product_id."'");
-     $imageResults=$galleryResults[0];
-     $imageResult=$imageResults->image;
-  if($imageResult!=""){ ?>
-		
-		<div class="col-md-4 pet-search-lft">
-          		<div id="pet-search-lft-carousel" class="carousel slide" data-ride="carousel">
-				<!--
-                <ol class="carousel-indicators">
-                    <li data-target="#pet-search-lft-carousel" data-slide-to="0" class="active"></li>
-                    <li data-target="#pet-search-lft-carousel" data-slide-to="1"></li>
-                    <li data-target="#pet-search-lft-carousel" data-slide-to="2"></li>
-                </ol>-->
-			 <div class="carousel-inner">
-			       <?php 		   
-				   $i=0;
-				   foreach($galleryResults as $galleryResult){
-					 if($i==0){$active ='active';} else{$active='';} 
-					   ?>
-                    <div class="item <?php echo $active;?>">
-                        <img src="<?php echo get_template_directory_uri()?>/images/vendor_pets/vendor_thumbs/<?php echo $galleryResult->image; ?>" width='300px' height='250px' alt="First slide">
-                    </div>
-				   <?php $i++;}?>
-					
-			 </div>
-                <a class="left carousel-control" href="#pet-search-lft-carousel" data-slide="prev">
-                    <span class="fa fa-chevron-circle-left"></span></a>
-				<a class="right carousel-control" href="#pet-search-lft-carousel" data-slide="next">
-				</span><span class="fa fa-chevron-circle-right" style="position: relative;top: 7em;right: -13px;"></span></a>
-            </div>
-          </div>
- <?php } ?>
-		
-
+        
           <div class="col-md-4 pet-search-mid">
       		    <h5>More Information</h5>
            		<ul>
@@ -195,60 +148,47 @@ $ratingArr =array('5'=>'Awesome','4'=>'Great','3'=>'Average','2'=>'Not that bad'
            		</ul>
 
           </div>
-		  
-		  <div class="col-md-4 pet-search-rht">
-                <h5>Also Listed in</h5>
-           		<ul>
-				<?php
-				$listed_results =$wpdb->get_results("select * from twc_vendor_services where vendor_id='".$userid."' and id!='".$_REQUEST['id']."'");
-				foreach($listed_results as $objrow){
-                									
-				$link =site_url().'/details-page/?id='.$objrow->id.'&destName='.$_REQUEST['destName'];
-				?>
-				
-	            <li> <a href="<?php echo $link;?>"><?php echo getFieldByID('title','twc_service_category',$objrow->service_category);?><span class="cat_loc">[<?php echo $objrow->address;?>]</span></a></li>	
-				
-				<?php } ?>
-           		</ul>
+    </div>
+    <div id="photos" class="tab-pane fade">
+      <h3>PHOTOS</h3>
+             
+   <?php 
+     $galleryResults =$wpdb->get_results("select * from twc_vendor_gallery where vendor_service_id='".$product_id."'");
+     $imageResults=$galleryResults[0];
+     $imageResult=$imageResults->image;
+  if($imageResult!=""){ ?>
+		
+		<div class="col-md-4 pet-search-lft">
+          		<div id="pet-search-lft-carousel" class="carousel slide" data-ride="carousel">
+				<!--
+                <ol class="carousel-indicators">
+                    <li data-target="#pet-search-lft-carousel" data-slide-to="0" class="active"></li>
+                    <li data-target="#pet-search-lft-carousel" data-slide-to="1"></li>
+                    <li data-target="#pet-search-lft-carousel" data-slide-to="2"></li>
+                </ol>-->
+			 <div class="carousel-inner">
+			       <?php 		   
+				   $i=0;
+				   foreach($galleryResults as $galleryResult){
+					 if($i==0){$active ='active';} else{$active='';} 
+					   ?>
+                    <div class="item <?php echo $active;?>">
+                        <img src="<?php echo get_template_directory_uri()?>/images/vendor_pets/vendor_thumbs/<?php echo $galleryResult->image; ?>" width='300px' height='250px' alt="First slide">
+                    </div>
+				   <?php $i++;}?>
+					
+			 </div>
+                <a class="left carousel-control" href="#pet-search-lft-carousel" data-slide="prev">
+                    <span class="fa fa-chevron-circle-left"></span></a>
+				<a class="right carousel-control" href="#pet-search-lft-carousel" data-slide="next">
+				</span><span class="fa fa-chevron-circle-right" style="position: relative;top: 7em;right: -13px;"></span></a>
+            </div>
           </div>
-		  
-
-        </div>
-
-      </div>
-
-	
-	</div>
-	
-	
-	<div class="pet-search-right">
-		<?php  echo getPopularCategories();?>
-	 
-		<div class="events_right">
-	   <?php  echo getPopularEvents();?>
-	
-	  </div>
-	  <?php
-		  if($offerdName != ''){
-			  ?>
-	      <div class="detail_pet_services_container">
-	            
-      		    <h5>Service Offered</h5>
-           		<ul class="detail_pet_services"> 
-			     <?php echo $offerd ; ?>
-                </ul>
-
-       </div>
-			  
-			  
-			  <?php } ?>
-
-	
-	
-	</div>
-
-   </div>
-
+ <?php } ?>
+    </div>
+    <div id="reviews" class="tab-pane fade">
+      <h3>REVIEWS</h3>
+      
    <?php	
 	$reviewResults =$wpdb->get_results("SELECT avg_rating from twc_vendor_services where id='".$product_id."'");
 	$reviewResult =$reviewResults[0];
@@ -440,73 +380,27 @@ $messageReview=$revResult->message;
 		
      </div>
    </div>
+    </div>
+    <div id="alsoListed" class="tab-pane fade">
+      <h3>ALSO LISTED IN </h3>
+      <div class="col-md-4 pet-search-rht">
+                <h5>Also Listed in</h5>
+           		<ul>
+				<?php
+				$listed_results =$wpdb->get_results("select * from twc_vendor_services where vendor_id='".$userid."' and id!='".$_REQUEST['id']."'");
+				foreach($listed_results as $objrow){
+                									
+				$link =site_url().'/details-page/?id='.$objrow->id.'&destName='.$_REQUEST['destName'];
+				?>
+				
+	            <li> <a href="<?php echo $link;?>"><?php echo getFieldByID('title','twc_service_category',$objrow->service_category);?><span class="cat_loc">[<?php echo $objrow->address;?>]</span></a></li>	
+				
+				<?php } ?>
+           		</ul>
+          </div>
+    </div>
+  </div>
    
-   <?php
-	    $similarResult = $wpdb->get_results("select * from twc_vendor_services where service_category='".$sid."' and id!='".$_REQUEST['id']."' ".$extQuery."");
-		$similarData =array_chunk($similarResult,4);
-	   if(count($similarResult)>0){
-	   
-	   
-	   ?>
-   
-		<div class="detail-section3">
-   		<h3>SIMILAR PET SERVICES</h3>
-   		<div class="detail-section3-cols">
-		  <ul class="services_slider">
-	   <?php
-       
-	
-		foreach($similarData as $dataArr){?>
-		 
-			   <?php foreach($dataArr as $objs) {				   
-				$offerd='';
-				$service_offered =explode(",",$objs->service_offered);
-				$service_offered_count=count($service_offered);
-				for($i=0; $i < $service_offered_count; $i++){
-				$offerdName = getFieldByID('title','twc_manage_offered',$service_offered[$i]);
-				$offerd.=$offerdName.',';
-				}
-				$offerd =substr($offerd,0,-1);
-				   				   				   
-				$link =site_url().'/details-page/?id='.$objs->id.'&destName='.$_REQUEST['destName'];
-				$userData =get_userdata($objs->vendor_id);
-				$userMetaData =get_user_meta($objs->vendor_id);
-				$establishment =$userMetaData['establishment'][0];
-
-?>
-				<li>
-					<div class="det-sec3-col">
-					<a href="<?php echo $link;?>">
-					   <div  class="sec3-top">
-						 <img src="<?php echo get_template_directory_uri()?>/uploads/<?php echo $objs->image_path; ?>" width='200' height='200' alt="">
-					   </div></a>
-					   <div class="sec3-bot">
-						  <h3><?php echo $establishment;?></h3>
-						  <p class="serv-add"><span><i class="fa fa-map-marker" aria-hidden="true"></i></span> <?php echo $objs->address.' '.$objs->city;?></p> 
-						  <?php if($offerd!=''){ ?>
-                        <p class="serv-phone"><span><i class="fa fa-wrench" aria-hidden="true"></i></span><?php echo $offerd;?></p>
-						  <?php } ?>
-						  <?php if(($objs->card_accepted)!=''){ ?>
-						<p class="serv-phone"><span><i class="fa fa-credit-card" aria-hidden="true"></i></span>Card Accepted:(<?php echo $objs->card_accepted;?>)</p>
-                      <?php } ?>						
-                      <p class="ser3-btn"><a href="<?php echo $link;?>" class="bstDeal-btn">More Info</a></p>	
-					   </div>
-				   </div>
-
-				</li>
-			   <?php }?>
-		
-		<?php }?>	
-
-        </ul>
-			
-   		</div>
-
-   </div>
-   
-  <?php 
-	  }
-	  ?>
 
 
 </div>

@@ -6909,7 +6909,13 @@ border-left: 30px solid #636;
 	#home_news_section .news-section-body{height:360px;}
 	#home_news_section .news{border-bottom:0px;}
 
+        
 /*Topbar Button styles*/ 
+
+.logo-desk img {
+    width: 13em;
+    height: 3em;
+}
 .sign-up-button, .login-button {
     width: 8em;
     border-radius: 20px;
@@ -7563,3 +7569,12 @@ div.login-whole-container {
     font-size: 15px;
 }
 /*Login Page Styles End*/ 
+
+/*Details Page Styles*/
+.details-page-parallax-container {
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    height: 13em;
+}
