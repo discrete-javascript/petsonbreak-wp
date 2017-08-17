@@ -7742,3 +7742,7 @@ div.details-page-also-listed {
    display: block;
    margin: auto;
 }
+.detail-section2.details-page-all-review,
+.detail-section4.details-page-add-review {
+    background: white;
+}

@@ -208,17 +208,15 @@ $ratingArr =array('5'=>'Awesome','4'=>'Great','3'=>'Average','2'=>'Not that bad'
  <?php } ?>
     </div>
     <div id="reviews" class="tab-pane fade details-page">
-      <h3>REVIEWS</h3>
-      
    <?php	
 	$reviewResults =$wpdb->get_results("SELECT avg_rating from twc_vendor_services where id='".$product_id."'");
 	$reviewResult =$reviewResults[0];
 	
 	$averageReview =ceil($reviewResult->avg_rating);
    if($messageReview!=""){ ?>
-   <div class="detail-section2">
+   <div class="detail-section2 details-page-all-review">
     <div style="width: 100%;overflow-x: scroll;">
-   <div class="dynamic_width_div">
+        <div class="dynamic_width_div" style="width: 100%;">
    		<h3 class="reveiews">REVIEWS</h3>
    		<p class="parlorem">Petsonbreak review.</p>
 
@@ -303,7 +301,7 @@ $ratingArr =array('5'=>'Awesome','4'=>'Great','3'=>'Average','2'=>'Not that bad'
    <?php } ?>
 
 
-      <div class="detail-section4">
+      <div class="detail-section4 details-page-add-review">
      <div class="row">
         <div class="col-md-6">
      <form name="frmReview" id="frmReview">
@@ -623,7 +621,6 @@ max-height: 85px;
         var overviewTab = document.querySelector('.tab-content div#overview');
   console.log(overviewTab.classList);
  document.addEventListener("DOMContentLoaded", function() {
-     console.log('lol');
     
     overviewTab.classList.add('active');
     console.log(overviewTab.classList);
