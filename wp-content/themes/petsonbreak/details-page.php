@@ -208,6 +208,8 @@ $ratingArr =array('5'=>'Awesome','4'=>'Great','3'=>'Average','2'=>'Not that bad'
  <?php } ?>
     </div>
     <div id="reviews" class="tab-pane fade details-page">
+        <h3 class="reveiews">REVIEWS</h3>
+        <p class="parlorem">Petsonbreak review.</p>
    <?php	
 	$reviewResults =$wpdb->get_results("SELECT avg_rating from twc_vendor_services where id='".$product_id."'");
 	$reviewResult =$reviewResults[0];
@@ -217,8 +219,8 @@ $ratingArr =array('5'=>'Awesome','4'=>'Great','3'=>'Average','2'=>'Not that bad'
    <div class="detail-section2 details-page-all-review">
     <div style="width: 100%;overflow-x: scroll;">
         <div class="dynamic_width_div" style="width: 100%;">
-   		<h3 class="reveiews">REVIEWS</h3>
-   		<p class="parlorem">Petsonbreak review.</p>
+   		
+   		
 
    		<div class="detail-section2-cols row">
 			<div class="col-md-3 col-sm-3 col-xs-3 det-rat-smry">
