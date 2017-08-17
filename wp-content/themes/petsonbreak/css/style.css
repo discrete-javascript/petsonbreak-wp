@@ -7020,8 +7020,7 @@ div.container_width {
     display: flex;
     justify-content: center;
     align-items: center;
-    max-width: 80em;
-    width: 80%;
+    width: 80em;
 }
 div#searchbox {
     display: flex;

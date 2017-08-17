@@ -608,7 +608,8 @@ function closeNav() {
 <script type="text/javascript">
   $(document).ready(function(){
     $('#servicesCarousel .catslider').bxSlider({
-      slideWidth: 310,
+      slideWidth: 320,
+      auto: true,
       pager: false,
       controls: true,
       minSlides: 1,
