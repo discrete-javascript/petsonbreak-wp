@@ -132,7 +132,7 @@ $results =$wpdb->get_results("select * from twc_service_category where published
 <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css-libraries/jquery.bxslider.css?var=<?php echo rand();?>">-->
 <!-- <script type="text/javascript" src="//platform-api.sharethis.com/js/sharethis.js#property=58f9d6dacaaba30012e7e3cb&product=sticky-share-buttons"></script> -->
 <?php 
-	wp_enqueue_style( 'petsonbreak-googlefont', get_theme_file_uri( 'https://fonts.googleapis.com/css?family=Lato|Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i|Oxygen:300,400,700' ), array(), null );
+	wp_enqueue_style( 'petsonbreak-googlefont', 'https://fonts.googleapis.com/css?family=Lato|Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i|Oxygen:300,400,700', array(), null );
 	wp_enqueue_style( 'petsonbreak-ripple', get_theme_file_uri( '/css-libraries/ripple.css' ), array(), null );
 	wp_enqueue_style( 'petsonbreak-mainstyle', get_theme_file_uri( '/css/style.css' ), array(), null );
 	wp_enqueue_style( 'petsonbreak-responsive', get_theme_file_uri( '/css/responsive.css' ), array(), null );
@@ -144,7 +144,7 @@ $results =$wpdb->get_results("select * from twc_service_category where published
 	wp_enqueue_style( 'petsonbreak-app', get_theme_file_uri( '/css-libraries/app.css' ), array(), null );
 	wp_enqueue_style( 'petsonbreak-angular-material', get_theme_file_uri( '/css-libraries/angular-material.min.css' ), array(), null );
 
-	wp_enqueue_style( 'petsonbreak-font-awesome', get_theme_file_uri( '//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css' ), array(), null );
+	wp_enqueue_style( 'petsonbreak-font-awesome', '//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css', array(), null );
 	wp_enqueue_style( 'petsonbreak-rzslider', get_theme_file_uri( '/css-libraries/rzslider.css' ), array(), null );
 	wp_enqueue_style( 'petsonbreak-bootstrap', get_theme_file_uri( '/css-libraries/bootstrap.min.css' ), array(), null );
 	wp_enqueue_style( 'petsonbreak-bxslider', get_theme_file_uri( '/css-libraries/jquery.bxslider.css' ), array(), null );
