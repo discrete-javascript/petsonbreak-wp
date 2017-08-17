@@ -231,13 +231,13 @@ $vendor_id =$result->vendor_id;
 <?php if($site_language=='ar'){?>
 <link rel="stylesheet" type="text/css" href="<?php echo get_template_directory_uri(); ?>/css/style-rtl.css?var=<?php echo date('His');?>">
 <link rel="stylesheet" type="text/css" href="<?php echo get_template_directory_uri(); ?>/css/bootstrap-rtl.css?var=<?php echo date('His');?>">
-<?php } /* else{?>
+<?php }  else{?>
 <link rel="stylesheet" type="text/css" href="<?php echo get_template_directory_uri(); ?>/css/style.css?var=<?php echo date('His');?>">
-<?php } */ ?>
+<?php } ?>
 
 
 <link rel="stylesheet" type="text/css" href="<?php echo get_template_directory_uri(); ?>/css/search-results-responsive.css?var=<?php echo date('His');?>">
-<!-- <link rel="stylesheet" type="text/css" href="<?php echo get_template_directory_uri(); ?>/css/responsive.css?var=<?php echo date('His');?>"> -->
+<link rel="stylesheet" type="text/css" href="<?php echo get_template_directory_uri(); ?>/css/responsive.css?var=<?php echo date('His');?>">
 <link rel="stylesheet" type="text/css" href="<?php echo get_template_directory_uri(); ?>/css/application-ltr.css?var=<?php echo date('His');?>">
 
 
