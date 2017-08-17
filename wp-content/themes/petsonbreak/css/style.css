@@ -1484,7 +1484,7 @@ border: 1px solid #d1d1d1;box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.2);transit
 /* login page css code */
 
 .log_backGrond {
-    background-image: url(http://adivaha.com/demo/ean-team/wp-content/themes/adivaha/images/E3.jpg);
+    background-image: url(../images/E3.jpg);
 padding: 20rem 0px;background-position: center center;background-repeat: no-repeat;    background-attachment: fixed;background-size: cover;}
 .container_width{width:40%;margin:0 auto;}
 .facebookBack{background-color: #59c45a;overflow: hidden;text-align: center;padding: 4em 0px;}

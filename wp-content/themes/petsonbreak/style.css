@@ -1372,7 +1372,7 @@ ul{margin:0px;padding:0px;}
 /* login page css code */
 
 .log_backGrond {
-    background-image: url(http://adivaha.com/demo/ean-team/wp-content/themes/adivaha/images/E3.jpg);
+    background-image: url(/images/E3.jpg);
     padding: 55px 0px;background-position: center center;background-repeat: no-repeat;    background-attachment: fixed;background-size: cover;}
 .container_width{width:40%;margin:0 auto;}
 .facebookBack{background-color: #59c45a;overflow: hidden;text-align: center;padding: 4em 0px;}
