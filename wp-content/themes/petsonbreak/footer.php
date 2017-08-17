@@ -231,13 +231,13 @@ $vendor_id =$result->vendor_id;
 <?php if($site_language=='ar'){?>
 <link rel="stylesheet" type="text/css" href="<?php echo get_template_directory_uri(); ?>/css/style-rtl.css?var=<?php echo date('His');?>">
 <link rel="stylesheet" type="text/css" href="<?php echo get_template_directory_uri(); ?>/css/bootstrap-rtl.css?var=<?php echo date('His');?>">
-<?php } else{?>
+<?php } /* else{?>
 <link rel="stylesheet" type="text/css" href="<?php echo get_template_directory_uri(); ?>/css/style.css?var=<?php echo date('His');?>">
-<?php }?>
+<?php } */ ?>
 
 
 <link rel="stylesheet" type="text/css" href="<?php echo get_template_directory_uri(); ?>/css/search-results-responsive.css?var=<?php echo date('His');?>">
-<link rel="stylesheet" type="text/css" href="<?php echo get_template_directory_uri(); ?>/css/responsive.css?var=<?php echo date('His');?>">
+<!-- <link rel="stylesheet" type="text/css" href="<?php echo get_template_directory_uri(); ?>/css/responsive.css?var=<?php echo date('His');?>"> -->
 <link rel="stylesheet" type="text/css" href="<?php echo get_template_directory_uri(); ?>/css/application-ltr.css?var=<?php echo date('His');?>">
 
 
@@ -598,353 +598,247 @@ function closeNav() {
 
 
 <div class="feed-btn">
-<a href="javascript:void();" class="feedBtn">FEEDBACK</a>
-
-
-
+  <a href="javascript:void();" class="feedBtn">FEEDBACK</a>
 </div>
 
-
-
+<?php wp_footer(); ?>
 </body>
 </html>
 
-<style>
-	
-</style>
-
-
-
-
-
-
 <script>
-	
-	$('#FeedbackBtn1').click(function(){
-		var flag=0;
-		
-
-	  if ($("input[name='scale_rate']:checked").size()==0) {
-		   $(".feed-text").html("Please select a score!");
-		  // $(".feed-error").css("display", "block");
-		   $('.feed-error').show(1).delay(2000).hide(1);
-		   return false;
-		}
-	  else if($('#feedtypes').val()==""){
-		 $(".feed-text").html("Pleass select a category!");
-		  $('.feed-error').show(1).delay(2000).hide(1);
-		 return false;    
-		}
-	  else if($('#feedback_area').val()==""){
-	     $(".feed-text").html("Please enter some feedback text!");
-	      $('.feed-error').show(1).delay(2000).hide(1);
-		 return false;     
-		}
-	  else{
-	    $('.feed-stg2').show();
-        $('.feed-stg1').hide(); 	
-	     }
-	});	
-	
-	$('#FeedbackBtn2').click(function(){
-        var flag=0;
-		var re = /[A-Z0-9._%+-]+@[A-Z0-9.-]+.[A-Z]{2,4}/igm;
-		
-		
-		if($("#email_id").val()=="")
-		{
-			
-			$(".feed-text").html("Please enter Your Email!");
-	         $('.feed-error').show(1).delay(2000).hide(1);
-		return false;   
-		}
-
-		else if (!re.test($("#email_id").val()))
-		{
-			
-			$(".feed-text").html("Please enter Valid Email!");
-	         $('.feed-error').show(1).delay(2000).hide(1);
-		return false;   
-		}
-		
-	  else{
-			var frmdata =$('#feedback_form').serialize();
-			$.ajax({
-				type: "POST",
-				url: "<?php echo get_template_directory_uri(); ?>/custom-ajax.php",
-				data: "action=UserFeedback&"+frmdata,
-				success: function(Data){
-					if(Data==1){
-						
-						 $('#feedback-container').hide();
-						 $('#feedback-container.thanks_feedback-container').show();
-						 $('#feedback_form')[0].reset();
-						
-						}else{
-							alert('Please try again');
-						
-					}
-				}
-			})
-	}
-	});	
-
-	
- setTimeout(function() {
-    $('.feed-error').fadeOut('fast');
-}, 2000);
- 
-	</script>
-
-
-
-
-
-
-<script type="text/javascript">
-
-function serServices(){
-   $('.ser_services').click(function(){
-    var sid =$(this).attr('rel');		
-    $('#hiddenSID').val(sid);
-    $('.city_pop_overlay').addClass('city_pop_show');
-   })
-	$('.city_pop_close').click(function(){
-		$(this).parents('.city_pop_overlay').removeClass('city_pop_show');
-	})
-}
-serServices();
-
-$('#prime-nav li').addClass('ser_services');
-</script>
-
-
-<!-- <script type="text/javascript" src="//maps.googleapis.com/maps/api/js?sensor=false&libraries=places"></script> -->
-<script type="text/javascript">
-       google.maps.event.addDomListener(window, "load", function () {
-		   /*                                                                                                                 
-		   var places = new google.maps.places.Autocomplete((document.getElementById('search-TB')),{
-	   types: ['geocode'],
-			 componentRestrictions: {country: 'DE'}//UK only   
-			 });*/
-		   var places = new google.maps.places.Autocomplete((document.getElementById("destName")));
-           google.maps.event.addListener(places, "place_changed", function () {
-               var place = places.getPlace();
-               var address = place.formatted_address;
-                       
-               var latitude = place.geometry.location.lat();
-               var longitude = place.geometry.location.lng();
-			   document.getElementById("latitude").value = latitude;
-			   document.getElementById("longitude").value = longitude;
-			   
-           });                 
-      });
-</script>
-
-<script>
-$('.city_pop_search').click(function(){
-	if($('#destName').val()==''){
-		$('#err_destName').html('<span class="state-indicator">Please enter your city name.</span>');
-		$('#destName').focus();
-		return false;
-	}
-	else{
-		var sid=$('#hiddenSID').val();
-		window.location.href="<?php echo site_url();?>/search-vendor/?sid="+sid+"&destName="+$("#destName").val();		
-		}	
-	});
-
-</script>
-
-<script type="text/javascript">
-    $(document).ready(function() {
-       if($(window).width() > 1024){
-                  var main_Container_width =  $('.main_Container').width();
-             
-       var newWidth = main_Container_width -185;
-       
-       $('.slide_Bar').click(function(){
-          slideFunction();
-
-        
-      });
-
-       function slideFunction(){
-
-        var styles = {'width':81 + '%'}
-        var styles2 = {'width':97 + '%'}
-      
-
-        if ($('.main_Container').hasClass('main_Container_sliding')){
-        $('.main_Container').removeClass("main_Container_sliding").css(styles);
-        $('.main_Container').addClass("main_Container_sliding_out").css(styles2);
-
-
-        $('#mySidenav').removeClass('mySidenav_collapsed_out');
-
+$('#FeedbackBtn1').click(function() {
+    var flag = 0;
+    if ($("input[name='scale_rate']:checked").size() == 0) {
+        $(".feed-text").html("Please select a score!");
+        // $(".feed-error").css("display", "block");
+        $('.feed-error').show(1).delay(2000).hide(1);
+        return false;
+    } else if ($('#feedtypes').val() == "") {
+        $(".feed-text").html("Pleass select a category!");
+        $('.feed-error').show(1).delay(2000).hide(1);
+        return false;
+    } else if ($('#feedback_area').val() == "") {
+        $(".feed-text").html("Please enter some feedback text!");
+        $('.feed-error').show(1).delay(2000).hide(1);
+        return false;
     } else {
-        $('.main_Container').removeClass("main_Container_sliding_out").css(styles2);
-        $('.main_Container').addClass("main_Container_sliding").css(styles);
-
-        $('#mySidenav').addClass('mySidenav_collapsed_out');
+        $('.feed-stg2').show();
+        $('.feed-stg1').hide();
     }
-
-
-       }
-       }
-
-
-
-        else{
-        var main_Container_width =  $('.main_Container').width();
-      var sideNav = $('.sidenav').width();
-       var newWidth = main_Container_width - sideNav;
-       
-       $('.slide_Bar').click(function(){
-          slideFunction();
-
-        
-      });
-
-       function slideFunction(){
-
-        var styles = {'width':newWidth}
-        var styles2 = {'width':100 + '%'}
-      
-
-        if ($('.main_Container').hasClass('main_Container_sliding')){
-        $('.main_Container').removeClass("main_Container_sliding").css(styles);
-        $('.main_Container').addClass("main_Container_sliding_out").css(styles2);
-
-
-        $('#mySidenav').removeClass('mySidenav_collapsed_out');
-
-    } else {
-        $('.main_Container').removeClass("main_Container_sliding_out").css(styles2);
-        $('.main_Container').addClass("main_Container_sliding").css(styles);
-
-        $('#mySidenav').addClass('mySidenav_collapsed_out');
-    }
-
-
-       }
-
-
-
-       }
-
-
-
-
-    });
-</script>
-
-
-<script type="text/javascript">
-  
-$(document).ready(function(){
-  $('#nav-icon1,#nav-icon2,#nav-icon3,#nav-icon4').click(function(){
-    $(this).toggleClass('open');
-  });
 });
 
+$('#FeedbackBtn2').click(function() {
+    var flag = 0;
+    var re = /[A-Z0-9._%+-]+@[A-Z0-9.-]+.[A-Z]{2,4}/igm;
+    if ($("#email_id").val() == "") {
+        $(".feed-text").html("Please enter Your Email!");
+        $('.feed-error').show(1).delay(2000).hide(1);
+        return false;
+    } else if (!re.test($("#email_id").val())) {
+        $(".feed-text").html("Please enter Valid Email!");
+        $('.feed-error').show(1).delay(2000).hide(1);
+        return false;
+    } else {
+        var frmdata = $('#feedback_form').serialize();
+        $.ajax({
+            type: "POST",
+            url: "<?php echo get_template_directory_uri(); ?>/custom-ajax.php",
+            data: "action=UserFeedback&" + frmdata,
+            success: function(Data) {
+                if (Data == 1) {
+                    $('#feedback-container').hide();
+                    $('#feedback-container.thanks_feedback-container').show();
+                    $('#feedback_form')[0].reset();
+                } else {
+                    alert('Please try again');
+                }
+            }
+        })
+    }
+});
+
+setTimeout(function() {
+    $('.feed-error').fadeOut('fast');
+}, 2000);
 </script>
 
+<script type = "text/javascript">
+function serServices() {
+    $('.ser_services').click(function() {
+        var sid = $(this).attr('rel');
+        $('#hiddenSID').val(sid);
+        $('.city_pop_overlay').addClass('city_pop_show');
+    })
+    $('.city_pop_close').click(function() {
+        $(this).parents('.city_pop_overlay').removeClass('city_pop_show');
+    })
+}
+serServices();
+$('#prime-nav li').addClass('ser_services'); < /script>
 
-<script type="text/javascript">
-  
-  $('.closeFeed').click(function(){
-      $('#feedback-container.thanks_feedback-container').hide();
-      $('.feed-stg1').show();
-      $('.feed-stg2').hide();
-      $('.feed-scale span').removeClass('isActive');
-      $('.feed_cmnt_type').removeClass('isActive');
+<!-- <script type="text/javascript" src="//maps.googleapis.com/maps/api/js?sensor=false&libraries=places"></script> -->
 
-  })
-  
+<script type = "text/javascript">
+google.maps.event.addDomListener(window, "load", function() {
+    /*                                                                                                                 
+       var places = new google.maps.places.Autocomplete((document.getElementById('search-TB')),{
+     types: ['geocode'],
+       componentRestrictions: {country: 'DE'}//UK only   
+       });*/
+    var places = new google.maps.places.Autocomplete((document.getElementById("destName")));
+    google.maps.event.addListener(places, "place_changed", function() {
+        var place = places.getPlace();
+        var address = place.formatted_address;
+        var latitude = place.geometry.location.lat();
+        var longitude = place.geometry.location.lng();
+        document.getElementById("latitude").value = latitude;
+        document.getElementById("longitude").value = longitude;
+    });
+});
+</script>
+
+<script>
+$('.city_pop_search').click(function() {
+    if ($('#destName').val() == '') {
+        $('#err_destName').html('<span class="state-indicator">Please enter your city name.</span>');
+        $('#destName').focus();
+        return false;
+    } else {
+        var sid = $('#hiddenSID').val();
+        window.location.href = "<?php echo site_url();?>/search-vendor/?sid=" + sid + "&destName=" + $("#destName").val();
+    }
+});
+</script>
+
+<script type = "text/javascript">
+$(document).ready(function() {
+    if ($(window).width() > 1024) {
+        var main_Container_width = $('.main_Container').width();
+        var newWidth = main_Container_width - 185;
+        $('.slide_Bar').click(function() {
+            slideFunction();
+        });
+
+        function slideFunction() {
+            var styles = {
+                'width': 81 + '%'
+            }
+            var styles2 = {
+                'width': 97 + '%'
+            }
+            if ($('.main_Container').hasClass('main_Container_sliding')) {
+                $('.main_Container').removeClass("main_Container_sliding").css(styles);
+                $('.main_Container').addClass("main_Container_sliding_out").css(styles2);
+                $('#mySidenav').removeClass('mySidenav_collapsed_out');
+            } else {
+                $('.main_Container').removeClass("main_Container_sliding_out").css(styles2);
+                $('.main_Container').addClass("main_Container_sliding").css(styles);
+                $('#mySidenav').addClass('mySidenav_collapsed_out');
+            }
+        }
+    } else {
+        var main_Container_width = $('.main_Container').width();
+        var sideNav = $('.sidenav').width();
+        var newWidth = main_Container_width - sideNav;
+        $('.slide_Bar').click(function() {
+            slideFunction();
+        });
+
+        function slideFunction() {
+            var styles = {
+                'width': newWidth
+            }
+            var styles2 = {
+                'width': 100 + '%'
+            }
+            if ($('.main_Container').hasClass('main_Container_sliding')) {
+                $('.main_Container').removeClass("main_Container_sliding").css(styles);
+                $('.main_Container').addClass("main_Container_sliding_out").css(styles2);
+                $('#mySidenav').removeClass('mySidenav_collapsed_out');
+            } else {
+                $('.main_Container').removeClass("main_Container_sliding_out").css(styles2);
+                $('.main_Container').addClass("main_Container_sliding").css(styles);
+                $('#mySidenav').addClass('mySidenav_collapsed_out');
+            }
+        }
+    }
+});
+</script>
+
+<script type = "text/javascript">
+$(document).ready(function() {
+    $('#nav-icon1,#nav-icon2,#nav-icon3,#nav-icon4').click(function() {
+        $(this).toggleClass('open');
+    });
+});
+</script>
+
+<script type = "text/javascript">
+$('.closeFeed').click(function() {
+    $('#feedback-container.thanks_feedback-container').hide();
+    $('.feed-stg1').show();
+    $('.feed-stg2').hide();
+    $('.feed-scale span').removeClass('isActive');
+    $('.feed_cmnt_type').removeClass('isActive');
+})
 /* $('.snd_feed_btn').click(function(){
       $('.feed-stg2').show();
       $('.feed-stg1').hide();
 
   }) */
-
-
-  $('.cancel_feed').click(function(){
-      $('#feedback-container').hide();
-       $('.feed-stg1').show();
-      $('.feed-stg2').hide();
-	 
-	  
-     
-
-  })
-  
-
-  $('.feedBtn').click(function(){
-     $('#feedback-container').show();
-  })
-
-  $('.feed_cmnt_type').click(function(){
+$('.cancel_feed').click(function() {
+    $('#feedback-container').hide();
+    $('.feed-stg1').show();
+    $('.feed-stg2').hide();
+})
+$('.feedBtn').click(function() {
+    $('#feedback-container').show();
+})
+$('.feed_cmnt_type').click(function() {
     $(this).addClass('isActive').siblings().removeClass('isActive');
     var feedType = $(this).html();
     $('.feed_cmnt_bot h4').html(feedType);
-	$('#feedtype').val(feedType);
-  })
-
-
-  $('.feed-scale span').click(function(){
+    $('#feedtype').val(feedType);
+})
+$('.feed-scale span').click(function() {
     $(this).addClass('isActive').siblings().removeClass('isActive');
-  })
-
-
-  
-  
+})
 </script>
 
 <script>
-	$('#quick_links .quick-links-section-body ul li > span').click(function(){
-	 $(this).parent().toggleClass('isActive');
-	 $(this).parent().find('.quick-sub-menu').slideToggle();
-	 })
+$('#quick_links .quick-links-section-body ul li > span').click(function() {
+    $(this).parent().toggleClass('isActive');
+    $(this).parent().find('.quick-sub-menu').slideToggle();
+})
 </script>
-
 
 <script>
-	$('.snd_query_btn').click(function(){
-	 $('#query-container').show();	
-	
-	})
-	
-	$('#queryBtn1').click(function(){
-		var frmdata =$('#sendqueryFrm').serialize();
-	  $.ajax({
-			 type: "POST",
-			 url: "<?php echo get_template_directory_uri(); ?>/custom-ajax.php",
-			 data: "action=sendQuery&"+frmdata,
-			 success: function(Data){
-				$('#query-container .feed-stg1').hide();
-	            $('#query-container .feed-stg2').show();
-			  }
-	  })	
-		
-	   
-		
-	})
-	
-	$('.cancel_query').click(function(){
-		$('#query-container').hide();
-		$('#query-container .feed-stg1').show();
-	  $('#query-container .feed-stg2').hide();
-	})
-	
-	$('#queryBtn2').click(function(){
-		$('#query-container').hide();
-		$('#query-container .feed-stg1').show();
-	  $('#query-container .feed-stg2').hide()
-		})
-
+$('.snd_query_btn').click(function() {
+    $('#query-container').show();
+})
+$('#queryBtn1').click(function() {
+    var frmdata = $('#sendqueryFrm').serialize();
+    $.ajax({
+        type: "POST",
+        url: "<?php echo get_template_directory_uri(); ?>/custom-ajax.php",
+        data: "action=sendQuery&" + frmdata,
+        success: function(Data) {
+            $('#query-container .feed-stg1').hide();
+            $('#query-container .feed-stg2').show();
+        }
+    })
+})
+$('.cancel_query').click(function() {
+    $('#query-container').hide();
+    $('#query-container .feed-stg1').show();
+    $('#query-container .feed-stg2').hide();
+})
+$('#queryBtn2').click(function() {
+    $('#query-container').hide();
+    $('#query-container .feed-stg1').show();
+    $('#query-container .feed-stg2').hide()
+})
 </script>
-
 
 <style>
 	.footer_links .sub-menu{margin-left: 30px;}
