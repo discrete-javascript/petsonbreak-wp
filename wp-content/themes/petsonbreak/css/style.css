@@ -4109,12 +4109,14 @@ margin-bottom: 15px;}
 }
 
 .cat_colm .desc p{
-	
 	display: -webkit-box;
     color: #fff;
     -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;
     overflow: hidden;
+    margin: 0;
+    padding: 10px;
+    font-size: 16px;
 }
 
 .cat_overlay{
@@ -7056,7 +7058,7 @@ div.home-slider-offer.desc {
 
 /*Over riding Carousel Control Style*/
 div.category-slides {
-    width: 24rem;
+    width: 100%;
     height: 30rem;
 }
 a.carousel-control[href="#servicesCarousel"] {

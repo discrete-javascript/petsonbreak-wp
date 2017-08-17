@@ -277,31 +277,35 @@ else{
          <p class="offer-content">Over <span class="pets-number">10,000+</span> Pets friendly places to stay, eat & play with your Pets</p>
      </div>
      <div class="container">
-         <div id="servicesCarousel" class="carousel slide" data-ride="carousel">
-            <div class="carousel-inner">
+         <div id="servicesCarousel" class="servicesCarousel">
+            <div class="catslider">
 
              <?php 
             $weekresults =$wpdb->get_results("select * from twc_service_category where published='Yes' and status_deleted=0");
-            foreach(array_chunk($weekresults, 4, true) as $key=>$array){
+            //echo '<pre>';print_r($weekresults);echo "</pre>";
+            foreach($weekresults as $key=>$weekrow) {
                     // $link =site_url().'/search-vendor/?sid='.$weekrow->service_category;
-               
             ?>
-            <div class="item <?php if($key == 0) { echo 'active'; } else { echo '';  }?>">
-            <?php foreach($array as $weekrow) {  $link =site_url().'/search-vendor/?sid='.$weekrow->service_category.'&destName='.$weekrow->destination; ?>
-            
-                <div class="col-md-3 col-xs-3">
+            <div class="item">
+            <?php /*foreach($array as $weekrow) {  */
+              $link =site_url().'/search-vendor/?sid='.$weekrow->service_category.'&destName='.$weekrow->destination; ?>
+                <div class="">
                     <div class="cat_colm category-slides">
-                        <div class="ser_services" rel="<?php echo $weekrow->id;?>" style="background:url(<?php echo plugins_url(); ?>/ean_plugin/images/Category/<?php echo $weekrow->category_image;?>);background-size:cover;">
+                        <div class="ser_services" rel="<?php echo $weekrow->id;?>" 
+                        <?php if(!empty($weekrow->category_image)) { ?>
+                          style="background:url(<?php echo plugins_url(); ?>/ean_plugin/images/Category/<?php echo $weekrow->category_image;?>);background-size:cover;" <?php } ?>>
                             <div class="home-slider-offer desc">
                                 <a href="javascript:void(0);">
                                     <p class="home-slider-offer-title"><?php echo $weekrow->title;?></p>
-                                <p><?php echo $weekrow->destination;?></p>
+                                    <?php if(isset($weekrow->destination)) { ?>
+                                      <p><?php echo $weekrow->destination;?></p>
+                                    <?php } ?>
                                 </a>
                             </div>
                         </div>
                     </div>
                 </div>
-            <?php } ?>
+            <?php /* } */ ?>
             </div>
          
             <?php } ?>

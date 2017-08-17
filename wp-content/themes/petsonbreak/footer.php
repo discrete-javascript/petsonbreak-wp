@@ -605,6 +605,19 @@ function closeNav() {
 </body>
 </html>
 
+<script type="text/javascript">
+  $(document).ready(function(){
+    $('#servicesCarousel .catslider').bxSlider({
+      slideWidth: 310,
+      pager: false,
+      controls: true,
+      minSlides: 1,
+      maxSlides: 4,
+      slideMargin: 20
+    });
+  });
+</script>
+
 <script>
 $('#FeedbackBtn1').click(function() {
     var flag = 0;
@@ -674,7 +687,8 @@ function serServices() {
     })
 }
 serServices();
-$('#prime-nav li').addClass('ser_services'); < /script>
+$('#prime-nav li').addClass('ser_services');
+</script>
 
 <!-- <script type="text/javascript" src="//maps.googleapis.com/maps/api/js?sensor=false&libraries=places"></script> -->
 
