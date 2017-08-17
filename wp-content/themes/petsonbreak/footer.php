@@ -608,13 +608,14 @@ function closeNav() {
 <script type="text/javascript">
   $(document).ready(function(){
     $('#servicesCarousel .catslider').bxSlider({
-      slideWidth: 320,
+      slideWidth: 310,
       auto: true,
       pager: false,
       controls: true,
+      responsive: true,
       minSlides: 1,
       maxSlides: 4,
-      slideMargin: 20
+      slideMargin: 10 
     });
   });
 </script>

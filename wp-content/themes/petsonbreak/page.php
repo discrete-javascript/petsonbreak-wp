@@ -279,35 +279,33 @@ else{
      <div class="container">
          <div id="servicesCarousel" class="servicesCarousel">
             <div class="catslider">
-
-             <?php 
-            $weekresults =$wpdb->get_results("select * from twc_service_category where published='Yes' and status_deleted=0");
-            //echo '<pre>';print_r($weekresults);echo "</pre>";
-            foreach($weekresults as $key=>$weekrow) {
-                    // $link =site_url().'/search-vendor/?sid='.$weekrow->service_category;
+            <?php 
+              $weekresults =$wpdb->get_results("select * from twc_service_category where published='Yes' and status_deleted=0");
+              //echo '<pre>';print_r($weekresults);echo "</pre>";
+              foreach($weekresults as $key=>$weekrow) {
+                // $link =site_url().'/search-vendor/?sid='.$weekrow->service_category;
             ?>
-            <div class="item">
-            <?php /*foreach($array as $weekrow) {  */
-              $link =site_url().'/search-vendor/?sid='.$weekrow->service_category.'&destName='.$weekrow->destination; ?>
-                <div class="">
-                    <div class="cat_colm category-slides">
-                        <div class="ser_services" rel="<?php echo $weekrow->id;?>" 
-                        <?php if(!empty($weekrow->category_image)) { ?>
-                          style="background:url(<?php echo plugins_url(); ?>/ean_plugin/images/Category/<?php echo $weekrow->category_image;?>);background-size:cover;" <?php } ?>>
-                            <div class="home-slider-offer desc">
-                                <a href="javascript:void(0);">
-                                    <p class="home-slider-offer-title"><?php echo $weekrow->title;?></p>
-                                    <?php if(isset($weekrow->destination)) { ?>
-                                      <p><?php echo $weekrow->destination;?></p>
-                                    <?php } ?>
-                                </a>
+              <div class="item">
+                <?php /*foreach($array as $weekrow) {  */
+                  $link =site_url().'/search-vendor/?sid='.$weekrow->service_category.'&destName='.$weekrow->destination; ?>
+                    <div class="">
+                        <div class="cat_colm category-slides">
+                            <div class="ser_services" rel="<?php echo $weekrow->id;?>" 
+                            <?php if(!empty($weekrow->category_image)) { ?>
+                              style="background:url(<?php echo plugins_url(); ?>/ean_plugin/images/Category/<?php echo $weekrow->category_image;?>);background-size:cover;" <?php } ?>>
+                                <div class="home-slider-offer desc">
+                                    <a href="javascript:void(0);">
+                                        <p class="home-slider-offer-title"><?php echo $weekrow->title;?></p>
+                                        <?php if(isset($weekrow->destination)) { ?>
+                                          <p><?php echo $weekrow->destination;?></p>
+                                        <?php } ?>
+                                    </a>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-            <?php /* } */ ?>
-            </div>
-         
+                <?php /* } */ ?>
+              </div>
             <?php } ?>
             </div>
              <!-- Left and right controls -->
