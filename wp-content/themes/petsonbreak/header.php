@@ -115,7 +115,7 @@ $results =$wpdb->get_results("select * from twc_service_category where published
 
 <meta http-equiv="Content-type" content="text/html;charset=UTF-8">
 <link rel="icon" href="<?php echo $mk_options['custom_favicon'];?>" type="image/png" sizes="16x16">
-<link rel="stylesheet" type="text/css" href="<?php echo get_template_directory_uri(); ?>/css-libraries/ripple.css">
+<!-- <link rel="stylesheet" type="text/css" href="<?php echo get_template_directory_uri(); ?>/css-libraries/ripple.css"> -->
 <link rel="stylesheet" type="text/css" href="<?php echo get_template_directory_uri(); ?>/css/style.css?var=<?php echo rand();?>">
 <link rel="stylesheet" type="text/css" href="<?php echo get_template_directory_uri(); ?>/css/responsive.css?var=<?php echo date('His');?>">
 <link rel="stylesheet" type="text/css" href="<?php echo get_template_directory_uri(); ?>/css/animate.css">
@@ -131,7 +131,9 @@ $results =$wpdb->get_results("select * from twc_service_category where published
 <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css-libraries/bootstrap.min.css">
 <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css-libraries/jquery.bxslider.css?var=<?php echo rand();?>">
 <!-- <script type="text/javascript" src="//platform-api.sharethis.com/js/sharethis.js#property=58f9d6dacaaba30012e7e3cb&product=sticky-share-buttons"></script> -->
-
+<?php 
+	wp_enqueue_style( 'twentyseventeen-ie9', get_theme_file_uri( '/css-libraries/ripple.css' ), array( 'petsonbreak-style' ), null );
+?>
 
 <?php wp_head(); ?>
 </head>
