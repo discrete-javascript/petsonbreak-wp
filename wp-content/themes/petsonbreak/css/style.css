@@ -2707,11 +2707,15 @@ font-size: 14px;}
 }
 
 .news-list-col p a{
-	color:#fff;
+    color:#f00;
+    display: block;
+    float: right;
 }
 
 .news-list-col .last6brdiv a{
-	color:#fff;
+    color:#f00;
+    display: block;
+    float: right;
 }
 
 .news-list-col .last6brdiv {
@@ -2724,7 +2728,7 @@ font-size: 14px;}
 	float: left;
 	margin-bottom: 20px;
 	min-height: 200px;
-	background: #7be6c8;
+	background: #fff;
 }
 
 .news-header{
@@ -7747,4 +7751,24 @@ div.details-page-also-listed {
 .detail-section2.details-page-all-review,
 .detail-section4.details-page-add-review {
     background: white;
+}
+.parallax-news-updates-container {
+    background-image: url(http://dev.petsonbreak.com/wp-content/uploads/2017/05/sai-kiran-anagani-209542-e1495047491399.jpg);
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    padding: 20em 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.parallax-news-updates-container > p {
+    color: yellow;
+    font-size: -webkit-xxx-large;
+}
+.news-list-col h3 {
+    text-transform: uppercase;
+    color: red;
+    margin-bottom: 1em;
 }

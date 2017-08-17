@@ -18,8 +18,11 @@ global $mk_options;
 
 
 
-<div class="terms_conditions news-listing"   style="background: #fff;">
-	<div class="container search-vendor-container">
+<div class="terms_conditions news-listing"   style="background: #eceaec;">
+    <div class="parallax-news-updates-container">
+        <p>NEWS & UPDATES</p>
+    </div>
+	<div class="container">
 		<div class="con_left">
 						<div id="petBrd-page-wrap">
 		  <ul class="pet_breadcrumb">
@@ -31,7 +34,6 @@ global $mk_options;
 
 
       <div class="news-header">
-        <h2>News and Updates</h2>
       </div>
 
   <?php $results =$wpdb->get_results("select * from twc_news where published='Yes' and status_deleted=0");
@@ -46,21 +48,7 @@ global $mk_options;
        <?php } ?>
 	 </div>
 	 </div>
-	 <div class="con_right">
-	     <div class="pet-search-right">
-			<?php  echo getPopularCategories();?>
-	   </div>
-		
-	   <div id="quick_links">
-		 <?php  echo getQuickLinks();?>
-	   </div>
-	   
-	   <div class="cat-image">
-	      <img src="<?php echo get_template_directory_uri();?>/images/kittens.jpg"/>
-	   
-	   </div>
-				
-		</div>
+	
 	</div>
 
 </div>
