@@ -134,8 +134,6 @@ $results =$wpdb->get_results("select * from twc_service_category where published
 <?php 
 	wp_enqueue_style( 'petsonbreak-googlefont', 'https://fonts.googleapis.com/css?family=Lato|Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i|Oxygen:300,400,700', array(), null );
 	wp_enqueue_style( 'petsonbreak-ripple', get_theme_file_uri( '/css-libraries/ripple.css' ), array(), null );
-	wp_enqueue_style( 'petsonbreak-mainstyle', get_theme_file_uri( '/css/style.css' ), array(), null );
-	wp_enqueue_style( 'petsonbreak-responsive', get_theme_file_uri( '/css/responsive.css' ), array(), null );
 	wp_enqueue_style( 'petsonbreak-animate', get_theme_file_uri( '/css/animate.css' ), array(), null );
 	wp_enqueue_style( 'petsonbreak-animations', get_theme_file_uri( '/css/animations.css' ), array(), null );
 	wp_enqueue_style( 'petsonbreak-color', get_theme_file_uri( '/css/color.css' ), array(), null );
@@ -148,6 +146,10 @@ $results =$wpdb->get_results("select * from twc_service_category where published
 	wp_enqueue_style( 'petsonbreak-rzslider', get_theme_file_uri( '/css-libraries/rzslider.css' ), array(), null );
 	wp_enqueue_style( 'petsonbreak-bootstrap', get_theme_file_uri( '/css-libraries/bootstrap.min.css' ), array(), null );
 	wp_enqueue_style( 'petsonbreak-bxslider', get_theme_file_uri( '/css-libraries/jquery.bxslider.css' ), array(), null );
+	wp_enqueue_style( 'mk-style', get_stylesheet_uri(), false, false, 'all' );
+	wp_enqueue_style( 'petsonbreak-mainstyle', get_theme_file_uri( '/css/style.css' ), array(), null );
+	wp_enqueue_style( 'petsonbreak-mainstyle', get_theme_file_uri( '/css/search-results-responsive.css' ), array(), null );
+	wp_enqueue_style( 'petsonbreak-responsive', get_theme_file_uri( '/css/responsive.css' ), array(), null );
 ?>
 
 <?php wp_head(); ?>

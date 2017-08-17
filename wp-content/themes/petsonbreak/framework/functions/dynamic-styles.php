@@ -7,7 +7,7 @@
 
 function mk_dynamic_css() {
 
-	wp_enqueue_style( 'mk-style', get_stylesheet_uri(), false, false, 'all' );
+	//wp_enqueue_style( 'mk-style', get_stylesheet_uri(), false, false, 'all' );
 
 global $mk_options;
 
