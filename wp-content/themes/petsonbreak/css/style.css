@@ -13,7 +13,7 @@ h1, h2, h3, h4, h5, h6 {color:#302a3d;font-family: 'Open Sans', sans-serif;}
     background: #636;
 }
 
-p, span, a, label {font-family: 'Open Sans', sans-serif;}
+p, span, a, label {font-family: 'Open Sans', sans-serif !important;}
 .main_title {
 	text-align:center;
 	font-size:32px;
