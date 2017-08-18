@@ -16,7 +16,7 @@
 	global $mk_options;
 ?>
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script> -->
 <!-- Latest compiled and minified CSS -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.4/css/bootstrap-select.min.css">
 
@@ -30,7 +30,7 @@
 	.err_req {color: #473636;}
 .petDetailsSmall{display:none;}	
 </style>
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<!-- <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"> -->
 
 <div class="register-background">
     <div class="parallax-heading"><p><span class="register-wording">REGISTER HERE</span> <span>TO ENJOY OUR SERVICES</span></p></div>
