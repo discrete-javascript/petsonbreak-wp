@@ -7772,3 +7772,6 @@ div.details-page-also-listed {
     color: red;
     margin-bottom: 1em;
 }
+#petBrd-page-wrap.news-updates-breadcrumb {
+    padding-top: 1em;
+}

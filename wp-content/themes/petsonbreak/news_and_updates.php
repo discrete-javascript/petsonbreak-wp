@@ -23,8 +23,11 @@ global $mk_options;
         <p>NEWS & UPDATES</p>
     </div>
 	<div class="container">
-		<div class="con_left">
-						<div id="petBrd-page-wrap">
+            <div class="row">
+                <div class="col-lg-2"></div>
+                <div class="col-lg-8">
+                    
+						<div id="petBrd-page-wrap" class="news-updates-breadcrumb">
 		  <ul class="pet_breadcrumb">
 					<li class=" pet_breadcrumbStep pet_breadcrumbActive"><a href="<?php echo site_url();?>">Home</a></li>
 					<li class="pet_breadcrumbStep"><a href="#">News and Updates</a></li>
@@ -47,7 +50,11 @@ global $mk_options;
        </div>
        <?php } ?>
 	 </div>
-	 </div>
+	
+                </div>
+                <div class="col-lg-2"></div>
+            </div>
+		
 	
 	</div>
 
