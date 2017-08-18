@@ -274,7 +274,8 @@
 											<option value="Horse">Horse</option>
 											<option value="Birds">Birds</option>
 											<option value="Mammals">Small Mammals</option>
-											<option value="Fish">Fish</option>
+											<option value="Ponies">Ponies</option>
+											<option value="Fishes">Fish</option>
 											<option value="Others">Others</option>
 										</select>
 									  </div>
@@ -296,7 +297,8 @@
 											<option value="Horse">Horse</option>
 											<option value="Birds">Birds</option>
 											<option value="Mammals">Small Mammals</option>
-											<option value="Fish">Fish</option>
+											<option value="Ponies">Ponies</option>
+											<option value="Fishes">Fish</option>
 											<option value="Others">Others</option>
 										</select>
 									 </div>
@@ -677,7 +679,7 @@ $('#addMorePets').click(function() {
   v++;
 $('#no_of_pets').val(v);
   var str='';
- str+='<li id="v_'+v+'"> <div class="shown_pets_div shown_pets_div2"  id="petType_'+v+'" style="width:12%"><select name="petData[pets][]" class="changePetType" rel="'+v+'"><option value="" selected disabled>Pet Type</option><option value="Dogs">Dogs</option><option value="Cats">Cats</option><option value="Horse">Horse</option><option value="Birds">Birds</option><option value="Mammals">Small Mammals</option><option value="Fish">Fish</option><option value="Others">Others</option></select></div>';
+ str+='<li id="v_'+v+'"> <div class="shown_pets_div shown_pets_div2"  id="petType_'+v+'" style="width:12%"><select name="petData[pets][]" class="changePetType" rel="'+v+'"><option value="" selected disabled>Pet Type</option><option value="Dogs">Dogs</option><option value="Cats">Cats</option><option value="Horse">Horse</option><option value="Birds">Birds</option><option value="Mammals">Small Mammals</option><option value="Ponies">Ponies</option><option value="Fishes">Fish</option><option value="Others">Others</option></select></div>';
  
  str+='<div id="petDetails_'+v+'" style="width:85%" class="petDetails2"><div><input name="petData[pet_name][]" value="" placeholder="Name"></div><div> <select name="petData[pet_age][]" value="" placeholder="Age"><option value="" selected disabled>Age</option><?php for($i=1;$i<=100;$i++){ ?><option value="<?php echo $i ;?>"><?php echo $i; ?></option><?php } ?></select>  </div><div><select name="petData[pet_gender][]"><option value="" selected disabled>Gender</option><option value="male">Male</option><option value="Female">Female</option></select></div><div><select name="petData[pet_breed][]" id="breedSelect_'+v+'"><option value="" selected disabled>Breed</option></select></div><div><select name="petData[pedigreed][]"><option value="" selected disabled>Pedigreed</option><option value="Yes">Yes</option><option value="No">No</option></select></div><div><select name="petData[spayed][]"><option value="" selected disabled>Sprayed/Neutered</option><option value="Yes">Yes</option><option value="No">No</option></select></div><div class="deletePets" rel="'+v+'">[Delete]</div></div>';
  
