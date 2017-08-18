@@ -31,6 +31,7 @@
 .petDetailsSmall{display:none;}	
 </style>
 <!-- <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"> -->
+<?php wp_enqueue_style( 'petsonbreak-w3', get_theme_file_uri( '/css/w3.css' ), array(), null ); ?>
 
 <div class="register-background">
     <div class="parallax-heading"><p><span class="register-wording">REGISTER HERE</span> <span>TO ENJOY OUR SERVICES</span></p></div>
