@@ -44,49 +44,37 @@ $sresults_img =$wpdb->get_Results("select * from twc_member_gallery where user_i
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 <div class="member-profile-hero-container">
     <div class="row">
-        <div class="col-lg-2"></div>
-        <div class="col-lg-8">
+        <div class="col-lg-2 col-md-2 col-sm-2 col-xs-12"></div>
+        <div class="col-lg-8 col-md-8 col-sm-8 col-xs-12">
             <div class="top-hero-content">
                <span>Dashboard</span><a class="change-password-hero-button" href="<?php echo site_url();?>/member-profile?type=changepass"><i class="fa fa-key" aria-hidden="true"></i>Change Password</a> 
             </div>
         </div>
-        <div class="col-lg-2"></div>
+        <div class="col-lg-2 col-md-2 col-sm-2 col-xs-12"></div>
         
     </div>
 </div>
-<div class="container tab-content147" id="memberProf">
-    
-    <ul class="nav nav-tabs">
-  <li class="active"><a data-toggle="tab" href="#home">Home</a></li>
-  <li><a data-toggle="tab" href="#menu1">Menu 1</a></li>
-  <li><a data-toggle="tab" href="#menu2">Menu 2</a></li>
-</ul>
-
-<div class="tab-content">
-  <div id="home" class="tab-pane fade in active">
-    <h3>HOME</h3>
-    <p>Some content.</p>
-  </div>
-  <div id="menu1" class="tab-pane fade">
-    <h3>Menu 1</h3>
-    <p>Some content in menu 1.</p>
-  </div>
-  <div id="menu2" class="tab-pane fade">
-    <h3>Menu 2</h3>
-    <p>Some content in menu 2.</p>
-  </div>
-</div>
-  <div class="row">
-    <div class="col-md-12">
-      <!-- tabs left -->
-      <div class="tabbable tabs-left">
-        <ul class="nav nav-tabs">
-		  <li class="tabs active" id="tab_enquiry"><a href="<?php echo site_url();?>/member-profile?type=enquiry"><i class="fa fa-question-circle" aria-hidden="true"></i>View Query</a></li>
-		  <li class="tabs " id="tab_profile"><a href="<?php echo site_url();?>/member-profile?type=profile"><i class="fa fa-user" aria-hidden="true"></i>Member Profile</a></li>
-          <li class="tabs" id="tab_changepass"><a href="<?php echo site_url();?>/member-profile?type=changepass"><i class="fa fa-key" aria-hidden="true"></i>Change Password</a></li>
+<div class="tabbable tabs-left row">
+          <div class="col-lg-2 col-md-2 col-sm-2 col-xs-12"></div>
+          <div class="col-lg-8 col-md-8 col-sm-8 col-xs-12">
+                <ul class="memberprofile nav nav-tabs">
+		  <li class="tabs active" id="tab_enquiry"><a href="<?php echo site_url();?>/member-profile?type=enquiry">View Query</a></li>
+                   <li class="tabs" id="tab_booking"><a href="<?php echo site_url();?>/member-profile?type=booking">Manage Booking</a></li>
+		  <li class="tabs " id="tab_profile"><a href="<?php echo site_url();?>/member-profile?type=profile">Member Profile</a></li>
+                  <li class="tabs " id="tab_changepass"><a href="<?php echo site_url();?>/member-profile?type=changepass">Change Password</a></li>
+         
 		 
-        </ul>
-        <div class="tab-content">
+                </ul>
+          </div>
+          <div class="col-lg-2 col-md-2 col-sm-2 col-xs-12"></div>
+         </div>
+<div class="container tab-content147" id="memberProf">
+      <!-- tabs left -->
+      
+          <div row="row">
+            <div class="col-lg-2 col-md-2 col-sm-2 col-xs-12"></div>
+            <div class="col-lg-8 col-md-8 col-sm-8 col-xs-12">
+                <div class="tab-content">
 		 <?php if($_REQUEST['type']=='profile'){
 			      include('includes/member_profile.php');
 		        }
@@ -94,19 +82,18 @@ $sresults_img =$wpdb->get_Results("select * from twc_member_gallery where user_i
 			      include('includes/change_password.php');
 		        }
 				if($_REQUEST['type']=='enquiry'){
-			      include('includes/manage_query.php');
+			      include('includes/manage_enquiry.php');
+		        }
+                                if($_REQUEST['type']=='booking'){
+			      include('includes/manage_booking.php');
 		        }
 		   ?>
 		 </div>
-
-        </div>
-
-        
-
-      </div>
+            </div>
+            <div class="col-lg-2 col-md-2 col-sm-2 col-xs-12"></div>
+          </div>
+       
       <!-- /tabs -->
-      
-    </div>   
   </div><!-- /row -->
 </div>
 
@@ -114,7 +101,32 @@ $sresults_img =$wpdb->get_Results("select * from twc_member_gallery where user_i
 
 <style>
 /* custom inclusion of right, left and below tabs */
+.tabbable.tabs-left.row {
+    background: white;
+}
+.memberprofile.nav.nav-tabs {
+    padding-left: 2.7em;
+    border: none;
+}
+.memberprofile.nav-tabs>li.active>a, .memberprofile.nav-tabs>li.active>a:hover, .memberprofile.nav-tabs>li.active>a:focus {
+    color: red;
+    text-transform: uppercase;
+    background: white;
+    font-weight: bold;
+    padding-top: 2em;
+    border-bottom: 3px solid #f00;
+    border-radius: 0;
+    margin-right: 1.5em;
 
+}
+.memberprofile.nav-tabs>li>a {
+    text-transform: uppercase;
+    padding-top: 2em;
+    border: none;
+    border-radius: 0;
+    color: black;
+    margin-right: 1.5em;
+}
 .tabs-right > .nav-tabs,
 .tabs-left > .nav-tabs {
   border-bottom: 0;
@@ -178,7 +190,7 @@ color: #fff;
 
 .tabs-left > .nav-tabs > li > a i{    display: block;text-align: center;color: #636;font-size:20px;    margin-bottom: 8px;}
 .tab-content147{}
-.tab-content147 .booking-table-container{float: left;width: 84%;}
+.tab-content147 .booking-table-container{float: left;width: 100%;}
 .booking-title-container h5 {
     color: #663366;
     font-size: 25px;
@@ -191,7 +203,7 @@ color: #fff;
 
 .recent_bookings{font-size: 35px;color: #777;font-weight: 100;}
 .this_section_pro{ font-size: 14px;margin-bottom: 30px;color: #777;}
-#memberProf.tab-content147 .tab-content{padding: 40px 0px;    float: left;width: 76%;}
+#memberProf.tab-content147 .tab-content{padding: 40px 2em;    float: left;width: 100%; background: white;}
 
 #memberProf .pet-search-right{width: 100%;float: left;}
 
