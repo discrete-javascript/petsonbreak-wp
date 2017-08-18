@@ -12,12 +12,8 @@ h1, h2, h3, h4, h5, h6 {color:#302a3d;font-family: 'Open Sans', sans-serif;}
     color: #fff; 
     background: #636;
 }
-<<<<<<< Updated upstream
-p {font-family: 'Open Sans', sans-serif !important;}
 p, span, a, label {font-family: 'Open Sans', sans-serif;}
-=======
 
->>>>>>> Stashed changes
 .main_title {
 	text-align:center;
 	font-size:32px;
@@ -7778,4 +7774,28 @@ div.details-page-also-listed {
 }
 #petBrd-page-wrap.news-updates-breadcrumb {
     padding-top: 1em;
+}
+
+/****Member Profile Styles******/
+.member-profile-hero-container {
+    background-color: #636;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    padding: 15em 0 10em 0;
+}
+div.top-hero-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: yellow;
+    font-size: -webkit-xxx-large;
+}
+a.change-password-hero-button {
+    font-size: small;
+    border: 1px solid white;
+    padding: 1em;
+    color: white;
+    border-radius: 10px;
 }
