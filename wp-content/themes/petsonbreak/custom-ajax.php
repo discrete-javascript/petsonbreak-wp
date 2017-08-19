@@ -432,7 +432,7 @@ if($_REQUEST['action']=='MemberRegistration'){
 	$Result =$Results[0];
 	$ID = $Result->ID;
 	
-	echo $ID;die();
+	//echo $ID;die();
 	wp_set_password($user_passowrd, $ID );
 	
 	//$SQL_pet_detail = "insert into twc_pet_detail set user_id='".$ID."',title='".$Pets."',pet_detail='".$petDetail_json."'"; 
