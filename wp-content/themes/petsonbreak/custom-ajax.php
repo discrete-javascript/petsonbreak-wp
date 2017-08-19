@@ -493,10 +493,6 @@ if($_REQUEST['action']=='MemberRegistration'){
 			<tr><td>Thanks,</td></tr>
 			<tr><td>Team PetsonBreak</td></tr>
 			</table>';
-			
-			echo $to;
-			
-			
 			//@mail($to,$pmail_subject,$pmailBody,$headers);
 
 	 } 
