@@ -418,7 +418,7 @@ if($_REQUEST['action']=='MemberRegistration'){
 		
 	
 	$Results = $wpdb->get_results("select * from wp_users where user_email='".$email."'");
-	
+
 	if(count($Results)>0){
 	 $flag=0; 	
 	}
@@ -471,7 +471,6 @@ if($_REQUEST['action']=='MemberRegistration'){
 		$sql="insert into ".$wpdb->prefix."usermeta SET user_id='".$ID."',meta_key='".$key."',meta_value='".$value."'";
 		$wpdb->query($sql);
 	} 
-	
 	 if($ID!=''){
 		$flag=0;   
 			$to = $_REQUEST["member_email"];

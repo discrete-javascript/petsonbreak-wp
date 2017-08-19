@@ -927,6 +927,7 @@ date.addEventListener('change', function() {
 			 url: "<?php echo get_template_directory_uri(); ?>/custom-ajax.php",
 			 data: "action=MemberRegistration&"+frmdata,
 			 success: function(Data){
+			 	console.log(Data);exit;
 				if(Data==1){
 					 window.location.href="<?php echo site_url();?>/thank-you/";
 				}else{
