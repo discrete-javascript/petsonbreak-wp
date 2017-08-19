@@ -921,19 +921,19 @@ date.addEventListener('change', function() {
 		} 
 	 else{
 	  var frmdata =$('#member_register').serialize();
-          console.log(frmdata);
-//		 $.ajax({
-//			 type: "POST",
-//			 url: "<?php echo get_template_directory_uri(); ?>/custom-ajax.php",
-//			 data: "action=MemberRegistration&"+frmdata,
-//			 success: function(Data){
-//				if(Data==1){
-//					 window.location.href="<?php echo site_url();?>/thank-you/";
-//				}else{
-//					$('#msgDiv').html('<span class="error">This email id already exist.</span>');
-//				}
-//			  }
-//	  })
+        //console.log(frmdata);
+		 $.ajax({
+			 type: "POST",
+			 url: "<?php echo get_template_directory_uri(); ?>/custom-ajax.php",
+			 data: "action=MemberRegistration&"+frmdata,
+			 success: function(Data){
+				if(Data==1){
+					 window.location.href="<?php echo site_url();?>/thank-you/";
+				}else{
+					$('#msgDiv').html('<span class="error">This email id already exist.</span>');
+				}
+			  }
+	  })
    }		 
 });	
 
