@@ -145,12 +145,12 @@
 						
 						
 						<li>
-							<label class="nrd-loginModal-label u-vr2x" for="username"><span>Citizenship<span class="err_req">* </span></span></label>
+							<label class="nrd-loginModal-label u-vr2x" for="username"><span>Nationality<span class="err_req">* </span></span></label>
 							<?php 
 								$sresults =$wpdb->get_Results("select * from twc_country");
 							?>
 							<select class="form-control" id="member_citizenship" name="member_citizenship"  placeholder="Citizenship" onchange="blankField('member_citizenship','')">
-								<option value="">Select Citizenship</option>
+								<option value="">Select Nationality</option>
 								<?php foreach($sresults as $sresult){ ?>
 									<option value="<?php echo $sresult->title ?>"><?php echo $sresult->title; ?></option>
 								<?php } ?>
@@ -289,7 +289,7 @@
 						
 							   <ul class="petLista_list">
 							    <li>
-								    <div class="shown_pets_div shown_pets_div2" id="petType_0" style="width:12%" >
+								    <div class="shown_pets_div shown_pets_div2" id="petType_0" style="width:20%" >
 										<select name="petData[pets][]" class="changePetType" rel="0">
 										   <option value="" selected disabled>Pet Type</option>
 											<option value="Dogs">Dogs</option>
@@ -302,7 +302,7 @@
 											<option value="Others">Others</option>
 										</select>
 									 </div>
-							        <div id="petDetails_0" style="width:85%" class="petDetails2">
+							        <div id="petDetails_0" style="width:100%" class="petDetails2">
 									  <div><input name="petData[pet_name][]" value="" placeholder="Name"></div>
 									  <div>
 										 <select name="petData[pet_age][]" value="" placeholder="Age">
@@ -368,7 +368,7 @@
 							
 							<div class="bot register-page">
 							   <label class="nrd-loginModal-label u-vr2x interested_area_label" for="username"><span>Please indicate the services you are intrested in</span></label>
-                                                           <select name="intrested_area" id="intrested_area">
+                                                           <select name="intrested_area" id="intrested_area" class="selectpicker" multiple>
                                                                <?php 
                                                                     $vendorServices =$wpdb->get_results("select * from twc_service_category where published='Yes' and status_deleted=0");
                                                                     foreach ($vendorServices as $val) { ?>
@@ -380,6 +380,7 @@
                                                                     <?php } ?>
                                                                ?>
                                                            </select>
+                                                           <p>SELECT MULTIPLE OPTIONS</p>
 					
 							<span id="err_member_profile_pic"></span>
 							</div>
@@ -559,7 +560,38 @@
   } );
   </script>
 
-
+  <style>
+    .bootstrap-select>.dropdown-toggle {
+        height: 40px;
+        border-radius: 4px;
+        border: 1px solid;
+    }
+    .dropdown-menu.inner .selected {
+        background: white;
+    }
+    .bootstrap-select:not([class*=col-]):not([class*=form-control]):not(.input-group-btn) {
+        width: 50%;
+        height: 40px;
+    }
+    .btn-default[data-id="intrested_area"]:hover, .btn-default[data-id="intrested_area"]:focus, .btn-default[data-id="intrested_area"]:active, .btn-default[data-id="intrested_area"].active, .open .dropdown-toggle.btn-default[data-id="intrested_area"] {
+        background: white;
+        color: black;
+        border-radius: 4px;
+        height: 40px;
+    }
+    .bootstrap-select.btn-group.show-tick .dropdown-menu li.selected a span.check-mark {
+        right: auto;
+    }
+    .bootstrap-select>.dropdown-toggle[data-id="intrested_area"].bs-placeholder, 
+    .bootstrap-select>.dropdown-toggle[data-id="intrested_area"].bs-placeholder:active, 
+    .bootstrap-select>.dropdown-toggle[data-id="intrested_area"].bs-placeholder:focus, 
+    .bootstrap-select>.dropdown-toggle[data-id="intrested_area"].bs-placeholder:hover {
+        color: black;
+        height: 40px;
+        border: 1px solid;
+        border-radius: 4px;
+    }
+  </style>
 <script>
 	
 	$('#RegisBtn').click(function(){
@@ -679,9 +711,9 @@ $('#addMorePets').click(function() {
   v++;
 $('#no_of_pets').val(v);
   var str='';
- str+='<li id="v_'+v+'"> <div class="shown_pets_div shown_pets_div2"  id="petType_'+v+'" style="width:12%"><select name="petData[pets][]" class="changePetType" rel="'+v+'"><option value="" selected disabled>Pet Type</option><option value="Dogs">Dogs</option><option value="Cats">Cats</option><option value="Horse">Horse</option><option value="Birds">Birds</option><option value="Mammals">Small Mammals</option><option value="Ponies">Ponies</option><option value="Fishes">Fish</option><option value="Others">Others</option></select></div>';
+ str+='<li id="v_'+v+'"> <div class="shown_pets_div shown_pets_div2"  id="petType_'+v+'" style="width:20%"><select name="petData[pets][]" class="changePetType" rel="'+v+'"><option value="" selected disabled>Pet Type</option><option value="Dogs">Dogs</option><option value="Cats">Cats</option><option value="Horse">Horse</option><option value="Birds">Birds</option><option value="Mammals">Small Mammals</option><option value="Ponies">Ponies</option><option value="Fishes">Fish</option><option value="Others">Others</option></select></div>';
  
- str+='<div id="petDetails_'+v+'" style="width:85%" class="petDetails2"><div><input name="petData[pet_name][]" value="" placeholder="Name"></div><div> <select name="petData[pet_age][]" value="" placeholder="Age"><option value="" selected disabled>Age</option><?php for($i=1;$i<=100;$i++){ ?><option value="<?php echo $i ;?>"><?php echo $i; ?></option><?php } ?></select>  </div><div><select name="petData[pet_gender][]"><option value="" selected disabled>Gender</option><option value="male">Male</option><option value="Female">Female</option></select></div><div><select name="petData[pet_breed][]" id="breedSelect_'+v+'"><option value="" selected disabled>Breed</option></select></div><div><select name="petData[pedigreed][]"><option value="" selected disabled>Pedigreed</option><option value="Yes">Yes</option><option value="No">No</option></select></div><div><select name="petData[spayed][]"><option value="" selected disabled>Sprayed/Neutered</option><option value="Yes">Yes</option><option value="No">No</option></select></div><div class="deletePets" rel="'+v+'">[Delete]</div></div>';
+ str+='<div id="petDetails_'+v+'" style="width:100%" class="petDetails2"><div><input name="petData[pet_name][]" value="" placeholder="Name"></div><div> <select name="petData[pet_age][]" value="" placeholder="Age"><option value="" selected disabled>Age</option><?php for($i=1;$i<=100;$i++){ ?><option value="<?php echo $i ;?>"><?php echo $i; ?></option><?php } ?></select>  </div><div><select name="petData[pet_gender][]"><option value="" selected disabled>Gender</option><option value="male">Male</option><option value="Female">Female</option></select></div><div><select name="petData[pet_breed][]" id="breedSelect_'+v+'"><option value="" selected disabled>Breed</option></select></div><div><select name="petData[pedigreed][]"><option value="" selected disabled>Pedigreed</option><option value="Yes">Yes</option><option value="No">No</option></select></div><div><select name="petData[spayed][]"><option value="" selected disabled>Sprayed/Neutered</option><option value="Yes">Yes</option><option value="No">No</option></select></div><div class="deletePets" rel="'+v+'">[Delete]</div></div>';
  
  str+='</li>';
  
@@ -697,9 +729,9 @@ function changePetType(){
 		var rel =$(this).attr('rel');
 		// if( (val=='Dogs') || (val=='Cats') || (val=='Horse') ){
 		if( (val != 'Others') ){
-			str='<div id="petDetails_'+v+'" style="width:85%" class="petDetails2"><div><input name="petData[pet_name][]" value="" placeholder="Name"></div><div> <select name="petData[pet_age][]" value="" placeholder="Age"><option value="" selected disabled>Age</option><?php for($i=1;$i<=100;$i++){ ?><option value="<?php echo $i ;?>"><?php echo $i; ?></option><?php } ?></select>  </div><div><select name="petData[pet_gender][]"><option value="" selected disabled>Gender</option><option value="Male">Male</option><option value="Female">Female</option></select></div><div><select id="breedSelect_'+v+'" name="petData[pet_breed][]"></select></div><div><select name="petData[pedigreed][]"><option value="" selected disabled>Pedigreed</option><option value="Yes">Yes</option><option value="No">No</option></select></div><div><select name="petData[spayed][]"><option value="" selected disabled>Sprayed/Neutered</option><option value="Yes">Yes</option><option value="No">No</option></select></div><div class="deletePets" rel="'+v+'">[Delete]</div></div>';
+			str='<div id="petDetails_'+v+'" style="width:100%" class="petDetails2"><div><input name="petData[pet_name][]" value="" placeholder="Name"></div><div> <select name="petData[pet_age][]" value="" placeholder="Age"><option value="" selected disabled>Age</option><?php for($i=1;$i<=100;$i++){ ?><option value="<?php echo $i ;?>"><?php echo $i; ?></option><?php } ?></select>  </div><div><select name="petData[pet_gender][]"><option value="" selected disabled>Gender</option><option value="Male">Male</option><option value="Female">Female</option></select></div><div><select id="breedSelect_'+v+'" name="petData[pet_breed][]"></select></div><div><select name="petData[pedigreed][]"><option value="" selected disabled>Pedigreed</option><option value="Yes">Yes</option><option value="No">No</option></select></div><div><select name="petData[spayed][]"><option value="" selected disabled>Sprayed/Neutered</option><option value="Yes">Yes</option><option value="No">No</option></select></div><div class="deletePets" rel="'+v+'">[Delete]</div></div>';
 		}else{
-			str='<div id="petDetails_'+v+'" style="width:85%" class="petDetails2"><div><input name="petData[pet_name][]" value="" placeholder="Detail"><input  type="hidden" name="petData[pet_age][]" value=""><input type="hidden" name="petData[pet_gender][]" value=""><input type="hidden" id="breedSelect_'+v+'" name="petData[pet_breed][]" value=""> <input type="hidden" name="petData[pedigreed][]" value=""><input type="hidden" name="petData[spayed][]" value=""></div><div class="deletePets" rel="'+v+'">[Delete]</div></div>';
+			str='<div id="petDetails_'+v+'" style="width:100%" class="petDetails2"><div><input name="petData[pet_name][]" value="" placeholder="Detail"><input  type="hidden" name="petData[pet_age][]" value=""><input type="hidden" name="petData[pet_gender][]" value=""><input type="hidden" id="breedSelect_'+v+'" name="petData[pet_breed][]" value=""> <input type="hidden" name="petData[pedigreed][]" value=""><input type="hidden" name="petData[spayed][]" value=""></div><div class="deletePets" rel="'+v+'">[Delete]</div></div>';
 		}
 		$('#petDetails_'+rel).html(str);
 		// fire ajax
@@ -748,7 +780,7 @@ for (i = new Date().getFullYear(); i > 1900; i--){
 }
     
 for (i = 1; i < 13; i++){
-    $('#months').append($('<option value='+i+'/>').val(i).html(i));
+    $('#months').append($('<option value='+i+'/>').val(i).html(monthNames[i]));
 }
  updateNumberOfDays(); 
     
@@ -971,19 +1003,21 @@ $("#pets").change(function() {
             } 
             
     });
+    
     // Script for Checkbox
-    var checkboxContainer = document.querySelector('.register-page-checkbox-container');
-    var checkBoxBox = document.querySelector('.register-page-checkbox');
+    var checkboxContainer = document.querySelectorAll('.register-page-checkbox-container');
     var count = 1;
-    checkboxContainer.addEventListener('click', function(e) {
+    checkboxContainer.forEach(function(item) {
+       item.addEventListener('click', function(e) {
         if(e.target.classList.contains('register-page-checkbox-label') && count === 1) {
-            checkBoxBox.setAttribute('checked', 'checked');
+            e.target.previousElementSibling.setAttribute('checked', 'checked');
             count = 0;
         } else if (e.target.classList.contains('register-page-checkbox-label') && count === 0) {
-            checkBoxBox.removeAttribute('checked');
+            e.target.previousElementSibling.removeAttribute('checked');
             count = 1;
         }
-    })
+    }); 
+    });
     
 //    $("input[name='own_pets']").click(function() {
 //        var test = $(this).val();

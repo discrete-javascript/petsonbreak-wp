@@ -26,7 +26,8 @@ if($_REQUEST['redirectPage']!=''){
 
 
 ?>
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<!--<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">-->
+<?php wp_enqueue_style( 'petsonbreak-w3', get_theme_file_uri( '/css/w3.css' ), array(), null ); ?>
 <div class="login-background"></div>
 <div class="login-whole-container container w3-container w3-content"  id="login">
 	<div class="login-container con_left w3-panel w3-white w3-card-2 w3-display-container"> 

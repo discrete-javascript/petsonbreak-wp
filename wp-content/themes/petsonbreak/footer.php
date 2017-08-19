@@ -167,6 +167,9 @@ $vendor_id =$result->vendor_id;
 
 <div class="city_pop_overlay"> 
   <div class="city_pop_box">
+      <img src="http://dev.petsonbreak.com/wp-content/uploads/2017/08/location-popup.png" style="
+    width: 100%;
+">
   <span class="city_pop_close">x</span>
   <input type="hidden" name="hiddenSID" id="hiddenSID" value=""/>
 <div class="city_pop_top">
@@ -180,20 +183,7 @@ $vendor_id =$result->vendor_id;
 </div>
 </div>
 </div>
-<div class="social-links-container-overlay">
-                    
-                    <ul>
-                                 <?php if($mk_options['f_facebook']!=''){?>
-                        <li><a href="<?php echo $mk_options['f_facebook'];?>" target="_blank"><i class="side-social-links fa fa-facebook"></i> </a></li>
-                                   <?php } if($mk_options['f_google']!=''){?>
-                        <li><a href="<?php echo $mk_options['f_google'];?>" target="_blank"><i class="side-social-links fa fa-google-plus"></i> </a></li>
-                                   <?php } if($mk_options['f_linkedin']!=''){?>
-                        <li><a href="<?php echo $mk_options['f_linkedin'];?>" target="_blank"><i class="side-social-links fa fa fa-linkedin"></i> </a></li>
-                                        <?php } if($mk_options['f_twitter']!=''){?>
-                        <li><a href="<?php echo $mk_options['f_twitter'];?>" target="_blank"><i class="side-social-links fa fa fa-twitter"></i> </a></li>
-                                      <?php }?>
-                    </ul>
-                </div>
+
 </div>
 
 <script type="text/javascript" src="//code.jquery.com/jquery-2.0.3.min.js"></script>

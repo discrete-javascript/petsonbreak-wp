@@ -217,7 +217,23 @@ $results =$wpdb->get_results("select * from twc_service_category where published
 <div class="pet-header header-container">
   <div class="container">
     <div class="row">
-      <div class="col-md-9 col-sm-6 col-xs-12 logo-container">
+        <div class="col-md-3 col-sm-6 col-xs-12 pull-left">
+            <div class="social-links-header-container">
+                    
+                    <ul>
+                                 <?php if($mk_options['f_facebook']!=''){?>
+                        <li><a href="<?php echo $mk_options['f_facebook'];?>" target="_blank"><i class="header-social-links fa fa-facebook"></i> </a></li>
+                                   <?php } if($mk_options['f_google']!=''){?>
+                        <li><a href="<?php echo $mk_options['f_google'];?>" target="_blank"><i class="header-social-links fa fa-google-plus"></i> </a></li>
+                                   <?php } if($mk_options['f_linkedin']!=''){?>
+                        <li><a href="<?php echo $mk_options['f_linkedin'];?>" target="_blank"><i class="header-social-links fa fa fa-linkedin"></i> </a></li>
+                                        <?php } if($mk_options['f_twitter']!=''){?>
+                        <li><a href="<?php echo $mk_options['f_twitter'];?>" target="_blank"><i class="header-social-links fa fa fa-twitter"></i> </a></li>
+                                      <?php }?>
+                    </ul>
+                </div>
+        </div>  
+      <div class="col-md-6 col-sm-6 col-xs-12 logo-container">
       
 	  
       <span class="bar_mnu">
