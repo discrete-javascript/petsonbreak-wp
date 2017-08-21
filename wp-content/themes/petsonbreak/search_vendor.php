@@ -208,7 +208,6 @@ function searchVendorServices(){
 		 myData = JSON.parse(Data); 
 		 var str='';
 		 for(a=0; a<myData.length; a++){
-                     console.log(myData[a])
 			str+='<li>';
                         if(!!(myData[a].image_path)) {
 				str+='<div class="search-items float_left14" style="background-image:url(<?php echo get_template_directory_uri(); ?>/uploads/vendor_thumbs/'+myData[a].image_path+');">'; }

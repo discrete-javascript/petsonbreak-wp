@@ -183,8 +183,20 @@ $vendor_id =$result->vendor_id;
 </div>
 </div>
 </div>
-
-</div>
+<div class="social-links-container-overlay">
+                     
+                    <ul>
+                                  <?php if($mk_options['f_facebook']!=''){?>
+                         <li><a href="<?php echo $mk_options['f_facebook'];?>" target="_blank"><i class="side-social-links fa fa-facebook"></i> </a></li>
+                                    <?php } if($mk_options['f_google']!=''){?>
+                         <li><a href="<?php echo $mk_options['f_google'];?>" target="_blank"><i class="side-social-links fa fa-google-plus"></i> </a></li>
+                                    <?php } if($mk_options['f_linkedin']!=''){?>
+                         <li><a href="<?php echo $mk_options['f_linkedin'];?>" target="_blank"><i class="side-social-links fa fa fa-linkedin"></i> </a></li>
+                                         <?php } if($mk_options['f_twitter']!=''){?>
+                         <li><a href="<?php echo $mk_options['f_twitter'];?>" target="_blank"><i class="side-social-links fa fa fa-twitter"></i> </a></li>
+                                      <?php }?>
+                     </ul>
+                 </div>
 
 <script type="text/javascript" src="//code.jquery.com/jquery-2.0.3.min.js"></script>
 <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
