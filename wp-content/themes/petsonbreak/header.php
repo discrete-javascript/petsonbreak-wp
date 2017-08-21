@@ -351,7 +351,7 @@ $results =$wpdb->get_results("select * from twc_service_category where published
                                     <span class="pet_g_crt"><?php echo $serviceCategory;?></span>
                                     <span><i class="fa fa-angle-down" aria-hidden="true"></i></span>
                                 </span>-->
-                                <ul id="categories" class="nav nav-tabs menu-bar">
+                                <ul id="categories" class="nav nav-tabs menu-bar" style="justify-content: center;">
                                    <?php foreach ($results as $val) { ?>
                                    <li class="selected_category" id="<?php echo $val->id;?>" value="<?php echo $val->id;?>">
                                        <a class="opt" data-toggle="tab" href="#searchbox">
@@ -359,6 +359,7 @@ $results =$wpdb->get_results("select * from twc_service_category where published
                                        </a>
                                    </li>           
                                    <?php } ?>
+                                   <li><a id="dig-more">DIG MORE <i class="fa fa-sort-asc" aria-hidden="true"></i></a></li>
                                 </ul>
                                 <div class="tab-content menu-bar">
                                     <div id="searchbox" class="tab-pane hidden menu-bar">
@@ -469,13 +470,35 @@ $results =$wpdb->get_results("select * from twc_service_category where published
     </div>
 <script>
 
-    
+        function hideVendorList() {
         var listCategories = document.querySelector('#categories');
         listCategories.childNodes.forEach(function(item, index) {
             if (index > 10 && index %2) {
                 item.classList.add('hidden');
             }
+            if (index === listCategories.childNodes.length - 2) {
+                item.classList.remove('hidden');
+            }
         });
+    }
+    
+    hideVendorList();
+    var digMoreButton = document.querySelector('#dig-more');
+    var listCounter = 0;
+    digMoreButton.onclick = function() {
+        if(listCounter === 0) {
+        document.querySelectorAll('.selected_category').forEach(function(item) {
+            item.classList.remove('hidden');
+        })
+        digMoreButton.innerHTML = 'DIG LESS <i class="fa fa-sort-desc" aria-hidden="true"></i>';
+        listCounter = 1;
+        } else if(listCounter === 1) {
+            hideVendorList();
+            digMoreButton.innerHTML = 'DIG MORE <i class="fa fa-sort-asc" aria-hidden="true"></i>';
+            listCounter = 0;
+        }
+        
+    }
     
 </script>
 <!--<script
@@ -505,13 +528,6 @@ $('.city_search').click(function(){
     
 //}
 </script>-->
-<script>
-document.addEventListener("DOMContentLoaded", function(event) {
-    var preSelectdCategory = window.localStorage.idOfSelected;
-    var toSelect = document.getElementById(preSelectdCategory);
-    toSelect.querySelector('.opt').click();
-  });
-</script>
 
 
 <script>
@@ -535,6 +551,16 @@ jQuery('.pet-groomsv-criteria-open #categories li').click(function(){
 	});
 })
 </script>
+<script>
+document.addEventListener("DOMContentLoaded", function(event) {
+    var preSelectdCategory = window.localStorage.idOfSelected;
+    if (preSelectdCategory) {
+        var toSelect = document.getElementById(preSelectdCategory);
+        toSelect.querySelector('.opt').click();
+    }
+  });
+</script>
+
 <style>
     .pet-groomsv-criteria-open #categories li {
         cursor: pointer;

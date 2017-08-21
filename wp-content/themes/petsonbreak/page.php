@@ -162,6 +162,7 @@ else{
                                        </a>
                                    </li>           
                                    <?php } ?>
+                                   <li><a id="dig-more">DIG MORE <i class="fa fa-sort-asc" aria-hidden="true"></i></a></li>
                                 </ul>
                                 <div class="tab-content">
                                     <div id="searchbox" class="tab-pane">
@@ -274,7 +275,7 @@ else{
  <div id="all_categories">
      <div class="offer-description">
          <h1 class="offer-heading">WHAT WE OFFER</h1>
-         <p class="offer-content">Over <span class="pets-number">10,000+</span> Pets friendly places to stay, eat & play with your Pets</p>
+         <p class="offer-content">Over <span class="pets-number">10,000+</span> Pet friendly places to stay, eat & play with your Pets</p>
      </div>
      <div class="container">
          <div id="servicesCarousel" class="servicesCarousel">
@@ -417,7 +418,7 @@ else{
                 <p class="events-section-heading">Events</p>
             </div>
             <div style="display: flex;justify-content: center;align-items: center;margin-top: 2rem;">
-                <h2>No Events</h2>
+                <h4>No Events</h4>
             </div>
         </div>
         <div class="news-column col-lg-6 col-md-6 col-sm-6 col-xs-12">
@@ -442,16 +443,40 @@ else{
 </div>
 
 <script>
+   var listCategories = document.querySelector('#categories');
     window.onload = function() { 
         listCategories.childNodes[1].childNodes[1].click(); 
     }; 
-    
+    function hideVendorList() {
         var listCategories = document.querySelector('#categories');
         listCategories.childNodes.forEach(function(item, index) {
             if (index > 10 && index %2) {
                 item.classList.add('hidden');
             }
+            if (index === listCategories.childNodes.length - 2) {
+                item.classList.remove('hidden');
+            }
         });
+    }
+    
+    hideVendorList();
+    var digMoreButton = document.querySelector('#dig-more');
+    var listCounter = 0;
+    digMoreButton.onclick = function() {
+        if(listCounter === 0) {
+        document.querySelectorAll('.selected_category').forEach(function(item) {
+            item.classList.remove('hidden');
+        })
+        digMoreButton.innerHTML = 'DIG LESS <i class="fa fa-sort-desc" aria-hidden="true"></i>';
+        listCounter = 1;
+        } else if(listCounter === 1) {
+            hideVendorList();
+            digMoreButton.innerHTML = 'DIG MORE <i class="fa fa-sort-asc" aria-hidden="true"></i>';
+            listCounter = 0;
+        }
+        
+    }
+    
     
 </script>
 <script>
