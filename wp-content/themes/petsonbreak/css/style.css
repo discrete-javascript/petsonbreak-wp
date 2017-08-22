@@ -7276,7 +7276,7 @@ p.copyright1 {
 }
 .parallax-search-frame {
     background-image: url(http://dev.petsonbreak.com/wp-content/uploads/2017/06/alexander-dummer-117495.jpg);
-    padding: 25em 0px;
+    padding: 25em 0 13em 0;
     background-position: center center;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -7591,7 +7591,7 @@ div.all-categories-header {
 }
 .parallax-all-categories-frame {
     background-image: url(http://dev.petsonbreak.com/wp-content/uploads/2017/06/andrew-branch-106879.jpg);
-    padding: 25em 0px;
+    padding: 25em 0 13em 0;
     background-position: center center;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -7788,7 +7788,7 @@ div.details-page-also-listed {
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
-    padding: 25em 0;
+    padding: 25em 0 13em 0;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -7837,7 +7837,7 @@ a.change-password-hero-button {
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
-    padding: 25em 0;
+    padding: 25em 0 13em 0;
     display: flex;
     justify-content: center;
     align-items: center;

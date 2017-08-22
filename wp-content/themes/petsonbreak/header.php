@@ -352,15 +352,34 @@ $results =$wpdb->get_results("select * from twc_service_category where published
                                     <span><i class="fa fa-angle-down" aria-hidden="true"></i></span>
                                 </span>-->
                                 <ul id="categories" class="nav nav-tabs menu-bar" style="justify-content: center;">
-                                   <?php foreach ($results as $val) { ?>
-                                   <li class="selected_category" id="<?php echo $val->id;?>" value="<?php echo $val->id;?>">
-                                       <a class="opt" data-toggle="tab" href="#searchbox">
-                                           <?php echo $val->title;?>
-                                       </a>
-                                   </li>           
-                                   <?php } ?>
+                                    <li>
+                                    <a href="<?php echo site_url();?>/all-categories/?sid=N148948330558c7b6295b388" title="Weekend Destinations"><span>Weekend Destinations</span></a>
+                                    </li>
+                                    <li>
+                                    <a href="<?php echo site_url();?>/all-categories/?sid=V148948235058c7b26e54885" title="Pet Friendly Restaurants"><span>Restaurants</span></a>
+                                    </li>
+                                    <li>
+                                    <a href="<?php echo site_url();?>/all-categories/?sid=G148948225958c7b21322ce8" title="Pet Friendly Cab Services"><span>Cab Services</span></a>
+                                    </li>
                                    <li><a id="dig-more">DIG MORE <i class="fa fa-sort-asc" aria-hidden="true"></i></a></li>
                                 </ul>
+                                <div style="
+                                        width: 100%;
+                                        display: flex;
+                                        justify-content: center;
+                                        align-items: center;
+                                        background: #663366;">
+                                    <select id="remaining-list" class="hidden" style="width: 40%;">
+                                    <?php foreach ($results as $key=>$val) { ?>
+
+                                        <option class="selected_category opt" id="<?php echo $val->id;?>" value="<?php echo $val->id;?>">
+                                            <?php echo $val->title;?>
+                                        </option>
+
+                                       <?php } ?>
+                                    </select>
+                                </div>
+                                
                                 <div class="tab-content menu-bar">
                                     <div id="searchbox" class="tab-pane hidden menu-bar">
                                         <?php if($_REQUEST['destName']!=''){ ?>
@@ -470,35 +489,38 @@ $results =$wpdb->get_results("select * from twc_service_category where published
     </div>
 <script>
 
-        function hideVendorList() {
-        var listCategories = document.querySelector('#categories');
-        listCategories.childNodes.forEach(function(item, index) {
-            if (index > 10 && index %2) {
-                item.classList.add('hidden');
-            }
-            if (index === listCategories.childNodes.length - 2) {
-                item.classList.remove('hidden');
-            }
-        });
-    }
+//        function hideVendorList() {
+//        var listCategories = document.querySelector('#categories');
+//        listCategories.childNodes.forEach(function(item, index) {
+//            if (index > 10 && index %2) {
+//                item.classList.add('hidden');
+//            }
+//            if (index === listCategories.childNodes.length - 2) {
+//                item.classList.remove('hidden');
+//            }
+//        });
+//    }
     
-    hideVendorList();
+//    hideVendorList();
     var digMoreButton = document.querySelector('#dig-more');
-    var listCounter = 0;
+    var remainingList = document.querySelector('#remaining-list');
     digMoreButton.onclick = function() {
-        if(listCounter === 0) {
-        document.querySelectorAll('.selected_category').forEach(function(item) {
-            item.classList.remove('hidden');
-        })
-        digMoreButton.innerHTML = 'DIG LESS <i class="fa fa-sort-desc" aria-hidden="true"></i>';
-        listCounter = 1;
-        } else if(listCounter === 1) {
-            hideVendorList();
-            digMoreButton.innerHTML = 'DIG MORE <i class="fa fa-sort-asc" aria-hidden="true"></i>';
-            listCounter = 0;
-        }
-        
+        remainingList.classList.toggle('hidden');
     }
+//    digMoreButton.onclick = function() {
+//        if(listCounter === 0) {
+//        document.querySelectorAll('.selected_category').forEach(function(item) {
+//            item.classList.remove('hidden');
+//        })
+//        digMoreButton.innerHTML = 'DIG LESS <i class="fa fa-sort-desc" aria-hidden="true"></i>';
+//        listCounter = 1;
+//        } else if(listCounter === 1) {
+//            hideVendorList();
+//            digMoreButton.innerHTML = 'DIG MORE <i class="fa fa-sort-asc" aria-hidden="true"></i>';
+//            listCounter = 0;
+//        }
+//        
+//    }
     
 </script>
 <!--<script
