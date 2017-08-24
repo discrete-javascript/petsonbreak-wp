@@ -438,9 +438,9 @@ else{
         </div>
     </div>
 </div>
-<div>
+<!-- <div>
     <img style="width: 100%" src="http://dev.petsonbreak.com/wp-content/uploads/2017/08/Index-Banner-Partners.png" />
-</div>
+</div> -->
 
 <script>
    var listCategories = document.querySelector('#categories');

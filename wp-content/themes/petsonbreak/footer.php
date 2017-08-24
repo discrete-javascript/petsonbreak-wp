@@ -183,7 +183,7 @@ $vendor_id =$result->vendor_id;
 </div>
 </div>
 </div>
-<div class="social-links-container-overlay">
+<!-- <div class="social-links-container-overlay">
                      
                     <ul>
                                   <?php if($mk_options['f_facebook']!=''){?>
@@ -196,7 +196,7 @@ $vendor_id =$result->vendor_id;
                          <li><a href="<?php echo $mk_options['f_twitter'];?>" target="_blank"><i class="side-social-links fa fa fa-twitter"></i> </a></li>
                                       <?php }?>
                      </ul>
-                 </div>
+                 </div> -->
 
 <script type="text/javascript" src="//code.jquery.com/jquery-2.0.3.min.js"></script>
 <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
