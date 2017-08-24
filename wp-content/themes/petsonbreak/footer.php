@@ -87,17 +87,17 @@ $vendor_id =$result->vendor_id;
                 <p class="footer-aus-phone">PHONE</p>
                 <ul>
                     <li>0421 3766 36 (Travel Related)</li>
-                    
+
                 </ul>
                 <p class="footer-aus-email">EMAIL</p>
                 <ul>
                     <li>
-                        
+
                     </li>
                 </ul>
             </div>
             <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
-                <div class="visa-sign-cards">
+                <!-- <div class="visa-sign-cards">
                         <p class="veri"><img src="<?php echo get_template_directory_uri();?>/images/veri-sign.png"/></p>
                         <ul>
                           <li><img src="<?php echo get_template_directory_uri();?>/images/visaCard.png"/></li>
@@ -105,7 +105,7 @@ $vendor_id =$result->vendor_id;
                           <li><img src="<?php echo get_template_directory_uri();?>/images/americanEx.png"/></li>
                           <li><img src="<?php echo get_template_directory_uri();?>/images/discover.png"/></li>
                         </ul>
-                </div>
+                </div> -->
                 <div class="social-links-container">
                     <p>FOLLOW US ON</p>
                     <ul class="footer_links social_links">
@@ -123,7 +123,7 @@ $vendor_id =$result->vendor_id;
             </div>
           </div>
       </div>
-    
+
   </div>
   <div class="footer-bottom">
     <div class="container">
@@ -135,7 +135,7 @@ $vendor_id =$result->vendor_id;
         </div>
         <div class="col-md-6">
           <div class="footer_terms">
-           	    <?php 
+           	    <?php
 			   $fdefaults = array(
 						'theme_location'  => 'footer_bottom',
 						'menu'            => '',
@@ -156,7 +156,7 @@ $vendor_id =$result->vendor_id;
 					);
 				 wp_nav_menu($fdefaults);
 			 ?>
-			  
+
           </div>
           </nav>
         </div>
@@ -165,7 +165,7 @@ $vendor_id =$result->vendor_id;
   </div>
 </footer>
 
-<div class="city_pop_overlay"> 
+<div class="city_pop_overlay">
   <div class="city_pop_box">
       <img src="http://dev.petsonbreak.com/wp-content/uploads/2017/08/location-popup.png" style="
     width: 100%;
@@ -184,7 +184,7 @@ $vendor_id =$result->vendor_id;
 </div>
 </div>
 <div class="social-links-container-overlay">
-                     
+
                     <ul>
                                   <?php if($mk_options['f_facebook']!=''){?>
                          <li><a href="<?php echo $mk_options['f_facebook'];?>" target="_blank"><i class="side-social-links fa fa-facebook"></i> </a></li>
@@ -258,12 +258,12 @@ function closeNav() {
 
 
 <script type="text/javascript">
-  
+
   $('.searchbox ul li input').click(function(){
 	$('.search_Form').css('z-index','21');
     $('.main-overlay').fadeIn();
   })
-  
+
    $('.main-overlay').click(function(){
     $(this).fadeOut();
 	$('.search_Form').css('z-index','2');
@@ -273,12 +273,12 @@ function closeNav() {
     $('.main-overlay').fadeOut();
 	$('.search_Form').css('z-index','2');
   })
-  
+
    $('.btn-hack').click(function(){
     $('.main-overlay').fadeOut();
 	$('.search_Form').css('z-index','2');
   })
-  
+
 
   $(window).scroll(function() {
     if ($(this).scrollTop() > 1) { // this refers to window
@@ -288,7 +288,7 @@ function closeNav() {
        $('#sthoverbuttons').removeClass('show-sthoverbuttons');
     }
   });
-  
+
 </script>
 
 
@@ -360,7 +360,7 @@ function closeNav() {
         <div class="panel panel-default">
           <div class="panel-heading feed-head"><img src="<?php echo get_template_directory_uri();?>/images/logo_pet.png"></div>
           <div class="panel-body">
-            
+
               <div class="feed-stg1">
                  <h3>Hello, we would love to hear your feedback...</h3>
                  <p>At PetsonBreak, we would love to get your thoughts on what works well, and what you   think we can improve on. All feedback is much appreciated!</p>
@@ -381,7 +381,7 @@ function closeNav() {
                       <span><label for="scale8">8</label><input type="radio" name="scale_rate" id="scale8" value="8"/></span>
                       <span><label for="scale9">9</label><input type="radio" name="scale_rate" id="scale9" value="9"/></span>
                       <span><label for="scale10">10</label><input type="radio" name="scale_rate" id="scale10" value="10"/></span>
-					 
+
 
                    </div>
                  </div>
@@ -396,7 +396,7 @@ function closeNav() {
                          <div class="feed_cmnt_type">Technical errors/Missing Links</div>
                          <div class="feed_cmnt_type">Other...</div>
                     </div>
-					
+
 					<input type="hidden" id="feedtypes" name="feedtypes" value="Reviews">
                      <div class="feed_cmnt_bot">
                          <h4>Reviews</h4>
@@ -407,12 +407,12 @@ function closeNav() {
 
                   </div>
 
-				  
+
 				    <div class="panel-footer feed-boot">
             <div class="snd_feed">
               <!--  <span><a href="#" id="FeedbackBtn" class="snd_feed_btn">Send Feedback</a></span>-->
-				
-				
+
+
 				<span><input type="submit" id="FeedbackBtn1" value="Send Feedback" class="snd_feed_btn"></span>
                 <span class="cancel_feed">or cancel</span>
             </div>
@@ -428,27 +428,27 @@ function closeNav() {
 				   <input type="email" value="" id="email_id" name="email_id" placeholder="Email" onkeyup="blankField('email_id','Email')">
 				   <span id="err_email_id"></span>
                  </div>
-				 
+
 				 <div class="panel-footer feed-boot">
             <div class="snd_feed">
               <!--  <span><a href="#" id="FeedbackBtn" class="snd_feed_btn">Send Feedback</a></span>-->
-				
-				
+
+
 				<span><input type="submit" id="FeedbackBtn2" value="Send Feedback" class="snd_feed_btn"></span>
                 <span class="cancel_feed">or cancel</span>
             </div>
 
           </div>
               </div>
-				
+
 
 
           </div>
          <!-- <div class="panel-footer feed-boot">
             <div class="snd_feed">
            <span><a href="#" id="FeedbackBtn" class="snd_feed_btn">Send Feedback</a></span>
-				
-				
+
+
 				<span><input type="submit" id="FeedbackBtn" value="Send Feedback" class="snd_feed_btn"></span>
                 <span class="cancel_feed">or cancel</span>
             </div>
@@ -457,13 +457,13 @@ function closeNav() {
         </div>
    <div class="feed-error">
 	  <span class="excl"><img src="<?php echo get_template_directory_uri();?>/images/exclamation.png"/></span><span class="feed-text">Please select a score!</span>
-	
+
      </div>
-	
+
 
 </div>
    </div>
-   
+
 </div>
 
 
@@ -475,8 +475,8 @@ function closeNav() {
         <div class="panel panel-default">
           <div class="panel-heading feed-head"><img src="<?php echo get_template_directory_uri();?>/images/logo_pet.png"></div>
           <div class="panel-body">
-            
-  
+
+
 			  <div class="feed-stg3">
                   <h3>Thanks again,</h3>
                  <p>Your feedback is very important to us, so we appreciate you giving us your time.</p>
@@ -486,14 +486,14 @@ function closeNav() {
           <div class="panel-footer feed-boot">
             <div class="snd_feed">
                 <span><a href="#" id="FeedbackBtn3" class="closeFeed">Close</a></span>
-               
+
             </div>
 
           </div>
         </div>
 		</div>
    </div>
-   
+
 </div>
 
 
@@ -517,33 +517,33 @@ function closeNav() {
               <div class="feed-stg1">
                  <h3>Hello, we would love to have your queries...</h3>
                  <p>At PetsonBreak, we would love to get your thoughts on what works well, and what you   think we can improve on. All feedback is much appreciated!</p>
-        
+
                   <div class="feed_comment">
 					<div class="feed_cmnt_div">
-					
+
 					<input type="hidden" id="feedtype" name="feedtype" value="Reviews">
                      <div class="feed_cmnt_bot">
-					 
+
 					    <div class="quer_fName">
 						  <h4>First Name</h4>
 						  <input type="text" name="first_name" id="first_name" placeholder="First Name">
 						</div>
-						
+
 					    <div class="quer_fLast">
 						  <h4>Last Name</h4>
 						  <input type="text" name="last_name" id="last_name" placeholder="Last Name">
 						</div>
-						
+
 						<div class="quer_Email">
 						  <h4>Email</h4>
 						  <input type="text" name="email"  placeholder="Email">
 						</div>
-						
+
 						<div class="quer_Contact">
 						  <h4>Contact Number</h4>
 						  <input type="text" name="contact_number" placeholder="Contact Number">
 						</div>
-						
+
 					     <div class="quer_Message">
                          <h4>Message</h4>
                          <textarea  name="message"></textarea>
@@ -553,34 +553,34 @@ function closeNav() {
 
                   </div>
 
-				  
+
 				    <div class="panel-footer feed-boot">
             <div class="snd_feed">
               <!--  <span><a href="#" id="FeedbackBtn" class="snd_feed_btn">Send Feedback</a></span>-->
-				
-				
+
+
 				<span><input type="submit" id="queryBtn1" value="Send Query" class="queryBtns"></span>
                 <span class="cancel_query">or cancel</span>
             </div>
 
           </div>
          </div>
-        </form>  
+        </form>
               <div class="feed-stg2">
                 <h3>Thanks</h3>
                  <p>Your feedback is very important to us, so we appreciate you giving us your time.</p>
-      
+
 		         <div class="panel-footer feed-boot">
             <div class="snd_feed">
                 <span><a href="#" id="queryBtn2" class="query_close queryBtns">Close</a></span>
-               
+
             </div>
 
           </div>
-		  
-		  
+
+
               </div>
-				
+
 
 
           </div>
@@ -588,13 +588,13 @@ function closeNav() {
         </div>
    <div class="feed-error">
 	  <span class="excl"><img src="<?php echo get_template_directory_uri();?>/images/exclamation.png"></span><span class="feed-text">Please select a score!</span>
-	
+
      </div>
-	
+
 
 </div>
    </div>
-   
+
 </div>
 
 
@@ -617,7 +617,7 @@ function closeNav() {
       responsive: true,
       minSlides: 1,
       maxSlides: 4,
-      slideMargin: 10 
+      slideMargin: 10
     });
   });
 </script>
@@ -698,10 +698,10 @@ $('#prime-nav li').addClass('ser_services');
 
 <script type = "text/javascript">
 google.maps.event.addDomListener(window, "load", function() {
-    /*                                                                                                                 
+    /*
        var places = new google.maps.places.Autocomplete((document.getElementById('search-TB')),{
      types: ['geocode'],
-       componentRestrictions: {country: 'DE'}//UK only   
+       componentRestrictions: {country: 'DE'}//UK only
        });*/
     var places = new google.maps.places.Autocomplete((document.getElementById("destName")));
     google.maps.event.addListener(places, "place_changed", function() {

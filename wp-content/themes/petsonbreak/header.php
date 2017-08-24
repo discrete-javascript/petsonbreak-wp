@@ -46,23 +46,23 @@ if ( function_exists('icl_object_id') ) {
  foreach($lang_arr as $key=>$val){
 	 if($val['active']==1){
 	 $activeLanguage =array('code'=>$val['code'],
-	                        'ean_code'=>ean_wpml_languages($val['code']), 
+	                        'ean_code'=>ean_wpml_languages($val['code']),
 	                        'native_name'=>$val['native_name'],
 							'translated_name'=>$val['translated_name'],
 							'flag_url'=>$val['country_flag_url'],
 							'page_url'=>$val['url']
-							); 
-  }	
+							);
+  }
  }
 }
 else{
  $activeLanguage =array('code'=>$mk_options['default_language'],
-						'ean_code'=>ean_wpml_languages($mk_options['default_language']), 
+						'ean_code'=>ean_wpml_languages($mk_options['default_language']),
 						'native_name'=>'',
 						'translated_name'=>'',
 						'flag_url'=>'',
 						'page_url'=>''
-						); 	
+						);
 }
 
 
@@ -81,24 +81,24 @@ $_SESSION['main_color_hex2rgb'] = $main_color_hex2rgb['red'].", ".$main_color_he
 $template_slug =get_page_template_slug();
 
 if($template_slug=='home-page-v1.php'){
-  $pageName='home-page';	
+  $pageName='home-page';
 }elseif($template_slug=='manage-destination.php'){
- $pageName='manage-destination';	
+ $pageName='manage-destination';
 }
 elseif($template_slug=='tp-flights.php'){
- $pageName='manage-flight';		
+ $pageName='manage-flight';
 }
 else{
- $pageName='';		
+ $pageName='';
 }
 
 
 if($activeLanguage['code']!=$mk_options['default_language']){
-$siteUrl =site_url().'/'.$activeLanguage['code'];	
+$siteUrl =site_url().'/'.$activeLanguage['code'];
 $site_language=$activeLanguage['code'];
 }else{
-$siteUrl =site_url();		
-$site_language='';	 
+$siteUrl =site_url();
+$site_language='';
 }
 
 $results =$wpdb->get_results("select * from twc_service_category where published='Yes' and status_deleted=0");
@@ -115,7 +115,7 @@ $results =$wpdb->get_results("select * from twc_service_category where published
 
 <meta http-equiv="Content-type" content="text/html;charset=UTF-8">
 <link rel="icon" href="<?php echo $mk_options['custom_favicon'];?>" type="image/png" sizes="16x16">
-<!-- <link rel="stylesheet" type="text/css" href="<?php echo get_template_directory_uri(); ?>/css-libraries/ripple.css"> 
+<!-- <link rel="stylesheet" type="text/css" href="<?php echo get_template_directory_uri(); ?>/css-libraries/ripple.css">
 <link rel="stylesheet" type="text/css" href="<?php echo get_template_directory_uri(); ?>/css/style.css?var=<?php echo rand();?>">
 <link rel="stylesheet" type="text/css" href="<?php echo get_template_directory_uri(); ?>/css/responsive.css?var=<?php echo date('His');?>">
 <link rel="stylesheet" type="text/css" href="<?php echo get_template_directory_uri(); ?>/css/animate.css">
@@ -131,7 +131,7 @@ $results =$wpdb->get_results("select * from twc_service_category where published
 <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css-libraries/bootstrap.min.css">
 <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css-libraries/jquery.bxslider.css?var=<?php echo rand();?>">-->
 <!-- <script type="text/javascript" src="//platform-api.sharethis.com/js/sharethis.js#property=58f9d6dacaaba30012e7e3cb&product=sticky-share-buttons"></script> -->
-<?php 
+<?php
 	wp_enqueue_style( 'petsonbreak-googlefont', 'https://fonts.googleapis.com/css?family=Lato|Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i|Oxygen:300,400,700', array(), null );
 	wp_enqueue_style( 'petsonbreak-ripple', get_theme_file_uri( '/css-libraries/ripple.css' ), array(), null );
 	wp_enqueue_style( 'petsonbreak-animate', get_theme_file_uri( '/css/animate.css' ), array(), null );
@@ -174,34 +174,34 @@ $results =$wpdb->get_results("select * from twc_service_category where published
   <input name="default_currency" id="default_currency" type="text" value="<?php echo $mk_options['default_currency']; ?>" />
   <input name="active_language" id="active_language" type="text" value="<?php echo $activeLanguage['ean_code']; ?>" />
   <input name="site_language" id="site_language" type="text" value="<?php echo $site_language; ?>" />
- 
+
   <input name="default_destination" id="default_destination" type="text" value="<?php echo $mk_options['default_destination']; ?>" />
 <input name="default_destination_child" id="default_destination_child" type="text" value="<?php echo $mk_options['default_destination_child']; ?>" />
-  
+
   <!-- banner images -->
   <input name="hotel_title" id="hotel_title" type="text" value="<?php echo $mk_options['hotel_banner_title'];?>" />
   <input name="hotel_description" id="hotel_description" type="text" value="<?php echo $mk_options['hotel_banner_description'];?>" />
-  <input name="hotel_img_path" id="hotel_img_path" type="text" value="<?php echo $mk_options['hotel_banner'];?>" /> 
-  
+  <input name="hotel_img_path" id="hotel_img_path" type="text" value="<?php echo $mk_options['hotel_banner'];?>" />
+
   <input name="flight_title" id="flight_title" type="text" value="<?php echo $mk_options['flight_banner_title'];?>" />
   <input name="flight_description" id="flight_description" type="text" value="<?php echo $mk_options['flight_banner_description'];?>" />
   <input name="flight_img_path" id="flight_img_path" type="text" value="<?php echo $mk_options['flight_banner'];?>" />
 
   <input name="holiday_title" id="holiday_title" type="text" value="<?php echo $mk_options['holiday_banner_title'];?>" />
   <input name="holiday_description" id="holiday_description" type="text" value="<?php echo $mk_options['holiday_banner_description'];?>" />
-  <input name="holiday_img_path" id="holiday_img_path" type="text" value="<?php echo $mk_options['holiday_banner'];?>" /> 
-  
+  <input name="holiday_img_path" id="holiday_img_path" type="text" value="<?php echo $mk_options['holiday_banner'];?>" />
+
   <input name="resort_title" id="resort_title" type="text" value="<?php echo $mk_options['resort_banner_title'];?>" />
   <input name="resort_description" id="resort_description" type="text" value="<?php echo $mk_options['resort_banner_description'];?>" />
   <input name="resort_img_path" id="resort_img_path" type="text" value="<?php echo $mk_options['resort_banner'];?>" />
- 
+
  <input name="bedbreakfast_title" id="bedbreakfast_title" type="text" value="<?php echo $mk_options['bedbreakfast_banner_title'];?>" />
   <input name="bedbreakfast_description" id="bedbreakfast_description" type="text" value="<?php echo $mk_options['resort_banner_description'];?>" />
-  <input name="bedbreakfast_img_path" id="bedbreakfast_img_path" type="text" value="<?php echo $mk_options['bedbreakfast_banner'];?>" /> 
-  
+  <input name="bedbreakfast_img_path" id="bedbreakfast_img_path" type="text" value="<?php echo $mk_options['bedbreakfast_banner'];?>" />
+
   <!-- some string for core.js page -->
-  <input name="select_your_accommodation" id="select_your_accommodation" type="text" value="<?php echo $mk_options['select_your_accommodation'];?>" /> 
-  
+  <input name="select_your_accommodation" id="select_your_accommodation" type="text" value="<?php echo $mk_options['select_your_accommodation'];?>" />
+
 </div>
 
 
@@ -213,13 +213,13 @@ $results =$wpdb->get_results("select * from twc_service_category where published
 
 <article class="borders-color header-article">
   <header>
-  
+
 <div class="pet-header header-container">
   <div class="container">
     <div class="row">
         <div class="col-md-3 col-sm-6 col-xs-12 pull-left">
             <div class="social-links-header-container">
-                    
+
                     <ul>
                                  <?php if($mk_options['f_facebook']!=''){?>
                         <li><a href="<?php echo $mk_options['f_facebook'];?>" target="_blank"><i class="header-social-links fa fa-facebook"></i> </a></li>
@@ -232,10 +232,10 @@ $results =$wpdb->get_results("select * from twc_service_category where published
                                       <?php }?>
                     </ul>
                 </div>
-        </div>  
+        </div>
       <div class="col-md-6 col-sm-6 col-xs-12 logo-container">
-      
-	  
+
+
       <span class="bar_mnu">
 
        <span id="nav-icon4" class="slide_Bar slide_Bar_hidden">
@@ -251,42 +251,42 @@ $results =$wpdb->get_results("select * from twc_service_category where published
 				   <select id="categories" class="form-control">
 				   <option value="">-Select Category-</option>
 				   <?php // foreach($results as $val) { ?>
-                       <option value="<?php // echo $val->id;?>"><?php // echo $val->title;?></option>           
+                       <option value="<?php // echo $val->id;?>"><?php // echo $val->title;?></option>
                    <?php // } ?>
 				   </select>
 				</div>
 				<div class="input-group">
-				
+
 				  <?php //   if($_REQUEST['destName']!=''){ ?>
-				  
+
 				  <input type="text" name="searchName" id="searchName" class="form-control" value="<?php // echo $_REQUEST['destName'] ;?>" placeholder="Discover and Unleash Happiness you cherish">
 				  <?php// }  else { //?>
 				  <input type="text" name="searchName" id="searchName" class="form-control" value="" placeholder="Discover and Unleash Happiness you cherish">
 				  <?php // } ?>
-				  
+
 				  <span class="input-group-addon city_search" id="basic-addon2" style="cursor: pointer;"><i class="fa fa-search"></i></span>
-				   				   
+
 				</div>
-			
+
 			</div>-->
 			<input type="hidden" value="" id="sel_category">
 <!--			<div class="pet-groomsv-sercahbox">
 			    <div class="pet-groomsv-criteria">
-				
+
 			 <span><span class="pet_g_crt"><?php echo $serviceCategory;?></span><span><i class="fa fa-angle-down" aria-hidden="true"></i></span></span>
-				   
-				   
+
+
 				   <ul id="categories" class="form-control">
-				  
+
 				   <?php foreach($results as $val) { ?>
-                       <li class="selected_category" value="<?php echo $val->id;?>"><span class="dogIcon"><img src="<?php echo get_template_directory_uri();?>/images/icons_pets.png"/></span><span class="opt"><?php echo $val->title;?></span></li>           
+                       <li class="selected_category" value="<?php echo $val->id;?>"><span class="dogIcon"><img src="<?php echo get_template_directory_uri();?>/images/icons_pets.png"/></span><span class="opt"><?php echo $val->title;?></span></li>
                    <?php } ?>
 				   </ul>
 				</div>
-				
-				
+
+
 				<div class="input-group">
-				
+
 				  <?php if($_REQUEST['destName']!=''){ ?>
 				  <span class="input-group-addon" id="magnifying"><i class="fa fa-search"></i></span>
 				  <input type="text" name="searchName" id="searchName" class="form-control" value="<?php echo $_REQUEST['destName'] ;?>" placeholder="Discover and Unleash Happiness you cherish">
@@ -294,47 +294,47 @@ $results =$wpdb->get_results("select * from twc_service_category where published
 				  <span class="input-group-addon" id="magnifying"><i class="fa fa-search"></i></span>
 				  <input type="text" name="searchName" id="searchName" class="form-control" value="" placeholder="Discover and Unleash Happiness you cherish">
 				  <?php } ?>
-				  
+
 				  <span class="input-group-addon city_search" id="basic-addon2" style="cursor: pointer;">Sniff</span>
-				   				   
+
 				</div>
 				<span class="err_searchName"></span>
-			
+
 			</div>-->
-			
+
       </div>
-      
+
        <div class="col-md-3 col-sm-6 col-xs-12 pull-right new-user-container">
-	   
-	   
-	   
+
+
+
 	   <ul class="navbar-right pet_right " id="riteSidedata">
 	   <?php if($userID==''){ ?>
                <li><button class="sign-up-button"><a href="<?php echo $siteUrl; ?>/register/"><span class="profileText"><?php echo $mk_options['sign_up'];?></span></a></button></li>
                <li><button class="login-button"><a href="<?php echo $siteUrl; ?>/login/"><span class="signoutText"><?php echo $mk_options['log_in'];?></span></a></button></li>
               <?php } else{ ?>
-			  
+
 			  <?php if($user_roles=='Vendor'){ ?>
                 <li><a href="<?php echo $siteUrl; ?>/booking/?type=services" title="Profile"> <i class="fa fa-user" aria-hidden="true"></i><span class="profileText"><?php echo $mk_options['profile'];?></span></a></li>
 				<?php } else{ ?>
 				<li><a href="<?php echo $siteUrl; ?>/member-profile/?type=profile" title="Profile"> <i class="fa fa-user" aria-hidden="true"></i><span class="profileText"><?php echo $mk_options['profile'];?></span></a></li>
 				<?php }?>
-				
+
                 <li><a href="<?php echo wp_logout_url(home_url() ); ?>" title="Sign Out"> <i class="fa fa-sign-out" aria-hidden="true"></i><span class="signoutText"><?php echo $mk_options['sign_out'];?></span></a></li>
-				
+
 		<?php }?>
-        </ul> 
+        </ul>
 
       </div>
     </div>
   </div>
 </div>
-  
-  
+
+
   <ul class="nav  navbar-right" ng-controller="currencies">
                 <input name="currency" id="currency" type="hidden" value="{{currency}}" />
                 <input name="currency_symbol" id="currency_symbol" type="hidden" value="{{symbol}}" />
-               
+
               </ul>
 
   </header>
@@ -357,21 +357,38 @@ $results =$wpdb->get_results("select * from twc_service_category where published
                                        <a class="opt" data-toggle="tab" href="#searchbox">
                                            <?php echo $val->title;?>
                                        </a>
-                                   </li>           
+                                   </li>
                                    <?php } ?>
                                    <li><a id="dig-more">DIG MORE <i class="fa fa-sort-asc" aria-hidden="true"></i></a></li>
                                 </ul>
+                                <div style="
+                                        width: 100%;
+                                        display: flex;
+                                        justify-content: center;
+                                        align-items: center;
+                                        background: #663366;">
+                                    <select id="remaining-list" class="hidden" style="width: 40%;">
+                                    <?php foreach ($results as $key=>$val) { ?>
+
+                                        <option class="selected_category opt" id="<?php echo $val->id;?>" value="<?php echo $val->id;?>">
+                                            <?php echo $val->title;?>
+                                        </option>
+
+                                       <?php } ?>
+                                    </select>
+                                </div>
+
                                 <div class="tab-content menu-bar">
                                     <div id="searchbox" class="tab-pane hidden menu-bar">
                                         <?php if($_REQUEST['destName']!=''){ ?>
-                                        <input type="text" 
-                                             name="searchName" 
-                                             id="searchName" 
+                                        <input type="text"
+                                             name="searchName"
+                                             id="searchName"
                                              class="form-control menu-bar-textbox" value="<?php echo $_REQUEST['destName'] ;?>" placeholder="Discover and Unleash Happiness you cherish">
                                         <?php }  else {?>
                                         <input type="text" name="searchName" id="searchName" class="form-control menu-bar-textbox" value="" placeholder="Discover and Unleash Happiness you cherish">
                                         <?php } ?>
-                                        <span class="input-group-addon city_search" 
+                                        <span class="input-group-addon city_search"
                                             id="basic-addon2" style="cursor: pointer;">
                                           SNIFF
                                         </span>
@@ -406,40 +423,40 @@ $results =$wpdb->get_results("select * from twc_service_category where published
                               </div>-->
 <!--			<div class="input-group">
 			  <?php if($_REQUEST['destName']!=''){ ?>
-                            <input type="text" 
-                                   name="searchName" 
-                                   id="searchName" 
+                            <input type="text"
+                                   name="searchName"
+                                   id="searchName"
                                    class="form-control" value="<?php echo $_REQUEST['destName'] ;?>" placeholder="Discover and Unleash Happiness you cherish">
                             <?php }  else {?>
                             <input type="text" name="searchName" id="searchName" class="form-control" value="" placeholder="Discover and Unleash Happiness you cherish">
                             <?php } ?>
-                            <span class="input-group-addon city_search" 
+                            <span class="input-group-addon city_search"
                                   id="basic-addon2" style="cursor: pointer;">
                                 Search
                             </span>
 			</div>
 			<span class="err_searchName"></span>-->
                     </div>
-                    
-            
+
+
 		<!-- <div class="facebookBack">
 			<a href="javascript:void(0);" alt="fblogin" class="fblogin">
 			<i class="fa fa-facebook"></i>  &nbsp;&nbsp;<?php echo $mk_options['log_in_with_facebook'];?></a>
 		</div>
-	
+
 		<div class="New_contactFrom">
-		
+
 		    <?php
 			if (is_page( 'login' ) ):
 			?>
 			<p class="logWith"><?php echo $mk_options['log_in'];?></p>
-				
+
 			<p class="CeratOr">  <small><?php echo $mk_options['or'];?></small> <a href="<?php echo site_url();?>/register/"><?php echo $mk_options['create_an_account'];?></a></p>
 			<?php
 			endif;
 			?>
-			
-			
+
+
 			<?php
 			if (is_page( 'register' ) ):
 			?>
@@ -447,12 +464,12 @@ $results =$wpdb->get_results("select * from twc_service_category where published
 			<?php
 			endif;
 			?>
-			
-			
-			
-			
-				
-		
+
+
+
+
+
+
 
 		  <?php
 			while ( have_posts() ) : the_post();
@@ -463,7 +480,7 @@ $results =$wpdb->get_results("select * from twc_service_category where published
 		  <?php
 			// End the loop.
 			endwhile;
-			
+
 			?>
 	<p style="clear: both;"></p>
 	  </div> -->
@@ -481,7 +498,7 @@ $results =$wpdb->get_results("select * from twc_service_category where published
             }
         });
     }
-    
+
     hideVendorList();
     var digMoreButton = document.querySelector('#dig-more');
     var listCounter = 0;
@@ -497,9 +514,9 @@ $results =$wpdb->get_results("select * from twc_service_category where published
             digMoreButton.innerHTML = 'DIG MORE <i class="fa fa-sort-asc" aria-hidden="true"></i>';
             listCounter = 0;
         }
-        
+
     }
-    
+
 </script>
 <!--<script
   src="https://code.jquery.com/jquery-2.0.3.min.js"
@@ -522,10 +539,10 @@ $('.city_search').click(function(){
                 var store = window.localStorage;
                 store.setItem('idOfSelected', sid);
 		window.location.href="<?php echo site_url();?>/search-vendor/?sid="+sid+"&destName="+city;
-		}	
+		}
 	});
 //document.DOMContentLoaded = function() {
-    
+
 //}
 </script>-->
 
@@ -533,8 +550,8 @@ $('.city_search').click(function(){
 <script>
  jQuery('.pet-groomsv-criteria').click(function(){
 	  jQuery(this).toggleClass('pet-groomsv-criteria-open');
-	 })	
-	 
+	 })
+
 jQuery('.pet-groomsv-criteria-open #categories li').click(function(){
 	 var catLi = (jQuery(this).find('.opt').text());
 	  var id = jQuery(this).attr('id');
@@ -569,7 +586,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
 <?php endif; ?>
 <!--<nav class="navbar navbar-default" role="navigation">
     <div class="navbar-header">
-        <button type="button" class="navbar-toggle" 
+        <button type="button" class="navbar-toggle"
            data-toggle="collapse" data-target="#navbar-to-collapse">
            <span class="sr-only">Toggle navigation</span>
            <span class="icon-bar"></span>
@@ -631,7 +648,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
               </a>
           </li>
 
-          <?php if($userID==''){ ?>  
+          <?php if($userID==''){ ?>
               <li>
                   <a href="<?php echo site_url();?>/login/" title="Offers and Discounts">
                       <span>Offers and Discouts</span>
@@ -669,8 +686,8 @@ $('.city_pop_search').click(function(){
 	}
 	else{
 		var sid=$('#hiddenSID').val();
-		window.location.href="<?php echo site_url();?>/search-vendor/?sid="+sid+"&destName="+$("#destName").val();		
-		}	
+		window.location.href="<?php echo site_url();?>/search-vendor/?sid="+sid+"&destName="+$("#destName").val();
+		}
 	});
 
 </script>
@@ -693,7 +710,7 @@ $('.city_search').click(function(){
 		var sid = $('#sel_category').val();
 		//alert(sid);
 		window.location.href="<?php echo site_url();?>/search-vendor/?sid="+sid+"&destName="+city;
-		}	
+		}
 	});
 
 </script>
@@ -702,8 +719,8 @@ $('.city_search').click(function(){
 <script>
  $('.pet-groomsv-criteria').click(function(){
 	  $(this).toggleClass('pet-groomsv-criteria-open');
-	 })	
-	 
+	 })
+
 $('.pet-groomsv-criteria #categories li').click(function(){
 	 var catLi = ($(this).find('.opt').text());
 	  var id = $(this).attr('id');
@@ -716,16 +733,16 @@ $('.pet-groomsv-criteria #categories li').click(function(){
 
 <style>
 
-	
+
 	.sidenav .pet-friend-subm{
 	transition: 0.8s ease-in-out;
     padding-left: 0px;
 	}
-	
+
 	.sidenav.mySidenav_collapsed_out .pet-friend-subm{
 	transition: 0.8s ease-in-out;
     padding-left: 28px
 	}
-	
-	
+
+
 </style>
