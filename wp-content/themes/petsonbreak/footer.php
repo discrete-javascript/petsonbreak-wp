@@ -97,7 +97,7 @@ $vendor_id =$result->vendor_id;
                 </ul>
             </div>
             <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
-                <div class="visa-sign-cards">
+                <!-- <div class="visa-sign-cards">
                         <p class="veri"><img src="<?php echo get_template_directory_uri();?>/images/veri-sign.png"/></p>
                         <ul>
                           <li><img src="<?php echo get_template_directory_uri();?>/images/visaCard.png"/></li>
@@ -105,7 +105,7 @@ $vendor_id =$result->vendor_id;
                           <li><img src="<?php echo get_template_directory_uri();?>/images/americanEx.png"/></li>
                           <li><img src="<?php echo get_template_directory_uri();?>/images/discover.png"/></li>
                         </ul>
-                </div>
+                </div> -->
                 <div class="social-links-container">
                     <p>FOLLOW US ON</p>
                     <ul class="footer_links social_links">
