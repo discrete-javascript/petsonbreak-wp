@@ -492,7 +492,7 @@ if($_REQUEST['action']=='MemberRegistration'){
 			<tr><td>Thanks,</td></tr>
 			<tr><td>Team PetsonBreak</td></tr>
 			</table>';
-			//@mail($to,$pmail_subject,$pmailBody,$headers);
+			@mail($to,$pmail_subject,$pmailBody,$headers);
 
 	 } 
 	$flag=1;
@@ -523,20 +523,20 @@ if($_REQUEST['action']=='AddReview'){
 if($_REQUEST['action']=='searchVendorServices'){
 	$extQuery ='';
 	if($_REQUEST['sid']!=''){
-	 $extQuery.=" and service_category='".$_REQUEST['sid']."'";	
+		$extQuery.=" and service_category='".$_REQUEST['sid']."'";
 	}
 	if($_REQUEST['destName']!=''){
-	 //$extQuery.=" and city='".$_REQUEST['destName']."'";	
-       $extQuery.=" and LCASE(city)LIKE '%".strtolower($_REQUEST['destName'])."'";		 
+		//$extQuery.=" and city='".$_REQUEST['destName']."'";
+		$extQuery.=" and LCASE(city)LIKE '%".strtolower($_REQUEST['destName'])."'";
 	}
-	
-   $limit=4;	
-   if(@$_REQUEST['p']<=1){
-	$start=0;
-	}else{
-	  $start=($_REQUEST['p']-1)*$limit;
+
+	$limit=4;
+	if(@$_REQUEST['p']<=1){
+		$start=0;
+	} else {
+		$start=($_REQUEST['p']-1)*$limit;
 	}
-	
+
 	$extrCond ='';
 	if($_REQUEST['rating']!=''){
 		$extrCond.=" and avg_rating='".$_REQUEST['rating']."'";
@@ -545,51 +545,52 @@ if($_REQUEST['action']=='searchVendorServices'){
 		$Cri_Price =explode("-",$_REQUEST['Cri_Price']);
 		$extrCond.=" and price BETWEEN ".$Cri_Price[0]." AND ".$Cri_Price[1];
 	}
-	
+	$rowcount = $wpdb->get_var("select count(*) from twc_vendor_services where 1 ".$extQuery." ".$extrCond);
 	$sql ="select * from twc_vendor_services where 1 ".$extQuery." ".$extrCond." LIMIT $start,$limit";
 	$resuts = $wpdb->get_results($sql);
- 	 
+
 	$data =array();
-	foreach($resuts  as $obj){
+	foreach($resuts as $obj){
 
 		$userData =get_userdata($obj->vendor_id);
 		$userMetaData =get_user_meta($obj->vendor_id);
 		$establishment_since =$userMetaData['establishment_since'][0];
 		$owner_name =$userMetaData['nickname'][0];
 		$establishment =$userMetaData['establishment'][0];
-		
+
 		$offerd='';
 		$service_offered =explode(",",$obj->service_offered);
 		$service_offered_count=count($service_offered);
 		for($i=0; $i < $service_offered_count; $i++){
-		  $offerdName = getFieldByID('title','twc_manage_offered',$service_offered[$i]);
-		  $offerd.=$offerdName.',';
+			$offerdName = getFieldByID('title','twc_manage_offered',$service_offered[$i]);
+			$offerd.=$offerdName.',';
 		}
 		$offerd =substr($offerd,0,-1);
-		
-		$data[] =array('id'=>$obj->id,'vendor_id'=>$obj->vendor_id,'title'=>$establishment,'description'=>$obj->description,'contact'=>$obj->contact,'address'=>$obj->address,'zipcode'=>$obj->zipcode,'city'=>$obj->city,'country'=>$obj->country,'time_from'=>$obj->time_from,'time_to'=>$obj->time_to,'card_accepted'=>$obj->card_accepted,'on_call'=>$obj->on_call,'service_category'=>$obj->service_category,'service_offered'=>$offerd,'price'=>$obj->price,'image_path'=>$obj->image_path,'latitude'=>$obj->latitude,'longitude'=>$obj->longitude,'establishment_since'=>$establishment_since,'event_name'=>$obj->event_name,'avg_rating'=>round($obj->avg_rating));
+
+		$data[] =array('total_records' => $rowcount,'id'=>$obj->id,'vendor_id'=>$obj->vendor_id,'title'=>$establishment,'description'=>$obj->description,'contact'=>$obj->contact,'address'=>$obj->address,'zipcode'=>$obj->zipcode,'city'=>$obj->city,'country'=>$obj->country,'time_from'=>$obj->time_from,'time_to'=>$obj->time_to,'card_accepted'=>$obj->card_accepted,'on_call'=>$obj->on_call,'service_category'=>$obj->service_category,'service_offered'=>$offerd,'price'=>$obj->price,'image_path'=>$obj->image_path,'latitude'=>$obj->latitude,'longitude'=>$obj->longitude,'establishment_since'=>$establishment_since,'event_name'=>$obj->event_name,'avg_rating'=>round($obj->avg_rating));
 	}
 	/* echo"<pre>";
 	print_r($resuts);die; */
-	
+
 	echo json_encode($data);
-	
 }
 if($_REQUEST['action']=='pagingList'){
 	$extQuery ='';
 	if($_REQUEST['sid']!=''){
-	 $extQuery.=" and service_category='".$_REQUEST['sid']."'";	
+	 $extQuery.=" and service_category='".$_REQUEST['sid']."'";
 	}
 	if($_REQUEST['destName']!=''){
 	 //$extQuery.=" and city='".$_REQUEST['destName']."'";
-     //$extQuery.=" and LCASE(city)='".strtolower($_REQUEST['destName'])."'";	
-     $extQuery.=" and LCASE(city)LIKE '%".strtolower($_REQUEST['destName'])."'";	 
+     //$extQuery.=" and LCASE(city)='".strtolower($_REQUEST['destName'])."'";
+     $extQuery.=" and LCASE(city)LIKE '%".strtolower($_REQUEST['destName'])."'";
 	}
-	
+
 	if($_REQUEST['p']<=1){
 		$p=1;
+	} else {
+		$p = $_REQUEST['p'];
 	}
-	
+
 	$extrCond ='';
 	if($_REQUEST['rating']!=''){
 		$extrCond.=" and avg_rating='".$_REQUEST['rating']."'";
@@ -602,17 +603,20 @@ if($_REQUEST['action']=='pagingList'){
 	$resuts = $wpdb->get_results($sql);
 	/* echo"<pre>";
 	print_r($resuts); */
-	
+
 	$limit=4;
 	$num_of_products =count($resuts);
     $num_of_pages=ceil($num_of_products/$limit);
 	$html='';
-	if($num_of_pages>1){
+	if($num_of_pages > 1){
 		$html='<ul class="pagination">
 			   <li><a href="#">&laquo;</a></li>';
 		     for($i=1;$i<=$num_of_pages;$i++){
-                 if($i==$p){$active ='active';}	
-                 else{$active='';}				 
+				if($i==$p){
+					$active ='active';
+				} else{
+					$active='';
+				}
 		        $html.='<li class="nextPage '.$active.'" id="nextPage_'.$i.'" rel="'.$i.'"><a href="javascript:void(0);">'.$i.'</a></li>';
 			  }
 	   $html.='<li><a href="#">&raquo;</a></li>
