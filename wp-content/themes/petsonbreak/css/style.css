@@ -7898,3 +7898,55 @@ div.upcoming-event-rows {
     font-weight: bold;
     cursor: pointer;
 }
+/* Home Slider */
+.background-slider {
+    position: relative;
+    top: 60px;
+    width: 100%;
+    display: inline-block;
+}
+.background-slider h2 {
+	color: #ffffff;
+    font-size: 3vw;
+    line-height: 3.5vw;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+.background-slider h2 span {
+	color: #ffff00;
+    font-size: 3vw;
+    line-height: 3.5vw;
+    font-weight: 700;
+}
+.slider-search {
+    position: absolute;
+    top: 40%;
+}
+#testimonial-slider .carousel-inner {
+	max-width: 1200px;
+}
+.testimonial-buttons {
+    display: inline-block;
+    width: 100%;
+    text-align: right;
+    position: relative;
+    padding: 10px 20px;
+    z-index: 1;
+}
+a.testi-btn {
+    position: relative;
+    padding: 10px 20px;
+    color: #fff;
+    font-size: 15px;
+    border: 1px solid #fff;
+    border-radius: 25px;
+}
+a.testi-btn:hover {
+	background: #ffff00;
+	color: #000;
+	border: 1px solid #ffff00;
+}
+a.testi-btn + a.testi-btn {
+    margin-left: 10px;
+}

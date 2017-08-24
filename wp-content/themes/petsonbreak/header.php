@@ -150,6 +150,8 @@ $results =$wpdb->get_results("select * from twc_service_category where published
 	wp_enqueue_style( 'petsonbreak-mainstyle', get_theme_file_uri( '/css/style.css' ), array(), time() );
 	wp_enqueue_style( 'petsonbreak-mainstyle', get_theme_file_uri( '/css/search-results-responsive.css' ), array(), null );
 	wp_enqueue_style( 'petsonbreak-responsive', get_theme_file_uri( '/css/responsive.css' ), array(), null );
+
+	wp_enqueue_script( 'petsonbreak-jquery', '//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js', array(), null );
 ?>
 
 <?php wp_head(); ?>
@@ -664,7 +666,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
       </ul>
     </div>
 </nav>-->
-<script type="text/javascript" src="//code.jquery.com/jquery-2.0.3.min.js"></script>
+<!-- <script type="text/javascript" src="//code.jquery.com/jquery-2.0.3.min.js"></script> -->
 <!-- <script type="text/javascript" src="//maps.googleapis.com/maps/api/js?libraries=places&key=AIzaSyBwzkKvM75QzamE7BzVZTfEBwRO6FHEz4U"></script> -->
 
 <script type="text/javascript">
