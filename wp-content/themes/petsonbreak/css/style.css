@@ -7202,7 +7202,7 @@ div.footer-top {
 }
 .social-links-container {
     width: 25rem;
-    margin-top: 10rem;
+    /*margin-top: 10rem;*/
 }
 .social_links .fa.fa-facebook {
     background: #3b5998;
