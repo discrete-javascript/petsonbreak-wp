@@ -7180,6 +7180,36 @@ a.carousel-control[href="#servicesCarousel"] span.glyphicon.glyphicon-chevron-le
 
 
 /*Footer Styles*/
+.offers-footer-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: #636;
+    height: 12em;
+    color: white;
+    font-size: 2rem;
+    padding: 7em;
+}
+.offers-footer-container div {
+    margin-bottom: 2em;
+}
+.offers-footer-heading span {
+    font-weight: bold;
+    font-size: 2vw;
+    font-style: italic;
+}
+.offers-footer-details {
+    
+}
+.offers-footer-button button {
+    border: 1px solid white;
+    background: #636;
+    color: white;
+    width: 7em;
+    height: 2em;
+    border-radius: 20px;
+}
 .footer-quick-links, .footer-locations,
 .footer-india-office, .footer-india-phone,
 .footer-aus-office, .footer-aus-phone,
@@ -7266,8 +7296,23 @@ p.copyright1 {
      align-items: center;
      color: white;
  }
-
-
+ .subscription-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 3em;
+ }
+ .subscribe-now-textbox {
+    width: 30%;
+    height: 2em;
+ }
+ .subscribe-now-button {
+    background: red;
+    border: none;
+    height: 2em;
+    width: 10%;
+    color: white;
+ }
 /** Footer Styles End **/
 
 /*Search Vendor Styles*/
@@ -7576,8 +7621,48 @@ div.register-page-checkbox-container  input[type="checkbox"] + label::before {
     font-weight: bold;
     text-transform: none;
 }
+.explore-more-container {
+    height: 25em;
+    background: #663366;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.newly-opened-restaurants,
+.top-trending-restaurants {
+    width: 35%;
+    height: 10em;
+    background: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-right: 1em;
+}
+.newly-opened-restaurants span,
+.top-trending-restaurants span {
+    font-size: 2rem;
+    font-weight: bold;
+}
+.newly-opened-restaurants > div,
+.top-trending-restaurants > div {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-top: 10px;
+}
+.newly-opened-restaurants button,
+.top-trending-restaurants button { 
+    background-color: yellow;
+    border: none;
+    border-radius: 17px;
+    width: 7em;
+    height: 3em;
+    margin-top: 1em;
+    font-weight: bold;
+}
 
-/*Registration Page Styles End*/
+
+/*Registration Page Styles End */
 
 /*All Categories Styles*/
 

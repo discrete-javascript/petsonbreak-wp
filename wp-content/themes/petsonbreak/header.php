@@ -354,6 +354,17 @@ $results =$wpdb->get_results("select * from twc_service_category where published
                                     <span><i class="fa fa-angle-down" aria-hidden="true"></i></span>
                                 </span>-->
                                 <ul id="categories" class="nav nav-tabs menu-bar" style="justify-content: center;">
+                                    
+			<li>
+			<a href="<?php echo site_url();?>/all-categories/?sid=N148948330558c7b6295b388" title="Weekend Destinations"><span>Weekend Destinations</span></a>
+			</li>
+			<li>
+			<a href="<?php echo site_url();?>/all-categories/?sid=V148948235058c7b26e54885" title="Pet Friendly Restaurants"><span>Restaurants</span></a>
+			</li>
+			<li>
+			<a href="<?php echo site_url();?>/all-categories/?sid=G148948225958c7b21322ce8" title="Pet Friendly Cab Services"><span>Cab Services</span></a>
+			</li>
+			<li><a href="<?php echo site_url();?>/all-categories/" title="Pet Services"><span>Pet Services</span></a></li>
                                    <?php foreach ($results as $val) { ?>
                                    <li class="selected_category <?php if($_REQUEST['sid'] == $val->id) { echo 'active'; } ?>" id="<?php echo $val->id;?>" value="<?php echo $val->id;?>">
                                        <a class="opt" data-toggle="tab" href="#searchbox">
@@ -492,7 +503,7 @@ $results =$wpdb->get_results("select * from twc_service_category where published
         function hideVendorList() {
         var listCategories = document.querySelector('#categories');
         listCategories.childNodes.forEach(function(item, index) {
-            if (index > 10 && index %2) {
+            if (index > 8 && index %2) {
                 item.classList.add('hidden');
             }
             if (index === listCategories.childNodes.length - 2) {

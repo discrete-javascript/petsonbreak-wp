@@ -542,11 +542,19 @@
 	</div>
 	
 </div>
-
-<div class="height_class1457" style="">
-	
-	
+<div class="explore-more-container">
+    <div class="newly-opened-restaurants">
+        <span>NEWLY OPENED PETS FRIENDLY</span>
+        <div>RESTAURANTS</div>
+        <button>EXPLORE</button>
+    </div>
+    <div class="top-trending-restaurants">
+        <span>TOP TRENDING PETS FRIENDLY</span>
+        <div>DESTINATIONS</div>
+        <button>EXPLORE</button>
+    </div>
 </div>
+
 
 <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
 <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>

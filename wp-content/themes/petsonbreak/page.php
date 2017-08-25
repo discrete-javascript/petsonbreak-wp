@@ -409,33 +409,7 @@ else{
     </a>
   </div>
 </div>
-<div class="container events-news-container">
-    <div class="row">
-        <div class="event-column col-lg-6 col-md-6 col-sm-6 col-xs-12">
-            <div class="events-container">
-                <p class="events-section-heading">Events</p>
-            </div>
-            <div style="display: flex;justify-content: center;align-items: center;margin-top: 2rem;">
-                <h4>No Events</h4>
-            </div>
-        </div>
-        <div class="news-column col-lg-6 col-md-6 col-sm-6 col-xs-12">
-            <div class="news-container">
-                <p class="news-section-heading">News & Updates</p>
-                
-                <div class="whole-news">
-                    <?php $newsResults =$wpdb->get_results("select * from twc_news where published='Yes' and status_deleted=0");
-                    foreach($newsResults as $obj){?>
-                    <div class="each-news" id="hash_<?php echo $obj->id;?>">
-                        <span class="glyphicon glyphicon-play"></span>
-                        <span><i><?php echo stripcslashes($obj->title);?></i></span>
-                    </div>    
-                    <?php } ?>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
+
 <!-- <div>
     <img style="width: 100%" src="http://dev.petsonbreak.com/wp-content/uploads/2017/08/Index-Banner-Partners.png" />
 </div> -->

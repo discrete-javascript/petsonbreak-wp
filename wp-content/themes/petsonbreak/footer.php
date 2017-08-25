@@ -8,10 +8,57 @@ $results =$wpdb->get_results("select vendor_id from twc_vendor_services where id
 $result =$results[0];
 $vendor_id =$result->vendor_id;
 ?>
+
 <div class="main-overlay"></div>
 <footer id="footer">
+    <div class="container">
+        
+        
+    </div>
+    <div class="container events-news-container">
+    <div class="row">
+        <div class="event-column col-lg-6 col-md-6 col-sm-6 col-xs-12">
+            <div class="events-container">
+                <p class="events-section-heading">Events</p>
+            </div>
+            <div style="display: flex;justify-content: center;align-items: center;margin-top: 2rem;">
+                <h4>No Events</h4>
+            </div>
+        </div>
+        <div class="news-column col-lg-6 col-md-6 col-sm-6 col-xs-12">
+            <div class="news-container">
+                <p class="news-section-heading">News & Updates</p>
+                
+                <div class="whole-news">
+                    <?php $newsResults =$wpdb->get_results("select * from twc_news where published='Yes' and status_deleted=0");
+                    foreach($newsResults as $obj){?>
+                    <div class="each-news" id="hash_<?php echo $obj->id;?>">
+                        <span class="glyphicon glyphicon-play"></span>
+                        <span><i><?php echo stripcslashes($obj->title);?></i></span>
+                    </div>    
+                    <?php } ?>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+    <div class="container-fluid offers-footer-container">
+        <div class="offers-footer-heading">
+            <span>SPECIAL OFFERS</span>
+        </div>
+        <div class="offers-footer-details">
+            <span style="font-size: 16px;">ON PETS CLINIC <span style="color: yellow;">15TH SEPTEMBER 17</span>USE CODE <span style="color: red; font-style: italic;">"INDIA"</span>WHILE BOOKING</span>
+        </div>
+        <div class="offers-footer-button">
+            <button>SEE DETAILS</button>
+        </div>
+    </div>
   <div class="footer-top">
       <div class="container">
+          <div class="row subscription-container">
+              <input type="text" name="subscribe-now" class="subscribe-now-textbox"/>
+              <button class="subscribe-now-button">SUBSCRIBE NOW</button>
+          </div>
           <div class="row">
             <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
                 <p class="footer-quick-links">QUICK LINKS</p>
