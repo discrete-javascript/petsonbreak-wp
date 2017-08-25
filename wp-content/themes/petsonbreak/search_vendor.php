@@ -155,7 +155,7 @@ function changePage() {
         var p = $(this).attr('rel');
         $('#page').val(p);
         searchVendorServices();
-        //pagingList();
+        pagingList();
     });
 }
 
@@ -169,7 +169,6 @@ function searchVendorServices() {
         success: function(Data) {
             var myData = "";
             myData = JSON.parse(Data);
-            console.log(myData.length)
             var str = '';
             if (myData.length > 0) {
 	            for (a = 0; a < myData.length; a++) {

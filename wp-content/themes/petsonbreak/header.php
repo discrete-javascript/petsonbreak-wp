@@ -561,6 +561,13 @@ jQuery('.pet-groomsv-criteria-open #categories li').click(function(){
 //	  alert(id);
 	 jQuery('.pet_g_crt').text(catLi);
 })
+
+document.addEventListener("DOMContentLoaded", function(event) {
+	var preSelectdCategory = document.querySelector('li.selected_category.active');
+    if (preSelectdCategory) {
+        preSelectdCategory.querySelector('.opt').click();
+    }
+});
 </script>
 <script>
     var optionsForSearch = document.querySelectorAll('a.opt');
