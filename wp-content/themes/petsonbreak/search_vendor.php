@@ -171,44 +171,50 @@ function searchVendorServices() {
             myData = JSON.parse(Data);
             console.log(myData.length)
             var str = '';
-            for (a = 0; a < myData.length; a++) {
-                str += '<li>';
-                if (!!(myData[a].image_path)) {
-                    str += '<div class="search-items float_left14" style="background-image:url(<?php echo get_template_directory_uri(); ?>/uploads/vendor_thumbs/' + myData[a].image_path + ');">';
-                } else {
-                    str += '<div class="search-items float_left14" style="background-image:url(<?php echo get_template_directory_uri(); ?>/uploads/vendor_thumbs/no-image.png">';
-                }
-                str += '</div>';
-                str += '<div class="search-items float_right14">';
-                str += '<div class="search-items text-pack17">';
-                str += '<div class="search-items top-panel">';
-                str += '<h2>' + myData[a].title + '</h2>';
-                str += '<div class="search-item-address add_Srvc">' + myData[a].address + ',' + myData[a].city + '</div>';
-                if (!!(myData[a].time_from) && !!(myData[a].time_to)) {
-                    str += '<div class="add_Srvc">' + myData[a].time_from + ' to ' + myData[a].time_to + '</div>';
-                } else {
-                    str += 'TIME: U/A'
-                }
-                str += '<div class="search-item-desc off_Srvc">' + myData[a].description + '</div>';
-                str += '</div>';
-                str += '<div class="search-items bottom-panel">';
-                str += '<div class="search-items rating-container">';
-                str += '<span>RATINGS & REVIEW</span><span class="item-rating">' + myData[a].avg_rating + '</span>';
-                str += '</div>'
-                <?php if($userID!==''){?>
-                str += '<div class="search-items book-now-button"><a href="<?php echo site_url();?>/login/?redirectPage=details-page&id=' + myData[a].id + '&destName=<?php echo $_REQUEST['
-                destName '];?>">MORE INFO</a></div>';
-                <?php }else{?>
-                str += '<div class="search-items book-now-button"><a href="<?php echo site_url();?>/details-page/?id=' + myData[a].id + '&destName=<?php echo $_REQUEST['
-                destName '];?>">MORE INFO</a></div>';
-                <?php } ?>
-                str += '</div>';
-                str += '</div>';
-                str += '</div>';
-                str += '</li>';
-            }
+            if (myData.length > 0) {
+	            for (a = 0; a < myData.length; a++) {
+	                str += '<li>';
+	                if (!!(myData[a].image_path)) {
+	                    str += '<div class="search-items float_left14" style="background-image:url(<?php echo get_template_directory_uri(); ?>/uploads/vendor_thumbs/' + myData[a].image_path + ');">';
+	                } else {
+	                    str += '<div class="search-items float_left14" style="background-image:url(<?php echo get_template_directory_uri(); ?>/uploads/vendor_thumbs/no-image.png">';
+	                }
+	                str += '</div>';
+	                str += '<div class="search-items float_right14">';
+	                str += '<div class="search-items text-pack17">';
+	                str += '<div class="search-items top-panel">';
+	                str += '<h2>' + myData[a].title + '</h2>';
+	                str += '<div class="search-item-address add_Srvc">' + myData[a].address + ',' + myData[a].city + '</div>';
+	                if (!!(myData[a].time_from) && !!(myData[a].time_to)) {
+	                    str += '<div class="add_Srvc">' + myData[a].time_from + ' to ' + myData[a].time_to + '</div>';
+	                } else {
+	                    str += 'TIME: U/A'
+	                }
+	                str += '<div class="search-item-desc off_Srvc">' + myData[a].description + '</div>';
+	                str += '</div>';
+	                str += '<div class="search-items bottom-panel">';
+	                str += '<div class="search-items rating-container">';
+	                str += '<span>RATINGS & REVIEW</span><span class="item-rating">' + myData[a].avg_rating + '</span>';
+	                str += '</div>'
+	                <?php if($userID!==''){?>
+	                str += '<div class="search-items book-now-button"><a href="<?php echo site_url();?>/login/?redirectPage=details-page&id=' + myData[a].id + '&destName=<?php echo $_REQUEST['
+	                destName '];?>">MORE INFO</a></div>';
+	                <?php }else{?>
+	                str += '<div class="search-items book-now-button"><a href="<?php echo site_url();?>/details-page/?id=' + myData[a].id + '&destName=<?php echo $_REQUEST['
+	                destName '];?>">MORE INFO</a></div>';
+	                <?php } ?>
+	                str += '</div>';
+	                str += '</div>';
+	                str += '</div>';
+	                str += '</li>';
+	            }
+	        }
             $('#serviceList').html(str);
-            $('.no-of-results').html('' + myData.length + ' OF '+ myData[0]['total_records'] +' RESULTS AVAILABLE')
+            if (myData.length > 0) {
+            	$('.no-of-results').html('' + myData.length + ' OF '+ myData[0]['total_records'] +' RESULTS AVAILABLE')
+        	} else {
+        		$('.no-of-results').html('No Result Found');
+        	}
         }
     })
 }

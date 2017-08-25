@@ -76,7 +76,7 @@ $vendor_id =$result->vendor_id;
                 <p class="footer-india-email">EMAIL</p>
                 <ul>
                     <li>
-                      <a href="mailto:">woof@petsonbreak.com</a>
+                      <a href="mailto:woof@petsonbreak.com">woof@petsonbreak.com</a>
                     </li>
                 </ul>
             </div>
@@ -96,7 +96,7 @@ $vendor_id =$result->vendor_id;
                 <p class="footer-aus-email">EMAIL</p>
                 <ul>
                     <li>
-                        <a href="mailto:">woof@petsonbreak.com</a>
+                        <a href="mailto:australiaincoming@petsonbreak.com">australiaincoming@petsonbreak.com</a>
                     </li>
                 </ul>
             </div>

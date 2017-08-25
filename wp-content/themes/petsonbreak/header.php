@@ -571,13 +571,13 @@ jQuery('.pet-groomsv-criteria-open #categories li').click(function(){
 })
 </script>
 <script>
-document.addEventListener("DOMContentLoaded", function(event) {
-    var preSelectdCategory = window.localStorage.idOfSelected;
-    if (preSelectdCategory) {
-        var toSelect = document.getElementById(preSelectdCategory);
-        toSelect.querySelector('.opt').click();
-    }
-  });
+// document.addEventListener("DOMContentLoaded", function(event) {
+//     var preSelectdCategory = window.localStorage.idOfSelected;
+//     if (preSelectdCategory) {
+//         var toSelect = document.getElementById(preSelectdCategory);
+//         toSelect.querySelector('.opt').click();
+//     }
+//   });
 </script>
 
 <style>
