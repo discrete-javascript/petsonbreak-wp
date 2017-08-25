@@ -85,7 +85,18 @@ if($_REQUEST['sid']!='' && $_REQUEST['destName']!=''){
         </div>
     </div>
 </div>
-
+<div class="explore-more-container">
+    <div class="newly-opened-restaurants">
+        <span>NEWLY OPENED PETS FRIENDLY</span>
+        <div>RESTAURANTS</div>
+        <button>EXPLORE</button>
+    </div>
+    <div class="top-trending-restaurants">
+        <span>TOP TRENDING PETS FRIENDLY</span>
+        <div>DESTINATIONS</div>
+        <button>EXPLORE</button>
+    </div>
+</div>
 <style>
 	.pagination li a{background-color: #636;color: #fff;}
 </style>

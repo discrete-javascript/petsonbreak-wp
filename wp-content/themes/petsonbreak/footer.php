@@ -10,6 +10,20 @@ $vendor_id =$result->vendor_id;
 ?>
 
 <div class="main-overlay"></div>
+<?php if(!is_front_page()): ?>
+<div class="explore-more-container">
+    <div class="newly-opened-restaurants">
+        <span>NEWLY OPENED PETS FRIENDLY</span>
+        <div>RESTAURANTS</div>
+        <button>EXPLORE</button>
+    </div>
+    <div class="top-trending-restaurants">
+        <span>TOP TRENDING PETS FRIENDLY</span>
+        <div>DESTINATIONS</div>
+        <button>EXPLORE</button>
+    </div>
+</div>
+<?php endif; ?>
 <footer id="footer">
     <div class="container">
         

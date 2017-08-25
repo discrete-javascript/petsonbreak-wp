@@ -345,6 +345,10 @@ $results =$wpdb->get_results("select * from twc_service_category where published
 <div id="article-anchor"></div>
 <div ng-controller="bodyloader"></div>
 <?php if(!is_front_page()): ?>
+<?php
+	global $wp;
+	$current_url = add_query_arg( $_SERVER['QUERY_STRING'], '', home_url( $wp->request ) );
+?>
 <div class="">
             <input type="hidden" value="" id="sel_category">
 			<div class="pet-groomsv-sercahbox menu-bar">
@@ -355,16 +359,16 @@ $results =$wpdb->get_results("select * from twc_service_category where published
                                 </span>-->
                                 <ul id="categories" class="nav nav-tabs menu-bar" style="justify-content: center;">
                                     
-			<li>
+			<li class="<?php if($_REQUEST['sid'] == 'N148948330558c7b6295b388') { echo 'active'; } ?>">
 			<a href="<?php echo site_url();?>/all-categories/?sid=N148948330558c7b6295b388" title="Weekend Destinations"><span>Weekend Destinations</span></a>
 			</li>
-			<li>
+			<li class="<?php if($_REQUEST['sid'] == 'V148948235058c7b26e54885') { echo 'active'; } ?>">
 			<a href="<?php echo site_url();?>/all-categories/?sid=V148948235058c7b26e54885" title="Pet Friendly Restaurants"><span>Restaurants</span></a>
 			</li>
-			<li>
+			<li class="<?php if($_REQUEST['sid'] == 'G148948225958c7b21322ce8') { echo 'active'; } ?>">
 			<a href="<?php echo site_url();?>/all-categories/?sid=G148948225958c7b21322ce8" title="Pet Friendly Cab Services"><span>Cab Services</span></a>
 			</li>
-			<li><a href="<?php echo site_url();?>/all-categories/" title="Pet Services"><span>Pet Services</span></a></li>
+			<li class="<?php if($current_url == "http://".$_SERVER['HTTP_HOST']."/all-categories") { echo 'active'; } ?>"><a href="<?php echo site_url();?>/all-categories/" title="Pet Services"><span>Pet Services</span></a></li>
                                    <?php foreach ($results as $val) { ?>
                                    <li class="selected_category <?php if($_REQUEST['sid'] == $val->id) { echo 'active'; } ?>" id="<?php echo $val->id;?>" value="<?php echo $val->id;?>">
                                        <a class="opt" data-toggle="tab" href="#searchbox">
