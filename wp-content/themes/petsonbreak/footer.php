@@ -71,9 +71,14 @@ $vendor_id =$result->vendor_id;
                     <li>+91-8999 306 724 (Travel Related)</li>
                     <?php  if($mk_options['f_contact_number']!=''){ ?>
                     <li>+91-7566485676 (Pet Related)</li>
-                       <?php } ?>
+                    <?php } ?>
                 </ul>
                 <p class="footer-india-email">EMAIL</p>
+                <ul>
+                    <li>
+                      <a href="mailto:">woof@petsonbreak.com</a>
+                    </li>
+                </ul>
             </div>
             <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
                 <p class="footer-aus-office">AUSTRALIA OFFICE</p>
@@ -87,12 +92,11 @@ $vendor_id =$result->vendor_id;
                 <p class="footer-aus-phone">PHONE</p>
                 <ul>
                     <li>0421 3766 36 (Travel Related)</li>
-
                 </ul>
                 <p class="footer-aus-email">EMAIL</p>
                 <ul>
                     <li>
-
+                        <a href="mailto:">woof@petsonbreak.com</a>
                     </li>
                 </ul>
             </div>

@@ -117,7 +117,7 @@ $('.modify-btn').click(function() {
 </style>
 
 <script>
-$('.pagination li').click(function(){
+$('.pagination').on('click','li.nextPage',function(){
 	$(this).addClass('active').siblings().removeClass('active');
 })
 </script>
@@ -155,7 +155,7 @@ function changePage() {
         var p = $(this).attr('rel');
         $('#page').val(p);
         searchVendorServices();
-        pagingList();
+        //pagingList();
     });
 }
 

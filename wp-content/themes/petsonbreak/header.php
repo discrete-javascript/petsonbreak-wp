@@ -355,7 +355,7 @@ $results =$wpdb->get_results("select * from twc_service_category where published
                                 </span>-->
                                 <ul id="categories" class="nav nav-tabs menu-bar" style="justify-content: center;">
                                    <?php foreach ($results as $val) { ?>
-                                   <li class="selected_category" id="<?php echo $val->id;?>" value="<?php echo $val->id;?>">
+                                   <li class="selected_category <?php if($_REQUEST['sid'] == $val->id) { echo 'active'; } ?>" id="<?php echo $val->id;?>" value="<?php echo $val->id;?>">
                                        <a class="opt" data-toggle="tab" href="#searchbox">
                                            <?php echo $val->title;?>
                                        </a>
@@ -372,7 +372,7 @@ $results =$wpdb->get_results("select * from twc_service_category where published
                                     <select id="remaining-list" class="hidden" style="width: 40%;">
                                     <?php foreach ($results as $key=>$val) { ?>
 
-                                        <option class="selected_category opt" id="<?php echo $val->id;?>" value="<?php echo $val->id;?>">
+                                        <option <?php if($_REQUEST['sid'] == $val->id) { echo 'selected'; } ?> class="selected_category opt" id="<?php echo $val->id;?>" value="<?php echo $val->id;?>">
                                             <?php echo $val->title;?>
                                         </option>
 
