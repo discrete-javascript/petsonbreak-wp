@@ -358,7 +358,9 @@ $results =$wpdb->get_results("select * from twc_service_category where published
                                     <span><i class="fa fa-angle-down" aria-hidden="true"></i></span>
                                 </span>-->
                                 <ul id="categories" class="nav nav-tabs menu-bar" style="justify-content: center;">
-                                    
+                               <li>
+                                   <a href="<?php echo site_url();?>" title="HOME PAGE">HOME</a>
+                               </li>     
 			<li class="<?php if($_REQUEST['sid'] == 'N148948330558c7b6295b388') { echo 'active'; } ?>">
 			<a href="<?php echo site_url();?>/all-categories/?sid=N148948330558c7b6295b388" title="Weekend Destinations"><span>Weekend Destinations</span></a>
 			</li>
@@ -371,7 +373,7 @@ $results =$wpdb->get_results("select * from twc_service_category where published
 			<li class="<?php if($current_url == "http://".$_SERVER['HTTP_HOST']."/all-categories") { echo 'active'; } ?>"><a href="<?php echo site_url();?>/all-categories/" title="Pet Services"><span>Pet Services</span></a></li>
                                    <?php foreach ($results as $val) { ?>
                                    <li class="selected_category <?php if($_REQUEST['sid'] == $val->id) { echo 'active'; } ?>" id="<?php echo $val->id;?>" value="<?php echo $val->id;?>">
-                                       <a class="opt" data-toggle="tab" href="#searchbox">
+                                       <a class="opt" href="<?php echo site_url();?>/search-vendor/?sid=<?php echo $val->id;?>" >
                                            <?php echo $val->title;?>
                                        </a>
                                    </li>
@@ -395,7 +397,7 @@ $results =$wpdb->get_results("select * from twc_service_category where published
                                     </select>
                                 </div>
 
-                                <div class="tab-content menu-bar">
+<!--                                <div class="tab-content menu-bar">
                                     <div id="searchbox" class="tab-pane hidden menu-bar">
                                         <?php if($_REQUEST['destName']!=''){ ?>
                                         <input type="text"
@@ -410,8 +412,8 @@ $results =$wpdb->get_results("select * from twc_service_category where published
                                           SNIFF
                                         </span>
                                     </div>
-                              </div>
-                                  <span class="err_searchName"></span>
+                              </div>-->
+                                  <!--<span class="err_searchName"></span>-->
                             </div>
 <!--                             <ul class="nav nav-tabs">
                                 <li class="active"><a data-toggle="tab" href="#home">Home</a></li>
@@ -535,33 +537,33 @@ $results =$wpdb->get_results("select * from twc_service_category where published
     }
 
 </script>
-<!--<script
+<script
   src="https://code.jquery.com/jquery-2.0.3.min.js"
   integrity="sha256-sTy1mJ4I/LAjFCCdEB4RAvPSmRCb3CU7YqodohyeOLo="
   crossorigin="anonymous"></script>
 <script>
 
-$('.city_search').click(function(){
-	if($('#searchName').val()==''){
-		$('.err_searchName').html('<span class="error_search">Please select category and your city name.</span>');
-		//alert('Please enter city name for search');
-		$('.err_searchName').show(1).delay(2000).hide(1);
-		$('#searchName').focus();
-		return false;
-	}
-	else{
-		var city=$('#searchName').val();
-		var sid = $('#sel_category').val();
-		//alert(sid);
-                var store = window.localStorage;
-                store.setItem('idOfSelected', sid);
-		window.location.href="<?php echo site_url();?>/search-vendor/?sid="+sid+"&destName="+city;
-		}
-	});
+//$('.city_search').click(function(){
+//	if($('#searchName').val()==''){
+//		$('.err_searchName').html('<span class="error_search">Please select category and your city name.</span>');
+//		//alert('Please enter city name for search');
+//		$('.err_searchName').show(1).delay(2000).hide(1);
+//		$('#searchName').focus();
+//		return false;
+//	}
+//	else{
+//		var city=$('#searchName').val();
+//		var sid = $('#sel_category').val();
+//		//alert(sid);
+//                var store = window.localStorage;
+//                store.setItem('idOfSelected', sid);
+//		window.location.href="<?php echo site_url();?>/search-vendor/?sid="+sid+"&destName="+city;
+//		}
+//	});
 //document.DOMContentLoaded = function() {
 
 //}
-</script>-->
+</script>
 
 
 <script>
@@ -569,28 +571,28 @@ $('.city_search').click(function(){
 	  jQuery(this).toggleClass('pet-groomsv-criteria-open');
 	 })
 
-jQuery('.pet-groomsv-criteria-open #categories li').click(function(){
-	 var catLi = (jQuery(this).find('.opt').text());
-	  var id = jQuery(this).attr('id');
-	   jQuery('#sel_category').val(id);
-//	  alert(id);
-	 jQuery('.pet_g_crt').text(catLi);
-})
+//jQuery('.pet-groomsv-criteria-open #categories li').click(function(){
+//	 var catLi = (jQuery(this).find('.opt').text());
+//	  var id = jQuery(this).attr('id');
+//	   jQuery('#sel_category').val(id);
+////	  alert(id);
+//	 jQuery('.pet_g_crt').text(catLi);
+//})
 
-document.addEventListener("DOMContentLoaded", function(event) {
-	var preSelectdCategory = document.querySelector('li.selected_category.active');
-    if (preSelectdCategory) {
-        preSelectdCategory.querySelector('.opt').click();
-    }
-});
+//document.addEventListener("DOMContentLoaded", function(event) {
+//	var preSelectdCategory = document.querySelector('li.selected_category.active');
+//    if (preSelectdCategory) {
+//        preSelectdCategory.querySelector('.opt').click();
+//    }
+//});
 </script>
 <script>
-    var optionsForSearch = document.querySelectorAll('a.opt');
-    optionsForSearch.forEach(function(item) {
-	item.addEventListener('click', function(e){
-		document.querySelector('div#searchbox.tab-pane').classList.remove('hidden')
-	});
-})
+//    var optionsForSearch = document.querySelectorAll('a.opt');
+//    optionsForSearch.forEach(function(item) {
+//	item.addEventListener('click', function(e){
+//		document.querySelector('div#searchbox.tab-pane').classList.remove('hidden')
+//	});
+//})
 </script>
 <script>
 // document.addEventListener("DOMContentLoaded", function(event) {
@@ -745,13 +747,13 @@ $('.city_search').click(function(){
 	  $(this).toggleClass('pet-groomsv-criteria-open');
 	 })
 
-$('.pet-groomsv-criteria #categories li').click(function(){
-	 var catLi = ($(this).find('.opt').text());
-	  var id = $(this).attr('id');
-	   $('#sel_category').val(id);
-	  //alert(id);
-	 $('.pet_g_crt').text(catLi);
-})
+//$('.pet-groomsv-criteria #categories li').click(function(){
+//	 var catLi = ($(this).find('.opt').text());
+//	  var id = $(this).attr('id');
+//	   $('#sel_category').val(id);
+//	  //alert(id);
+//	 $('.pet_g_crt').text(catLi);
+//})
 </script>
 
 

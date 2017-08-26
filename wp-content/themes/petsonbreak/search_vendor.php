@@ -67,6 +67,25 @@ if($_REQUEST['sid']!='' && $_REQUEST['destName']!=''){
     </div>
 </div>
 <div class="container search-vendor-container">
+    <div class="tab-content menu-bar">
+                                    <div id="searchbox" class="tab-pane menu-bar">
+                                        <?php if($_REQUEST['destName']!=''){ ?>
+                                        <input type="text"
+                                             name="searchName"
+                                             id="searchName"
+                                             class="form-control menu-bar-textbox" value="<?php echo $_REQUEST['destName'] ;?>" placeholder="Discover and Unleash Happiness you cherish">
+                                        <?php }  else {?>
+                                        <input type="text" name="searchName" id="searchName" class="form-control menu-bar-textbox" value="" placeholder="Discover and Unleash Happiness you cherish">
+                                        <?php } ?>
+                                        <span class="input-group-addon city_search"
+                                            id="basic-addon2" style="cursor: pointer;">
+                                          SNIFF
+                                        </span>
+                                        
+                                    </div>
+                                <span class="err_searchName"></span>
+                              </div>
+                                  
     <div class="con_left search-results-container">
         <div class="pet-search-container">
             <div class="search-items pet-child-right">
@@ -85,18 +104,7 @@ if($_REQUEST['sid']!='' && $_REQUEST['destName']!=''){
         </div>
     </div>
 </div>
-<div class="explore-more-container">
-    <div class="newly-opened-restaurants">
-        <span>NEWLY OPENED PETS FRIENDLY</span>
-        <div>RESTAURANTS</div>
-        <button>EXPLORE</button>
-    </div>
-    <div class="top-trending-restaurants">
-        <span>TOP TRENDING PETS FRIENDLY</span>
-        <div>DESTINATIONS</div>
-        <button>EXPLORE</button>
-    </div>
-</div>
+
 <style>
 	.pagination li a{background-color: #636;color: #fff;}
 </style>
@@ -105,6 +113,34 @@ if($_REQUEST['sid']!='' && $_REQUEST['destName']!=''){
 
 
 <div class="filter-opac"></div>
+<script>
+    var url_string = window.location.href;
+        var url = new URL(url_string);
+        var sidParams = url.searchParams.get("sid");
+    $('.city_search').click(function(){
+	if($('#searchName').val()===''){
+		$('.err_searchName').html('<span class="error_search">Please select category and your city name.</span>');
+		//alert('Please enter city name for search');
+		$('.err_searchName').show(1).delay(2000).hide(1);
+		$('#searchName').focus();
+		return false;
+	}
+	else{
+		var city=$('#searchName').val();
+		var sid = $('#sel_category').val();
+		//alert(sid);
+		window.location.href="<?php echo site_url();?>/search-vendor/?sid="+sidParams+"&destName="+city;
+                var store = window.localStorage;
+                store.setItem('cityValue', city);
+		}
+	});
+        
+        var selectedCity = window.localStorage.cityValue;
+        var textBoxValue = $('#searchName').val();
+        if(selectedCity && !textBoxValue) {
+            document.querySelector('#searchName').value = selectedCity;
+        }
+</script>
 <script>
 $('.close-filter,.filter-opac').click(function() {
     $('.pet-child-left').removeClass('width-set_results-left-slider');

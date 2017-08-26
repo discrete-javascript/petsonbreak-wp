@@ -2069,10 +2069,10 @@ font-size: 18px;}
 }
 
 .err_searchName{
-	position: absolute;
-    top: 60px;
-    left: 29%;
+    top: 135vh;
+    right: 28%;
     height: 20px;
+    position: absolute;
 }
 
 .menu-toolTip{display:none;}
@@ -6964,19 +6964,22 @@ border-left: 30px solid #636;
 /*Integrated Searchbox styles*/
 .pet-groomsv-sercahbox.menu-bar {
     border-radius: 0px;
-    margin-top: 4.7em;
+    margin-top: 4.6em;
+    z-index: 3;
 }
 #categories.nav-tabs.menu-bar {
-    background: #663366;
+    background: #f0efed;
+    box-shadow: 0 -4px 8px 0 rgba(0, 0, 0, 0.2), 0 -6px 10px 0 rgba(0, 0, 0, 0.19);
 }
 #categories.nav-tabs.menu-bar>li>a {
-    color: white;
+    color: black;
 }
 #categories.nav-tabs.menu-bar>li>a:hover {
-    color: red;
+    color: #663366;
+    background: white;
 }
 #categories.nav-tabs.menu-bar>li.active>a, #categories.nav-tabs.menu-bar>li.active>a:hover, #categories.nav-tabs.menu-bar>li.active>a:focus {
-    background: red;
+    background: #663366;
     color: white;
     border: none;
 }
@@ -6985,10 +6988,27 @@ border-left: 30px solid #636;
     padding: 15px;
     justify-content: center;
     align-items: center;
+    background: white;
+    width: 65%;
+    margin: auto;
+    margin-top: -2em;
+    box-shadow: 0 -4px 8px 0px rgba(0, 0, 0, 0.2), 0 -6px 20px 10px rgba(0, 0, 0, 0.19);
+    border-radius: 6px;
+}
+#searchbox span.input-group-addon.city_search {
+    width: 8em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 2.5em;
     background: red;
+    color: white;
+    border: none;
+    border-radius: 0;
 }
 #searchName.menu-bar-textbox {
-    width: 50em;
+   border-radius: 0;
+   width: 100%;
 }
 
 .menu-bar.nav-tabs>li>a {
@@ -7048,12 +7068,12 @@ div#searchbox {
     display: flex;
     padding: 15px;
 }
-.pet-groomsv-sercahbox .input-group-addon {
+.input-group-addon {
     width: 8em;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 2.87em;
+    height: 2.5em;
 }
 #categories.nav-tabs>li>a {
     color: #000;
