@@ -712,7 +712,7 @@ if($_REQUEST['action']=='VendorLogin'){
 	//$Result =$Results[0];
 	//print_r($Result);
 	$user_status = $Results[0]->user_status;
-	$user = get_user_by( 'login', $creds['user_login']);
+	$user = get_user_by( 'email', $creds['user_login']);
 	$flag=0;
 
 	if($user_status==0){

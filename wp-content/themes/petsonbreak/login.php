@@ -86,37 +86,29 @@ if($_REQUEST['redirectPage']!=''){
 <?php get_footer(); ?>
 
 <script>
- $('#vendor_login').click(function(){
-	  var frmdata =$('#loginform').serialize();
-	  var redirect =$('#redirect').val();
-		 $.ajax({
-			 type: "POST",
-			 url: "<?php echo get_template_directory_uri(); ?>/custom-ajax.php",
-			 data: "action=VendorLogin&"+frmdata,
-			 success: function(Data){
-			 	console.log(Data);
-			    if(Data=='0'){ 
-				   alert('Information wrong');
-				 }
-				 else if(Data=='Inactive'){ 
-					alert('Account not active');
-				 }
-				 else if( redirect!=''){
-					 window.location.href="<?php echo site_url();?>/"+redirect;
-				 }
-				else if(Data=='Administrator'){ 
-				 window.location.href="<?php echo site_url();?>/wp-admin/index.php";		
-				 }
-				else if(Data=='Vendor'){ 
-				   window.location.href="<?php echo site_url();?>/booking/?type=services";
-				 }
-				 else if(Data=='subscriber'){ 
-				   window.location.href="<?php echo site_url();?>/member-profile/?type=enquiry";
-				 }
-				  
-			  }
-		 })
- });	
-
- 
+$('#vendor_login').click(function(){
+ 	var frmdata =$('#loginform').serialize();
+ 	var redirect =$('#redirect').val();
+	$.ajax({
+		type: "POST",
+		url: "<?php echo get_template_directory_uri(); ?>/custom-ajax.php",
+		data: "action=VendorLogin&"+frmdata,
+		success: function(Data){
+		 	console.log(Data);
+		    if(Data=='0'){
+			   alert('Information wrong');
+			} else if(Data=='Inactive'){
+				alert('Account not active');
+			} else if( redirect!=''){
+				window.location.href="<?php echo site_url();?>/"+redirect;
+			} else if(Data=='administrator'){
+				window.location.href="<?php echo site_url();?>/wp-admin/index.php";
+			} else if(Data=='Vendor'){
+				window.location.href="<?php echo site_url();?>/booking/?type=services";
+			} else if(Data=='subscriber'){
+				window.location.href="<?php echo site_url();?>/member-profile/?type=enquiry";
+			}
+		}
+	})
+ });
 </script>
