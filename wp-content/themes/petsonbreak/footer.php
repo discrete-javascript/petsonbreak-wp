@@ -61,7 +61,7 @@ $vendor_id =$result->vendor_id;
             <span>SPECIAL OFFERS</span>
         </div>
         <div class="offers-footer-details">
-            <span style="font-size: 16px;">ON PETS CLINIC <span style="color: yellow;">15TH SEPTEMBER 17</span>USE CODE <span style="color: red; font-style: italic;">"INDIA"</span>WHILE BOOKING</span>
+            <span style="font-size: 16px;">ON PETS CLINIC <span style="color: yellow;">15TH SEPTEMBER 17 </span>USE CODE <span style="color: red; font-style: italic;">"INDIA" </span>WHILE BOOKING </span>
         </div>
         <div class="offers-footer-button">
             <button>SEE DETAILS</button>
@@ -190,6 +190,11 @@ $vendor_id =$result->vendor_id;
       </div>
 
   </div>
+    <style>
+        #menu-item-135 > a {
+            text-transform: uppercase;
+        }
+    </style>
   <div class="footer-bottom">
     <div class="container">
       <div class="row">
@@ -232,6 +237,15 @@ $vendor_id =$result->vendor_id;
 
 <div class="city_pop_overlay">
   <div class="city_pop_box">
+      <p style="
+    position: absolute;
+    margin-left: 10px;
+    color: white;
+    font-size: 16px;
+    margin-top: 8px;
+    text-align: center;
+    width: 100%;
+">Enter your city name</p>
       <img src="http://dev.petsonbreak.com/wp-content/uploads/2017/08/location-popup.png" style="
     width: 100%;
 ">
@@ -244,7 +258,9 @@ $vendor_id =$result->vendor_id;
       </div>
 </div>
 <div class="city_pop_bot">
-    <a href="javascript:void();" class="city_pop_search">Search</a>
+    <a href="javascript:void();" class="city_pop_search" style="
+    background: red;
+    border: none;" >Search</a>
 </div>
 </div>
 </div>
@@ -423,7 +439,7 @@ function closeNav() {
    <div class="feedback-div">
    <div class="feedback-div-container">
         <div class="panel panel-default">
-          <div class="panel-heading feed-head"><img src="<?php echo get_template_directory_uri();?>/images/logo_pet.png"></div>
+            <div class="panel-heading feed-head"><img style="width :10em" src="<?php echo $mk_options['header_logo'];?>"></div>
           <div class="panel-body">
 
               <div class="feed-stg1">

@@ -318,11 +318,18 @@ else{
    
 </div>
 <div class="about-us-section">
-    <h1 class="about-us-heading">ABOUT US</h1>
-    <div class="about-us-description">
-        <p>At PetsonBreak we mean what we say and are committed to providing superlative experiences that can rarely be found elsewhere. For us, PetsonBreak is more than just a travel company; it is the embodiment of everything that we are truly passionate about. PetsonBreak is owned and staffed by pet people for whom work related with pets and travel is not simply an interesting job, but an all-consuming passion. </p>
-        <p>We believe that travel should not simply be a business, but a way of exploring and understanding the diverse cultures, people and traditions that inhabit in this world and what more you can ask if your furry friend can tag along in these adventurous trips.</p>
+    <div class="about-image-container hidden-xs">
+        <img src="http://dev.petsonbreak.com/wp-content/uploads/2017/08/about-us-section.png" alt="about-us" class="about-us-image"/>
     </div>
+    <div class="about-description-container">
+        <div class="about-us-description">
+            <h1 class="about-us-heading">ABOUT US</h1>
+            <p class="about-us-para-1">At PetsonBreak we mean what we say and are committed to providing superlative experiences that can rarely be found elsewhere. For us, PetsonBreak is more than just a travel company; it is the embodiment of everything that we are truly passionate about. PetsonBreak is owned and staffed by pet people for whom work related with pets and travel is not simply an interesting job, but an all-consuming passion. </p>
+            <p class="about-us-para-2">We believe that travel should not simply be a business, but a way of exploring and understanding the diverse cultures, people and traditions that inhabit in this world and what more you can ask if your furry friend can tag along in these adventurous trips.</p>
+        </div>
+    </div>
+        
+    
 </div>
 <?php // strong_testimonials_view( 1 ); ?>.
 <div class="testimonial-container">

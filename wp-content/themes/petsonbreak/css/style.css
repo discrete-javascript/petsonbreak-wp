@@ -10,7 +10,9 @@
   font-weight: normal;
   font-style: normal;
 }
-
+html {
+    background: white;
+}
 body {font-size:13px;line-height:20px;font-family: 'SegoeUI', 'Open Sans', sans-serif;color:#302a3d;}
 h1, h2, h3, h4, h5, h6 {color:#302a3d;font-family: 'SegoeUI', 'Open Sans', sans-serif;}
 
@@ -3711,6 +3713,9 @@ color: #fff;
     padding: 20px;
     background: #fff;
     border-top: 1px solid #ccc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 
@@ -6960,7 +6965,22 @@ border-left: 30px solid #636;
     align-items: center;
     color: #ccc;
 }
-
+.header-social-links.fa.fa-facebook:hover {
+    background: #3b5998;
+    color: white;
+}
+.header-social-links.fa.fa-google-plus:hover {
+    background: #d34836;
+    color: white;
+}
+.header-social-links.fa.fa-linkedin:hover {
+    background: #0077b5;
+    color: #000;
+}
+.header-social-links.fa.fa-twitter:hover {
+    background: #0084b4;
+    color: white;
+}
 /*Integrated Searchbox styles*/
 .pet-groomsv-sercahbox.menu-bar {
     border-radius: 0px;
@@ -6981,7 +7001,6 @@ border-left: 30px solid #636;
 #categories.nav-tabs.menu-bar>li.active>a, #categories.nav-tabs.menu-bar>li.active>a:hover, #categories.nav-tabs.menu-bar>li.active>a:focus {
     background: #663366;
     color: white;
-    border: none;
 }
 #searchbox.tab-pane.menu-bar{
     display: flex;
@@ -7000,7 +7019,7 @@ border-left: 30px solid #636;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 2.5em;
+    height: 40px;
     background: red;
     color: white;
     border: none;
@@ -7009,6 +7028,8 @@ border-left: 30px solid #636;
 #searchName.menu-bar-textbox {
    border-radius: 0;
    width: 100%;
+   height: 40px;
+   padding-left: 1em;
 }
 
 .menu-bar.nav-tabs>li>a {
@@ -7118,23 +7139,43 @@ a.carousel-control[href="#servicesCarousel"] span.glyphicon.glyphicon-chevron-le
     right: -1em;
 }
 /*About Us Style*/
+
 .about-us-section {
-    margin: 8rem 0 0 70rem;
-    width: 50rem;
+    background: white;
+    position: relative;
+}
+.about-image-container,
+.about-description-container {
+    
+}
+.about-description-container {
+    position: absolute;
+    top: 30%;
+    left: 35%;
+    width: 50%;
+}
+.about-us-heading {
+    margin-bottom: 14px;
 }
 .about-us-description p {
     line-height: 1.5;
+    text-align: justify;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+.about-us-image {
+    width: 40%;
 }
 
 /*Testimonial Slider Over riding*/
 .testimonial-container {
     margin-top: 5em;
 }
-.testimonial-container p:first-child {
+.testimonial-container > p {
     font-size: 24px;
     text-align: center;
     margin-bottom: 3rem;
-    font-weight: 500;
+    font-weight: 600;
 }
 #testimonial-slider {
     background: #643364;
@@ -7164,6 +7205,7 @@ a.carousel-control[href="#servicesCarousel"] span.glyphicon.glyphicon-chevron-le
     font-style: italic;
     line-height: 2.2;
     font-size: 14px;
+    text-align: justify;
 }
 .testimonial-slider.glyphicon {
     font-size: 60px;
@@ -7200,16 +7242,19 @@ a.carousel-control[href="#servicesCarousel"] span.glyphicon.glyphicon-chevron-le
 
 
 /*Footer Styles*/
+
 .offers-footer-container {
+    background-image: url(http://dev.petsonbreak.com/wp-content/uploads/2017/08/restaurant-offer-bg-blu.png);
+    padding: 5em 0;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    background: #636;
-    height: 12em;
     color: white;
-    font-size: 2rem;
-    padding: 7em;
 }
 .offers-footer-container div {
     margin-bottom: 2em;
@@ -7226,8 +7271,8 @@ a.carousel-control[href="#servicesCarousel"] span.glyphicon.glyphicon-chevron-le
     border: 1px solid white;
     background: #636;
     color: white;
-    width: 7em;
-    height: 2em;
+    width: 10em;
+    height: 3em;
     border-radius: 20px;
 }
 .footer-quick-links, .footer-locations,
@@ -7248,7 +7293,7 @@ div.footer-top {
 }
 .quick-links-list li a {
     color: white;
-    cursor: pointer;
+    cursor: auto;
 }
 .social-links-container {
     width: 25rem;
@@ -7324,12 +7369,12 @@ p.copyright1 {
  }
  .subscribe-now-textbox {
     width: 30%;
-    height: 2em;
+    height: 40px;
  }
  .subscribe-now-button {
     background: red;
     border: none;
-    height: 2em;
+    height: 40px;
     width: 10%;
     color: white;
  }
@@ -7944,14 +7989,13 @@ a.change-password-hero-button {
     background-attachment: fixed;
     background-size: cover;
     padding: 25em 0 13em 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 .parallax-events-container > p {
     color: yellow;
     font-size: 3vw;
     text-transform: uppercase;
+    width: 100%;
+    text-align: center;
 }
 .upcoming-event-container {
     width: 260px;
