@@ -94,6 +94,7 @@ if($_REQUEST['redirectPage']!=''){
 			 url: "<?php echo get_template_directory_uri(); ?>/custom-ajax.php",
 			 data: "action=VendorLogin&"+frmdata,
 			 success: function(Data){
+			 	console.log(Data);
 			    if(Data=='0'){ 
 				   alert('Information wrong');
 				 }

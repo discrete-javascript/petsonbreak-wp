@@ -483,7 +483,7 @@ if($_REQUEST['action']=='MemberRegistration'){
 			<p>Welcome and thank you for registering at Petsonbreak.com!</p>
 			<tr>
 			<td>
-			You can activate your account by clicking on the following link or copy paste the same in URL locator : <a href="http://twc5.com/clients/petsonbreak/thank-you/?action=activation&id='.$ID.'">http://twc5.com/clients/petsonbreak/thank-you/?action=activation&id='.$ID.'</a>
+			You can activate your account by clicking on the following link or copy paste the same in URL locater : <a href="'.site_url().'/thank-you/?action=activation&id='.$ID.'">'.site_url().'/thank-you/?action=activation&id='.$ID.'</a>
             </td>
 			</tr> 
 			  <tr>
@@ -633,7 +633,7 @@ if($img_delete!=''){
 	$sql ="Delete from  twc_member_gallery where user_id='".$_SESSION['userID']."' and id='".$img_delete."'";
 	$resuts = $wpdb->get_results($sql);
 	
-	  unlink('http://twc5.com/clients/petsonbreak/wp-content/themes/adivaha/images/pets/thumbs/"'.$attr.'"');
+	  unlink(get_template_directory_uri().'/images/pets/thumbs/'.$attr);
 
 	$flag=1;
 }
@@ -700,40 +700,37 @@ echo $flag;
 
 //Vendor Login
 if($_REQUEST['action']=='VendorLogin'){
-  global $wpdb;
+	global $wpdb;
     $creds = array();
 	$creds['user_login'] = trim($_REQUEST['user_login']);
 	$creds['user_password'] = trim($_REQUEST['user_password']);
 	$creds['remember'] = false;
-	
+
 	$redirectUrl =$_REQUEST['redirect'];
 	$sql = "select user_status from ".$wpdb->prefix."users where user_email='".$creds['user_login']."'";
 	$Results = $wpdb->get_results($sql);
-	$Result =$Results[0];
-	$user_status = $Result->user_status;
+	//$Result =$Results[0];
+	//print_r($Result);
+	$user_status = $Results[0]->user_status;
 	$user = get_user_by( 'login', $creds['user_login']);
 	$flag=0;
-	
-	
-	
- if($user_status==0){
-	
-	if ( $user && wp_check_password( $creds['user_password'], $user->data->user_pass, $user->ID))
-    {
-	  $user = wp_signon( $creds, false );
-	  if ( is_wp_error($user) ){ $flag=0;}
-	  else{ 
-	  $user_role=$user->roles[0];
-	  $flag=$user_role;
-	  }
-	}else{
-		$flag=0;
+
+	if($user_status==0){
+		if ( $user && wp_check_password( $creds['user_password'], $user->data->user_pass, $user->ID)) {
+			$user = wp_signon( $creds, false );
+	  		if ( is_wp_error($user) ){
+	  			$flag=0;
+	  		} else {
+				$user_role=$user->roles[0];
+				$flag=$user_role;
+			}
+		}else{
+			$flag=0;
+		}
+ 	} else {
+		$flag='Inactive';
 	}
- }
- else{
-	$flag='Inactive'; 
- } 
-	echo $flag;	 
+	echo $flag;
 	die;
 }
 
