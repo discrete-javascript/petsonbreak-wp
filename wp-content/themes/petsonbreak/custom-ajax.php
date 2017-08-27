@@ -230,7 +230,7 @@ if($_REQUEST['action']=='VendorRegistration'){
 			$to = $_REQUEST["email"];
 			$headers = "MIME-Version: 1.0" . "\r\n";
 			$headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
-			$headers  .= 'From: <support@thewebconz.com>' . "\r\n";
+			$headers  .= "From: support@petsonbreak.com" . "\r\n";
 
 			$pmail_subject ='Confirmation';
 			$pmailBody ='<table cellpadding="2" cellspacing="2">
@@ -247,7 +247,7 @@ if($_REQUEST['action']=='VendorRegistration'){
 			<tr><td>Thanks,</td></tr>
 			<tr><td>Team PetsonBreak</td></tr>
 			</table>';
-		      @mail($to,$pmail_subject,$pmailBody,$headers);
+		      mail($to,$pmail_subject,$pmailBody,$headers);
 
 	 }
 	$flag=1;
@@ -303,7 +303,7 @@ $flag=0;
 
 	if(count($Results) > 0){
 
-	$headers = 'From: <meenakshimehra50@gmail.com>'."\r\nContent-type: text/html; charset=us scii";
+	$headers = 'From: support@petsonbreak.com'."\r\nContent-type: text/html; charset=us scii";
    $html=$user_password;
 	 mail($email,$subject,$html,$headers);
 	$flag=1;
@@ -476,7 +476,7 @@ if($_REQUEST['action']=='MemberRegistration'){
 			$to = $_REQUEST["member_email"];
 			$headers = "MIME-Version: 1.0" . "\r\n";
 			$headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
-			$headers  .= 'From: <support@thewebconz.com>' . "\r\n";
+			$headers  .= "From: support@petsonbreak.com" . "\r\n";
 
 			$pmail_subject ='Confirmation';
 			$pmailBody ='<table cellpadding="2" cellspacing="2">
@@ -492,7 +492,7 @@ if($_REQUEST['action']=='MemberRegistration'){
 			<tr><td>Thanks,</td></tr>
 			<tr><td>Team PetsonBreak</td></tr>
 			</table>';
-			@mail($to,$pmail_subject,$pmailBody,$headers);
+			mail($to,$pmail_subject,$pmailBody,$headers);
 
 	 } 
 	$flag=1;
@@ -659,7 +659,7 @@ if($_REQUEST['action']=='UserFeedback'){
             $to = $_REQUEST["email_id"];
 			$headers = "MIME-Version: 1.0" . "\r\n";
 			$headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
-			$headers  .= 'From: <support@thewebconz.com>' . "\r\n";
+			$headers  .= 'From: support@petsonbreak.com' . "\r\n";
 
 			$pmail_subject ='User Feedback';
 			$pmailBody ='<table cellpadding="2" cellspacing="2">
@@ -690,7 +690,7 @@ if($_REQUEST['action']=='UserFeedback'){
 			 
 			  
 			</table>';
-			@mail($to,$pmail_subject,$pmailBody,$headers);
+			mail($to,$pmail_subject,$pmailBody,$headers);
 			$flag=1;
  }
 			}
