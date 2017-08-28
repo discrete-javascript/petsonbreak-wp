@@ -7740,6 +7740,7 @@ div.register-page-checkbox-container  input[type="checkbox"] + label::before {
 .top-trending-restaurants span {
     font-size: 2rem;
     font-weight: bold;
+    text-align: center;
 }
 .newly-opened-restaurants > div,
 .top-trending-restaurants > div {
