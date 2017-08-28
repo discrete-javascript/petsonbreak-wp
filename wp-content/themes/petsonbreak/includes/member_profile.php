@@ -386,7 +386,7 @@ $additional_info =$get_usermeta['additional_info'][0];
 						  <div class="upload_div">
 							<label class="nrd-loginModal-label u-vr2x" for="username"><span>Upload Image </span></label>
 							<div class="member_profile_btn">
-							<label for="image_path">Upload</label>
+							<label for="image_path" style="background: red;">Upload</label>
 							<input type="file" name="image_path" id="image_path">
 							</div>
 							 
@@ -404,7 +404,7 @@ $additional_info =$get_usermeta['additional_info'][0];
 					</ul>
 
 	<div class="register-btn">
-		<input type="button" id="SaveButtonMember" value="Save Changes" class="btn_1 green medium">
+		<input type="button" id="SaveButtonMember" value="Save Changes" class="btn_1 green medium" style="background: red;margin-bottom: 3em;">
 	</div>
 	</form> 
 	
@@ -413,7 +413,7 @@ $additional_info =$get_usermeta['additional_info'][0];
 	<div class="upload_div">
     <form method="post" name="multiple_upload_form" id="multiple_upload_form" enctype="multipart/form-data" action="<?php echo get_template_directory_uri(); ?>/uploadify/upload.php">
     	<input type="hidden" name="image_form_submit" value="1"/>
-            <label for="images">Upload Gallery Images</label>
+            <label for="images" style="background: red;">Upload Gallery Images</label>
             <input type="file" name="images[]" id="images" multiple >
         <div class="uploading none">
           
@@ -837,7 +837,7 @@ deletePets();
 	.modalLogin-loginFields li:nth-child(2n-2){width: 49.5%;float: right;}
 	
 	.register-btn{clear: both;float: left;width: 100%;padding: 0px 0px;}
-	.register-btn input{background: #663366;color: #fff;padding: 10px 25px;font-size: 14px;    border-radius: 4px;}
+	.register-btn input{background: red;color: #fff;padding: 10px 25px;font-size: 14px;    border-radius: 4px;}
 	.register-page1{    font-size: 33px;
     font-weight: 300;
     border-bottom: 1px solid #ddd;
@@ -1021,7 +1021,7 @@ deletePets();
 #memberProf .spayed_div_left{width: 49%;float: left;}
 #memberProf .spayed_div_right{width: 49%;float: right;}
 #memberProf #addMorePets {width: 100%;float:left;margin-bottom:25px;}
-#memberProf #addMorePets span{ background: #663366;color: #fff;padding: 10px 25px;font-size: 14px;border-radius: 4px;cursor:pointer;}
+#memberProf #addMorePets span{ background: red;color: #fff;padding: 10px 25px;font-size: 14px;border-radius: 4px;cursor:pointer;}
 #memberProf .petLista_list li {width: 100% !important;float:left;}
 #memberProf .petLista_head li {width: 100% !important;padding-bottom: 10px;}
 #memberProf .deletePetss {width: 19%;float: left!important;margin-right: 1%;height: 40px;line-height: 40px;margin-bottom: 25px;color: red;font-size: 16px;}

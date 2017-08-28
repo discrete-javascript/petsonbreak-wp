@@ -127,6 +127,10 @@ $sresults_img =$wpdb->get_Results("select * from twc_member_gallery where user_i
     color: black;
     margin-right: 1.5em;
 }
+.memberprofile.nav-tabs>li>a:focus, .memberprofile.nav-tabs>li>a:hover {
+    background: white;
+    color: red;
+}
 .tabs-right > .nav-tabs,
 .tabs-left > .nav-tabs {
   border-bottom: 0;

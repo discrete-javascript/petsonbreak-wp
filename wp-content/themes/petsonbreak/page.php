@@ -318,9 +318,6 @@ else{
    
 </div>
 <div class="about-us-section">
-    <div class="about-image-container hidden-xs">
-        <img src="http://dev.petsonbreak.com/wp-content/uploads/2017/08/about-us-section.png" alt="about-us" class="about-us-image"/>
-    </div>
     <div class="about-description-container">
         <div class="about-us-description">
             <h1 class="about-us-heading">ABOUT US</h1>

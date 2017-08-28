@@ -773,7 +773,7 @@ for (i = new Date().getFullYear(); i > 1900; i--){
     $('#years').append($('<option value='+i+'/>').val(i).html(i));
 }
     
-for (i = 1; i < 13; i++){
+for (i = 0; i < 12; i++){
     $('#months').append($('<option value='+i+'/>').val(i).html(monthNames[i]));
 }
  updateNumberOfDays(); 

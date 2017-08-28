@@ -3805,15 +3805,15 @@ color: #fff;
 .pet-search-lft{display: table-cell;float: none;}
 .pet-search-lft:first-child{padding: 0px;}
 .detail-section1{display: table;padding: 0px 15px 0px 15px;width: 100%;float: left;}
-.det-sec2-col{background: #653463;padding: 15px;height: 460px;color:#fff;}
+.det-sec2-col{background: #fff;padding: 15px;height: 460px;color:#fff; border: 1px solid #ccc;}
 .det-sec2-col h5{color: #fff;padding-bottom: 5px;}
-.det-sec2-col span{display: block;padding-bottom: 5px;width: 100%;}
-.det-sec2-col .star-ioncs14:before{color:#fff;}
-.det-sec2-col .star-ioncs5:before{color:#fff;}
-.det-sec2-col .star-ioncs4:before{color:#fff;}
-.det-sec2-col .star-ioncs3:before{color:#fff;}
-.det-sec2-col .star-ioncs2:before{color:#fff;}
-.det-sec2-col .star-ioncs1:before{color:#fff;}
+.det-sec2-col span{display: block;padding-bottom: 5px;width: 100%;color: black;}
+.det-sec2-col .star-ioncs14:before{color:red;}
+.det-sec2-col .star-ioncs5:before{color:red;}
+.det-sec2-col .star-ioncs4:before{color:red;}
+.det-sec2-col .star-ioncs3:before{color:red;}
+.det-sec2-col .star-ioncs2:before{color:red;}
+.det-sec2-col .star-ioncs1:before{color:red;}
 .travld_Date{color:#ccc;}
 .cont{    height: 335px;
     overflow: hidden;
@@ -3900,7 +3900,7 @@ border-radius: 5px;}
     width: 100%;
 float:  left;padding-bottom: 20px;}
 .sec2-rating .sec2-rating-top h3{    font-size: 38px;
-color: #fff;padding-bottom: 5px;}
+color: #000;padding-bottom: 5px;}
 .sec2-rating .sec2-rating-top  .star-ioncs14{float: none;}
 .sec2-rating .sec2-rating-bot{width: 100%;float: left;}
 .sec2-rating .sec2-rating-bot ul,.sec2-rating  .sec2-rating-bot li{width: 100%;float: left;}
@@ -3931,7 +3931,7 @@ color: #fff;padding-bottom: 5px;}
 }
 
 .sec2-rating  .str-5 .ratBar{
-	background: #fff;
+	background: #ccc;
 }
 
 
@@ -3967,9 +3967,10 @@ padding-bottom: 20px;}
 .write-review  input{padding:5px;}
 
 .ratings_comments{
-	background: #653463;padding:20px;
+	background: #fff;padding:20px;
 	width: 100%;
 	float: left;
+            border: 1px solid #ccc;
 }
 .ratings_comments ul li{
 	width: 100%;
@@ -4003,30 +4004,30 @@ padding-bottom: 20px;}
 }
 
 .commnt_rting .star-ioncs14:before{
-	color:#fff;
+	color:red;
 }
 
 .commnt_rting .star-ioncs5:before{
-	color:#fff;
+	color:red;
 }
 .commnt_rting .star-ioncs4:before{
-	color:#fff;
+	color:red;
 }
 .commnt_rting .star-ioncs3:before{
-	color:#fff;
+	color:red;
 }
 .commnt_rting .star-ioncs2:before{
-	color:#fff;
+	color:red;
 }
 .commnt_rting .star-ioncs1:before{
-	color:#fff;
+	color:red;
 }
 
 
 .ratng_date{
 	width: 20%;
     float: right;
-    color: #fff;
+    color: black;
 
 }
 
@@ -6993,14 +6994,18 @@ border-left: 30px solid #636;
 }
 #categories.nav-tabs.menu-bar>li>a {
     color: black;
+    border: none;
+    background-color: transparent;
 }
 #categories.nav-tabs.menu-bar>li>a:hover {
     color: #663366;
     background: white;
+    background-color: transparent;
 }
 #categories.nav-tabs.menu-bar>li.active>a, #categories.nav-tabs.menu-bar>li.active>a:hover, #categories.nav-tabs.menu-bar>li.active>a:focus {
     background: #663366;
     color: white;
+    border: none;
 }
 #searchbox.tab-pane.menu-bar{
     display: flex;
@@ -7145,14 +7150,19 @@ a.carousel-control[href="#servicesCarousel"] span.glyphicon.glyphicon-chevron-le
     position: relative;
 }
 .about-image-container,
-.about-description-container {
-    
+.about-us-description {
+    margin-left: 23%;
+    width: 44%;
+    margin-top: 24%;
 }
 .about-description-container {
-    position: absolute;
-    top: 30%;
-    left: 35%;
-    width: 50%;
+    background-image: url(http://dev.petsonbreak.com/wp-content/uploads/2017/08/about-us-section.png);
+    background-size: 54em;
+    height: 76em;
+    background-position: left;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
 }
 .about-us-heading {
     margin-bottom: 14px;
@@ -7170,6 +7180,7 @@ a.carousel-control[href="#servicesCarousel"] span.glyphicon.glyphicon-chevron-le
 /*Testimonial Slider Over riding*/
 .testimonial-container {
     margin-top: 5em;
+    position: relative;
 }
 .testimonial-container > p {
     font-size: 24px;
@@ -7177,9 +7188,24 @@ a.carousel-control[href="#servicesCarousel"] span.glyphicon.glyphicon-chevron-le
     margin-bottom: 3rem;
     font-weight: 600;
 }
+#testimonial-slider:before {
+    content: '';
+    background-color: #636;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: .5; 
+}
 #testimonial-slider {
     background: #643364;
     padding: 2.5rem 0;
+    background-image: url(http://dev.petsonbreak.com/wp-content/uploads/2017/05/nathalia-bariani-100947.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
 }
 .testimonial-section img{
     border-radius: 100%;
@@ -7368,15 +7394,16 @@ p.copyright1 {
     padding-bottom: 3em;
  }
  .subscribe-now-textbox {
-    width: 30%;
+    width: 40%;
     height: 40px;
  }
  .subscribe-now-button {
     background: red;
     border: none;
     height: 40px;
-    width: 10%;
+    width: 9vw;
     color: white;
+    font-size: 1vw;
  }
 /** Footer Styles End **/
 
@@ -7692,6 +7719,11 @@ div.register-page-checkbox-container  input[type="checkbox"] + label::before {
     display: flex;
     justify-content: center;
     align-items: center;
+    background-image: url(http://dev.petsonbreak.com/wp-content/uploads/2017/08/bg-trends-section.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
 }
 .newly-opened-restaurants,
 .top-trending-restaurants {

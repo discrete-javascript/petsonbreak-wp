@@ -83,7 +83,7 @@ $ratingArr =array('5'=>'Awesome','4'=>'Great','3'=>'Average','2'=>'Not that bad'
         
    
 </div>
-<div class="detail-container">
+<div class="detail-container" style="background: #f1f1f1;">
     <div class="row">
         <div class="col-lg-2 col-md-2 col-sm-2"></div>
         <div class="col-lg-8 col-md-8 col-sm-8">
