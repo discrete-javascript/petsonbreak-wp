@@ -12,9 +12,7 @@
  * @subpackage Twenty_Twelve
  * @since Twenty Twelve 1.0
  */
-get_header();
-global $mk_options;
-//echo base64_encode('details-page/?id=66&destName=');
+
 if($_REQUEST['redirectPage']!=''){
   if($_REQUEST['redirectPage']=='details-page'){
     $loginRedirect =$_REQUEST['redirectPage'].'/?id='.$_REQUEST['id'].'&destName='.$_REQUEST['destName'];
@@ -22,6 +20,15 @@ if($_REQUEST['redirectPage']!=''){
 }else{
   $loginRedirect ='';	
 }
+
+if ( is_user_logged_in() && !empty($loginRedirect) ) {
+    header("Location: ".$loginRedirect);
+	die();
+}
+
+get_header();
+global $mk_options;
+//echo base64_encode('details-page/?id=66&destName=');
 
 
 
