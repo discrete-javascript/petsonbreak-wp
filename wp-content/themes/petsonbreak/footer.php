@@ -19,12 +19,12 @@ $vendor_id =$result->vendor_id;
             <div class="newly-opened-restaurants">
                 <span>NEWLY OPENED PETS FRIENDLY</span>
                 <div>RESTAURANTS</div>
-                <button>EXPLORE</button>
+                <a href="<?php echo site_url();?>/all-categories/?sid=V148948235058c7b26e54885" class="yellow">EXPLORE</a>
             </div>
             <div class="top-trending-restaurants">
                 <span>TOP TRENDING PETS FRIENDLY</span>
                 <div>DESTINATIONS</div>
-                <button>EXPLORE</button>
+                <a href="<?php echo site_url();?>/all-categories/?sid=N148948330558c7b6295b388" class="yellow">EXPLORE</a>
             </div>
         </div>
     </div>
