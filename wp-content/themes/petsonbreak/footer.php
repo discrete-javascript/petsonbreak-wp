@@ -137,7 +137,7 @@ $vendor_id =$result->vendor_id;
                 <p class="footer-india-email">EMAIL</p>
                 <ul>
                     <li>
-                      <a href="mailto:woof@petsonbreak.com">woof@petsonbreak.com</a>
+                      <a href="mailto:info@petsonbreak.com">info@petsonbreak.com</a>
                     </li>
                 </ul>
             </div>
@@ -154,7 +154,7 @@ $vendor_id =$result->vendor_id;
                 <ul>
                     <li>0421 3766 36 (Travel Related)</li>
                 </ul>
-                <p class="footer-aus-email">EMAIL</p>
+                <p class="footer-india-email">EMAIL</p>
                 <ul>
                     <li>
                         <a href="mailto:australiaincoming@petsonbreak.com">australiaincoming@petsonbreak.com</a>
@@ -785,6 +785,25 @@ google.maps.event.addDomListener(window, "load", function() {
        componentRestrictions: {country: 'DE'}//UK only
        });*/
     var places = new google.maps.places.Autocomplete((document.getElementById("destName")));
+    google.maps.event.addListener(places, "place_changed", function() {
+        var place = places.getPlace();
+        var address = place.formatted_address;
+        var latitude = place.geometry.location.lat();
+        var longitude = place.geometry.location.lng();
+        document.getElementById("latitude").value = latitude;
+        document.getElementById("longitude").value = longitude;
+    });
+});
+</script>
+
+<script type="text/javascript">
+google.maps.event.addDomListener(window, "load", function() {
+    /*
+    var places = new google.maps.places.Autocomplete((document.getElementById('search-TB')),{
+    types: ['geocode'],
+    componentRestrictions: {country: 'DE'}//UK only
+    });*/
+    var places = new google.maps.places.Autocomplete((document.getElementById("searchName")));
     google.maps.event.addListener(places, "place_changed", function() {
         var place = places.getPlace();
         var address = place.formatted_address;
