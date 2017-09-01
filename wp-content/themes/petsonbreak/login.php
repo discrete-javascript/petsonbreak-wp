@@ -60,7 +60,7 @@ global $mk_options;
            </ul>
 		   <div class="login-page register-btn">
 				<!--<a href="http://petsonbreak.com/login/" class="btn_1 green medium">Log In</a>-->
-				  <input type="button" id="vendor_login" value="Log In" class="btn_1 green medium">
+				  <input type="submit" id="vendor_login" value="Log In" class="btn_1 green medium">
 			</div>
 			
 			

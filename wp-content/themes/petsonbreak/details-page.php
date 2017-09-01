@@ -97,7 +97,7 @@ $ratingArr =array('5'=>'Awesome','4'=>'Great','3'=>'Average','2'=>'Not that bad'
  		  <ul class="pet_breadcrumb">
  					<li class=" pet_breadcrumbStep pet_breadcrumbActive"><a href="<?php echo site_url();?>">Home</a></li>
  					<li class=" pet_breadcrumbStep pet_breadcrumbActive"><a href="<?php echo site_url();?>/search-vendor/?sid=<?php echo $sid; ?>&destName=<?php echo $_REQUEST['destName'];?>"><?php echo $serviceTitle ; ?></a></li>
- 					<li class="pet_breadcrumbStep"><a href="#"><?php echo $establishment; ?></a></li>
+ 					<li class="pet_breadcrumbStep"><a href="#">Establishment: <?php echo $establishment; ?></a></li>
  				</ul>
  		</div>
             </div>
@@ -563,13 +563,7 @@ top: 0;
 .pet_breadcrumb{
 	margin-top:30px;
 }
-.pet_breadcrumb li:last-child a{
-	background:none !important;
-}
 
-.pet_breadcrumb li:last-child a:before{
-	border-left:none;
-}
 
 .detail_pet_services_container{
 	margin-top: 15px;

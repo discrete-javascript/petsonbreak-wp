@@ -403,7 +403,7 @@
 						
 					</div>
 					<div class="register-btn">
-						<input type="button" id="MemberRegisBtn" value="Register now" class="btn_1 green medium">
+						<input type="submit" id="MemberRegisBtn" value="Register now" class="btn_1 green medium">
 					</div>
 				</form> 
 			</div>
@@ -521,7 +521,7 @@
                                                 <div class="register-page-checkbox-container">
                                                     <li class="agreeTerms">
 							<input class="register-page-checkbox" style="float: left;width: 3%;height: 15px;margin-bottom: 0px;" id="v_tc" name="v_tc" type="checkbox" value="1">	
-							<label class="nrd-loginModal-label u-vr2x register-page-checkbox-label">I agree to the <a href="" title="terms and conditions">Terms and Conditions</a></label>
+							<label class="nrd-loginModal-label u-vr2x register-page-checkbox-label">I agree to the <a href="<?php echo site_url();?>/terms-conditions/" title="terms and conditions" target="_blank">Terms and Conditions</a></label>
 							<span class="errSpan" id="err_v_tc"></span>
 							
 						</li>
@@ -532,7 +532,7 @@
 					
 					
 					<div class="register-btn">
-						<input type="button" id="RegisBtn" value="Register now" class="btn_1 green medium">
+						<input type="submit" id="RegisBtn" value="Register now" class="btn_1 green medium">
 					</div>
 				</form> 
 			</div>

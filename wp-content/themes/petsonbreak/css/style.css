@@ -2071,8 +2071,7 @@ font-size: 18px;}
 }
 
 .err_searchName{
-    top: 135vh;
-    right: 28%;
+    left: 28%;
     height: 20px;
     position: absolute;
 }
@@ -7954,6 +7953,10 @@ ul.details-page-nav-tabs>li.active>a, ul.details-page-nav-tabs>li.active>a:hover
 }
 ul.details-page-nav-tabs>li>a {
     border-radius: 0px;
+}
+ul.details-page-nav-tabs>li>a:focus, ul.details-page-nav-tabs>li>a:hover {
+    color: red;
+    background-color: white;
 }
 div.details-page-also-listed ul li a {
     color: black;
