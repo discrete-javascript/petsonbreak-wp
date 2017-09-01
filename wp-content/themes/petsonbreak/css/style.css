@@ -7748,8 +7748,8 @@ div.register-page-checkbox-container  input[type="checkbox"] + label::before {
     font-weight: bold;
     margin-top: 10px;
 }
-.newly-opened-restaurants button,
-.top-trending-restaurants button { 
+.newly-opened-restaurants a.yellow,
+.top-trending-restaurants a.yellow { 
     background-color: yellow;
     border: none;
     border-radius: 17px;
@@ -7757,6 +7757,9 @@ div.register-page-checkbox-container  input[type="checkbox"] + label::before {
     height: 3em;
     margin-top: 1em;
     font-weight: bold;
+    padding: 0.6em 1.5em;
+    color: #000;
+    text-decoration: none;
 }
 
 
