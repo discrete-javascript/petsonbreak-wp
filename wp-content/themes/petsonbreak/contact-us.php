@@ -72,29 +72,6 @@ tbody {
 <?php get_header(); ?>
 
 
-<div class="container-map">
-
-
-<div class="map_contus" style="">
-        <div id="gmap_canvas" style="height:100%; width:100%;max-width:100%;border-bottom: 10px solid <?php// echo $_SESSION['main_color']; ?>;">
-         <?php// echo $mk_options['map_pointer'];?>
-         
-         
-         
-         
-         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3504.3844875208224!2d77.24338331508093!3d28.5582149824471!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce3b5e5f372e3%3A0x17d317afabe06e81!2sHoliday+Winger+Pvt.Ltd.!5e0!3m2!1sen!2sin!4v1465459154269" width="100%" height="100%" frameborder="0" style="border:0" allowfullscreen></iframe>
-         
-         
-         
-         
-         
-         
-        </div>
-        <a class="google-map-enabler" href="https://www.dog-checks.com/german-shepherd-checks" id="enable-maps-data">german shepherd checks</a><style>#gmap_canvas img{max-width:none!important;background:none!important;}</style>
-        </div>
-
-</div>
-        
         
         
         
@@ -179,7 +156,7 @@ tbody {
 
 				
                 <div class="row">
-                    <div class="col-lx-12 " style="margin: 0px 12px;">
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                         <div class="form-group">
                             <label for="comment">Comment</label>
                             <textarea class="form-control" rows="5" name="comment" id="comment"></textarea>
@@ -203,16 +180,16 @@ tbody {
             <ul class="footer_links indAdd">
 			   <h6 style="color:#302a3d">INDIA</h6>
 			     
-			
-				<li><span><i class="fa fa-phone"></i></span><a href="">+91 7566485676 (Pet Related)</a></li>
-			                   <li><span><i class="fa fa-envelope"></i></span><a href="">woof[at]petsonbreak[dot]com</a></li>
+                                <li><span><i class="fa fa-home"></i></span><a href="">PetsonBreak Travel Advisors LLP, Vidhya Nagar, Dhanori, Pune 411 015 India</a></li>
+				<li><span><i class="fa fa-phone"></i></span><a href="">+917566485676 (Pet Related)</a></li>
+			                   <li><span><i class="fa fa-envelope"></i></span><a href="">info[at]petsonbreak[dot]com</a></li>
 			   			   <li><span><i class="fa fa-skype"></i></span><a href="">info[at]petsonbreak[dot]com</a></li>
               </ul>
 			  <ul class="footer_links ausAd">
 			   <h6 style="color:#302a3d">AUSTRALIA</h6>
                 
                 <li><span><i class="fa fa-home"></i></span><a href="">43 Whites Lane,Glen Waverley 3150,Victoria  Australia</a></li>
-                <li><span><i class="fa fa-phone"></i></span><a href="">0421 3766 36 (Travel Related)</a></li>
+                <li><span><i class="fa fa-phone"></i></span><a href="">0421376636 (Travel Related)</a></li>
                 <li><span><i class="fa fa-envelope"></i></span><a href="">australiaincoming[at]petsonbreak[dot]com</a></li>
 			 
 			

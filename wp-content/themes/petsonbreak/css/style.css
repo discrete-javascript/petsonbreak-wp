@@ -7972,7 +7972,7 @@ div.details-page-also-listed {
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
-    padding: 25em 0 13em 0;
+    padding: 15em;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -8012,6 +8012,9 @@ a.change-password-hero-button {
     padding: 1em;
     color: white;
     border-radius: 10px;
+}
+a.change-password-hero-button:hover {
+    color: white;
 }
 /** Member Profile Styles End ***/
 /*** Upcoming Events page Styles Start ***/

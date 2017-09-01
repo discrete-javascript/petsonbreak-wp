@@ -25,13 +25,19 @@ $resultss =$wpdb->get_results("select * from twc_queries where vendor_id='".$_SE
 
 foreach($resultss as $results){ ?>
 	<tr>
+            
 	<td><?php echo $results->first_name.' '.$results->last_name; ?></td>
 	<td><?php echo $results->contact_number; ?></td>
 	<td><?php echo $results->email; ?></td>
 	<td><?php echo $results->message; ?></a></td>
   </tr>
-<?php } ?>
+<?php } 
+?>
 </tbody></table>
+    <div style="
+    text-align: center;
+    padding-top: 1em;
+"><span>NO QUERIES FOUND</span></div>
 </div>
 
  

@@ -389,7 +389,7 @@
 						
 						<li class="additional_info">
 						  <label class="nrd-loginModal-label u-vr2x" for="username"><span>Additional information or Questions / Comments</span></label>
-							<textarea cols="5" name="additional_info" id="additional_info"></textarea>
+							<textarea cols="5" name="additional_info" id="additional_info" style="resize: vertical;"></textarea>
 							<span id="err_additional_info"></span>
 					    </li>
 						

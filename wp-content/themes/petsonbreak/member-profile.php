@@ -47,7 +47,7 @@ $sresults_img =$wpdb->get_Results("select * from twc_member_gallery where user_i
         <div class="col-lg-2 col-md-2 col-sm-2 col-xs-12"></div>
         <div class="col-lg-8 col-md-8 col-sm-8 col-xs-12">
             <div class="top-hero-content">
-               <span>Dashboard</span><a class="change-password-hero-button" href="<?php echo site_url();?>/member-profile?type=changepass"><i class="fa fa-key" aria-hidden="true"></i>Change Password</a> 
+               <span>Dashboard</span><a class="change-password-hero-button" href="<?php echo site_url();?>/member-profile?type=changepass"><i class="fa fa-key" aria-hidden="true" style="padding-right: 5px;"></i>Change Password</a> 
             </div>
         </div>
         <div class="col-lg-2 col-md-2 col-sm-2 col-xs-12"></div>
