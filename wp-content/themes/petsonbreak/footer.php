@@ -303,7 +303,7 @@ $vendor_id =$result->vendor_id;
 <script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/js/elif.js"></script>
 <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.6.4/js/bootstrap-datepicker.min.js"></script>
-<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+<!-- <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css"> -->
 <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-sanitize.min.js"></script>
 <script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/scripts-libraries/dirPagination.js"></script>
 <script src="<?php echo get_template_directory_uri(); ?>/js/ng-map.js"></script>

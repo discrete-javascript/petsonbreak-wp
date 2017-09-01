@@ -13,7 +13,7 @@ if($_REQUEST['postType']!=''){
 	$ext = pathinfo($file_name, PATHINFO_EXTENSION);
 	if(in_array($ext,$allowed)){
 		if($file_name !=''){
-			$target_dir = "wp-content/themes/adivaha/uploads_img/";
+			$target_dir = "wp-content/themes/petsonbreak/uploads_img/";
 			$target_file = $target_dir.$file_name;
 			move_uploaded_file($_FILES['image_path']['tmp_name'],$target_file);
 			$db_image_path =$file_name;

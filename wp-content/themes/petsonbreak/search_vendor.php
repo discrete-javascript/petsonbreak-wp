@@ -229,14 +229,18 @@ function searchVendorServices() {
 	                str += '<div class="search-items float_right14">';
 	                str += '<div class="search-items text-pack17">';
 	                str += '<div class="search-items top-panel">';
-	                str += '<h2>' + myData[a].title + '</h2>';
+                    if (myData[a].title) {
+                        str += '<h2>' + myData[a].title + '</h2>';
+                    } else {
+                        str += '<h2>&nbsp;</h2>';
+                    }
 	                str += '<div class="search-item-address add_Srvc">' + myData[a].address + ',' + myData[a].city + '</div>';
 	                if (!!(myData[a].time_from) && !!(myData[a].time_to)) {
 	                    str += '<div class="add_Srvc">' + myData[a].time_from + ' to ' + myData[a].time_to + '</div>';
 	                } else {
 	                    str += 'TIME: U/A'
 	                }
-	                str += '<div class="search-item-desc off_Srvc">' + myData[a].description + '</div>';
+	                str += '<div class="search-item-desc off_Srvc" data-toggle="tooltip" title="'+ myData[a].description +'">' + myData[a].description + '</div>';
 	                str += '</div>';
 	                str += '<div class="search-items bottom-panel">';
 	                str += '<div class="search-items rating-container">';
@@ -256,6 +260,7 @@ function searchVendorServices() {
 	            }
 	        }
             $('#serviceList').html(str);
+            //$('[data-toggle="tooltip"]').tooltip(tooloptions);
             if (myData.length > 0) {
             	$('.no-of-results').html('' + myData.length + ' OF '+ myData[0]['total_records'] +' RESULTS AVAILABLE')
         	} else {

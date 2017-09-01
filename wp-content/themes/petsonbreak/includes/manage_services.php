@@ -15,7 +15,7 @@ if(($_REQUEST['postType']!='') && ($_REQUEST['postAction']!='')){
 	
 	if(in_array($ext,$allowed)){
 		if($file_name !=''){
-			$target_dir = "wp-content/themes/adivaha/uploads/";
+			$target_dir = "wp-content/themes/petsonbreak/uploads/";
 			$original_file_path = $target_dir.$file_name;
 			$target_file_path = $target_dir.'vendor_thumbs/'.$file_name;
 			$target_file_path_thumb = $target_dir.'vendor_thumbs/thumb/'.$file_name;
