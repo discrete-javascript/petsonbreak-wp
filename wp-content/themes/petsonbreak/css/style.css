@@ -3025,17 +3025,22 @@ background: #E5E4E6;border:1px solid #ccc;border-right:0px;margin-bottom:0px;cur
 .pet-groomsv-sercahbox #magnifying{cursor: pointer;background: none;border-left: 0px;border-right: 0px;color: #ccc;font-size: 20px;}
 .star-ioncs14{position:relative;}
 
-
+/**Changed in 02-09-2017 ***/
+#pagination.pagination-div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
 
 .pagination-div .pagination>li>a:hover,.pagination-div .pagination>li>span:hover,.pagination-div .pagination>li>a:focus,.pagination-div .pagination>li>span:focus{
-	background-color: #636;
-    color: #fff;
+	background-color: white;
+    color: red;
 }
 
 .pagination-div .pagination>.active>a,.pagination-div .pagination>.active>span,.pagination-div .pagination>.active>a:hover,.pagination-div .pagination>.active>span:hover,.pagination-div .pagination>.active>a:focus,.pagination-div .pagination>.active>span:focus{
-    background-color: #663366;
-    border-color: #663366;
+    background-color: red;
+    border-color: red;
     color:#fff;
 }
 
@@ -3213,7 +3218,7 @@ border: 1px solid #777;}
 }
 
 #forg_pass #new_from{
-	width: 50%;
+	width: 100%;
 }
 
 #forg_pass  #fotpass{
@@ -4086,7 +4091,7 @@ padding-bottom: 20px;}
 
 .cat_colm{    width: 100%;
     float: left;
-    height: 200px;
+    height: 350px;
 	position: relative;
 margin-bottom: 15px;}
 
@@ -8167,4 +8172,20 @@ a.testi-btn + a.testi-btn {
     background-attachment: fixed;
     background-size: cover;
     padding: 25em 0 13em 0; 
+}
+.parallax-container-policy p {
+    color: yellow;
+    font-size: 3vw;
+    line-height: 3.5vw;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+/** Forgot password Styles ***/
+.forgot-password-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: -80px !important;
 }

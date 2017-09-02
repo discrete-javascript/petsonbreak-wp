@@ -89,7 +89,7 @@
 
            </ul>
 			
-			<div class="facebook-div_all">
+<!--			<div class="facebook-div_all">
 				<p>Your Links <span>Below are some suggestions. You can change the titles as you see fit.</span></p>
 				
 				
@@ -126,7 +126,7 @@
 					</li>
 					
 					</ul>
-			</div>
+			</div>-->
 			
 			
 			

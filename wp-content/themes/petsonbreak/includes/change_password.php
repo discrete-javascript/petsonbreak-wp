@@ -30,4 +30,12 @@
 				<input type="button" id="changepasswordid" value="Save Changes" class="btn_1 green medium" style="padding: 5px 15px;background: red;">
 			</div>
 		 </form> 
-		 
+	<script>
+            var url_string = window.location.href;
+            var url = new URL(url_string);
+            var type = url.searchParams.get("type");
+            if(type === 'changepass') {
+                document.querySelector('.change-password-hero-button').setAttribute('style', 'display: none;');
+            }
+            
+         </script>	 

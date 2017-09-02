@@ -24,7 +24,10 @@ global $mk_options;
 
 
 <div class="terms_conditions privacy_policy"  style="background: #fff;">
-    <div class="parallax-container-policy"></div>
+    <div class="parallax-container-policy">
+        <p>
+            Privacy Policy
+        </p></div>
 	<div class="container search-vendor-container">
 	<div class="con_left">
 		<div id="petBrd-page-wrap">

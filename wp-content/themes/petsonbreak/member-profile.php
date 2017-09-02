@@ -113,6 +113,7 @@ $sresults_img =$wpdb->get_Results("select * from twc_member_gallery where user_i
     background: white;
     font-weight: bold;
     padding-top: 2em;
+    border: none;
     border-bottom: 3px solid #f00;
     border-radius: 0;
     margin-right: 1.5em;

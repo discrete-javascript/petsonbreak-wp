@@ -53,11 +53,16 @@ global $mk_options;
 			<li>
 				<label class="nrd-loginModal-label u-vr2x" for="username"><span>Password</span></label>
 				<input type="password" name="user_password" id="user_password"  placeholder="Password" title="Email address is required." type="email">
-				<a href="<?php echo $siteUrl;?>/forgot-password/" class="login-page forgot_po">Forgot your password?</a>
+				
 				
 			</li>
 		              
            </ul>
+                     <div>
+                         <input type="checkbox" id="rememberme" class="remember-me">
+                         <label for="rememberme">REMEMBER ME</label>
+                     </div>
+                     <a href="<?php echo $siteUrl;?>/forgot-password/" class="login-page forgot_po">Forgot your password?</a>
 		   <div class="login-page register-btn">
 				<!--<a href="http://petsonbreak.com/login/" class="btn_1 green medium">Log In</a>-->
 				  <input type="submit" id="vendor_login" value="Log In" class="btn_1 green medium">

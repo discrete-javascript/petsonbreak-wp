@@ -48,4 +48,14 @@
                 border-radius: 4px;
                 border: 1px solid #777;
             }
-         </style>		 
+         </style>	
+         
+         <script>
+            var url_string = window.location.href;
+            var url = new URL(url_string);
+            var type = url.searchParams.get("type");
+            if(type === 'changepass') {
+                document.querySelector('.change-password-hero-button').setAttribute('style', 'display: none;');
+            }
+            
+         </script>

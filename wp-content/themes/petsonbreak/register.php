@@ -493,9 +493,7 @@
 							<label class="nrd-loginModal-label u-vr2x" for="username"><span>Established Since<span class="err_req">* </span> </span></label>
 							<select name="establishment_since" id="establishment_since" class="form-control" onchange="blankField('establishment_since','')">
 							  <option value="">Select Year</option>
-							  <?php for($y=1900;$y<=date('Y');$y++){
-								     echo '<option value="'.$y.'">'.$y.'</option>';
-							        }?>
+							  
 							</select>
 							<span class="errSpan" id="err_establishment_since"></span>
 							
@@ -722,9 +720,12 @@ function changePetType(){
 		var val =$(this).val();
 		var rel =$(this).attr('rel');
 		// if( (val=='Dogs') || (val=='Cats') || (val=='Horse') ){
-		if( (val != 'Others') ){
+		if(val === 'Birds' || val === 'Fishes' || val === 'Mammals') {
+                        str='<div id="petDetails_'+v+'" style="width:100%" class="petDetails2"><div><input name="petData[pet_name][]" value="" placeholder="Name"></div><div> <select name="petData[pet_age][]" value="" placeholder="Age"><option value="" selected disabled>Age</option><?php for($i=1;$i<=100;$i++){ ?><option value="<?php echo $i ;?>"><?php echo $i; ?></option><?php } ?></select>  </div><div><select name="petData[pet_gender][]"><option value="" selected disabled>Gender</option><option value="Male">Male</option><option value="Female">Female</option></select></div><div><select id="breedSelect_'+v+'" name="petData[pet_breed][]"></select></div><div class="deletePets" rel="'+v+'">[Delete]</div></div>';
+                } else if( (val != 'Others') ){
 			str='<div id="petDetails_'+v+'" style="width:100%" class="petDetails2"><div><input name="petData[pet_name][]" value="" placeholder="Name"></div><div> <select name="petData[pet_age][]" value="" placeholder="Age"><option value="" selected disabled>Age</option><?php for($i=1;$i<=100;$i++){ ?><option value="<?php echo $i ;?>"><?php echo $i; ?></option><?php } ?></select>  </div><div><select name="petData[pet_gender][]"><option value="" selected disabled>Gender</option><option value="Male">Male</option><option value="Female">Female</option></select></div><div><select id="breedSelect_'+v+'" name="petData[pet_breed][]"></select></div><div><select name="petData[pedigreed][]"><option value="" selected disabled>Pedigreed</option><option value="Yes">Yes</option><option value="No">No</option></select></div><div><select name="petData[spayed][]"><option value="" selected disabled>Sprayed/Neutered</option><option value="Yes">Yes</option><option value="No">No</option></select></div><div class="deletePets" rel="'+v+'">[Delete]</div></div>';
-		}else{
+		}
+                else{
 			str='<div id="petDetails_'+v+'" style="width:100%" class="petDetails2"><div><input name="petData[pet_name][]" value="" placeholder="Detail"><input  type="hidden" name="petData[pet_age][]" value=""><input type="hidden" name="petData[pet_gender][]" value=""><input type="hidden" id="breedSelect_'+v+'" name="petData[pet_breed][]" value=""> <input type="hidden" name="petData[pedigreed][]" value=""><input type="hidden" name="petData[spayed][]" value=""></div><div class="deletePets" rel="'+v+'">[Delete]</div></div>';
 		}
 		$('#petDetails_'+rel).html(str);
@@ -771,6 +772,7 @@ var monthNames = [ "January", "February", "March", "April", "May", "June",
 
 for (i = new Date().getFullYear(); i > 1900; i--){
     $('#years').append($('<option value='+i+'/>').val(i).html(i));
+    $('#establishment_since').append($('<option value='+i+'/>').val(i).html(i));
 }
     
 for (i = 0; i < 12; i++){

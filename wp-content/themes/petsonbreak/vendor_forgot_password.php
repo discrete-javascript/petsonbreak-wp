@@ -17,14 +17,17 @@ global $mk_options;
 global $wpdb;
 ?>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-<div class="container" id="forg_pass">
-<div class="con_left">
-<div id="new_from">	
+<div class="login-background"></div>
+<?php wp_enqueue_style( 'petsonbreak-w3', get_theme_file_uri( '/css/w3.css' ), array(), null ); ?>
+<div class="forgot-password-container container  w3-container w3-content" id="forg_pass">
+<div class="login-container con_left w3-panel w3-white w3-card-2 w3-display-container">
+    <div class="login-header"><div class="login-flex"><div class="login-margin" style="width: 100%;"><h2 class="register-page1" style="font-size: 20px;">Forgot your password?</h2></div></div></div>
+<div class="login-form-container" id="new_from">	
 <form class="ui form new_from1">
 
  
   <div class="field">
-    <h2 class="register-page1">Forgot your password?</h2>
+    
    
   </div>
 
@@ -34,7 +37,7 @@ global $wpdb;
 	<div id="txt" class="Err" style="color:red;">   </div>
   </div>
 
-  <input type="button" value="Sniff" id="fotpass" class="btn btn-default btn-lg btn-block">
+  <input type="button" value="Sniff" id="fotpass" class="btn btn-default btn-lg btn-block" style="background: red;">
 
 </form>
 
