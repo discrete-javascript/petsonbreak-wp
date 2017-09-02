@@ -24,6 +24,7 @@ global $mk_options;
 
 
 <div class="terms_conditions"  style="background: #fff;">
+    <div class="parallax-container-policy"></div>
 	<div class="container search-vendor-container">
 	<div class="con_left">
 		<div id="petBrd-page-wrap">

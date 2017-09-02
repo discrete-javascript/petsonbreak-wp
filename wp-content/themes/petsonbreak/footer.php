@@ -816,6 +816,11 @@ google.maps.event.addDomListener(window, "load", function() {
 </script>
 
 <script>
+$('#searchbox').keypress(function(e) {
+    if(e.which === 13) {
+        $('.city_search').click();
+    }
+});
 $('.city_pop_search').click(function() {
     if ($('#destName').val() == '') {
         $('#err_destName').html('<span class="state-indicator">Please enter your city name.</span>');

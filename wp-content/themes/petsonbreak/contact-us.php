@@ -30,11 +30,11 @@
   border-left: 0px solid <?php echo $_SESSION['main_color']; ?> !important;
 }
 a.btn_1.green, .btn_1.green {
-    background: #636 !important;
+   
     padding: 10px 20px;
 color: #fff;
 }
-.box_style_1 h3.inner {background-color: #663366 !important; color: #fff;text-align: center;padding: 12px;margin: 0px;}
+.box_style_1 h3.inner {color: #fff;text-align: center;padding: 12px;margin: 0px;}
 
 .iframe {width:100%;}
 .form_title h3 strong { margin: 0px 30px 0px -7px !important;}
@@ -77,7 +77,9 @@ tbody {
         
         
 
-
+<div class="container-fluid parallax-contact-us">
+    
+</div>
 
 <div class="container marging-and-bottom_not_use_border-text-your-d">
   <form name="contactFrm" id="contactFrm">
@@ -159,7 +161,7 @@ tbody {
                     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                         <div class="form-group">
                             <label for="comment">Comment</label>
-                            <textarea class="form-control" rows="5" name="comment" id="comment"></textarea>
+                            <textarea class="form-control" rows="5" name="comment" id="comment" style="resize: vertical;"></textarea>
                         </div>
                     </div>
                 </div>
@@ -175,7 +177,7 @@ tbody {
         
         <aside class="col-md-4  ">
                 <div class="box_style_1 margin_top22">
-            <h3 class="inner">- Reach Us -</h3>
+            <h3 class="inner reach-us-contact">- Reach Us -</h3>
 			<div class="reachUs-add">
             <ul class="footer_links indAdd">
 			   <h6 style="color:#302a3d">INDIA</h6>

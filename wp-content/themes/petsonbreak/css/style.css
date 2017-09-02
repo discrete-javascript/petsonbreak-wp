@@ -26,7 +26,9 @@ h1, h2, h3, h4, h5, h6 {color:#302a3d;font-family: 'SegoeUI', 'Open Sans', sans-
     background: #636;
 }
 p, span, a, label {font-family: 'SegoeUI', 'Open Sans', sans-serif;}
-
+textarea {
+    resize: vertical !important;
+}
 .main_title {
 	text-align:center;
 	font-size:32px;
@@ -8140,4 +8142,29 @@ a.testi-btn:hover {
 }
 a.testi-btn + a.testi-btn {
     margin-left: 10px;
+}
+/** Contact Us form Styles ***/ 
+
+.parallax-contact-us {
+    background-image: url(http://dev.petsonbreak.com/wp-content/uploads/2017/05/ian-schneider-42238.jpg);
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    padding: 25em 0 13em 0;
+}
+.box_style_1 h3.inner.reach-us-contact,
+#contactFrm #policy > a {
+    background: red;
+}
+/*** Contact us Form Styles End ***/
+
+/*** Policies/T&C Parallax ***/
+.parallax-container-policy {
+   background-image: url(http://dev.petsonbreak.com/wp-content/uploads/2017/09/Terms-and-conditions-hero.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    padding: 25em 0 13em 0; 
 }
