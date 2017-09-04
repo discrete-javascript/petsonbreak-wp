@@ -176,7 +176,8 @@ ul#serviceList li {
 	margin-bottom:20px;
 }
 /*RAJStyle*/
-.pet-groomsv-sercahbox.menu-bar{width:100%;}
+.pet-groomsv-sercahbox.menu-bar{width:100%;margin-top: 7em;}
+.pet-header {height: 8em;}
 div.home-page-container {width: 98%;}
 .testimonial-section img {margin-left: 0;}
 .about-us-section {margin: 1em;}
@@ -519,7 +520,7 @@ div.container_width.home-page-container {margin-left: -20px; width: 100%}
     width: 8em;}
 .testimonial-section img {margin-left: 0}
 .footer-top {display: flex;}
-div.pet-header {height: 100px;}
+div.pet-header {height: 150px;}
 .sign-up-button>a>span, .login-button>a>span {display: block;}
 .logo-container, .new-user-container {display: flex;
     justify-content: center;
@@ -535,6 +536,7 @@ div.pet-header {height: 100px;}
 }
 div.pet-groomsv-sercahbox.menu-bar {
    left: 0; 
+       margin-top: 11em;
 }
 
 /*Style for Search Results*/ 

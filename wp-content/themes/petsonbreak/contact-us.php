@@ -15,7 +15,9 @@
 ?>
 <script src="<?php echo get_template_directory_uri(); ?>/js/jquery.js"></script>
 <style>
-    
+.errSpan {
+    color: red;
+}
 .map_contus{width:100%;overflow:hidden;height:500px;max-width:100%;}
 .policy{margin-bottom: 20px;}
 .form_title h3 strong {
@@ -33,7 +35,9 @@ a.btn_1.green, .btn_1.green {
    
     padding: 10px 20px;
 color: #fff;
+
 }
+.box_style_1 h3.inner.reach-us-contact, #contactFrm #policy > a {border-radius: 4px;}
 .box_style_1 h3.inner {color: #fff;text-align: center;padding: 12px;margin: 0px;}
 
 .iframe {width:100%;}
@@ -78,7 +82,7 @@ tbody {
         
 
 <div class="container-fluid parallax-contact-us">
-    
+    <p>CONTACT US</p>
 </div>
 
 <div class="container marging-and-bottom_not_use_border-text-your-d">
@@ -97,14 +101,14 @@ tbody {
                 <div class="row">
                     <div class="col-md-6 col-sm-6">
                         <div class="form-group">
-                            <label>First Name</label>
+                            <label>First Name<span style="color: red;">*</span></label>
                             <input name="firstname" id="firstname" class="form-control" type="text" onkeyup="blankField('firstname','')">
 							<span class="errSpan" id="err_firstname"></span>
                         </div>
                     </div>
                     <div class="col-md-6 col-sm-6">
                         <div class="form-group">
-                            <label>Last Name</label>
+                            <label>Last Name<span style="color: red;">*</span></label>
                             <input name="lastname" id="lastname" class="form-control" type="text" onkeyup="blankField('lastname','')">
 							<span class="errSpan" id="err_lastname"></span>
                         </div>
@@ -113,14 +117,14 @@ tbody {
                 <div class="row">
                     <div class="col-md-6 col-sm-6">
                         <div class="form-group">
-                            <label>Email</label>
+                            <label>Email<span style="color: red;">*</span></label>
                             <input class="form-control" name="email" id="email" type="email" onkeyup="blankField('email','')">
 							<span class="errSpan" id="err_email"></span>
                         </div>
                     </div>
                     <div class="col-md-6 col-sm-6">
                         <div class="form-group">
-                            <label>Phone</label>
+                            <label>Phone<span style="color: red;">*</span></label>
                             <input class="form-control" name="phone" id="phone" type="text" onkeyup="blankField('phone','')">
 							<span class="errSpan" id="err_phone"></span>
                         </div>
@@ -130,7 +134,7 @@ tbody {
               <div class="row">
                     <div class="col-md-6 col-sm-6">
                         <div class="form-group">
-                            <label>Subject</label>
+                            <label>Subject<span style="color: red;">*</span></label>
 							<select name="subject" id="subject" class="form-control" onchange="blankField('subject','')">
 							<option value="">Select…</option>
 							<option value="Travel Relatede">Travel Related</option>
@@ -145,7 +149,7 @@ tbody {
                     </div>
                     <div class="col-md-6 col-sm-6">
                         <div class="form-group">
-                            <label>Add Country</label>
+                            <label>Add Country<span style="color: red;">*</span></label>
                             <select name="country" id="country" class="form-control" onchange="blankField('country','')">
 							<option value="">Select..</option>
 							<option value="India">India</option>
@@ -160,9 +164,10 @@ tbody {
                 <div class="row">
                     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                         <div class="form-group">
-                            <label for="comment">Comment</label>
+                            <label for="comment">Comment<span style="color: red;">*</span></label>
                             <textarea class="form-control" rows="5" name="comment" id="comment" style="resize: vertical;"></textarea>
                         </div>
+                        <span class="errSpan" id="err_comment"></span>
                     </div>
                 </div>
                 
@@ -187,7 +192,7 @@ tbody {
 			                   <li><span><i class="fa fa-envelope"></i></span><a href="">info[at]petsonbreak[dot]com</a></li>
 			   			   <li><span><i class="fa fa-skype"></i></span><a href="">info[at]petsonbreak[dot]com</a></li>
               </ul>
-			  <ul class="footer_links ausAd">
+<!--			  <ul class="footer_links ausAd">
 			   <h6 style="color:#302a3d">AUSTRALIA</h6>
                 
                 <li><span><i class="fa fa-home"></i></span><a href="">43 Whites Lane,Glen Waverley 3150,Victoria  Australia</a></li>
@@ -195,7 +200,7 @@ tbody {
                 <li><span><i class="fa fa-envelope"></i></span><a href="">australiaincoming[at]petsonbreak[dot]com</a></li>
 			 
 			
-              </ul>
+              </ul>-->
 			</div>
         </div>
         <div class="box_style_4">
@@ -255,7 +260,12 @@ function contactUsFun(){
 		$('#err_country').html('Please selct your country');
         $('#country').focus();
         return false;
-    }
+    } 
+     else if($('#comment').val()==''){
+		$('#err_comment').html('Please comment');
+        $('#comment').focus();
+        return false;
+    } 
     else{
 		
         var contactFrm =$('#contactFrm').serialize(); 

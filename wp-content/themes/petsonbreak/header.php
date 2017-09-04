@@ -149,7 +149,7 @@ $results =$wpdb->get_results("select * from twc_service_category where published
 	wp_enqueue_style( 'mk-style', get_stylesheet_uri(), false, false, 'all' );
 	wp_enqueue_style( 'petsonbreak-mainstyle', get_theme_file_uri( '/css/style.css' ), array(), time() );
 	wp_enqueue_style( 'petsonbreak-mainstyle', get_theme_file_uri( '/css/search-results-responsive.css' ), array(), null );
-	wp_enqueue_style( 'petsonbreak-responsive', get_theme_file_uri( '/css/responsive.css' ), array(), null );
+	wp_enqueue_style( 'petsonbreak-responsive', get_theme_file_uri( '/css/responsive.css' ), array(), time() );
 
 	wp_enqueue_script( 'petsonbreak-jquery', '//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js', array(), null );
 ?>

@@ -8151,17 +8151,26 @@ a.testi-btn + a.testi-btn {
 /** Contact Us form Styles ***/ 
 
 .parallax-contact-us {
-    background-image: url(http://dev.petsonbreak.com/wp-content/uploads/2017/05/ian-schneider-42238.jpg);
-    background-position: bottom;
+    background-image: url(http://dev.petsonbreak.com/wp-content/uploads/2017/09/pexels-photo.jpg);
+    background-position: top;
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
     padding: 25em 0 13em 0;
 }
+.parallax-contact-us p {
+    color: red;
+    font-size: 3vw;
+    line-height: 3.5vw;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 700;
+}
 .box_style_1 h3.inner.reach-us-contact,
 #contactFrm #policy > a {
     background: red;
 }
+
 /*** Contact us Form Styles End ***/
 
 /*** Policies/T&C Parallax ***/
