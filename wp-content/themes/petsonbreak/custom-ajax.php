@@ -294,7 +294,7 @@ $flag=0;
 	wp_set_password($user_password, $ID );
 	
 	$user_email = $Result->user_email;
-    $user_password = $Result->user_pass;
+    //$user_password = $Result->user_pass;
     $title = $Result->user_login;	
     $find_arr =array('{Email Address}','{Password}');
 	$replace_arr = array($title, $user_password);
@@ -302,10 +302,12 @@ $flag=0;
     $mail_body = str_replace($find_arr, $replace_arr,$subject);
 
 	if(count($Results) > 0){
-
-	$headers = 'From: support@petsonbreak.com'."\r\nContent-type: text/html; charset=us scii";
-   $html=$user_password;
-	 mail($email,$subject,$html,$headers);
+		$headers = "MIME-Version: 1.0" . "\r\n";
+		$headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
+		$headers  .= "From: support@petsonbreak.com" . "\r\n";
+	//$headers = 'From: support@petsonbreak.com'."\r\nContent-type: text/html; charset=us scii";
+   	$html=$user_password;
+	mail($email,$subject,$html,$headers);
 	$flag=1;
 
 	}	
@@ -659,7 +661,7 @@ if($_REQUEST['action']=='UserFeedback'){
             $to = $_REQUEST["email_id"];
 			$headers = "MIME-Version: 1.0" . "\r\n";
 			$headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
-			$headers  .= 'From: support@petsonbreak.com' . "\r\n";
+			$headers  .= "From: support@petsonbreak.com" . "\r\n";
 
 			$pmail_subject ='User Feedback';
 			$pmailBody ='<table cellpadding="2" cellspacing="2">
@@ -766,7 +768,7 @@ if($_REQUEST['action']=='sendQuery'){
 	<tr><td>Contact No.: '.$_REQUEST['contact_number'].'</td></tr>
 	<tr><td>Message: '.$_REQUEST['message'].'</td></tr>
 	</table>';
-	//@mail($admin_email,$pmail_subject,$pmailBody,$headers);
+	mail($admin_email,$pmail_subject,$pmailBody,$headers);
 	
 }
 
@@ -790,7 +792,7 @@ if($_REQUEST['action']=='ContactUs'){
 	<tr><td>Country: '.$_REQUEST['country'].'</td></tr>
 	<tr><td>Comment: '.$_REQUEST['comment'].'</td></tr>
 	</table>';
-	@mail($admin_email,$pmail_subject,$pmailBody,$headers);
+	mail($admin_email,$pmail_subject,$pmailBody,$headers);
 	//@mail('praveen@thewebconz.com',$pmail_subject,$pmailBody,$headers);
 	
 }

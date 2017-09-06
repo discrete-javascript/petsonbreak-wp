@@ -118,7 +118,7 @@ $siteUrl =site_url();
 $site_language='';	 
 }
 
-$results =$wpdb->get_results("select * from twc_service_category where published='Yes' and status_deleted=0");
+$results =$wpdb->get_results("select * from twc_service_category where published='Yes' and status_deleted=0 ORDER BY sorting ASC");
 
 $extQuery ='';
 if($_REQUEST['sid']!=''){
@@ -276,7 +276,7 @@ else{
          <div id="servicesCarousel" class="servicesCarousel">
             <div class="catslider">
             <?php 
-              $weekresults =$wpdb->get_results("select * from twc_service_category where published='Yes' and status_deleted=0");
+              $weekresults =$wpdb->get_results("select * from twc_service_category where published='Yes' and status_deleted=0 order by sorting asc");
               //echo '<pre>';print_r($weekresults);echo "</pre>";
               foreach($weekresults as $key=>$weekrow) {
                 // $link =site_url().'/search-vendor/?sid='.$weekrow->service_category;
@@ -422,11 +422,11 @@ else{
    var listCategories = document.querySelector('#categories');
     window.onload = function() { 
         listCategories.childNodes[1].childNodes[1].click(); 
-    }; 
+    };
     function hideVendorList() {
         var listCategories = document.querySelector('#categories');
         listCategories.childNodes.forEach(function(item, index) {
-            if (index > 10 && index %2) {
+            if (index > 8 && index %2) {
                 item.classList.add('hidden');
             }
             if (index === listCategories.childNodes.length - 2) {

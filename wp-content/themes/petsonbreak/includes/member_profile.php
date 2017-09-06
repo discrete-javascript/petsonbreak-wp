@@ -1,4 +1,5 @@
-<?php session_start();
+<?php
+session_start();
 global $mk_options;
 global $wpdb;
 $type =$_REQUEST['type'];
@@ -470,12 +471,10 @@ $additional_info =$get_usermeta['additional_info'][0];
 			<div class="col-md-6">
 			<p class="def-detl"><?php
 			$mb_dob=$all_meta_for_user['dob'][0];
-                                     
+
 			echo date('d M, Y',strtotime($mb_dob));?></p>
 			</div>
 			</div>
-
-			
 		</li>
 		<li>
 		

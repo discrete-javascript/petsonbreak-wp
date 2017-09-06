@@ -260,7 +260,7 @@ function searchVendorServices() {
 	            }
 	        }
             $('#serviceList').html(str);
-            //$('[data-toggle="tooltip"]').tooltip(tooloptions);
+            $('[data-toggle="tooltip"]').tooltip();
             if (myData.length > 0) {
             	$('.no-of-results').html('' + myData.length + ' OF '+ myData[0]['total_records'] +' RESULTS AVAILABLE')
         	} else {

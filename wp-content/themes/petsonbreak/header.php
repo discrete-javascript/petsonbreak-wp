@@ -380,10 +380,8 @@ $results =$wpdb->get_results("select * from twc_service_category where published
                                    <?php } ?>
                                    <?php if(is_page('login')) {  ?>
                                       <li><a href="<?php echo site_url();?>/all-categories/">PET SERVICES</a></li> 
-                                   <?php } else { ?>
+                                   <?php } ?>
                                        <li><a id="dig-more">DIG MORE <i class="fa fa-sort-asc" aria-hidden="true"></i></a></li>
-                                   <?php }?>
-                                   
                                 </ul>
                                 <div style="
                                         width: 100%;

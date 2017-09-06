@@ -37,7 +37,7 @@ global $wpdb;
 	<div id="txt" class="Err" style="color:red;">   </div>
   </div>
 
-  <input type="button" value="Sniff" id="fotpass" class="btn btn-default btn-lg btn-block" style="background: red;">
+  <input type="button" value="Send" id="fotpass" class="btn btn-default btn-lg btn-block" style="background: red;">
 
 </form>
 

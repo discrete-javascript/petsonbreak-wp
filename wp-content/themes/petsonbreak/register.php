@@ -807,7 +807,8 @@ $('#years').prepend('<option selected="selected" value="">Year</option>');
 var dateWrapper = document.querySelector('.dateWrapper');
 
 var dateOfBirth = document.querySelector('#member_dob');
-date.addEventListener('change', function() {
+var registerMem = document.querySelector('#MemberRegisBtn')
+registerMem.addEventListener('click', function() {
     var date = document.querySelector('#days');
     var month = document.querySelector('#months');
     var year = document.querySelector('#years');

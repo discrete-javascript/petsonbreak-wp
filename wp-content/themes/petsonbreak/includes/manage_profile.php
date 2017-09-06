@@ -78,7 +78,7 @@
 				<select name="establishment_since" id="establishment_since" onchange="blankField('establishment_since','')">
 				  <option value="">Select Year</option>
 				  <?php for($i=1900;$i<=date('Y');$i++){
-					     if($i==$all_meta_for_user['establishment'][0]){$selected='selected="selected"';}
+					     if($i==$all_meta_for_user['establishment_since'][0]){$selected='selected="selected"';}
 						 else{$selected='';}
 					  echo '<option value="'.$i.'" '.$selected.'>'.$i.'</option>';
 				  }?>

@@ -1,4 +1,9 @@
-<?php session_start();
+<?php 
+if ( !is_user_logged_in() ) {
+    header("Location: ".site_url()."/login/");
+  die();
+}
+session_start();
 /**
  Template Name: Member Profile	
  * The template for displaying all pages.
