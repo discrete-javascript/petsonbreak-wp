@@ -27,7 +27,7 @@
 			
                 </div>
 		   <div class="register-btn">
-				<input type="button" id="changepasswordid" value="Save Changes" class="btn_1 green medium" style="padding: 5px 15px;background: red;">
+				<input type="button" id="changepasswordid" value="Save changes" class="btn_1 green medium" style="padding: 5px 15px;background: red;">
 			</div>
 		 </form> 
 	<script>

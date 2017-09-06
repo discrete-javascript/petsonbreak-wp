@@ -26,7 +26,7 @@ global $mk_options;
 <div class="terms_conditions"  style="background: #fff;">
     <div class="parallax-container-policy"><p>TERMS AND CONDITIONS</p></div>
 	<div class="container search-vendor-container">
-	<div class="con_left">
+	<div class="con_left" style="float: none; margin: 0 auto;">
 		<div id="petBrd-page-wrap">
 		  <ul class="pet_breadcrumb">
 					<li class=" pet_breadcrumbStep pet_breadcrumbActive"><a href="<?php echo site_url();?>">Home</a></li>
@@ -626,6 +626,18 @@ global $mk_options;
 	
 	</div>
 </div>
+ <button class="scroll-up" title="Scroll To Top"><i class="fa fa-chevron-up" aria-hidden="true" ></i></button>
+
+
+<script>
+    var scrollUp = document.querySelector('.scroll-up');
+    var topContainer = document.querySelector('.parallax-container-policy');
+    scrollUp.addEventListener('click', function(e){
+       e.preventDefault;
+       e.stopImmediatePropagation();
+       topContainer.scrollIntoView();
+    });
+</script>
 
 
 

@@ -59,7 +59,7 @@ $sresults_img =$wpdb->get_Results("select * from twc_member_gallery where user_i
         
     </div>
 </div>
-<div class="tabbable tabs-left row">
+<div class="tabbable tabs-left row" style="margin-right:0;">
           <div class="col-lg-2 col-md-2 col-sm-2 col-xs-12"></div>
           <div class="col-lg-8 col-md-8 col-sm-8 col-xs-12">
                 <ul class="memberprofile nav nav-tabs">
@@ -103,7 +103,12 @@ $sresults_img =$wpdb->get_Results("select * from twc_member_gallery where user_i
 </div>
 
 
-
+<style>
+    /*Whomsoever may concern please change this row margin when you find the bug*/ 
+    .row {
+        margin-right: 0px !important;
+    }
+</style>
 <style>
 /* custom inclusion of right, left and below tabs */
 .tabbable.tabs-left.row {

@@ -6455,7 +6455,7 @@ border-left: 30px solid #636;
 
 .errSpan{
     height: 20px;
-    color: #d77f3f;
+    color: red;
     display:block;
     margin-bottom: 2px;
     line-height: 20px;
@@ -7189,10 +7189,10 @@ a.carousel-control[href="#servicesCarousel"] span.glyphicon.glyphicon-chevron-le
     position: relative;
 }
 .testimonial-container > p {
-    font-size: 24px;
+    font-size: 3rem;
     text-align: center;
     margin-bottom: 3rem;
-    font-weight: 600;
+    font-weight: 500;
 }
 #testimonial-slider:before {
     content: '';
@@ -7580,6 +7580,7 @@ div.search-item-desc.off_Srvc {
 }
 #regist .register-btn input {
     background: #ff0000;
+    text-transform: uppercase;
 }
 #regist .modalLogin-loginFields > li select#intrested_area {
     width: 50%;
@@ -7714,6 +7715,7 @@ div.register-page-checkbox-container  input[type="checkbox"] + label::before {
    border: 1px solid rgb(166, 166, 166);
    box-shadow: inset 0 2px 5px rgba(0,0,0,0.25);
    margin-right: 0.5em;
+   margin-bottom: 2px;
 }
 #regist .modalLogin-loginFields li label.register-page-checkbox-label {
     font-weight: bold;
@@ -7960,6 +7962,8 @@ ul.details-page-nav-tabs>li.active>a, ul.details-page-nav-tabs>li.active>a:hover
 }
 ul.details-page-nav-tabs>li>a {
     border-radius: 0px;
+    color: black;
+    font-weight: bold;
 }
 ul.details-page-nav-tabs>li>a:focus, ul.details-page-nav-tabs>li>a:hover {
     color: red;
@@ -8189,6 +8193,16 @@ a.testi-btn + a.testi-btn {
     text-align: center;
     text-transform: uppercase;
     font-weight: 700;
+}
+.scroll-up {
+    position: fixed;
+    right: 9vw;
+    bottom: 10vh;
+    width: 3em;
+    height: 3em;
+    background: transparent;
+    border: 1px solid #ccc;
+    color: #ccc;
 }
 
 /** Forgot password Styles ***/
