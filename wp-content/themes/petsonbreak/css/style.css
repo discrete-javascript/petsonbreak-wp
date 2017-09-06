@@ -7189,10 +7189,10 @@ a.carousel-control[href="#servicesCarousel"] span.glyphicon.glyphicon-chevron-le
     position: relative;
 }
 .testimonial-container > p {
-    font-size: 24px;
+    font-size: 3rem;
     text-align: center;
     margin-bottom: 3rem;
-    font-weight: 600;
+    font-weight: 500;
 }
 #testimonial-slider:before {
     content: '';
@@ -7960,6 +7960,8 @@ ul.details-page-nav-tabs>li.active>a, ul.details-page-nav-tabs>li.active>a:hover
 }
 ul.details-page-nav-tabs>li>a {
     border-radius: 0px;
+    color: black;
+    font-weight: bold;
 }
 ul.details-page-nav-tabs>li>a:focus, ul.details-page-nav-tabs>li>a:hover {
     color: red;
@@ -8189,6 +8191,16 @@ a.testi-btn + a.testi-btn {
     text-align: center;
     text-transform: uppercase;
     font-weight: 700;
+}
+.scroll-up {
+    position: fixed;
+    right: 9vw;
+    bottom: 10vh;
+    width: 3em;
+    height: 3em;
+    background: transparent;
+    border: 1px solid #ccc;
+    color: #ccc;
 }
 
 /** Forgot password Styles ***/

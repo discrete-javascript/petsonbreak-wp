@@ -37,7 +37,7 @@ foreach($resultss as $results){ ?>
     <div style="
     text-align: center;
     padding-top: 1em;
-"><span>NO QUERIES FOUND</span></div>
+"><span style="<?php if(count($resultss) > 0){echo 'display:none'; } else { echo 'display: block;'; } ?>">NO QUERIES FOUND</span></div>
 </div>
 
  

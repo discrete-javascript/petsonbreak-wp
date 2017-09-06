@@ -36,8 +36,8 @@ $all_meta_for_user = get_user_meta($_SESSION['userID']);
 <div class="container tab-content147" id="vendorprof">
 
 <div class="tabbable tabs-left row">
-          <div class="col-lg-2 col-md-2 col-sm-2 col-xs-12"></div>
-          <div class="col-lg-8 col-md-8 col-sm-8 col-xs-12">
+          <div class="col-lg-1 col-md-1 col-sm-1 col-xs-12"></div>
+          <div class="col-lg-10 col-md-10 col-sm-10 col-xs-12">
                 <ul class="memberprofile nav nav-tabs">
 		  <li class="tabs active" id="tab_services" title="Add Services" ALT="Add Services"><a href="<?php echo site_url();?>/booking?type=services">Manage Services</a></li>
 		  <li class="tabs" id="tab_profile"><a href="<?php echo site_url();?>/booking?type=profile">Manage Profile</a></li>
@@ -51,13 +51,13 @@ $all_meta_for_user = get_user_meta($_SESSION['userID']);
 		 
                 </ul>
           </div>
-          <div class="col-lg-2 col-md-2 col-sm-2 col-xs-12"></div>
+          <div class="col-lg-1 col-md-1 col-sm-1 col-xs-12"></div>
          </div>
       <!-- tabs left -->
       
           <div row="row">
-            <div class="col-lg-2 col-md-2 col-sm-2 col-xs-12"></div>
-            <div class="col-lg-8 col-md-8 col-sm-8 col-xs-12" style="background: white;padding: 2em;">
+            <div class="col-lg-1 col-md-1 col-sm-1 col-xs-12"></div>
+            <div class="col-lg-10 col-md-10 col-sm-10 col-xs-12" style="background: white;padding: 2em;">
                 <div class="tab-content">
 		 <?php if($_REQUEST['type']=='profile'){
 			      include('includes/manage_profile.php');
@@ -80,9 +80,15 @@ $all_meta_for_user = get_user_meta($_SESSION['userID']);
 		   ?>
 		 </div>
             </div>
-            <div class="col-lg-2 col-md-2 col-sm-2 col-xs-12"></div>
+            <div class="col-lg-1 col-md-1 col-sm-1 col-xs-12"></div>
           </div>
 </div>     
+<style>
+    /*Whomsoever may concern please change this row margin when you find the bug*/ 
+    .row {
+        margin-right: 0px !important;
+    }
+</style>
       <!-- /tabs -->
 <!--<div class="container tab-content147" id="myBook">
   <div class="row">
@@ -101,25 +107,25 @@ $all_meta_for_user = get_user_meta($_SESSION['userID']);
 		  <li class="tabs" id="tab_enquiry"><a href="<?php echo site_url();?>/booking?type=enquiry"><i class="fa fa-question-circle" aria-hidden="true"></i>Manage Enquiry</a></li>
         </ul>
         <div class="tab-content">
-		 <?php if($_REQUEST['type']=='profile'){
-			      include('includes/manage_profile.php');
-		        }
-			  if($_REQUEST['type']=='services'){
-			      include('includes/manage_services.php');
-		        }
-			  if($_REQUEST['type']=='booking'){
-			      include('includes/manage_booking.php');
-		        }
-				if($_REQUEST['type']=='changepass'){
-			      include('includes/manage_password.php');
-		        }
-				if($_REQUEST['type']=='offered'){
-			      include('includes/manage_offered.php');
-		        }
-				if($_REQUEST['type']=='enquiry'){
-			      include('includes/manage_enquiry.php');
-		        }
-		   ?>
+		 //<?php // if($_REQUEST['type']=='profile'){
+//			      include('includes/manage_profile.php');
+//		        }
+//			  if($_REQUEST['type']=='services'){
+//			      include('includes/manage_services.php');
+//		        }
+//			  if($_REQUEST['type']=='booking'){
+//			      include('includes/manage_booking.php');
+//		        }
+//				if($_REQUEST['type']=='changepass'){
+//			      include('includes/manage_password.php');
+//		        }
+//				if($_REQUEST['type']=='offered'){
+//			      include('includes/manage_offered.php');
+//		        }
+//				if($_REQUEST['type']=='enquiry'){
+//			      include('includes/manage_enquiry.php');
+//		        }
+//		   ?>
 		 </div>
 
         </div>
