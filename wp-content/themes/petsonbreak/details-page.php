@@ -351,7 +351,11 @@ $ratingArr =array('5'=>'Awesome','4'=>'Great','3'=>'Average','2'=>'Not that bad'
                     <div class="col-md-4">
                      <div class="dv">
                    <label>&nbsp;</label>
-                   <input type="button" class="reviewBtn btn btn-primary" id="reviewBtn" value="SUBMIT">
+                   <input type="button" class="reviewBtn btn btn-primary" id="reviewBtn" value="Submit" style="
+                        width: 5em;
+                        background: red;
+                        border: none;
+                    ">
                    </div>
                    </div>
 
