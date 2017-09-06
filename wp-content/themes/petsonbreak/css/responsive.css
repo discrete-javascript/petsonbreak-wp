@@ -190,6 +190,14 @@ ul#serviceList li {
 }
 }
 @media (max-width:767px){
+    .about-description-container {
+        background: unset;
+        height: 30em;
+    } 
+    .about-us-descrition {
+        width: 100%;
+    margin: 8%;
+    }
 .header-bottom .navbar-default .navbar-nav > li > a > i{font-size:32px;padding:0px 15px 0px 15px;}
 #exTab1 .nav-pills > li > a{font-size:0px;}
 .div_clol .nav-pills li a i{font-size:30px;padding:0px;}

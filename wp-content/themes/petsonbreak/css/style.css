@@ -7123,7 +7123,9 @@ div.home-slider-offer.desc {
     width: 100%;
     background-color: rgba(0, 0, 0, 0.51);
 }
-
+.bx-wrapper .bx-controls-direction a {
+    z-index: 1;
+}
 /*Styles for Heading and Description for homepage carousel*/
 .offer-description {display: flex;flex-direction: column;justify-content: center;align-items: center;margin: 6em 1em;}
 .offer-heading { margin-bottom: 4rem;}
@@ -7290,6 +7292,7 @@ a.carousel-control[href="#servicesCarousel"] span.glyphicon.glyphicon-chevron-le
 }
 .offers-footer-container div {
     margin-bottom: 2em;
+    text-align: center;
 }
 .offers-footer-heading span {
     font-weight: bold;
@@ -8176,23 +8179,27 @@ a.testi-btn + a.testi-btn {
 }
 
 /*** Contact us Form Styles End ***/
-
-/*** Policies/T&C Parallax ***/
+/*Common Parallax container*/
+.parallax-container-about,
 .parallax-container-policy {
-   background-image: url(http://dev.petsonbreak.com/wp-content/uploads/2017/09/Terms-and-conditions-hero.jpg);
     background-position: center;
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
     padding: 25em 0 13em 0; 
 }
-.parallax-container-policy p {
+.parallax-container-policy p,
+.parallax-container-about p {
     color: yellow;
     font-size: 3vw;
     line-height: 3.5vw;
     text-align: center;
     text-transform: uppercase;
     font-weight: 700;
+}
+/*** Policies/T&C Parallax ***/
+.parallax-container-policy {
+   background-image: url(http://dev.petsonbreak.com/wp-content/uploads/2017/09/Terms-and-conditions-hero.jpg);
 }
 .scroll-up {
     position: fixed;
@@ -8211,4 +8218,9 @@ a.testi-btn + a.testi-btn {
     justify-content: center;
     align-items: center;
     margin-top: -80px !important;
+}
+/*What we do and Why us page styles*/
+
+.parallax-container-about {
+     background-image: url(http://dev.petsonbreak.com/wp-content/uploads/2017/09/pexels-photo-341378.jpeg);
 }

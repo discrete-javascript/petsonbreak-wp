@@ -17,7 +17,10 @@ global $mk_options;
 ?>
 
 
-
+<div class="parallax-container-about">
+        <p>
+            What we do?
+        </p></div>
 <div class="container" >
 
 <div class="custom_pages" id="what_we_do">
