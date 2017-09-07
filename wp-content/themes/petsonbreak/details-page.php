@@ -167,7 +167,8 @@ $ratingArr =array('5'=>'Awesome','4'=>'Great','3'=>'Average','2'=>'Not that bad'
 
           </div>
         <div>
-                        <a href="javascript:void();" class="snd_query_btn">Send Query</a>
+<!--            <button class="details-share-button"><img src="<?php $upload_dir = wp_upload_dir(); echo $upload_dir['baseurl']; ?>/2017/09/coloredIcon.png" /> </button>        -->
+            <a href="javascript:void();" class="snd_query_btn">Send Query</a>
                     </div>
     </div>
     <div id="photos" class="tab-pane fade details-page">

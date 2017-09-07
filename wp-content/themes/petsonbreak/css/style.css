@@ -7159,14 +7159,13 @@ a.carousel-control[href="#servicesCarousel"] span.glyphicon.glyphicon-chevron-le
 }
 .about-image-container,
 .about-us-description {
-    margin-left: 23%;
     width: 44%;
-    margin-top: 24%;
+    margin-top: 12%;
 }
 .about-description-container {
     background-image: url(http://dev.petsonbreak.com/wp-content/uploads/2017/08/about-us-section.png);
-    background-size: 54em;
-    height: 76em;
+    background-size: 40em;
+    height: 50em;
     background-position: left;
     background-repeat: no-repeat;
     display: flex;
@@ -7986,6 +7985,16 @@ div.details-page-also-listed {
 .detail-section4.details-page-add-review {
     background: white;
 }
+.details-share-button {
+    background: none;
+    border: none;
+}
+.details-share-button img{
+    height: 3em;
+}
+/*** Details page styles end ***/
+
+/**** News and upadates Page styles ***/
 .parallax-news-updates-container {
     background-image: url(http://dev.petsonbreak.com/wp-content/uploads/2017/05/sai-kiran-anagani-209542-e1495047491399.jpg);
     background-position: bottom;
