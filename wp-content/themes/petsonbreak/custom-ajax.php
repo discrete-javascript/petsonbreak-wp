@@ -706,7 +706,7 @@ if($_REQUEST['action']=='VendorLogin'){
     $creds = array();
 	$creds['user_login'] = trim($_REQUEST['user_login']);
 	$creds['user_password'] = trim($_REQUEST['user_password']);
-	$creds['remember'] = false;
+	$creds['remember'] = $_REQUEST['rememberme'];
 
 	$redirectUrl =$_REQUEST['redirect'];
 	$sql = "select user_status from ".$wpdb->prefix."users where user_email='".$creds['user_login']."'";
@@ -725,6 +725,17 @@ if($_REQUEST['action']=='VendorLogin'){
 	  		} else {
 				$user_role=$user->roles[0];
 				$flag=$user_role;
+				if(!empty($_REQUEST["rememberme"])) {
+					setcookie ("member_login",$creds['user_login'],time()+ (10 * 365 * 24 * 60 * 60));
+					setcookie ("member_password",$creds['user_password'],time()+ (10 * 365 * 24 * 60 * 60));
+				} else {
+					if(isset($_COOKIE["member_login"])) {
+						setcookie ("member_login","");
+					}
+					if(isset($_COOKIE["member_password"])) {
+						setcookie ("member_password","");
+					}
+				}
 			}
 		}else{
 			$flag=0;

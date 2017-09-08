@@ -459,7 +459,7 @@ if(count($resultss)>0)
  	font-size: 14px;
  }
 
- #myBook .uploading.none {
+.uploading.none {
    display: none;
  }
 

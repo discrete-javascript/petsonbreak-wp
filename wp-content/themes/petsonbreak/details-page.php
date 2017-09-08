@@ -101,7 +101,9 @@ $ratingArr =array('5'=>'Awesome','4'=>'Great','3'=>'Average','2'=>'Not that bad'
  		  <ul class="pet_breadcrumb">
  					<li class=" pet_breadcrumbStep pet_breadcrumbActive"><a href="<?php echo site_url();?>">Home</a></li>
  					<li class=" pet_breadcrumbStep pet_breadcrumbActive"><a href="<?php echo site_url();?>/search-vendor/?sid=<?php echo $sid; ?>&destName=<?php echo $_REQUEST['destName'];?>"><?php echo $serviceTitle ; ?></a></li>
- 					<li class="pet_breadcrumbStep"><a href="#"><?php echo $establishment; ?></a></li>
+ 					<?php if(isset($establishment)) { ?>
+            <li class="pet_breadcrumbStep"><a href="#"><?php echo $establishment; ?></a></li>
+          <?php } ?>
  				</ul>
  		</div>
             </div>

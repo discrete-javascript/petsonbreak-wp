@@ -47,19 +47,19 @@ global $mk_options;
                      <ul class="user-input-container modalLogin-loginFields">
 			<li>
 				<label class="nrd-loginModal-label u-vr2x" for="username"><span>Email</span></label>
-				<input name="user_login" id="user_login" placeholder="Name" title="Email address is required." type="email">
+				<input name="user_login" id="user_login" placeholder="Name" title="Email address is required." type="email" value="<?php if(isset($_COOKIE["member_login"])) { echo $_COOKIE["member_login"]; } ?>">
 			</li>
 			
 			<li>
 				<label class="nrd-loginModal-label u-vr2x" for="username"><span>Password</span></label>
-				<input type="password" name="user_password" id="user_password"  placeholder="Password" title="Email address is required." type="email">
+				<input type="password" name="user_password" id="user_password"  placeholder="Password" title="Email address is required." value="<?php if(isset($_COOKIE["member_password"])) { echo $_COOKIE["member_password"]; } ?>">
 				
 				
 			</li>
 		              
            </ul>
                      <div>
-                         <input type="checkbox" id="rememberme" class="remember-me">
+                         <input type="checkbox" id="rememberme" name="rememberme" <?php if(isset($_COOKIE["member_login"])) { ?> checked <?php } ?> class="remember-me">
                          <label for="rememberme">REMEMBER ME</label>
                      </div>
                      <a href="<?php echo $siteUrl;?>/forgot-password/" class="login-page forgot_po">Forgot your password?</a>
