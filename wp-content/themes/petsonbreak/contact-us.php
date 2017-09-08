@@ -188,8 +188,9 @@ tbody {
 			   <h6 style="color:#302a3d">INDIA</h6>
 			     
                                 <li><span><i class="fa fa-home"></i></span><a href="">PetsonBreak Travel Advisors LLP, Vidhya Nagar, Dhanori, Pune 411 015 India</a></li>
-				<li><span><i class="fa fa-phone"></i></span><a href="">+917566485676 (Pet Related)</a></li>
-			                   <li><span><i class="fa fa-envelope"></i></span><a href="">info[at]petsonbreak[dot]com</a></li>
+				<li><span><i class="fa fa-phone"></i></span><a href="">+91 8999 306 724 (Travel Related)</a></li>
+                <li><span><i class="fa fa-phone"></i></span><a href="">+91 7566 485 676 (Pet Related)</a></li>
+			                   <li><span><i class="fa fa-envelope"></i></span><a href="mailto:info@petsonbreak.com">info[at]petsonbreak[dot]com</a></li>
 			   			   <li><span><i class="fa fa-skype"></i></span><a href="">info[at]petsonbreak[dot]com</a></li>
               </ul>
 <!--			  <ul class="footer_links ausAd">
@@ -206,7 +207,7 @@ tbody {
         <div class="box_style_4">
             <i class="icon_set_1_icon-57"></i>
             <h4>Need <span>Help?</span></h4>
-            <a class="phone" href="tel://+91-9999854201"><?php echo $mk_options['f_contact_number'];?></a>
+            <a class="phone" href="tel://+91-8999306724"><?php echo $mk_options['f_contact_number'];?></a>
             
         </div>
         </aside>
