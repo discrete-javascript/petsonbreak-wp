@@ -1,4 +1,8 @@
-<?php 
+<?php
+if ( !is_user_logged_in() ) {
+    header("Location: ".site_url()."/login/");
+  die();
+}
 session_start();
 /**
  Template Name: Details Page
@@ -53,8 +57,8 @@ foreach($service_ofrdresults  as $service_ofrdresult){
 		  $offerdName = getFieldByID('title','twc_manage_offered',$service_offered[$i]);
 		 $offerd.='<li>'.$offerdName.'</li>';
 		}
-		
-	} 
+
+	}
 
 /* foreach($service_ofrdresults  as $service_ofrdresult){
 		$offerd='';
@@ -65,11 +69,11 @@ foreach($service_ofrdresults  as $service_ofrdresult){
 		  $offerd.=$offerdName.',';
 		}
 		$offerd.=substr($offerd,0,-1);
-		
+
 	} */
-	
-		
-		
+
+
+
 $ratingArr =array('5'=>'Awesome','4'=>'Great','3'=>'Average','2'=>'Not that bad','1'=>"It's ok");	
 
 ?>
@@ -78,17 +82,17 @@ $ratingArr =array('5'=>'Awesome','4'=>'Great','3'=>'Average','2'=>'Not that bad'
 </style>
 <div class="details-page-parallax-container" style="background-image: url(<?php echo get_template_directory_uri()?>/uploads/<?php echo $objs->image_path; ?>);
 ">
-    
-            
-        
-   
+
+
+
+
 </div>
 <div class="detail-container" style="background: #f1f1f1;padding-bottom: 5em;">
     <div class="row">
         <div class="col-lg-2 col-md-2 col-sm-2"></div>
         <div class="col-lg-8 col-md-8 col-sm-8">
             <div class="vendor-details-container">
-                <p>Details<?php echo $establishment;?><sup class="item-rating details-page-rating"><?php if($averageReview) { echo $averageReview; } else { echo '0'; } ?></sup></p>
+                <p><?php echo $establishment;?> <sup class="item-rating details-page-rating"><?php if($averageReview) { echo $averageReview; } else { echo '0'; } ?></sup></p>
                 <div><i class="fa fa-map-marker details-page-address" aria-hidden="true"></i><span><?php echo $objs->address;?>,<?php echo $objs->city;?></span></div>
                 <div><i class="fa fa-phone details-page-phone" aria-hidden="true"></i> <span><?php echo $objs->contact_number;?></span></div>
             </div>
@@ -97,7 +101,7 @@ $ratingArr =array('5'=>'Awesome','4'=>'Great','3'=>'Average','2'=>'Not that bad'
  		  <ul class="pet_breadcrumb">
  					<li class=" pet_breadcrumbStep pet_breadcrumbActive"><a href="<?php echo site_url();?>">Home</a></li>
  					<li class=" pet_breadcrumbStep pet_breadcrumbActive"><a href="<?php echo site_url();?>/search-vendor/?sid=<?php echo $sid; ?>&destName=<?php echo $_REQUEST['destName'];?>"><?php echo $serviceTitle ; ?></a></li>
- 					<li class="pet_breadcrumbStep"><a href="#">Establishment: <?php echo $establishment; ?></a></li>
+ 					<li class="pet_breadcrumbStep"><a href="#"><?php echo $establishment; ?></a></li>
  				</ul>
  		</div>
             </div>
@@ -115,10 +119,10 @@ $ratingArr =array('5'=>'Awesome','4'=>'Great','3'=>'Average','2'=>'Not that bad'
                     <div class="long-description-container">
                         <p><?php echo $objs->description;?></p>
                     </div>
-			
-                    
+
+
 		</div>
-        
+
           <div class="col-md-4 pet-search-mid details-page more-information-container">
       		    <h5>More Information</h5>
            		<ul>
@@ -172,13 +176,13 @@ $ratingArr =array('5'=>'Awesome','4'=>'Great','3'=>'Average','2'=>'Not that bad'
     </div>
     <div id="photos" class="tab-pane fade details-page">
       <h3>PHOTOS</h3>
-             
-   <?php 
+
+   <?php
      $galleryResults =$wpdb->get_results("select * from twc_vendor_gallery where vendor_service_id='".$product_id."'");
      $imageResults=$galleryResults[0];
      $imageResult=$imageResults->image;
   if($imageResult!=""){ ?>
-		
+
 		<div class="col-md-4 pet-search-lft">
           		<div id="pet-search-lft-carousel" class="carousel slide details-page-photos-slider" data-ride="carousel">
 				<!--
@@ -188,16 +192,16 @@ $ratingArr =array('5'=>'Awesome','4'=>'Great','3'=>'Average','2'=>'Not that bad'
                     <li data-target="#pet-search-lft-carousel" data-slide-to="2"></li>
                 </ol>-->
 			 <div class="carousel-inner">
-			       <?php 		   
+			       <?php
 				   $i=0;
 				   foreach($galleryResults as $galleryResult){
-					 if($i==0){$active ='active';} else{$active='';} 
+					 if($i==0){$active ='active';} else{$active='';}
 					   ?>
                     <div class="item <?php echo $active;?>">
                         <img src="<?php echo get_template_directory_uri()?>/images/vendor_pets/vendor_thumbs/<?php echo $galleryResult->image; ?>" width='300px' height='250px' alt="First slide">
                     </div>
 				   <?php $i++;}?>
-					
+
 			 </div>
                 <a class="left carousel-control" href="#pet-search-lft-carousel" data-slide="prev">
                     <span class="fa fa-chevron-circle-left"></span></a>
@@ -210,17 +214,17 @@ $ratingArr =array('5'=>'Awesome','4'=>'Great','3'=>'Average','2'=>'Not that bad'
     <div id="reviews" class="tab-pane fade details-page">
         <h3 class="reveiews">REVIEWS</h3>
         <p class="parlorem">Petsonbreak review.</p>
-   <?php	
+   <?php
 	$reviewResults =$wpdb->get_results("SELECT avg_rating from twc_vendor_services where id='".$product_id."'");
 	$reviewResult =$reviewResults[0];
-	
+
 	$averageReview =ceil($reviewResult->avg_rating);
    if($messageReview!=""){ ?>
    <div class="detail-section2 details-page-all-review">
     <div style="width: 100%;overflow-x: scroll;">
         <div class="dynamic_width_div" style="width: 100%;">
-   		
-   		
+
+
 
    		<div class="detail-section2-cols row">
 			<div class="col-md-3 col-sm-3 col-xs-3 det-rat-smry">
@@ -266,14 +270,14 @@ $ratingArr =array('5'=>'Awesome','4'=>'Great','3'=>'Average','2'=>'Not that bad'
    			        	</div>
 			   </div>
    			</div>
-					
-	
-			
+
+
+
 		<div class="carousel-reviews broun-block">
-		
-		
+
+
 		<div class="services_slider_notuse">
-	 
+
       <div class="slide_item">
 	       <?php foreach($rResults as $robj) {?>
 			<div class=" col-md-4">
@@ -287,16 +291,16 @@ $ratingArr =array('5'=>'Awesome','4'=>'Great','3'=>'Average','2'=>'Not that bad'
 				</div>
            <?php }?>
         </div>
-		
+
 
         </div>
-		
+
 			</div>
-		
-	
+
+
    </div>
    		</div>
-		
+
 		</div>
 
    </div>
@@ -323,7 +327,7 @@ $ratingArr =array('5'=>'Awesome','4'=>'Great','3'=>'Average','2'=>'Not that bad'
           <option value="2">Not that bad</option>
           <option value="1">It's Ok</option>
         </select>
-              </div>  
+              </div>
 
               <div class="form-group">
                 <label>Your Review</label>
@@ -360,22 +364,22 @@ $ratingArr =array('5'=>'Awesome','4'=>'Great','3'=>'Average','2'=>'Not that bad'
                    </div>
 
                 </div>
-               
-               
-               
+
+
+
               </div>
 
             </div>
 
           </div>
-           </form> 
+           </form>
         </div>
-    
+
 	<?php
 	$revResults =$wpdb->get_results("select * from twc_review where product_id='".$product_id."' and  published='Yes' and status_deleted=0 order by date_time DESC limit 4");
 $revResult=$revResults[0];
 $messageReview=$revResult->message;
-	
+
 	if($messageReview!=""){
 	?>
        <div class="col-md-6">
@@ -400,26 +404,26 @@ $messageReview=$revResult->message;
           </div>
 
         </div>
-		
+
 	<?php } ?>
-		
+
      </div>
    </div>
     </div>
     <div id="alsoListed" class="tab-pane fade details-page">
       <h3>ALSO LISTED IN </h3>
       <div class="col-md-4 pet-search-rht details-page-also-listed">
-               
+
            		<ul>
 				<?php
 				$listed_results =$wpdb->get_results("select * from twc_vendor_services where vendor_id='".$userid."' and id!='".$_REQUEST['id']."'");
 				foreach($listed_results as $objrow){
-                									
+
 				$link =site_url().'/details-page/?id='.$objrow->id.'&destName='.$_REQUEST['destName'];
 				?>
-				
+
 	            <li> <a href="<?php echo $link;?>"><?php echo getFieldByID('title','twc_service_category',$objrow->service_category);?><span class="cat_loc">[<?php echo $objrow->address;?>]</span></a></li>	
-				
+
 				<?php } ?>
            		</ul>
           </div>
@@ -428,18 +432,18 @@ $messageReview=$revResult->message;
         </div>
         <div class="col-lg-2 col-md-2 col-sm-2"></div>
     </div>
-     
-    
-   
+
+
+
 
 
 </div>
 
 <script>
   $(document).ready(function(){
-  
+
 	   if ($(window).width() > 480) {
-		     
+
 	  $('.services_slider').bxSlider({
 		controls: true,
 		pager:false,
@@ -455,7 +459,7 @@ $messageReview=$revResult->message;
 	  });
 		}
 		else {
-		    
+
 	  $('.services_slider').bxSlider({
 		controls: true,
 		pager:false,
@@ -470,10 +474,10 @@ $messageReview=$revResult->message;
 	    slideWidth: 350,
 	  });
 		}
-               
+
 
   });
-  
+
 </script>
 
 
