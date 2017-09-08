@@ -70,8 +70,9 @@ $vendor_id =$result->vendor_id;
   <div class="footer-top">
       <div class="container">
           <div class="row subscription-container">
-              <input type="text" name="subscribe-now" class="subscribe-now-textbox"/>
-              <button class="subscribe-now-button">SUBSCRIBE NOW</button>
+            <?php echo do_shortcode('[newsletter_form type="minimal"]'); ?>
+              <!-- <input type="text" name="subscribe-now" class="subscribe-now-textbox"/>
+              <button class="subscribe-now-button">SUBSCRIBE NOW</button> -->
           </div>
           <div class="row">
             <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">

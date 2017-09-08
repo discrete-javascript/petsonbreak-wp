@@ -7398,18 +7398,19 @@ p.copyright1 {
      align-items: center;
      color: white;
  }
- .subscription-container {
+ .subscription-container, .subscription-container .tnp-subscription-minimal form {
     display: flex;
     justify-content: center;
     align-items: center;
     padding-bottom: 3em;
  }
- .subscribe-now-textbox {
+ .subscribe-now-textbox, .subscription-container .tnp-subscription-minimal input.tnp-email {
     width: 40%;
     height: 40px;
  }
- .subscribe-now-button {
+ .subscribe-now-button, .subscription-container .tnp-subscription-minimal input.tnp-submit {
     background: red;
+    background-color: red;
     border: none;
     height: 40px;
     width: 9vw;

@@ -92,7 +92,7 @@ $ratingArr =array('5'=>'Awesome','4'=>'Great','3'=>'Average','2'=>'Not that bad'
         <div class="col-lg-2 col-md-2 col-sm-2"></div>
         <div class="col-lg-8 col-md-8 col-sm-8">
             <div class="vendor-details-container">
-                <p><?php echo $establishment;?> <sup class="item-rating details-page-rating"><?php if($averageReview) { echo $averageReview; } else { echo '0'; } ?></sup></p>
+                <p><?php echo $establishment;?> <sup class="item-rating details-page-rating"><?php if(isset($objs->avg_rating)) { echo ceil($objs->avg_rating); } else { echo '0'; } ?></sup></p>
                 <div><i class="fa fa-map-marker details-page-address" aria-hidden="true"></i><span><?php echo $objs->address;?>,<?php echo $objs->city;?></span></div>
                 <div><i class="fa fa-phone details-page-phone" aria-hidden="true"></i> <span><?php echo $objs->contact_number;?></span></div>
             </div>
@@ -383,7 +383,7 @@ $ratingArr =array('5'=>'Awesome','4'=>'Great','3'=>'Average','2'=>'Not that bad'
 $revResult=$revResults[0];
 $messageReview=$revResult->message;
 
-	if($messageReview!=""){
+	if($messageReview!=""){ /*
 	?>
        <div class="col-md-6">
           <div class="ratings_comments">
@@ -408,7 +408,7 @@ $messageReview=$revResult->message;
 
         </div>
 
-	<?php } ?>
+	<?php */ } ?>
 
      </div>
    </div>
