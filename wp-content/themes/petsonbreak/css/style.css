@@ -7805,6 +7805,11 @@ div.all-categories-header {
     text-transform: uppercase;
     font-weight: 700;
 }
+.home-slider-offer h4,
+.home-slider-offer h6 {
+    color: white;
+    padding-top: 0;
+}
 /*All Categories Styles End*/
 
 /*Login Page Styles*/

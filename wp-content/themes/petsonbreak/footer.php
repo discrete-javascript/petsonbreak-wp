@@ -97,6 +97,7 @@ $vendor_id =$result->vendor_id;
 					);
 				wp_nav_menu($fdefaults);
 			 ?>
+                <hr/>
                 <?php $fdefaults = array(
                                         'theme_location'  => 'petsonbreak_details',
                                         'menu'            => '',
@@ -130,9 +131,9 @@ $vendor_id =$result->vendor_id;
                 </ul>
                 <p class="footer-india-phone">PHONE</p>
                 <ul>
-                    <li>+91-8999 306 724 (Travel Related)</li>
+                    <li>+91 8999 306 724 (Travel Related)</li>
                     <?php  if($mk_options['f_contact_number']!=''){ ?>
-                    <li>+91-7566485676 (Pet Related)</li>
+                    <li>+91 7566 485 676 (Pet Related)</li>
                     <?php } ?>
                 </ul>
                 <p class="footer-india-email">EMAIL</p>

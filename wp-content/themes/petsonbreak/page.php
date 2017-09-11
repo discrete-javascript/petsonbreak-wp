@@ -330,16 +330,14 @@ else{
 </div>
 <?php // strong_testimonials_view( 1 ); ?>.
 <div class="testimonial-container">
-  <p>Customer Reviews & Testimonials</p>  
+  <p>Customer Reviews & Ratings</p>  
   <div id="testimonial-slider" class="carousel slide" data-ride="carousel">
     <!-- Wrapper for slides -->
     <div class="carousel-inner">
       <div class="item active testimonial-section">
             <div class="row">
-                <div class="col-lg-6 col-md-6 col-sm-6">
-                    <img src="http://dev.petsonbreak.com/wp-content/uploads/2017/07/desk-about-portrait-diego@2x-6e11e0946c.jpg">
-                </div>
-                <div class="col-lg-6 col-md-6 col-sm-6">
+                <div class="col-lg-2 col-md-2 col-sm-2"></div>
+                <div class="col-lg-8 col-md-8 col-sm-8 col-xs-12 col-lg-offset-2">
                     <div class="testimony-content">
                       <p class="testimony-person-name"> Peter Novac</p>
                       <p class="testimony-stars">
@@ -353,14 +351,13 @@ else{
                       <small class="testimony-date"><i>Sunday 26th July, 2017</i> </small>
                   </div>
                 </div>
+                <div class="col-lg-2 col-md-2 col-sm-2"></div>
             </div>
       </div>
       <div class="item testimonial-section">
             <div class="row">
-                <div class="col-lg-6 col-md-6 col-sm-6">
-                    <img src="http://dev.petsonbreak.com/wp-content/uploads/2017/07/desk-about-portrait-diego@2x-6e11e0946c.jpg">
-                </div>
-                <div class="col-lg-6 col-md-6 col-sm-6">
+                <div class="col-lg-2 col-md-2 col-sm-2"></div>
+                <div class="col-lg-8 col-md-8 col-sm-8 col-xs-12 col-lg-offset-2">
                     <div class="testimony-content">
                       <p class="testimony-person-name"> Peter Novac</p>
                       <p class="testimony-stars">
@@ -374,14 +371,13 @@ else{
                       <small class="testimony-date"><i>Sunday 26th July, 2017</i> </small>
                   </div>
                 </div>
+                <div class="col-lg-2 col-md-2 col-sm-2"></div>
             </div>
       </div>
       <div class="item testimonial-section">
             <div class="row">
-                <div class="col-lg-6 col-md-6 col-sm-6">
-                    <img src="http://dev.petsonbreak.com/wp-content/uploads/2017/07/desk-about-portrait-diego@2x-6e11e0946c.jpg">
-                </div>
-                <div class="col-lg-6 col-md-6 col-sm-6">
+                <div class="col-lg-2 col-md-2 col-sm-2"></div>
+                <div class="col-lg-8 col-md-8 col-sm-8 col-xs-12 col-lg-offset-2">
                     <div class="testimony-content">
                       <p class="testimony-person-name"> Peter Novac</p>
                       <p class="testimony-stars">
@@ -395,11 +391,12 @@ else{
                       <small class="testimony-date"><i>Sunday 26th July, 2017</i> </small>
                   </div>
                 </div>
+                <div class="col-lg-2 col-md-2 col-sm-2"></div>
             </div>
       </div>
     </div>
     <div class="testimonial-buttons">
-      <a class="testi-btn" href="#">Add Testimonial</a>
+      <a class="testi-btn" href="#">Add Review</a>
       <a class="testi-btn" href="#">See All</a>
     </div>
     <!-- Left and right controls -->

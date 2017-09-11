@@ -80,13 +80,13 @@ else{
 	   	       <div class="cat_colm">
 	   	          <div class="" rel="<?php echo $weekrow->service_category;?>" style="background:url(<?php echo plugins_url(); ?>/ean_plugin/images/Category/<?php echo $weekrow->img_path;?>);background-size:cover;">
 				   
-                   <div class="desc">
-                      <h2><?php echo $weekrow->title;?></h2>
-                      <p><?php echo $weekrow->destination;?></p>
+                   <div class="home-slider-offer desc">
+                      <a href="<?php echo $link;?>" class="text-center">
+                        <h4><?php echo $weekrow->title;?></h4>
+                        <h6><?php echo $weekrow->destination;?></h6>
+                      </a>
                    </div>
-                   <div class="cat_overlay">
-                     <a href="<?php echo $link;?>" class="cat_det"><i class="fa fa-paperclip" aria-hidden="true"></i></a>
-                   </div>
+                  
 	   	          </div>
 	   	       </div>
 	   	     </div>
@@ -117,17 +117,17 @@ else{
 			foreach($results as $objrow){
              $link =site_url().'/search-vendor/?sid='.$objrow->id;?>
 		  
-	   	     <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6">
+	   	     <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
 	   	       <div class="cat_colm">
 	   	          <div class="ser_services" rel="<?php echo $objrow->id;?>" style="background:url(<?php echo plugins_url(); ?>/ean_plugin/images/Category/<?php echo $objrow->category_image;?>);background-size:cover;">
 				   
-                   <div class="desc">
-                      <h2><?php echo $objrow->title;?></h2>
-                      <p><?php echo $objrow->description;?></p>
+                   <div class="home-slider-offer desc">
+                       <a href="javascript:void();" class="text-center">
+                           <h4><?php echo $objrow->title;?></h4>
+                           <h6><?php echo $objrow->description;?></h6>
+                       </a>
                    </div>
-                   <div class="cat_overlay">
-                     <a href="javascript:void();" class="cat_det"><i class="fa fa-paperclip" aria-hidden="true"></i></a>
-                   </div>
+                 
 	   	          </div>
 	   	       </div>
 	   	     </div>

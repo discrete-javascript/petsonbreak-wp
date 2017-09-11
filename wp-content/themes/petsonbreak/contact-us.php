@@ -150,12 +150,16 @@ tbody {
                     <div class="col-md-6 col-sm-6">
                         <div class="form-group">
                             <label>Add Country<span style="color: red;">*</span></label>
+                            <?php 
+				$sresults =$wpdb->get_Results("select * from twc_country");
+                            ?>
                             <select name="country" id="country" class="form-control" onchange="blankField('country','')">
-							<option value="">Select..</option>
-							<option value="India">India</option>
-							<option value="Australia">Australia</option>
-							</select>
-							<span class="errSpan" id="err_country"></span>
+                                <option value="">Select..</option>
+                                <?php foreach($sresults as $sresult){ ?>
+                                    <option value="<?php echo $sresult->title; ?>"><?php echo $sresult->title; ?></option>
+                                <?php } ?>
+                                </select>
+                            <span class="errSpan" id="err_country"></span>
                         </div>
                     </div>
                 </div>    
@@ -223,6 +227,12 @@ tbody {
 <?php get_footer(); ?>
 
 <script>
+(function selectIndia() {
+  document.querySelector('#country option[value="India"]').selected = true;
+})()
+
+
+
 function contactUsFun(){
     var emailfilter = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
     if($('#firstname').val()==''){
