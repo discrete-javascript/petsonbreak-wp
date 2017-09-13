@@ -331,7 +331,7 @@ else{
 <?php // strong_testimonials_view( 1 ); ?>
 <?php $feedResults =$wpdb->get_results("select * from twc_feedback where 1 ORDER BY date_time DESC LIMIT 5 "); ?>
 <div class="testimonial-container">
-  <p>Customer Reviews & Ratings</p>  
+  <p>Customer Reviews & Ratings</p>
   <div id="testimonial-slider" class="carousel slide" data-ride="carousel">
     <!-- Wrapper for slides -->
     <div class="carousel-inner">
