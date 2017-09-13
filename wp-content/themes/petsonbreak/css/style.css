@@ -7263,10 +7263,12 @@ a.carousel-control[href="#servicesCarousel"] span.glyphicon.glyphicon-chevron-le
     margin-bottom: 2rem;
 }
 .news-column {
-    border-left: 1px solid #ccc;
+    /*border-left: 1px solid #ccc;*/
 }
 .whole-news {
     margin-left: 5rem;
+    height: 11.5em;
+    overflow: hidden;
 }
 .each-news .glyphicon.glyphicon-play {
     margin-right: 1rem;
@@ -8243,4 +8245,8 @@ a.testi-btn + a.testi-btn {
 
 .parallax-container-about {
      background-image: url(http://dev.petsonbreak.com/wp-content/uploads/2017/09/pexels-photo-341378.jpeg);
+}
+
+.each-news a, .each-news a:hover, .each-news a:focus  {
+	color: black;
 }

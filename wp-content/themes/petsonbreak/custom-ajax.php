@@ -265,6 +265,7 @@ if($_REQUEST['action']=='ChangePassword')
 	get_currentuserinfo();
 	$ID =$current_user->ID;
 	$user_pass =$current_user->user_pass;
+	$user_email = $current_user->user_email;
 	$currentpass = $_REQUEST["currentPw"];
 	$newpass     = $_REQUEST["newPw"];
 	$ID          = $current_user->ID;
@@ -275,6 +276,24 @@ if($_REQUEST['action']=='ChangePassword')
 		wp_set_password($newpass, $ID );
 		$SQL_user = "UPDATE wp_users set user_pass=MD5('".$newpass."') WHERE ID='".$ID."'";
 		$wpdb->query($SQL_user);
+			$to = $user_email;
+			$headers = "MIME-Version: 1.0" . "\r\n";
+			$headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
+			$headers  .= "From: info@petsonbreak.com" . "\r\n";
+
+			$cpmail_subject ='Password Changed';
+			$cpmailBody ='<table cellpadding="2" cellspacing="2">
+			<p>Your password has been changed at Petsonbreak.com!</p>
+			<tr>
+				<td> Please note down below new password:</td>
+				<td> New Password: '.$newpass.'</td>
+			</tr>
+		
+			<tr><td>Thanks,</td></tr>
+			<tr><td>Team PetsonBreak</td></tr>
+			</table>';
+		    mail($to,$cpmail_subject,$cpmailBody,$headers);
+
 		echo 1;
 	} else {
 		echo 0;

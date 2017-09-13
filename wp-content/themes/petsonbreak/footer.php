@@ -31,27 +31,26 @@ $vendor_id =$result->vendor_id;
     <?php endif; ?>
     <div class="container events-news-container">
     <div class="row">
-        <div class="event-column col-lg-6 col-md-6 col-sm-6 col-xs-12">
+        <!-- <div class="event-column col-lg-6 col-md-6 col-sm-6 col-xs-12">
             <div class="events-container">
                 <p class="events-section-heading">Events</p>
             </div>
             <div style="display: flex;justify-content: center;align-items: center;margin-top: 2rem;">
                 <h4>No Events</h4>
             </div>
-        </div>
-        <div class="news-column col-lg-6 col-md-6 col-sm-6 col-xs-12">
+        </div> -->
+        <div class="news-column col-lg-8 col-md-8 col-sm-8 col-xs-12 col-lg-offset-2">
             <div class="news-container">
                 <p class="news-section-heading">News & Updates</p>
-                
-                <div class="whole-news">
+                <div id="whole-news" class="whole-news"><ul>
                     <?php $newsResults =$wpdb->get_results("select * from twc_news where published='Yes' and status_deleted=0");
                     foreach($newsResults as $obj){?>
-                    <div class="each-news" id="hash_<?php echo $obj->id;?>">
+                    <li><div class="each-news" id="hash_<?php echo $obj->id;?>">
                         <span class="glyphicon glyphicon-play"></span>
-                        <span><i><?php echo stripcslashes($obj->title);?></i></span>
-                    </div>    
+                        <a href="<?php echo site_url().'/news-and-updates/?id='.$obj->id;?>"><span><i><?php echo stripcslashes($obj->title);?></i></span></a>
+                    </div></li>
                     <?php } ?>
-                </div>
+                </ul></div>
             </div>
         </div>
     </div>
@@ -311,7 +310,7 @@ $vendor_id =$result->vendor_id;
 <script src="<?php echo get_template_directory_uri(); ?>/js/ng-map.js"></script>
 <script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/scripts/main.js"></script>
 <script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/scripts/core.js?var=<?php echo rand();?>"></script>
-
+<script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/js/jquery.scrollbox.js"></script>
 
 <?php if($site_language=='ar'){?>
 <link rel="stylesheet" type="text/css" href="<?php echo get_template_directory_uri(); ?>/css/style-rtl.css?var=<?php echo date('His');?>">
@@ -337,7 +336,6 @@ function closeNav() {
 
 
 </script>
-
 
 
 <script type="text/javascript">
@@ -703,6 +701,17 @@ function closeNav() {
       slideMargin: 10
     });
   });
+</script>
+
+<script>
+$(document).ready(function(){
+  $('#whole-news').scrollbox({
+    linear: true,
+    step: 1,
+    delay: 0,
+    speed: 100
+  });
+});
 </script>
 
 <script>

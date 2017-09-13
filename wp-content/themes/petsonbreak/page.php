@@ -336,6 +336,7 @@ else{
     <!-- Wrapper for slides -->
     <div class="carousel-inner">
     <?php
+      $first = true;
       foreach($feedResults as $feedrow){
         $name = explode("@",$feedrow->email);
         $star = 1;
@@ -349,7 +350,7 @@ else{
           $star = 5;
         }
     ?>
-      <div class="item testimonial-section">
+      <div class="item <?php if ( $first ) { echo 'active'; $first = false; } ?> testimonial-section">
             <div class="row">
                 <div class="col-lg-8 col-md-8 col-sm-8 col-xs-12 col-lg-offset-2">
                     <div class="testimony-content">
