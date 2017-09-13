@@ -328,77 +328,49 @@ else{
         
     
 </div>
-<?php // strong_testimonials_view( 1 ); ?>.
+<?php // strong_testimonials_view( 1 ); ?>
+<?php $feedResults =$wpdb->get_results("select * from twc_feedback where 1 ORDER BY date_time DESC LIMIT 5 "); ?>
 <div class="testimonial-container">
   <p>Customer Reviews & Ratings</p>  
   <div id="testimonial-slider" class="carousel slide" data-ride="carousel">
     <!-- Wrapper for slides -->
     <div class="carousel-inner">
-      <div class="item active testimonial-section">
-            <div class="row">
-                <div class="col-lg-2 col-md-2 col-sm-2"></div>
-                <div class="col-lg-8 col-md-8 col-sm-8 col-xs-12 col-lg-offset-2">
-                    <div class="testimony-content">
-                      <p class="testimony-person-name"> Peter Novac</p>
-                      <p class="testimony-stars">
-                        <span class="glyphicon glyphicon-star"></span>
-                        <span class="glyphicon glyphicon-star"></span>
-                        <span class="glyphicon glyphicon-star"></span>
-                        <span class="glyphicon glyphicon-star"></span>
-                        <span class="glyphicon glyphicon-star"></span>
-                      </p>
-                      <p class="testimony-description"> Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui. Donec sollicitudin molestie malesuada. Vivamus suscipit tortor eget felis porttitor volutpat. Curabitur aliquet quam id dui posuere blandit. Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Proin eget tortor risus. Nulla porttitor accumsan tincidunt. Proin eget tortor risus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent sapien massa, convallis a pellentesque nec, egestas non nisi. </p>
-                      <small class="testimony-date"><i>Sunday 26th July, 2017</i> </small>
-                  </div>
-                </div>
-                <div class="col-lg-2 col-md-2 col-sm-2"></div>
-            </div>
-      </div>
+    <?php
+      foreach($feedResults as $feedrow){
+        $name = explode("@",$feedrow->email);
+        $star = 1;
+        if($feedrow->rating >= 0 && $feedrow->rating <= 2) {
+          $star = 1;
+        } else if($feedrow->rating >= 3 && $feedrow->rating <= 5) {
+          $star = 2;
+        } else if($feedrow->rating >= 6 && $feedrow->rating <= 7) {
+          $star = 4;
+        } else {
+          $star = 5;
+        }
+    ?>
       <div class="item testimonial-section">
             <div class="row">
-                <div class="col-lg-2 col-md-2 col-sm-2"></div>
                 <div class="col-lg-8 col-md-8 col-sm-8 col-xs-12 col-lg-offset-2">
                     <div class="testimony-content">
-                      <p class="testimony-person-name"> Peter Novac</p>
+                      <p class="testimony-person-name"><?php echo $name[0]; ?></p>
                       <p class="testimony-stars">
-                        <span class="glyphicon glyphicon-star"></span>
-                        <span class="glyphicon glyphicon-star"></span>
-                        <span class="glyphicon glyphicon-star"></span>
-                        <span class="glyphicon glyphicon-star"></span>
-                        <span class="glyphicon glyphicon-star"></span>
+                        <?php for($starcount = 0; $starcount < $star; $starcount++){ ?>
+                          <span class="glyphicon glyphicon-star"></span>
+                        <?php } ?>
                       </p>
-                      <p class="testimony-description"> Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui. Donec sollicitudin molestie malesuada. Vivamus suscipit tortor eget felis porttitor volutpat. Curabitur aliquet quam id dui posuere blandit. Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Proin eget tortor risus. Nulla porttitor accumsan tincidunt. Proin eget tortor risus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent sapien massa, convallis a pellentesque nec, egestas non nisi. </p>
-                      <small class="testimony-date"><i>Sunday 26th July, 2017</i> </small>
+                      <p class="testimony-description"><?php echo $feedrow->message; ?></p>
+                      <small class="testimony-date"><i><?php echo date('l M d, Y',strtotime($feedrow->date_time));?></i> </small>
                   </div>
                 </div>
-                <div class="col-lg-2 col-md-2 col-sm-2"></div>
             </div>
       </div>
-      <div class="item testimonial-section">
-            <div class="row">
-                <div class="col-lg-2 col-md-2 col-sm-2"></div>
-                <div class="col-lg-8 col-md-8 col-sm-8 col-xs-12 col-lg-offset-2">
-                    <div class="testimony-content">
-                      <p class="testimony-person-name"> Peter Novac</p>
-                      <p class="testimony-stars">
-                        <span class="glyphicon glyphicon-star"></span>
-                        <span class="glyphicon glyphicon-star"></span>
-                        <span class="glyphicon glyphicon-star"></span>
-                        <span class="glyphicon glyphicon-star"></span>
-                        <span class="glyphicon glyphicon-star"></span>
-                      </p>
-                      <p class="testimony-description"> Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui. Donec sollicitudin molestie malesuada. Vivamus suscipit tortor eget felis porttitor volutpat. Curabitur aliquet quam id dui posuere blandit. Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Proin eget tortor risus. Nulla porttitor accumsan tincidunt. Proin eget tortor risus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent sapien massa, convallis a pellentesque nec, egestas non nisi. </p>
-                      <small class="testimony-date"><i>Sunday 26th July, 2017</i> </small>
-                  </div>
-                </div>
-                <div class="col-lg-2 col-md-2 col-sm-2"></div>
-            </div>
-      </div>
+    <?php } ?>
     </div>
-    <div class="testimonial-buttons">
+<!--     <div class="testimonial-buttons">
       <a class="testi-btn" href="#">Add Review</a>
       <a class="testi-btn" href="#">See All</a>
-    </div>
+    </div> -->
     <!-- Left and right controls -->
     <a class="left carousel-control" href="#testimonial-slider" data-slide="prev">
       <span class="testimonial-slider glyphicon glyphicon-chevron-left"></span>

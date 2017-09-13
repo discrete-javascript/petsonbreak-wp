@@ -8148,9 +8148,11 @@ div.upcoming-event-rows {
 }
 #testimonial-slider .carousel-inner {
 	max-width: 1200px;
+	margin: auto;
 }
 .testimonial-buttons {
     display: inline-block;
+
     width: 100%;
     text-align: right;
     position: relative;
