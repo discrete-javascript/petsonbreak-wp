@@ -7006,10 +7006,9 @@ border-left: 30px solid #636;
     border: none;
     background-color: transparent;
 }
-#categories.nav-tabs.menu-bar>li>a:hover {
-    color: #663366;
-    background: white;
-    background-color: transparent;
+#categories.nav-tabs.menu-bar>li>a:hover,#categories.nav-tabs.menu-bar>li>a:focus {
+    color: white;
+    background: #636;
 }
 #categories.nav-tabs.menu-bar>li.active>a, #categories.nav-tabs.menu-bar>li.active>a:hover, #categories.nav-tabs.menu-bar>li.active>a:focus {
     background: #663366;
@@ -7116,8 +7115,14 @@ div#searchbox {
     text-transform: uppercase;
 }
 #categories.nav-tabs>li.active>a, #categories.nav-tabs>li.active>a:hover, #categories.nav-tabs>li.active>a:focus {
-    color: #ff372f
+    color: red;
+    background: #fff;
 }
+#categories.nav-tabs>li>a:hover, #categories.nav-tabs>li>a:focus {
+    color: #fff;
+    background: #636;
+}
+
 .home-slider-offer-title {
     text-align: center;
     color: white;
