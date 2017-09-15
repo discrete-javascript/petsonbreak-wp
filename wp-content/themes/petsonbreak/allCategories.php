@@ -113,7 +113,7 @@ else{
 	   	  <div class="row">
 		  
 		  <?php 
-            $results =$wpdb->get_results("select * from twc_service_category where published='Yes' and status_deleted=0");
+            $results =$wpdb->get_results("select * from twc_service_category where published='Yes' and status_deleted=0 ORDER BY sorting ASC");
 			foreach($results as $objrow){
              $link =site_url().'/search-vendor/?sid='.$objrow->id;?>
 		  
