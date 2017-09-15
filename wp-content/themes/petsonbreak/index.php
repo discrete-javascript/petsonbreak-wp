@@ -33,17 +33,12 @@ $featured_image = $img[0];
 
 <!-- Add Banner -->
 <div id="blog-page">
-<div class="blog-banner" style="background-image: url(<?php echo $featured_image;?>);">
+<div class="general-hero-parallax-styles blog-banner" style="background-image: url(<?php echo $featured_image;?>);">
 
 
    
-		<div class="blog-banner-caption">
 				<h3 class="ng-binding"><?php echo $mk_options['blog_title'];?></h3>
 				<p class="ng-binding"><?php echo $mk_options['blog_description'];?></p>
-		</div>
-
-
-
 </div>
 <!--
 <div class="container-fluid bg_white border-top-solid">
@@ -66,7 +61,7 @@ $featured_image = $img[0];
    -->
 
 <div class="container blog-main-container">
-<div class="row">
+<div class="row general-center-element">
 <div id="primary" class="content-area col-md-9">
 
 	  <ul id="blog-posts">
@@ -108,9 +103,7 @@ $featured_image = $img[0];
 	   
 	   </div>
 </div><!-- .content-area -->
-	<div class="col-md-3 boder_right1">
-	 <?php echo get_sidebar(); ?>
-	</div>
+	
 	</div>
 	</div>
 </div>
