@@ -73,10 +73,10 @@ if($_REQUEST['postType']!=''){
 								'country'=>$country,
 								'member_citizenship'=>$member_citizenship,
 								'dob'=>$dob,
-								'own_pets'=>$own_pets,
+								//'own_pets'=>$own_pets,
 								//'spayed'=>$spayed,
 								//'pedigreed'=>$pedigreed,
-								'pet_details'=>$petDetail_json,
+								//'pet_details'=>$petDetail_json,
 								
 								'intrested_area' =>$intrested_area,
 								'additional_info' =>$additional_info,
@@ -120,6 +120,12 @@ $spayed=$pet_details->spayed;
 $intrested_area =$get_usermeta['intrested_area'][0];
 $additional_info =$get_usermeta['additional_info'][0];
 
+function getBreadName($id){
+	global $wpdb;
+	$getBreedsql = "select title from twc_pet_breedtype where id='".$id."'";
+	$getBreed = $wpdb->get_results($getBreedsql);
+	return $getBreed[0]->title;
+}
 ?>
 
 
@@ -259,7 +265,7 @@ $additional_info =$get_usermeta['additional_info'][0];
 					
 			       <input type="hidden" id="pettypede" name="pettypede" value="<?php echo $PetTitle; ?>">
 			
-					<li class="doYou">
+					<!-- <li class="doYou">
 						<label class="nrd-loginModal-label u-vr2x" for="Accepted"><span>Do you Own Pets</span></label>
 						<div class="payment-options">
 							<label class="radio-inline">
@@ -373,7 +379,7 @@ $additional_info =$get_usermeta['additional_info'][0];
 							<div class="petListadetail"></div>
 				
 							<span class="errSpan" ></span>
-						</li>
+						</li> -->
 			
 						
 						
@@ -572,7 +578,7 @@ $additional_info =$get_usermeta['additional_info'][0];
 			</div>
 		</li>
 		
-		<li>
+		<!-- <li>
 		   <div class="row">
 			<div class="col-md-6">
 			<label class="nrd-loginModal-label  def-label" for="username"><span>Own Pets ?</span></label>
@@ -628,7 +634,7 @@ $additional_info =$get_usermeta['additional_info'][0];
 					  <div><?php echo $pet_age[$p];?></div>
 					
 					  <div><?php echo $pet_gender[$p];?></div>
-					  <div><?php echo getBreadName($pet_breed[$p]);?></div>
+					  <div><?php echo getBreadName($pet_breed[$p]); ?></div>
 					   <div><?php echo $pedigreed[$p];?></div>
 					 <div><?php echo $spayed[$p];?></div> 
 			   <?php } else{?>									 
@@ -657,7 +663,7 @@ $additional_info =$get_usermeta['additional_info'][0];
 	
 		
 	
-		 </li>
+		 </li> -->
 
 	
 		<li>

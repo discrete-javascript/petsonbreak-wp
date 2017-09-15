@@ -548,7 +548,7 @@ if($_REQUEST['action']=='searchVendorServices'){
 	}
 	if($_REQUEST['destName']!=''){
 		//$extQuery.=" and city='".$_REQUEST['destName']."'";
-		$extQuery.=" and LCASE(city)LIKE '%".strtolower($_REQUEST['destName'])."'";
+		$extQuery.=" and LCASE(city)LIKE '".strtolower($_REQUEST['destName'])."%'";
 	}
 
 	$limit=4;
@@ -785,12 +785,19 @@ if($_REQUEST['action']=='petbreedType'){
 if($_REQUEST['action']=='sendQuery'){
 	$sql ="insert into twc_queries SET id='".uniqid()."', first_name='".$_REQUEST['first_name']."',last_name='".$_REQUEST['last_name']."',email='".$_REQUEST['email']."',contact_number='".$_REQUEST['contact_number']."',message='".$_REQUEST['message']."',product_id='".$_REQUEST['product_id']."',member_id='".$_REQUEST['member_id']."',vendor_id='".$_REQUEST['vendor_id']."',published='Yes', date_time='".date('Y-m-d H:i:s')."'";
 	$wpdb->query($sql);
-	
+
+	$vendorEmail = '';
+	$pmail_subject ='Find New Booking';
+	if($_REQUEST['booking'] == 'Send Query') {
+		$vendoruser = get_userdata( $_REQUEST['vendor_id'] );
+		$vendorEmail = $vendoruser->user_email;
+		$pmail_subject ='Find the new query';
+	}
 	$headers = "MIME-Version: 1.0" . "\r\n";
 	$headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
-	$headers  .= 'From: <'.$admin_email.'>' . "\r\n";
+	$headers  .= "From: info@petsonbreak.com" . "\r\n";
 
-	$pmail_subject ='Find the new query';
+	$admin_email = 'dharminl@versionsolutions.com';
 	$pmailBody ='<table cellpadding="2" cellspacing="2">
 	<p>Find the new query</p>
 	<tr><td>Client name: '.$_REQUEST['first_name'].' '.$_REQUEST['last_name'].'</td></tr>
@@ -799,7 +806,9 @@ if($_REQUEST['action']=='sendQuery'){
 	<tr><td>Message: '.$_REQUEST['message'].'</td></tr>
 	</table>';
 	mail($admin_email,$pmail_subject,$pmailBody,$headers);
-	
+	if (!empty($vendorEmail)) {
+		mail($vendorEmail,$pmail_subject,$pmailBody,$headers);
+	}
 }
 
 

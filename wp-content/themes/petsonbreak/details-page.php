@@ -92,7 +92,17 @@ $ratingArr =array('5'=>'Awesome','4'=>'Great','3'=>'Average','2'=>'Not that bad'
         <div class="col-lg-2 col-md-2 col-sm-2"></div>
         <div class="col-lg-8 col-md-8 col-sm-8">
             <div class="vendor-details-container">
-                <p><?php echo $establishment;?> <sup class="item-rating details-page-rating"><?php if(isset($objs->avg_rating)) { echo ceil($objs->avg_rating); } else { echo '0'; } ?></sup></p>
+                <p><?php echo $establishment;?> 
+                  <?php if(isset($objs->avg_rating) && $objs->avg_rating > 0 ) { ?>
+                    <sup class="item-rating details-page-rating"> <?php echo ceil($objs->avg_rating); ?> </sup>
+                  <?php } ?></p>
+                  <?php if(isset($objs->avg_rating)) { ?>
+                  <p class="testimony-stars">
+                    <?php for($starcount = 0; $starcount < $objs->avg_rating; $starcount++){ ?>
+                      <span class="glyphicon glyphicon-star"></span>
+                    <?php } ?>
+                  </p>
+                  <?php } ?>
                 <div><i class="fa fa-map-marker details-page-address" aria-hidden="true"></i><span><?php echo $objs->address;?>,<?php echo $objs->city;?></span></div>
                 <div><i class="fa fa-phone details-page-phone" aria-hidden="true"></i> <span><?php echo $objs->contact_number;?></span></div>
             </div>
@@ -109,9 +119,9 @@ $ratingArr =array('5'=>'Awesome','4'=>'Great','3'=>'Average','2'=>'Not that bad'
             </div>
    <ul class="nav nav-tabs details-page-nav-tabs">
     <li class="active"><a data-toggle="tab" data-target="#overview" href="#overview">OVERVIEW</a></li>
+    <li><a data-toggle="tab" data-target="#alsoListed" href="#alsoListed">SERVICES OFFERED</a></li>
     <li><a data-toggle="tab" data-target="#photos" href="#photos">PHOTOS</a></li>
     <li><a data-toggle="tab" data-target="#reviews" href="#reviews">REVIEWS</a></li>
-    <li><a data-toggle="tab" data-target="#alsoListed" href="#alsoListed">ALSO LISTED IN</a></li>
   </ul>
 
   <div class="tab-content details-page-tab-content">
@@ -174,7 +184,11 @@ $ratingArr =array('5'=>'Awesome','4'=>'Great','3'=>'Average','2'=>'Not that bad'
           </div>
         <div>
 <!--            <button class="details-share-button"><img src="<?php $upload_dir = wp_upload_dir(); echo $upload_dir['baseurl']; ?>/2017/09/coloredIcon.png" /> </button>        -->
-            <a href="javascript:void();" class="snd_query_btn">Send Query</a>
+            <?php if ($sid == 'N148948330558c7b6295b388' || $sid == 'V148948235058c7b26e54885' || $sid == 'G148948225958c7b21322ce8') { ?>
+                <a href="javascript:void();" class="snd_query_btn">Book Now</a>
+            <?php } else { ?>
+                <a href="javascript:void();" class="snd_query_btn">Send Query</a>
+            <?php } ?>
                     </div>
     </div>
     <div id="photos" class="tab-pane fade details-page">

@@ -14,17 +14,20 @@ $vendor_id =$result->vendor_id;
 
 <footer id="footer">
     <?php if(!is_front_page()): ?>
+    <?php 
+            $random =$wpdb->get_results("select id, title from twc_service_category where published='Yes' and status_deleted=0 and not id ='".$_REQUEST['sid']."' ORDER BY RAND() LIMIT 2");
+    ?>
     <div class="container-fluid">
          <div class="explore-more-container">
             <div class="newly-opened-restaurants">
-                <span>NEWLY OPENED PETS FRIENDLY</span>
-                <div>RESTAURANTS</div>
-                <a href="<?php echo site_url();?>/all-categories/?sid=V148948235058c7b26e54885" class="yellow">EXPLORE</a>
+                <span><?php echo $random[0]->title ?></span>
+                <!-- <div>RESTAURANTS</div> -->
+                <a href="<?php echo site_url();?>/search-vendor/?sid=<?php echo $random[0]->id ?>" class="yellow">EXPLORE</a>
             </div>
             <div class="top-trending-restaurants">
-                <span>TOP TRENDING PETS FRIENDLY</span>
-                <div>DESTINATIONS</div>
-                <a href="<?php echo site_url();?>/all-categories/?sid=N148948330558c7b6295b388" class="yellow">EXPLORE</a>
+                <span><?php echo $random[1]->title ?></span>
+                <!-- <div>DESTINATIONS</div> -->
+                <a href="<?php echo site_url();?>/search-vendor/?sid=<?php echo $random[0]->id ?>" class="yellow">EXPLORE</a>
             </div>
         </div>
     </div>
@@ -927,6 +930,8 @@ $('#quick_links .quick-links-section-body ul li > span').click(function() {
 <script>
 $('.snd_query_btn').click(function() {
     $('#query-container').show();
+    var btntext = $(this).text();
+    $('<input type="hidden">').attr({ name: 'booking', value: btntext }).appendTo('#sendqueryFrm');
 })
 $('#queryBtn1').click(function() {
     var frmdata = $('#sendqueryFrm').serialize();

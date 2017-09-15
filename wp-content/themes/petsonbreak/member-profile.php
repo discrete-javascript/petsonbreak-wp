@@ -66,6 +66,7 @@ $sresults_img =$wpdb->get_Results("select * from twc_member_gallery where user_i
 		  <li class="tabs active" id="tab_enquiry"><a href="<?php echo site_url();?>/member-profile?type=enquiry">View Query</a></li>
                    <li class="tabs" id="tab_booking"><a href="<?php echo site_url();?>/member-profile?type=booking">Manage Booking</a></li>
 		  <li class="tabs " id="tab_profile"><a href="<?php echo site_url();?>/member-profile?type=profile">Member Profile</a></li>
+      <li class="tabs " id="tab_addpets"><a href="<?php echo site_url();?>/member-profile?type=addpets">Add Pets</a></li>
                   <li class="tabs " id="tab_changepass"><a href="<?php echo site_url();?>/member-profile?type=changepass">Change Password</a></li>
          
 		 
@@ -83,13 +84,16 @@ $sresults_img =$wpdb->get_Results("select * from twc_member_gallery where user_i
 		 <?php if($_REQUEST['type']=='profile'){
 			      include('includes/member_profile.php');
 		        }
+          if($_REQUEST['type']=='addpets'){
+            include('includes/addpets.php');
+            }
 				if($_REQUEST['type']=='changepass'){
 			      include('includes/change_password.php');
 		        }
 				if($_REQUEST['type']=='enquiry'){
 			      include('includes/manage_enquiry.php');
 		        }
-                                if($_REQUEST['type']=='booking'){
+            if($_REQUEST['type']=='booking'){
 			      include('includes/manage_booking.php');
 		        }
 		   ?>
