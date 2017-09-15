@@ -3839,6 +3839,7 @@ font-weight: bold;}
 	max-height: 335px;
 	height:auto;
 	overflow:auto;
+        justify-content: left;
 }
 .detail-section2 .cont::-webkit-scrollbar-track
 {
@@ -6437,7 +6438,6 @@ border-left: 30px solid #636;
 	position: absolute;
 	top: 50%;
 	margin-top: -50px;
-	margin-left: 1px;
 	left: 100%;
 	z-index: 1;
 }
@@ -7265,7 +7265,7 @@ a.carousel-control[href="#servicesCarousel"] span.glyphicon.glyphicon-chevron-le
     text-align: center;
     font-size: 3rem;
     font-weight: 500;
-    margin-bottom: 2rem;
+    margin-bottom: 3rem;
 }
 .news-column {
     /*border-left: 1px solid #ccc;*/
@@ -8254,4 +8254,36 @@ a.testi-btn + a.testi-btn {
 
 .each-news a, .each-news a:hover, .each-news a:focus  {
 	color: black;
+}
+/** General Parallax effect styles **/
+/*** Blog Page **/
+.general-hero-parallax-styles {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    padding: 10em; 
+}
+.general-center-element {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.general-hero-parallax-styles p,
+#blog-page h3 {
+    color: yellow;
+    font-size: 3vw;
+    line-height: 3.5vw;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+#blog-page h3 {
+    color: red;
+}
+#blog-page p {
+    text-transform: none;
+}
+#blog-page div.blog-banner {
+    height: auto;
 }

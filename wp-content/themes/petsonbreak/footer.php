@@ -119,7 +119,7 @@ $vendor_id =$result->vendor_id;
 			?>
             </div>
             <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
-                <p class="footer-locations">LOCATIONS </p>
+                <p class="footer-locations">LOCATION </p>
                 <p class="footer-india-office">INDIA OFFICE</p>
                 <ul>
                     <li><?php echo $mk_options['f_company_name'];?></li>
@@ -128,6 +128,9 @@ $vendor_id =$result->vendor_id;
                     <li>Pune 411 015 </li>
                     <li>India</li>
                 </ul>
+                
+            </div>
+              <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12" style="margin-top: 2em;">
                 <p class="footer-india-phone">PHONE</p>
                 <ul>
                     <li>+91 8999 306 724 (Travel Related)</li>
@@ -139,26 +142,6 @@ $vendor_id =$result->vendor_id;
                 <ul>
                     <li>
                       <a href="mailto:info@petsonbreak.com">info@petsonbreak.com</a>
-                    </li>
-                </ul>
-            </div>
-            <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
-                <p class="footer-aus-office">AUSTRALIA OFFICE</p>
-                <ul>
-                    <li>43 </li>
-                    <li>Whites Lane,</li>
-                    <li>Glen Waverley 3150,</li>
-                    <li>Victoria  </li>
-                    <li>Australia</li>
-                </ul>
-                <p class="footer-aus-phone">PHONE</p>
-                <ul>
-                    <li>0421 3766 36 (Travel Related)</li>
-                </ul>
-                <p class="footer-india-email">EMAIL</p>
-                <ul>
-                    <li>
-                        <a href="mailto:australiaincoming@petsonbreak.com">australiaincoming@petsonbreak.com</a>
                     </li>
                 </ul>
             </div>
@@ -204,7 +187,7 @@ $vendor_id =$result->vendor_id;
             <p class="copyright1">Copyright All Rights Reserved © 2017</p>
           </div>
         </div>
-        <div class="col-md-6">
+        <div class="col-md-6 text-right">
           <div class="footer_terms">
            	    <?php
 			   $fdefaults = array(
