@@ -50,7 +50,6 @@ $all_meta_for_user = get_user_meta($_SESSION['userID']);
           <li class="tabs" id="tab_booking"><a href="<?php echo site_url();?>/booking?type=booking"><i class="fa fa-calendar-check-o"></i>My Bookings</a></li>
 		  -->
           <li class="tabs" id="tab_changepass"><a href="<?php echo site_url();?>/booking?type=changepass"></i>Change Password</a></li>
-		  <li class="tabs" id="tab_offered"><a href="<?php echo site_url();?>/booking?type=offered"></i>Offer and Discount</a></li>
 		  <li class="tabs" id="tab_enquiry"><a href="<?php echo site_url();?>/booking?type=enquiry">Manage Enquiry</a></li>
          
 		 
@@ -75,9 +74,6 @@ $all_meta_for_user = get_user_meta($_SESSION['userID']);
 		        }
 				if($_REQUEST['type']=='changepass'){
 			      include('includes/manage_password.php');
-		        }
-				if($_REQUEST['type']=='offered'){
-			      include('includes/manage_offered.php');
 		        }
 				if($_REQUEST['type']=='enquiry'){
 			      include('includes/manage_enquiry.php');

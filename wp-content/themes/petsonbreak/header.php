@@ -357,7 +357,7 @@ $results =$wpdb->get_results("select * from twc_service_category where published
                                     <span class="pet_g_crt"><?php echo $serviceCategory;?></span>
                                     <span><i class="fa fa-angle-down" aria-hidden="true"></i></span>
                                 </span>-->
-                                <ul id="categories" class="nav nav-tabs menu-bar" style="justify-content: center;">
+                                <ul id="categories" class="nav nav-tabs menu-bar" style="justify-content: center;width: 95%;">
                                <li>
                                    <a href="<?php echo site_url();?>" title="HOME PAGE">HOME</a>
                                </li>     
@@ -380,10 +380,11 @@ $results =$wpdb->get_results("select * from twc_service_category where published
                                    <?php } ?>
                                    <?php if(is_page('login')) {  ?>
                                       <li><a href="<?php echo site_url();?>/all-categories/">PET SERVICES</a></li> 
-                                   <?php } else { ?>
-                                       <li><a id="dig-more">DIG MORE<?php echo is_page('login');?> <i class="fa fa-sort-asc" aria-hidden="true"></i></a></li>
                                    <?php } ?>
                                 </ul>
+                                <div class="show-hide-button">
+                                  <a id="dig-more">SHOW<?php echo is_page('login');?> <i class="fa fa-sort-asc" aria-hidden="true"></i></a>  
+                                </div>
                                 <div style="
                                         width: 100%;
                                         display: flex;
@@ -513,7 +514,7 @@ $results =$wpdb->get_results("select * from twc_service_category where published
         function hideVendorList() {
         var listCategories = document.querySelector('#categories');
         listCategories.childNodes.forEach(function(item, index) {
-            if (index > 8 && index %2) {
+            if (index > 10 && index %2) {
                 item.classList.add('hidden');
             }
             if (index === listCategories.childNodes.length - 2) {
@@ -530,11 +531,11 @@ $results =$wpdb->get_results("select * from twc_service_category where published
         document.querySelectorAll('.selected_category').forEach(function(item) {
             item.classList.remove('hidden');
         })
-        digMoreButton.innerHTML = 'DIG LESS <i class="fa fa-sort-desc" aria-hidden="true"></i>';
+        digMoreButton.innerHTML = 'HIDE <i class="fa fa-sort-desc" aria-hidden="true"></i>';
         listCounter = 1;
         } else if(listCounter === 1) {
             hideVendorList();
-            digMoreButton.innerHTML = 'DIG MORE <i class="fa fa-sort-asc" aria-hidden="true"></i>';
+            digMoreButton.innerHTML = 'SHOW <i class="fa fa-sort-asc" aria-hidden="true"></i>';
             listCounter = 0;
         }
 

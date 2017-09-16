@@ -183,7 +183,7 @@ $ratingArr =array('5'=>'Awesome','4'=>'Great','3'=>'Average','2'=>'Not that bad'
 
           </div>
         <div>
-<!--            <button class="details-share-button"><img src="<?php $upload_dir = wp_upload_dir(); echo $upload_dir['baseurl']; ?>/2017/09/coloredIcon.png" /> </button>        -->
+            <button class="details-share-button"><img src="<?php $upload_dir = wp_upload_dir(); echo $upload_dir['baseurl']; ?>/2017/09/coloredIcon.png" /> </button>        
             <?php if ($sid == 'N148948330558c7b6295b388' || $sid == 'V148948235058c7b26e54885' || $sid == 'G148948225958c7b21322ce8') { ?>
                 <a href="javascript:void();" class="snd_query_btn">Book Now</a>
             <?php } else { ?>
@@ -325,7 +325,7 @@ $ratingArr =array('5'=>'Awesome','4'=>'Great','3'=>'Average','2'=>'Not that bad'
 
 
       <div class="detail-section4 details-page-add-review">
-     <div class="row">
+     <div class="row general-center-element">
         <div class="col-md-6">
      <form name="frmReview" id="frmReview">
        <input type="hidden" name="user_id" value="<?php echo $userID;?>">
@@ -431,7 +431,7 @@ $messageReview=$revResult->message;
       <h3>ALSO LISTED IN </h3>
       <div class="col-md-4 pet-search-rht details-page-also-listed">
 
-           		<ul>
+           		<ul style="width:60%; margin: 0 auto;">
 				<?php
 				$listed_results =$wpdb->get_results("select * from twc_vendor_services where vendor_id='".$userid."' and id!='".$_REQUEST['id']."'");
 				foreach($listed_results as $objrow){

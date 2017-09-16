@@ -163,8 +163,11 @@ else{
                  </a>
               </li>
               <?php } ?>
-              <li><a id="dig-more">DIG MORE <i class="fa fa-sort-asc" aria-hidden="true"></i></a></li>
+              <li></li>
             </ul>
+            <div class="show-hide-button">
+                <a id="dig-more">SHOW<?php echo is_page('login');?> <i class="fa fa-sort-asc" aria-hidden="true"></i></a>  
+            </div>
             <div class="tab-content">
             <div id="searchbox" class="tab-pane">
             <?php if($_REQUEST['destName']!=''){ ?>
@@ -566,7 +569,7 @@ else{
     function hideVendorList() {
         var listCategories = document.querySelector('#categories');
         listCategories.childNodes.forEach(function(item, index) {
-            if (index > 8 && index %2) {
+            if (index > 12 && index %2) {
                 item.classList.add('hidden');
             }
             if (index === listCategories.childNodes.length - 2) {
@@ -583,11 +586,11 @@ else{
         document.querySelectorAll('.selected_category').forEach(function(item) {
             item.classList.remove('hidden');
         })
-        digMoreButton.innerHTML = 'DIG LESS <i class="fa fa-sort-desc" aria-hidden="true"></i>';
+        digMoreButton.innerHTML = 'HIDE <i class="fa fa-sort-desc" aria-hidden="true"></i>';
         listCounter = 1;
         } else if(listCounter === 1) {
             hideVendorList();
-            digMoreButton.innerHTML = 'DIG MORE <i class="fa fa-sort-asc" aria-hidden="true"></i>';
+            digMoreButton.innerHTML = 'SHOW <i class="fa fa-sort-asc" aria-hidden="true"></i>';
             listCounter = 0;
         }
         

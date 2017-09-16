@@ -20,7 +20,9 @@ h1, h2, h3, h4, h5, h6 {color:#302a3d;font-family: 'SegoeUI', 'Open Sans', sans-
     color: #fff;
     background: #636;
 }
-
+.row {
+    margin-right: 0 !important;
+}
 ::selection {
     color: #fff;
     background: #636;
@@ -4230,7 +4232,7 @@ margin-bottom: 15px;}
 }
 
 .snd_query_btn:hover{
-	color:#673569;
+	color:#fff;
 }
 
 .quer_fName,.quer_Email{
@@ -5792,7 +5794,7 @@ float:left;}
 #regist .petLista_head li div{width:13%; float:left !important;margin-right: 1%;font-size: 16px;color:#555;}
 #regist .petLista_list li {width:100% !important;float: left;}
 #regist .petLista_list li:first-child{margin-bottom:25px;}
-#regist .petLista_list li div{width:13%; float:left!important;margin-right: 1%;}
+#regist .petLista_list li div{width:25%; float:left!important;margin-right: 1%;}
 
 #regist .petListadetail{width:100%;float:left;}
 
@@ -6997,9 +6999,25 @@ border-left: 30px solid #636;
     margin-top: 4.6em;
     z-index: 3;
 }
-#categories.nav-tabs.menu-bar {
+.pet-groomsv-criteria-open.menu-bar {
     background: #f0efed;
-    box-shadow: 0 -4px 8px 0 rgba(0, 0, 0, 0.2), 0 -6px 10px 0 rgba(0, 0, 0, 0.19);
+    box-shadow: 0 -4px 8px 0 rgba(0, 0, 0, 0.2);
+    position: relative;
+}
+.show-hide-button {
+    position: absolute;
+    top: 7px;
+    right: 10px;
+}
+.show-hide-button a {
+    cursor: pointer;
+    font-size: 13px;
+    font-weight: bold;
+    color: #000;
+}
+.show-hide-button:hover,
+.show-hide-button:focus {
+    color: #636;
 }
 #categories.nav-tabs.menu-bar>li>a {
     color: black;
@@ -7909,7 +7927,7 @@ div.login-whole-container {
    background: white;
 }
 .vendor-details-container {
-    margin-top: -8em;
+    margin-top: -9em;
     margin-bottom: 0.5em;
     color: white;
 }
@@ -8007,6 +8025,9 @@ div.details-page-also-listed {
 }
 .details-share-button img{
     height: 3em;
+    position: absolute;
+    bottom: 7rem;
+    left: 3em;
 }
 /*** Details page styles end ***/
 

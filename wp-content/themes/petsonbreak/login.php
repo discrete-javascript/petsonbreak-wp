@@ -44,6 +44,8 @@ global $mk_options;
 		 <input type="hidden" name="redirect" id="redirect" value="<?php echo $loginRedirect;?>">
                  
                  <div class="login-content">
+                                             <span class="errSpan" id="login-error"></span>
+
                      <ul class="user-input-container modalLogin-loginFields">
 			<li>
 				<label class="nrd-loginModal-label u-vr2x" for="username"><span>Email</span></label>
@@ -108,9 +110,11 @@ $('#vendor_login').click(function(){
 		success: function(Data){
 		 	console.log(Data);
 		    if(Data=='0'){
-			   alert('Information wrong');
+                        $('#login-error').html('Information Wrong');
+                        $('#user_login').focus();
 			} else if(Data=='Inactive'){
-				alert('Account not active');
+				$('#login-error').html('Account not active');
+                                $('#user_login').focus();
 			} else if( redirect!=''){
 				window.location.href="<?php echo site_url();?>/"+redirect;
 			} else if(Data=='administrator'){
