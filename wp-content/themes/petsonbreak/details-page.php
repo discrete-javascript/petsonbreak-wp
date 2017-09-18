@@ -428,7 +428,7 @@ $messageReview=$revResult->message;
    </div>
     </div>
     <div id="alsoListed" class="tab-pane fade details-page">
-      <h3>ALSO LISTED IN </h3>
+      <h3>Services Offered</h3>
       <div class="col-md-4 pet-search-rht details-page-also-listed">
 
            		<ul style="width:60%; margin: 0 auto;">

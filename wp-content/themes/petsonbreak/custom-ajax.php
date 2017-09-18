@@ -797,7 +797,6 @@ if($_REQUEST['action']=='sendQuery'){
 	$headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
 	$headers  .= "From: info@petsonbreak.com" . "\r\n";
 
-	$admin_email = 'dharminl@versionsolutions.com';
 	$pmailBody ='<table cellpadding="2" cellspacing="2">
 	<p>Find the new query</p>
 	<tr><td>Client name: '.$_REQUEST['first_name'].' '.$_REQUEST['last_name'].'</td></tr>

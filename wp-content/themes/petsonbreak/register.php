@@ -586,7 +586,7 @@
   </style>
 <script>
 	
-	$('#RegisBtn').click(function(){
+	$('#RegisBtn').click(function(event){
 		var flag=0;
 		var re = /[A-Z0-9._%+-]+@[A-Z0-9.-]+.[A-Z]{2,4}/igm;
 		var IndNum =/^(\+91-|\+91|0)?\d{10}$/;	
@@ -671,6 +671,7 @@
 			return false;
 		}
 		else{
+			event.preventDefault();
 			var frmdata =$('#contactform').serialize();
 			$.ajax({
 				type: "POST",
@@ -680,7 +681,7 @@
 					if(Data==1){
 						window.location.href="<?php echo site_url();?>/thank-you/";
 						}else{
-						$('#msgDiv').html('<span class="error">This email id already exist.</span>');
+						$('#err_email').html('<span class="error">This email id already exist.</span>');
 					}
 				}
 			})

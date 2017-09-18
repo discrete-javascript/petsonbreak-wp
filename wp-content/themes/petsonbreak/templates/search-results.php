@@ -3,6 +3,10 @@
   <h6>Loading {{tab}}!</h6>
   <p>Please wait while we check for the lowest rates and availibility...</p>
 </div>
+
+<!-- <div class="noresult" ng-if = "NoresultFound">
+   <p>Please wait while we check for the lowest rates and availibility...</p>
+</div> -->
 <section id="hotel-list-section" class="wleft">
   <div class="container hotel-list-container">
     <div class="row">
