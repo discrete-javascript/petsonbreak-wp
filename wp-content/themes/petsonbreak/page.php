@@ -156,8 +156,9 @@ else{
             <span><i class="fa fa-angle-down" aria-hidden="true"></i></span>
             </span>-->
             <ul id="categories" class="nav nav-tabs">
+              <?php $firstElement = true; ?>
               <?php foreach ($results as $val) { ?>
-              <li class="selected_category" data-value="<?php echo $val->id;?>">
+              <li class="selected_category <?php if($firstElement) { echo 'active'; $firstElement = false; } ?>" data-value="<?php echo $val->id;?>">
                  <a class="opt" data-toggle="tab" href="#searchbox">
                      <?php echo $val->title;?>
                  </a>
@@ -563,9 +564,9 @@ else{
 
 <script>
    var listCategories = document.querySelector('#categories');
-    window.onload = function() { 
+    /*window.onload = function() { 
         listCategories.childNodes[1].childNodes[1].click(); 
-    };
+    };*/
     function hideVendorList() {
         var listCategories = document.querySelector('#categories');
         listCategories.childNodes.forEach(function(item, index) {
