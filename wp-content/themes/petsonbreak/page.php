@@ -24,12 +24,12 @@ global $site_language;
 global $wpdb;
 
 if($_SESSION['IP_Country']==''){
-	$ip = $_SERVER['REMOTE_ADDR'];
-	$details = json_decode(file_get_contents("http://ipinfo.io/".$ip));
-	$_SESSION['IP_Country']=$details->country;
-	if($details->country=='DE'){
-	echo '<script>window.location.href="'.site_url().'/de/"</script>';
-	}
+  $ip = $_SERVER['REMOTE_ADDR'];
+  $details = json_decode(file_get_contents("http://ipinfo.io/".$ip));
+  $_SESSION['IP_Country']=$details->country;
+  if($details->country=='DE'){
+  echo '<script>window.location.href="'.site_url().'/de/"</script>';
+  }
 }
 
 if($_REQUEST['sid']!=''){
@@ -61,25 +61,25 @@ $activeLanguage ='';
 if ( function_exists('icl_object_id') ) {
  $lang_arr = icl_get_languages('skip_missing=0&orderby=name&order=asc&link_empty_to=str');
  foreach($lang_arr as $key=>$val){
-	 if($val['active']==1){
-	 $activeLanguage =array('code'=>$val['code'],
-	                        'ean_code'=>ean_wpml_languages($val['code']), 
-	                        'native_name'=>$val['native_name'],
-							'translated_name'=>$val['translated_name'],
-							'flag_url'=>$val['country_flag_url'],
-							'page_url'=>$val['url']
-							); 
-  }	
+   if($val['active']==1){
+   $activeLanguage =array('code'=>$val['code'],
+                          'ean_code'=>ean_wpml_languages($val['code']), 
+                          'native_name'=>$val['native_name'],
+              'translated_name'=>$val['translated_name'],
+              'flag_url'=>$val['country_flag_url'],
+              'page_url'=>$val['url']
+              ); 
+  } 
  }
 }
 else{
  $activeLanguage =array('code'=>$mk_options['default_language'],
-						'ean_code'=>ean_wpml_languages($mk_options['default_language']), 
-						'native_name'=>'',
-						'translated_name'=>'',
-						'flag_url'=>'',
-						'page_url'=>''
-						); 	
+            'ean_code'=>ean_wpml_languages($mk_options['default_language']), 
+            'native_name'=>'',
+            'translated_name'=>'',
+            'flag_url'=>'',
+            'page_url'=>''
+            );  
 }
 
 
@@ -89,40 +89,40 @@ $_SESSION['main_button_color'] = "#444444";
 $main_color_hex2rgb = hex2rgb($_REQUEST["themecolors"]);
 $_SESSION['main_color_hex2rgb'] = $main_color_hex2rgb['red'].", ".$main_color_hex2rgb['green'].", ".$main_color_hex2rgb['blue'];
 }else{
-	if($_SESSION['main_color']==""){
-	$_SESSION['main_color'] = $mk_options['m_theme_color'];
-	$_SESSION['main_button_color'] = "#444444";
-	$_SESSION['main_color_hex2rgb'] = "89, 196, 90";
-	}
+  if($_SESSION['main_color']==""){
+  $_SESSION['main_color'] = $mk_options['m_theme_color'];
+  $_SESSION['main_button_color'] = "#444444";
+  $_SESSION['main_color_hex2rgb'] = "89, 196, 90";
+  }
 }
 $template_slug =get_page_template_slug();
 
 if($template_slug=='home-page-v1.php'){
-  $pageName='home-page';	
+  $pageName='home-page';  
 }elseif($template_slug=='manage-destination.php'){
- $pageName='manage-destination';	
+ $pageName='manage-destination';  
 }
 elseif($template_slug=='tp-flights.php'){
- $pageName='manage-flight';		
+ $pageName='manage-flight';   
 }
 else{
- $pageName='';		
+ $pageName='';    
 }
 
 
 if($activeLanguage['code']!=$mk_options['default_language']){
-$siteUrl =site_url().'/'.$activeLanguage['code'];	
+$siteUrl =site_url().'/'.$activeLanguage['code']; 
 $site_language=$activeLanguage['code'];
 }else{
-$siteUrl =site_url();		
-$site_language='';	 
+$siteUrl =site_url();   
+$site_language='';   
 }
 
 $results =$wpdb->get_results("select * from twc_service_category where published='Yes' and status_deleted=0 ORDER BY sorting ASC");
 
 $extQuery ='';
 if($_REQUEST['sid']!=''){
- $extQuery.=" and service_category='".$_REQUEST['sid']."'";	
+ $extQuery.=" and service_category='".$_REQUEST['sid']."'"; 
 }
 if($_REQUEST['destName']!=''){
  //$extQuery.=" and LCASE(city)='".strtolower($_REQUEST['destName'])."'";
@@ -131,7 +131,7 @@ if($_REQUEST['destName']!=''){
 
 $serviceTitle ='';
 if($_REQUEST['sid']!='' && $_REQUEST['destName']!=''){
- $serviceTitle.=getFieldByID('title','twc_service_category',$_REQUEST['sid']). ' in ' .$_REQUEST['destName'];	
+ $serviceTitle.=getFieldByID('title','twc_service_category',$_REQUEST['sid']). ' in ' .$_REQUEST['destName']; 
 }
 elseif($_REQUEST['sid']!='' || $_REQUEST['destName']=''){
  $serviceTitle.=getFieldByID('title','twc_service_category',$_REQUEST['sid']);
@@ -140,17 +140,17 @@ elseif($_REQUEST['destName']!='' || $_REQUEST['sid']=''){
   $serviceTitle.=$_REQUEST['destName']; 
 }
 else{
-	$serviceTitle.='Pet Services';
+  $serviceTitle.='Pet Services';
 }
 
 ?>
-<div class="background-slider">
+<div class="background-slider" ng-show="'default' | isState">
   <?php echo do_shortcode('[crellyslider alias="homeslider"] '); ?>
 <div class=" col-sm-12 slider-search"> <!-- log_backGrond -->
     <div class=" col-sm-10 col-sm-offset-1"><!-- container_width -->
       <input type="hidden" value="" id="sel_category">
-			<div class="pet-groomsv-sercahbox">
-			    <div class="pet-groomsv-criteria-open">
+      <div class="pet-groomsv-sercahbox">
+          <div class="pet-groomsv-criteria-open">
             <!--<span>
             <span class="pet_g_crt"><?php echo $serviceCategory;?></span>
             <span><i class="fa fa-angle-down" aria-hidden="true"></i></span>
@@ -229,49 +229,49 @@ else{
           <span class="err_searchName"></span>-->
         </div>
 
-		<!-- <div class="facebookBack">
-			<a href="javascript:void(0);" alt="fblogin" class="fblogin">
-			<i class="fa fa-facebook"></i>  &nbsp;&nbsp;<?php echo $mk_options['log_in_with_facebook'];?></a>
-		</div>
+    <!-- <div class="facebookBack">
+      <a href="javascript:void(0);" alt="fblogin" class="fblogin">
+      <i class="fa fa-facebook"></i>  &nbsp;&nbsp;<?php echo $mk_options['log_in_with_facebook'];?></a>
+    </div>
 
-		<div class="New_contactFrom">
+    <div class="New_contactFrom">
 
-		    <?php
-			if (is_page( 'login' ) ):
-			?>
-			<p class="logWith"><?php echo $mk_options['log_in'];?></p>
+        <?php
+      if (is_page( 'login' ) ):
+      ?>
+      <p class="logWith"><?php echo $mk_options['log_in'];?></p>
 
-			<p class="CeratOr">  <small><?php echo $mk_options['or'];?></small> <a href="<?php echo site_url();?>/register/"><?php echo $mk_options['create_an_account'];?></a></p>
-			<?php
-			endif;
-			?>
+      <p class="CeratOr">  <small><?php echo $mk_options['or'];?></small> <a href="<?php echo site_url();?>/register/"><?php echo $mk_options['create_an_account'];?></a></p>
+      <?php
+      endif;
+      ?>
 
-			<?php
-			if (is_page( 'register' ) ):
-			?>
-			<p class="logWith registerWith"><?php echo $mk_options['register'];?></p>
-			<?php
-			endif;
-			?>
+      <?php
+      if (is_page( 'register' ) ):
+      ?>
+      <p class="logWith registerWith"><?php echo $mk_options['register'];?></p>
+      <?php
+      endif;
+      ?>
 
 
-		  <?php
-			while ( have_posts() ) : the_post();
-			?>
-		  <p class="txt-o">
-			<?php the_content(); ?>
-		  </p>
-		  <?php
-			// End the loop.
-			endwhile;
+      <?php
+      while ( have_posts() ) : the_post();
+      ?>
+      <p class="txt-o">
+      <?php the_content(); ?>
+      </p>
+      <?php
+      // End the loop.
+      endwhile;
 
-			?>
-	<p style="clear: both;"></p>
-	  </div> -->
+      ?>
+  <p style="clear: both;"></p>
+    </div> -->
     </div>
 </div>
 </div>
- <div id="all_categories">
+ <div id="all_categories" ng-show="'default' | isState">
      <div class="offer-description">
          <h1 class="offer-heading">WHAT WE OFFER</h1>
          <p class="offer-content">Over <span class="pets-number">10,000+</span> Pet friendly places to stay, eat & play with your Pets</p>
@@ -504,7 +504,7 @@ else{
 </div>
 <?php // strong_testimonials_view( 1 ); ?>
 <?php $feedResults =$wpdb->get_results("select * from twc_feedback where 1 ORDER BY date_time DESC LIMIT 5 "); ?>
-<div class="testimonial-container">
+<div class="testimonial-container" ng-show="'default' | isState">
   <p>Customer Reviews & Ratings</p>
   <div id="testimonial-slider" class="carousel slide" data-ride="carousel">
     <!-- Wrapper for slides -->
@@ -564,9 +564,9 @@ else{
 
 <script>
    var listCategories = document.querySelector('#categories');
-    /*window.onload = function() { 
-        listCategories.childNodes[1].childNodes[1].click(); 
-    };*/
+    // window.onload = function() { 
+    //     listCategories.childNodes[1].childNodes[1].click(); 
+    // };
     function hideVendorList() {
         var listCategories = document.querySelector('#categories');
         listCategories.childNodes.forEach(function(item, index) {
@@ -601,52 +601,58 @@ else{
 </script>
 <script>
 $('.city_pop_search').click(function(){
-	if($('#destName').val()==''){
-		$('#err_destName').html('<span class="state-indicator">Please enter your city name.</span>');
-		$('#destName').focus();
-		return false;
-	}
-	else{
-		var sid=$('#hiddenSID').val();
-		window.location.href="<?php echo site_url();?>/search-vendor/?sid="+sid+"&destName="+$("#destName").val();		
-		}	
-	});
+  if($('#destName').val()==''){
+    $('#err_destName').html('<span class="state-indicator">Please enter your city name.</span>');
+    $('#destName').focus();
+    return false;
+  }
+  else{
+    var sid=$('#hiddenSID').val();
+    window.location.href="<?php echo site_url();?>/search-vendor/?sid="+sid+"&destName="+$("#destName").val();    
+    } 
+  });
 
 </script>
 <script>
 $('.city_search').click(function(){
-	if($('#searchName').val()==''){
-		$('.err_searchName').html('<span class="error_search">Please select category and your city name.</span>');
-		//alert('Please enter city name for search');
-		$('.err_searchName').show(1).delay(2000).hide(1);
-		$('#searchName').focus();
-		return false;
-	}
-	else{
-		var city=$('#searchName').val();
-		var sid = $('#sel_category').val();
+  if($('#searchName').val()==''){
+    $('.err_searchName').html('<span class="error_search">Please select category and your city name.</span>');
+    //alert('Please enter city name for search');
+    $('.err_searchName').show(1).delay(2000).hide(1);
+    $('#searchName').focus();
+    return false;
+  }
+  else{
+    var city=$('#searchName').val();
+    var sid = $('#sel_category').val();
                 var store = window.localStorage;
-		//alert(sid);
+    //alert(sid);
                 store.setItem('idOfSelected', sid);
-		window.location.href="<?php echo site_url();?>/search-vendor/?sid="+sid+"&destName="+city;
+    window.location.href="<?php echo site_url();?>/search-vendor/?sid="+sid+"&destName="+city;
                 
-		}	
-	});
+    } 
+  });
 
 </script>
 
 
 <script>
+  $(document).ready(function() {
+  var catLi = ($('.pet-groomsv-criteria-open #categories li.active').find('.opt').text());
+  var id = $('.pet-groomsv-criteria-open #categories li.active').attr('data-value');
+  $('#sel_category').val(id);
+  $('.pet_g_crt').text(catLi);
+});
  $('.pet-groomsv-criteria').click(function(){
-	  $(this).toggleClass('pet-groomsv-criteria-open');
-	 })	
-	 
+    $(this).toggleClass('pet-groomsv-criteria-open');
+   }) 
+   
 $('.pet-groomsv-criteria-open #categories li').click(function(){
-	 var catLi = ($(this).find('.opt').text());
-	  var id = $(this).attr('data-value');
-	   $('#sel_category').val(id);
-//	  alert(id);
-	 $('.pet_g_crt').text(catLi);
+   var catLi = ($(this).find('.opt').text());
+    var id = $(this).attr('data-value');
+     $('#sel_category').val(id);
+//    alert(id);
+   $('.pet_g_crt').text(catLi);
 })
 </script>
 <style>
@@ -656,4 +662,3 @@ $('.pet-groomsv-criteria-open #categories li').click(function(){
 </style>
 
 <?php get_footer(); ?>
-

@@ -32,7 +32,7 @@ $vendor_id =$result->vendor_id;
         </div>
     </div>
     <?php endif; ?>
-    <div class="container events-news-container">
+    <div class="container events-news-container" ng-show="'default' | isState">
     <div class="row">
         <!-- <div class="event-column col-lg-6 col-md-6 col-sm-6 col-xs-12">
             <div class="events-container">
@@ -58,7 +58,7 @@ $vendor_id =$result->vendor_id;
         </div>
     </div>
 </div>
-    <div class="container-fluid offers-footer-container">
+    <div class="container-fluid offers-footer-container" ng-show="'default' | isState">
         <div class="offers-footer-heading">
             <span>SPECIAL OFFERS</span>
         </div>
