@@ -104,7 +104,6 @@ $ratingArr =array('5'=>'Awesome','4'=>'Great','3'=>'Average','2'=>'Not that bad'
                   </p>
                   <?php } ?>
                 <div><i class="fa fa-map-marker details-page-address" aria-hidden="true"></i><span><?php echo $objs->address;?>,<?php echo $objs->city;?></span></div>
-                <div><i class="fa fa-phone details-page-phone" aria-hidden="true"></i> <span><?php echo $objs->contact_number;?></span></div>
             </div>
             <div class="pet-search-left details-page35">
  		<div id="petBrd-page-wrap">
@@ -127,7 +126,7 @@ $ratingArr =array('5'=>'Awesome','4'=>'Great','3'=>'Average','2'=>'Not that bad'
   <div class="tab-content details-page-tab-content">
     <div id="overview" class="tab-pane fade in active">
       <div class="pet-child-right details-page long-description-overview">
-		    <h3>Why do we use it?</h3>
+		    <h3>About our property</h3>
                     <div class="long-description-container">
                         <p><?php echo $objs->description;?></p>
                     </div>
@@ -139,7 +138,7 @@ $ratingArr =array('5'=>'Awesome','4'=>'Great','3'=>'Average','2'=>'Not that bad'
       		    <h5>More Information</h5>
            		<ul>
                             <li><div></div>Hours of Operation <span class="details-page-more-info"><?php echo $objs->time_from ; ?> - <?php echo $objs->time_to ; ?></span></li>
-                                           <li>Contact No        <span class="details-page-more-info"><?php echo $objs->contact_number;?></span></li>
+                                          
 						<?php if(($objs->card_accepted)!=''){ ?>
 					    <li>Card Accepted     <span class="details-page-more-info">[<?php echo $objs->card_accepted;?>]</span></li>
 						<?php } ?>
@@ -183,7 +182,7 @@ $ratingArr =array('5'=>'Awesome','4'=>'Great','3'=>'Average','2'=>'Not that bad'
 
           </div>
         <div>
-            <button class="details-share-button"><img src="<?php $upload_dir = wp_upload_dir(); echo $upload_dir['baseurl']; ?>/2017/09/coloredIcon.png" /> </button>        
+                   
             <?php if ($sid == 'N148948330558c7b6295b388' || $sid == 'V148948235058c7b26e54885' || $sid == 'G148948225958c7b21322ce8') { ?>
                 <a href="javascript:void();" class="snd_query_btn">Book Now</a>
             <?php } else { ?>
@@ -237,14 +236,8 @@ $ratingArr =array('5'=>'Awesome','4'=>'Great','3'=>'Average','2'=>'Not that bad'
 
 	$averageReview =ceil($reviewResult->avg_rating);
    if($messageReview!=""){ ?>
-   <div class="detail-section2 details-page-all-review">
-    <div style="width: 100%;overflow-x: scroll;">
-        <div class="dynamic_width_div" style="width: 100%;">
-
-
-
-   		<div class="detail-section2-cols row">
-			<div class="col-md-3 col-sm-3 col-xs-3 det-rat-smry">
+   <div class="detail-section2 details-page-all-review row">
+       <div class="col-md-3 col-sm-3 col-xs-3 det-rat-smry">
 					<div class="det-sec2-col sec2-rating">
    			        	<div class="sec2-rating-top">
    			        	    <h3><?php echo $averageReview ; ?></h3>
@@ -287,6 +280,13 @@ $ratingArr =array('5'=>'Awesome','4'=>'Great','3'=>'Average','2'=>'Not that bad'
    			        	</div>
 			   </div>
    			</div>
+       <div class="col-md-9 col-sm-9 col-xs-9" style="overflow-x: scroll;">
+        <div class="dynamic_width_div" style="width: 100%;">
+
+
+
+   		<div class="detail-section2-cols row">
+			
 
 
 
@@ -452,7 +452,7 @@ $messageReview=$revResult->message;
 
 
 
-
+<button class="details-share-button"><img src="<?php $upload_dir = wp_upload_dir(); echo $upload_dir['baseurl']; ?>/2017/09/coloredIcon.png" /> </button> 
 
 </div>
 
@@ -644,7 +644,5 @@ max-height: 85px;
  document.addEventListener("DOMContentLoaded", function() {
     
     overviewTab.classList.add('active');
-    console.log(overviewTab.classList);
   });
-  console.log(overviewTab.classList);
 </script>
