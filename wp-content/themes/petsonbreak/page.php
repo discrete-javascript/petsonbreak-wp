@@ -144,7 +144,7 @@ else{
 }
 
 ?>
-<div class="background-slider" ng-show="'default' | isState">
+<div class="background-slider" ng-hide="('search' | isState) || ('hotel-information' | isState) || ('online-booking' | isState) || ('confirmation' | isState) || ('flight_search' | isState)">
   <?php echo do_shortcode('[crellyslider alias="homeslider"] '); ?>
 <div class=" col-sm-12 slider-search"> <!-- log_backGrond -->
     <div class=" col-sm-10 col-sm-offset-1"><!-- container_width -->
@@ -271,7 +271,7 @@ else{
     </div>
 </div>
 </div>
- <div id="all_categories" ng-show="'default' | isState">
+ <div id="all_categories" ng-hide="('search' | isState) || ('hotel-information' | isState) || ('online-booking' | isState) || ('confirmation' | isState) || ('flight_search' | isState)">
      <div class="offer-description">
          <h1 class="offer-heading">WHAT WE OFFER</h1>
          <p class="offer-content">Over <span class="pets-number">10,000+</span> Pet friendly places to stay, eat & play with your Pets</p>
@@ -504,7 +504,7 @@ else{
 </div>
 <?php // strong_testimonials_view( 1 ); ?>
 <?php $feedResults =$wpdb->get_results("select * from twc_feedback where 1 ORDER BY date_time DESC LIMIT 5 "); ?>
-<div class="testimonial-container" ng-show="'default' | isState">
+<div class="testimonial-container" ng-hide="('search' | isState) || ('hotel-information' | isState) || ('online-booking' | isState) || ('confirmation' | isState) || ('flight_search' | isState)">
   <p>Customer Reviews & Ratings</p>
   <div id="testimonial-slider" class="carousel slide" data-ride="carousel">
     <!-- Wrapper for slides -->
