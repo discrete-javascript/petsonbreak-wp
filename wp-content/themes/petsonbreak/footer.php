@@ -58,7 +58,8 @@ $vendor_id =$result->vendor_id;
         </div>
     </div>
 </div>
-    <div class="container-fluid offers-footer-container" ng-hide="('search' | isState) || ('hotel-information' | isState) || ('online-booking' | isState) || ('confirmation' | isState) || ('flight_search' | isState)">
+  <div class="offers-section" ng-hide="('search' | isState) || ('hotel-information' | isState) || ('online-booking' | isState) || ('confirmation' | isState) || ('flight_search' | isState)">
+    <div class="item container-fluid offers-footer-container" style="background-image: url(http://dev.petsonbreak.com/wp-content/uploads/2017/08/restaurant-offer-bg-blu.png);" >
         <div class="offers-footer-heading">
             <span>SPECIAL OFFERS</span>
         </div>
@@ -69,6 +70,31 @@ $vendor_id =$result->vendor_id;
             <button>SEE DETAILS</button>
         </div>
     </div>
+
+    <div class="item container-fluid offers-footer-container" style="background-image: url(http://dev.petsonbreak.com/wp-content/uploads/2017/08/restaurant-offer-bg-blu.png);" >
+        <div class="offers-footer-heading">
+            <span>SPECIAL OFFERS</span>
+        </div>
+        <div class="offers-footer-details">
+            <span style="font-size: 16px;">ON PETS CLINIC <span style="color: yellow;">15TH SEPTEMBER 17 </span>USE CODE <span style="color: red; font-style: italic;">"INDIA" </span>WHILE BOOKING </span>
+        </div>
+        <div class="offers-footer-button">
+            <button>SEE DETAILS</button>
+        </div>
+    </div>
+
+    <div class="item container-fluid offers-footer-container" style="background-image: url(http://dev.petsonbreak.com/wp-content/uploads/2017/08/restaurant-offer-bg-blu.png);" >
+        <div class="offers-footer-heading">
+            <span>SPECIAL OFFERS</span>
+        </div>
+        <div class="offers-footer-details">
+            <span style="font-size: 16px;">ON PETS CLINIC <span style="color: yellow;">15TH SEPTEMBER 17 </span>USE CODE <span style="color: red; font-style: italic;">"INDIA" </span>WHILE BOOKING </span>
+        </div>
+        <div class="offers-footer-button">
+            <button>SEE DETAILS</button>
+        </div>
+    </div>
+  </div>
   <div class="footer-top">
       <div class="container">
           <div class="row subscription-container">
@@ -685,6 +711,17 @@ function closeNav() {
       minSlides: 1,
       maxSlides: 4,
       slideMargin: 10
+    });
+  });
+</script>
+
+<script type="text/javascript">
+  $(document).ready(function(){
+    $('.offers-section').bxSlider({
+      auto: true,
+      pager: false,
+      controls: false,
+      responsive: true,
     });
   });
 </script>
